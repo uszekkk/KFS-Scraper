@@ -15,7 +15,7 @@ from datetime import date, datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse, parse_qs
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
@@ -110,6 +110,24 @@ Treść: {snippet}"""
 # ============================================================
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0"})
+
+
+def _article_fingerprint(url):
+    """Canonical key for Liferay articles — (domain, content_slug, assetEntryId).
+
+    The same article can appear under different asset_publisher paths
+    (e.g. /rynek-pracy/aktualnosci/ vs /strona-glowna/) but shares the
+    content slug and assetEntryId.  Returns a tuple usable as a set key,
+    or None if the URL doesn't look like a Liferay article.
+    """
+    parsed = urlparse(url)
+    m = re.search(r"/content/([^/?]+)", parsed.path)
+    if not m:
+        return None
+    slug = m.group(1)
+    qs = parse_qs(parsed.query)
+    entry_id = qs.get("p_r_p_assetEntryId", [""])[0]
+    return (parsed.netloc, slug, entry_id)
 
 
 def fetch(url):
@@ -345,8 +363,12 @@ def _scrape_one(i, urzad, total):
         if hp_soup:
             hp_arts = extract_articles(hp_soup, base_url)
             existing_urls = {a["url"] for a in articles}
+            existing_fps = {_article_fingerprint(a["url"]) for a in articles} - {None}
             for a in hp_arts:
                 if a["url"] in existing_urls:
+                    continue
+                fp = _article_fingerprint(a["url"])
+                if fp and fp in existing_fps:
                     continue
                 title_text = a.get("title", "")
                 # Pełny match KFS keywords w tytule — od razu bierz
@@ -398,7 +420,24 @@ def scrape_all(urzedy):
             all_articles.extend(arts)
             errors.extend(errs)
 
-    return all_articles, errors
+    # Deduplikacja — ten sam artykuł Liferay pod różnymi ścieżkami
+    seen_urls = set()
+    seen_fps = set()
+    deduped = []
+    for art in all_articles:
+        url = art.get("url", "")
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+        fp = _article_fingerprint(url)
+        if fp:
+            if fp in seen_fps:
+                continue
+            seen_fps.add(fp)
+        deduped.append(art)
+    if len(deduped) < len(all_articles):
+        print(f"  Deduplikacja: usunięto {len(all_articles) - len(deduped)} duplikatów")
+    return deduped, errors
 
 
 # ============================================================
@@ -493,9 +532,14 @@ def classify_article(art, key_index, cache):
             progress["done"] += 1
         return result, False
 
-    # Sprawdź cache
+    # Sprawdź cache (po URL lub po fingerprint — ten sam artykuł pod inną ścieżką)
     if url in cache:
         cached = cache[url]
+        return cached, True
+    fp = _article_fingerprint(url)
+    if fp and fp in _cache_fp_index:
+        cached = _cache_fp_index[fp]
+        cache[url] = cached  # dodaj alias do cache
         return cached, True
 
     # Nowy artykuł z KFS keywords — wyślij do AI
@@ -532,9 +576,28 @@ def classify_article(art, key_index, cache):
     return result, False
 
 
+_cache_fp_index = {}  # fingerprint -> cache value (budowany w classify_all)
+
+
 def classify_all(articles, cache):
     """Klasyfikuje wszystkie artykuły — nowe przez AI, stare z cache."""
-    new_articles = [a for a in articles if a.get("url", "") not in cache]
+    # Buduj indeks fingerprint → cache value (szybki lookup po slug+entryId)
+    global _cache_fp_index
+    _cache_fp_index = {}
+    for url, val in cache.items():
+        fp = _article_fingerprint(url)
+        if fp:
+            _cache_fp_index[fp] = val
+
+    def _in_cache(url):
+        if url in cache:
+            return True
+        fp = _article_fingerprint(url)
+        if fp and fp in _cache_fp_index:
+            cache[url] = _cache_fp_index[fp]  # alias
+            return True
+        return False
+    new_articles = [a for a in articles if not _in_cache(a.get("url", ""))]
     # Ile z nowych ma KFS keywords (pójdzie do AI), ile bez (auto-NIE)
     kfs_new = [a for a in new_articles if KFS_KEYWORDS.search(
         a.get("title", "") + " " + a.get("snippet", "")[:1000])]
