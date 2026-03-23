@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-KFS Scraper — scrapes Polish powiatowe urzędy pracy (county employment offices) websites for active KFS (Krajowy Fundusz Szkoleniowy) grant application announcements. Articles are classified using Gemini 2.0 Flash API, and results are rendered as an interactive HTML report with a Leaflet map of Poland's counties.
+KFS Scraper — scrapes Polish powiatowe urzędy pracy (county employment offices) websites for active KFS (Krajowy Fundusz Szkoleniowy) grant application announcements. Articles are classified using Gemini 2.0 Flash API, and results are rendered as an interactive HTML report with a Leaflet map of Poland's counties. New results are also pushed to EspoCRM.
 
 The project is in Polish. All prompts, variable names, UI text, and comments are in Polish.
 
 ## Running
 
 ```bash
-# Main production pipeline (scrape → classify → HTML report with map)
+# Main production pipeline (scrape → classify → CRM push → HTML report with map)
 # Runs on GitHub Actions every 5h, or manually
 python run.py
 
@@ -28,22 +28,27 @@ python rescan_enrich.py     # fetch full article pages for TAK entries missing t
 
 ## Environment
 
-- Requires `GEMINI_API_KEYS` env var (comma-separated) or falls back to hardcoded keys
+- Requires `GEMINI_API_KEYS` env var (comma-separated); exits with error if missing
+- Optional `ESPOCRM_URL` + `ESPOCRM_API_KEY` env vars for CRM integration (skipped if missing)
 - Older `scraper.py` uses `GEMINI_API_KEY` (single key) via `google.generativeai` SDK
-- Dependencies: `requests`, `beautifulsoup4`, `google-generativeai` (only in scraper.py)
-- No requirements.txt — install manually: `pip install requests beautifulsoup4`
+- Dependencies: `requests`, `beautifulsoup4` (listed in `requirements.txt`)
+- Install: `pip install -r requirements.txt`
 
 ## Architecture
 
-**`run.py`** is the unified production pipeline (replaces the separate test_*.py scripts). It:
+**`run.py`** is the unified production pipeline (~990 lines). It:
 1. Loads office list from `urzedy.json`
 2. Scrapes news pages + KFS pages (sequential, with detail page fetching)
 3. Classifies articles via Gemini API (multithreaded, with URL-keyed cache)
-4. Generates `index.html` with interactive Leaflet map + searchable card list
+4. Pushes TAK results to EspoCRM (deduplicates by URL)
+5. Generates `index.html` with interactive Leaflet map + searchable card list
+6. Filters out articles with publication dates before 2026
 
-**Data flow:** `urzedy.json` → scrape → classify (Gemini) → `results.json` + `cache.json` → `index.html`
+**Data flow:** `urzedy.json` → scrape → classify (Gemini) → `results.json` + `cache.json` → EspoCRM → `index.html`
 
-**Classification logic:** Gemini receives a structured prompt asking TAK/NIE for KFS grant announcements. Response is parsed for `WYNIK`, `POWOD`, `TERMIN`, `KWOTA` fields. Cache is keyed by article URL. Articles with KFS keywords in title but cached as NIE get reclassified (cache override).
+**Classification logic:** Gemini receives a structured prompt asking TAK/NIE for KFS grant announcements. Response is parsed for `WYNIK`, `POWOD`, `TERMIN`, `KWOTA` fields. Cache is keyed by article URL. Articles with KFS keywords in title but cached as NIE get reclassified (cache override). Content snippets truncated to 10000 chars.
+
+**EspoCRM integration:** `push_to_crm()` sends TAK results to `NaborKFS` entity via REST API. Fetches existing URLs first to avoid duplicates. Converts dates from DD.MM.YYYY to YYYY-MM-DD format.
 
 **Key data files:**
 - `urzedy.json` — list of ~340 offices with `name`, `homepage`, `aktualnosci_url`, `kfs_url`, `base_url`
@@ -51,14 +56,16 @@ python rescan_enrich.py     # fetch full article pages for TAK entries missing t
 - `results.json` / `errors.json` — latest run output
 - `powiaty.geojson` — county boundaries for map rendering
 - `urzad_to_powiat.json` — maps office names to GeoJSON county names
-- `urzad_to_woj.json` — maps office names to voivodeships
+- `powiat_coords.json` — county coordinates data
 
-**Scraping targets Liferay CMS** — extraction strategies look for `journal-content-article`, `asset-content`, `portlet-body`, etc. Detail pages use smart truncation that preserves date/amount patterns when content exceeds 3000 chars.
+**Scraping targets Liferay CMS** — extraction strategies look for `journal-content-article`, `asset-content`, `portlet-body`, etc. Detail pages use smart truncation that preserves date/amount patterns when content exceeds limits.
 
 **Rescan scripts** (`rescan_*.py`) are post-processing tools that operate on `test_results.json` to fix API errors, deduplicate, and enrich results. They call Gemini API directly via REST (not the SDK).
 
 **Two Gemini API calling patterns exist:**
 - `scraper.py`: uses `google.generativeai` SDK (`genai.GenerativeModel`)
-- All other files: direct REST calls to `generativelanguage.googleapis.com` with multiple API key rotation and retry logic
+- All other files: direct REST calls to `generativelanguage.googleapis.com` with multiple API key rotation and retry logic (5 retries, 15s wait)
 
-**Report generation** embeds all data inline in the HTML (no external JS/CSS except Leaflet CDN). The map colors counties green (has KFS announcements) or gray (none), with click popups showing details.
+**Report generation** embeds all data inline in the HTML (no external JS/CSS except Leaflet CDN). The map colors counties green (has KFS announcements) or gray (none), with click popups showing details. Report includes promote/demote buttons to manually move articles between tabs (stored in localStorage). Tabs: Mapa, Nabory KFS, Artykuły KFS (related), Błędy.
+
+**GitHub Actions** (`scrape.yml`): runs every 5h, commits results to repo, deploys `index.html` to GitHub Pages. Live at uszekkk.github.io/KFS-Scraper.

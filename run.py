@@ -7,10 +7,13 @@ Uruchamiany co 5h przez GitHub Actions lub ręcznie.
 import json
 import os
 import re
+import smtplib
 import sys
 import time
 import threading
 from datetime import date, datetime
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from pathlib import Path
 from urllib.parse import urljoin
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -213,19 +216,36 @@ def fetch_detail_content(url):
     return ""
 
 
+def _extract_date(element):
+    """Szuka daty DD.MM.YYYY w kontenerze nadrzędnym lub poprzedzającym elemencie."""
+    container = element.find_parent("div", class_=re.compile(r"nnk|asset|results-row"))
+    if container:
+        dm = re.search(r"\d{2}\.\d{2}\.\d{4}", container.get_text())
+        if dm:
+            return dm.group()
+    prev = element.find_previous(string=re.compile(r"\d{2}\.\d{2}\.\d{4}"))
+    if prev:
+        dm = re.search(r"\d{2}\.\d{2}\.\d{4}", prev)
+        if dm:
+            return dm.group()
+    return ""
+
+
 def extract_articles(soup, base_url):
     seen = set()
     articles = []
-    for h3 in soup.find_all("h3"):
-        parent = h3.parent
+
+    # 1) Nagłówki h3/h4 z linkami
+    for heading in soup.find_all(["h3", "h4"]):
+        parent = heading.parent
         if parent and parent.name == "a" and parent.get("href"):
-            href, title = parent["href"], h3.get_text(strip=True)
+            href, title = parent["href"], heading.get_text(strip=True)
         else:
-            link = h3.find("a", href=True)
+            link = heading.find("a", href=True)
             if not link:
                 continue
             href = link["href"]
-            title = link.get_text(strip=True) or h3.get_text(strip=True)
+            title = link.get_text(strip=True) or heading.get_text(strip=True)
 
         if not title or not href:
             continue
@@ -237,23 +257,9 @@ def extract_articles(soup, base_url):
             continue
         seen.add(key)
 
-        # Date
-        pub_date = ""
-        container = h3.find_parent("div", class_=re.compile(r"nnk|asset|results-row"))
-        if container:
-            dm = re.search(r"\d{2}\.\d{2}\.\d{4}", container.get_text())
-            if dm:
-                pub_date = dm.group()
-        if not pub_date:
-            prev = h3.find_previous(string=re.compile(r"\d{2}\.\d{2}\.\d{4}"))
-            if prev:
-                dm = re.search(r"\d{2}\.\d{2}\.\d{4}", prev)
-                if dm:
-                    pub_date = dm.group()
-
-        # Snippet
+        pub_date = _extract_date(heading)
         snippet = ""
-        anchor = parent if parent and parent.name == "a" else h3
+        anchor = parent if parent and parent.name == "a" else heading
         next_p = anchor.find_next("p")
         if next_p:
             snippet = next_p.get_text(strip=True)[:MAX_SNIPPET]
@@ -262,6 +268,28 @@ def extract_articles(soup, base_url):
             "title": title, "url": href, "snippet": snippet,
             "date": pub_date, "source_type": "Aktualnosci",
         })
+
+    # 2) Liferay nnk-title-list — linki w <div class="nnk-title-list-list-item">
+    for div in soup.find_all("div", class_=re.compile(r"nnk-title-list-list-item")):
+        link = div.find("a", href=True)
+        if not link:
+            continue
+        href = link["href"]
+        title = link.get_text(strip=True)
+        if not title or not href:
+            continue
+        if not href.startswith("http"):
+            href = urljoin(base_url, href)
+        key = title.strip().lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        pub_date = _extract_date(div)
+        articles.append({
+            "title": title, "url": href, "snippet": "",
+            "date": pub_date, "source_type": "Aktualnosci",
+        })
+
     return articles
 
 
@@ -310,6 +338,34 @@ def _scrape_one(i, urzad, total):
         errs.append({"urzad": name, "url": homepage, "typ": "Aktualnosci",
                       "blad": err or "Brak artykulow"})
 
+    # Homepage — szukaj artykułów KFS na stronie głównej (asset_publisher)
+    akt_url = urzad.get("aktualnosci_url", "")
+    if homepage and homepage != akt_url:
+        hp_soup, _ = fetch(homepage)
+        if hp_soup:
+            hp_arts = extract_articles(hp_soup, base_url)
+            existing_urls = {a["url"] for a in articles}
+            for a in hp_arts:
+                if a["url"] in existing_urls:
+                    continue
+                title_text = a.get("title", "")
+                # Pełny match KFS keywords w tytule — od razu bierz
+                if KFS_KEYWORDS.search(title_text):
+                    a["urzad"] = name
+                    detail = fetch_detail_content(a["url"])
+                    if detail and len(detail) > len(a.get("snippet", "")):
+                        a["snippet"] = detail
+                    articles.append(a)
+                    continue
+                # Luźny match (ucięte tytuły) — sprawdź detail page
+                loose = re.search(r"(?:KFS|[Ff]undusz|nab[oó]r\s+wniosk)", title_text)
+                if loose:
+                    detail = fetch_detail_content(a["url"])
+                    if detail and KFS_KEYWORDS.search(detail[:2000]):
+                        a["urzad"] = name
+                        a["snippet"] = detail
+                        articles.append(a)
+
     # KFS
     if kfs_url:
         ks, ke = fetch(kfs_url)
@@ -321,7 +377,7 @@ def _scrape_one(i, urzad, total):
         else:
             errs.append({"urzad": name, "url": kfs_url, "typ": "KFS", "blad": ke})
 
-    print(f"  [{i}/{total}] {name} -> {len(news)} art.")
+    print(f"  [{i}/{total}] {name} -> {len(articles)} art.")
     return articles, errs
 
 
@@ -492,6 +548,7 @@ def classify_all(articles, cache):
     progress["tak"] = 0
 
     results = []
+    new_tak_urls = set()
 
     # Cache hits — przetwarzaj synchronicznie
     for art in articles:
@@ -526,19 +583,22 @@ def classify_all(articles, cache):
                 # Zapisz do cache
                 cache[url] = result
 
+                wynik = result.get("wynik", "NIE")
                 results.append({
                     "url": url,
                     "title": art.get("title", ""),
                     "urzad": art.get("urzad", ""),
                     "date": art.get("date", ""),
-                    "wynik": result.get("wynik", "NIE"),
+                    "wynik": wynik,
                     "powod": result.get("powod", ""),
                     "termin": result.get("termin", ""),
                     "kwota": result.get("kwota", ""),
                     "snippet": art.get("snippet", "")[:MAX_SNIPPET],
                 })
+                if wynik == "TAK":
+                    new_tak_urls.add(url)
 
-    return results
+    return results, new_tak_urls
 
 
 # ============================================================
@@ -615,6 +675,67 @@ def push_to_crm(results):
 
 
 # ============================================================
+# POWIADOMIENIA EMAIL
+# ============================================================
+def send_email_notification(new_tak):
+    """Wysyła email z nowymi naborami TAK."""
+    smtp_host = os.environ.get("SMTP_HOST", "smtp.gmail.com")
+    smtp_port = int(os.environ.get("SMTP_PORT", "587"))
+    smtp_user = os.environ.get("SMTP_USER", "")
+    smtp_pass = os.environ.get("SMTP_PASSWORD", "")
+    email_to = os.environ.get("EMAIL_TO", "")
+
+    if not smtp_user or not smtp_pass or not email_to:
+        print("  Brak SMTP_USER/SMTP_PASSWORD/EMAIL_TO — pomijam email")
+        return
+
+    if not new_tak:
+        print("  Brak nowych naborów — pomijam email")
+        return
+
+    recipients = [x.strip() for x in email_to.split(",") if x.strip()]
+    today_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+    subject = f"KFS: {len(new_tak)} nowych naborów ({today_str})"
+
+    rows = ""
+    for r in new_tak:
+        rows += (
+            f'<tr><td style="padding:6px 10px;border:1px solid #ddd">{r.get("urzad","")}</td>'
+            f'<td style="padding:6px 10px;border:1px solid #ddd"><a href="{r.get("url","")}">{r.get("title","")[:80]}</a></td>'
+            f'<td style="padding:6px 10px;border:1px solid #ddd">{r.get("termin","")}</td>'
+            f'<td style="padding:6px 10px;border:1px solid #ddd">{r.get("kwota","")}</td></tr>'
+        )
+
+    body = f"""<html><body style="font-family:sans-serif">
+<h2 style="color:#1e3a5f">Nowe nabory KFS — {len(new_tak)}</h2>
+<p>Znaleziono {len(new_tak)} nowych naborów KFS ({today_str}):</p>
+<table style="border-collapse:collapse;width:100%;font-size:14px">
+<tr style="background:#1e3a5f;color:#fff">
+<th style="padding:8px 10px;text-align:left">Urząd</th>
+<th style="padding:8px 10px;text-align:left">Tytuł</th>
+<th style="padding:8px 10px;text-align:left">Termin</th>
+<th style="padding:8px 10px;text-align:left">Kwota</th></tr>
+{rows}</table>
+<p style="margin-top:16px"><a href="https://uszekkk.github.io/KFS-Scraper/">Pełny raport na mapie</a></p>
+</body></html>"""
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = smtp_user
+    msg["To"] = ", ".join(recipients)
+    msg.attach(MIMEText(body, "html", "utf-8"))
+
+    try:
+        with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_pass)
+            server.sendmail(smtp_user, recipients, msg.as_string())
+        print(f"  Email: Wysłano do {', '.join(recipients)} ({len(new_tak)} naborów)")
+    except Exception as ex:
+        print(f"  Email: Błąd wysyłki — {ex}")
+
+
+# ============================================================
 # GENEROWANIE RAPORTU HTML
 # ============================================================
 def generate_report(results, errors):
@@ -634,6 +755,13 @@ def generate_report(results, errors):
     if MAPPING_FILE.exists():
         with open(MAPPING_FILE, "r", encoding="utf-8") as f:
             urzad_to_powiat = json.load(f)
+
+    WOJ_FILE = BASE_DIR / "urzad_to_woj.json"
+    urzad_to_woj = {}
+    if WOJ_FILE.exists():
+        with open(WOJ_FILE, "r", encoding="utf-8") as f:
+            urzad_to_woj = json.load(f)
+    all_woj = sorted(set(urzad_to_woj.values()))
 
     # Potwierdzone nabory: TAK + konkretny termin (nie "w załączniku"/"brak"/pusty)
     _uncertain = {"w załączniku", "brak", ""}
@@ -711,13 +839,14 @@ def generate_report(results, errors):
         dt = f'<span class="date">{e(r["date"])}</span>' if r.get("date") else ""
         termin = r.get("termin", "")
         kwota = r.get("kwota", "")
-        termin_h = f'<span class="termin">{e(termin)}</span>' if termin and is_tak else ""
+        termin_h = f'<span class="termin" data-termin="{e(termin)}">{e(termin)}</span>' if termin and is_tak else ""
         kwota_h = f'<span class="kwota">{e(kwota)}</span>' if kwota and is_tak else ""
         snippet = r.get("snippet", "")[:200]
         sd = f'{r.get("urzad","")} {r.get("title","")} {snippet}'.lower()
         url = e(r.get("url", ""))
+        woj = urzad_to_woj.get(r.get("urzad", ""), "")
         move_btn = f'<button class="btn-promote" onclick="promote(this)" title="Przeniес do naborów">&#x2714; Do naborów</button>' if show_move_btn else ""
-        return f'''<div class="card" data-search="{e(sd)}" data-url="{url}">
+        return f'''<div class="card" data-search="{e(sd)}" data-url="{url}" data-woj="{e(woj)}">
 <div class="row1"><span class="urzad">{e(r.get("urzad",""))}</span>{badge}{termin_h}{kwota_h}{move_btn}{dt}</div>
 <div class="title"><a href="{url}" target="_blank">{e(r.get("title",""))}</a></div>
 <div class="snippet">{e(snippet)}</div>
@@ -734,6 +863,11 @@ def generate_report(results, errors):
 
     err_news = len([x for x in errors if x.get("typ") == "Aktualnosci"])
     err_kfs = len([x for x in errors if x.get("typ") == "KFS"])
+
+    woj_options = '<option value="">Wszystkie wojewodztwa</option>'
+    woj_options += "".join(f'<option value="{e(w)}">{e(w)}</option>' for w in all_woj)
+
+    js_date_re = r"(\d{2})\.(\d{2})\.(\d{4})"
 
     # Write full HTML (using same template as test_report.py but cleaner)
     page = f'''<!DOCTYPE html>
@@ -766,6 +900,8 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 .badge{{padding:2px 10px;border-radius:5px;font-size:12px;font-weight:700;text-transform:uppercase}}
 .badge.tak{{background:#dcfce7;color:#166534}}.badge.nie{{background:#f3f4f6;color:#6b7280}}
 .termin{{background:#dbeafe;color:#1e40af;padding:2px 8px;border-radius:5px;font-size:12px;font-weight:600;white-space:nowrap}}
+.termin.termin-red{{background:#fee2e2;color:#991b1b}}.termin.termin-yellow{{background:#fef3c7;color:#92400e}}
+.termin.termin-green{{background:#dcfce7;color:#166534}}.termin.termin-expired{{background:#f3f4f6;color:#9ca3af;text-decoration:line-through}}
 .kwota{{background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;font-size:12px;font-weight:600;white-space:nowrap}}
 .date{{margin-left:auto;color:#9ca3af;font-size:13px}}
 .title a{{color:#1e3a5f;text-decoration:none;font-size:15px;font-weight:500}}.title a:hover{{text-decoration:underline}}
@@ -778,6 +914,8 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 .btn-demote:hover{{background:#fde68a}}
 .promoted-badge{{background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:600}}
 .tab.related-tab{{color:#2563eb}}.tab.related-tab.active{{color:#2563eb;border-bottom-color:#2563eb}}
+.woj-filter{{width:100%;padding:10px 16px;font-size:15px;border:1px solid #d1d5db;border-radius:8px;margin-bottom:8px;outline:none;background:#fff}}
+.woj-filter:focus{{border-color:#2d5a8e;box-shadow:0 0 0 3px rgba(45,90,142,.15)}}
 .empty{{text-align:center;padding:48px;color:#9ca3af;display:none}}
 #map{{width:100%;height:calc(100vh - 140px);min-height:500px}}
 .map-legend{{background:rgba(255,255,255,.95);padding:14px 18px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);font-size:13px;line-height:2}}
@@ -813,10 +951,12 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 <div>Powiaty z naborem: <span class="stat-num">{count_tak_powiaty}</span></div>
 <div>Artykulow: {total}</div></div></div></div>
 <div class="panel" id="p-nabory">
+<select class="woj-filter" data-list="l-nabory">{woj_options}</select>
 <input class="search" placeholder="Szukaj po urzedzie lub tytule..." data-list="l-nabory">
 <div id="promoted-section" style="display:none"><h3 style="font-size:14px;color:#92400e;margin:12px 0 8px">Recznie przeniesione</h3><div id="l-promoted"></div></div>
 <div id="l-nabory">{tak_cards}</div><div class="empty" id="e-nabory">Brak wynikow.</div></div>
 <div class="panel" id="p-related">
+<select class="woj-filter" data-list="l-related">{woj_options}</select>
 <input class="search" placeholder="Szukaj po urzedzie lub tytule..." data-list="l-related">
 <div id="l-related">{related_cards}</div><div class="empty" id="e-related">Brak wynikow.</div></div>
 <div class="panel" id="p-errors"><div id="l-errors">{err_cards}</div></div>
@@ -826,11 +966,16 @@ document.querySelectorAll(".tab").forEach(function(x){{x.classList.remove("activ
 document.querySelectorAll(".panel").forEach(function(x){{x.classList.remove("active")}});
 t.classList.add("active");document.getElementById("p-"+t.dataset.tab).classList.add("active");
 if(t.dataset.tab==="map"&&window._map)window._map.invalidateSize()}});}});
-document.querySelectorAll(".search").forEach(function(input){{input.addEventListener("input",function(){{
-var q=input.value.toLowerCase(),list=document.getElementById(input.dataset.list),
-cards=list.querySelectorAll(".card"),id=input.dataset.list.split("-")[1],empty=document.getElementById("e-"+id),n=0;
-cards.forEach(function(c){{var ok=c.dataset.search.indexOf(q)!==-1;c.classList.toggle("hidden",!ok);if(ok)n++}});
-empty.style.display=n===0?"block":"none"}});}});
+function filterCards(panel){{
+var list=panel.querySelector("[id^='l-']");if(!list)return;
+var search=panel.querySelector(".search"),woj=panel.querySelector(".woj-filter");
+var q=search?search.value.toLowerCase():"",w=woj?woj.value:"";
+var cards=list.querySelectorAll(".card"),id=list.id.split("-")[1],empty=document.getElementById("e-"+id),n=0;
+cards.forEach(function(c){{var okS=!q||c.dataset.search.indexOf(q)!==-1;var okW=!w||c.dataset.woj===w;
+var vis=okS&&okW;c.classList.toggle("hidden",!vis);if(vis)n++}});
+if(empty)empty.style.display=n===0?"block":"none"}}
+document.querySelectorAll(".search,.woj-filter").forEach(function(el){{
+el.addEventListener(el.tagName==="SELECT"?"change":"input",function(){{filterCards(el.closest(".panel"))}});}});
 
 var geoData={geojson_json};
 var map=L.map("map").setView([52,19.4],6);window._map=map;
@@ -853,7 +998,7 @@ mouseout:function(e){{gl.resetStyle(e.target);info.update()}},
 click:function(e){{var p=f.properties,n=p.nazwa.replace("powiat ","");n=n.charAt(0).toUpperCase()+n.slice(1);
 var h="";if(p.has_tak){{h+='<div class="popup-title">'+n+(p.urzedy?' <small style="font-weight:400;color:#6b7280">('+p.urzedy+')</small>':'')+'</div>';
 var arts=JSON.parse(p.articles||"[]");arts.forEach(function(a){{h+='<div class="popup-article"><a href="'+a.url+'" target="_blank">'+a.title.substring(0,70)+(a.title.length>70?"...":"")+'</a>';
-var m=[];if(a.termin)m.push("<b>"+a.termin+"</b>");if(a.kwota)m.push(a.kwota);
+var m=[];if(a.termin)m.push(terminBadge(a.termin));if(a.kwota)m.push(a.kwota);
 if(m.length)h+='<br><span class="popup-termin">'+m.join(" | ")+"</span>";
 else if(a.date)h+='<br><span class="popup-date">'+a.date+"</span>";h+="</div>"}})}}
 else{{h+='<div class="popup-title no-tak">'+n+'</div><div style="font-size:12px;color:#9ca3af">Brak naboru</div>'}}
@@ -902,6 +1047,24 @@ var pb=document.createElement("span");pb.className="promoted-badge";pb.textConte
 document.getElementById("l-promoted").appendChild(c);}}}});
 if(document.querySelectorAll("#l-promoted .card").length)document.getElementById("promoted-section").style.display="block";
 updateCount()}})();
+/* Countdown terminow */
+function parseTerminDates(raw){{var re=new RegExp("{js_date_re}","g"),dates=[],m;
+while((m=re.exec(raw))!==null)dates.push(new Date(parseInt(m[3]),parseInt(m[2])-1,parseInt(m[1])));
+return dates}}
+function terminDiff(raw){{var dates=parseTerminDates(raw);if(!dates.length)return null;
+var end=dates[dates.length-1],today=new Date();today.setHours(0,0,0,0);
+return Math.ceil((end-today)/86400000)}}
+function terminBadge(termin){{var diff=terminDiff(termin);if(diff===null)return'<b>'+termin+'</b>';
+var cls=diff<0?'termin-expired':diff<=3?'termin-red':diff<=7?'termin-yellow':'termin-green';
+return'<b class="'+cls+'" style="padding:1px 5px;border-radius:4px">'+termin+'</b>'}}
+(function(){{document.querySelectorAll(".termin[data-termin]").forEach(function(el){{
+var raw=el.dataset.termin;if(!raw)return;var diff=terminDiff(raw);if(diff===null)return;
+var suffix="";if(diff<0){{suffix=" (zakonczone)";el.classList.add("termin-expired")}}
+else if(diff===0){{suffix=" (ostatni dzien!)";el.classList.add("termin-red")}}
+else if(diff<=3){{suffix=" (jeszcze "+diff+" dn.)";el.classList.add("termin-red")}}
+else if(diff<=7){{suffix=" (jeszcze "+diff+" dn.)";el.classList.add("termin-yellow")}}
+else{{suffix=" (jeszcze "+diff+" dn.)";el.classList.add("termin-green")}}
+el.textContent=el.textContent+suffix}});}})();
 </script></body></html>'''
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -957,7 +1120,7 @@ def main():
 
     # Classify
     print(f"\n[4/4] Klasyfikacja AI...")
-    results = classify_all(articles, cache)
+    results, new_tak_urls = classify_all(articles, cache)
 
     # Save cache
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
@@ -971,6 +1134,10 @@ def main():
 
     # Push to CRM
     push_to_crm(results)
+
+    # Email notification
+    new_tak = [r for r in results if r.get("url") in new_tak_urls]
+    send_email_notification(new_tak)
 
     # Generate report
     count_tak, count_powiaty = generate_report(results, errors)
