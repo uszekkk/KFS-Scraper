@@ -124,9 +124,14 @@ def fetch(url):
 
 
 KFS_KEYWORDS = re.compile(
-    r"KFS|Krajow\w+ Fundusz\w* Szkoleniow|"
-    r"kszta[łl]ceni\w+ ustawiczn|"
-    r"nab[oó]r wniosk[oó]w",
+    r"KFS"
+    r"|Krajow\w+ Fundusz\w* Szkoleniow"
+    r"|fundusz\w* szkoleniow"
+    r"|kszta[łl]ceni\w+ ustawiczn\w* .{0,30}(?:środk|wnios|nab[oó]r|dofin)"
+    r"|(?:środk|wnios|nab[oó]r|dofin)\w* .{0,30}kszta[łl]ceni\w+ ustawiczn"
+    r"|dofinansow\w+ kszta[łl]ceni"
+    r"|nab[oó]r .{0,20}(?:KFS|fundusz\w* szkoleniow)"
+    r"|(?:KFS|fundusz\w* szkoleniow) .{0,20}nab[oó]r",
     re.IGNORECASE,
 )
 
