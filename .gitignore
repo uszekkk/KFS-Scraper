@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.jpg
+test_*.json
+test_*.html
+.claude/

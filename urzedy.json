@@ -1,0 +1,2361 @@
+[
+  {
+    "name": "Aleksandrów Kujawski",
+    "base_url": "https://aleksandrowkujawski.praca.gov.pl",
+    "homepage": "https://aleksandrowkujawski.praca.gov.pl/",
+    "aktualnosci_url": "https://aleksandrowkujawski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://aleksandrowkujawski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Augustow",
+    "base_url": "https://augustow.praca.gov.pl",
+    "homepage": "https://augustow.praca.gov.pl/",
+    "aktualnosci_url": "https://augustow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://augustow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bartoszyce",
+    "base_url": "https://bartoszyce.praca.gov.pl",
+    "homepage": "https://bartoszyce.praca.gov.pl/",
+    "aktualnosci_url": "https://bartoszyce.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bartoszyce.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bełchatów",
+    "base_url": "https://belchatow.praca.gov.pl",
+    "homepage": "https://belchatow.praca.gov.pl/",
+    "aktualnosci_url": "https://belchatow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://belchatow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Biała Podlaska",
+    "base_url": "https://bialapodlaska.praca.gov.pl",
+    "homepage": "https://bialapodlaska.praca.gov.pl/",
+    "aktualnosci_url": "https://bialapodlaska.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bialapodlaska.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Białobrzegi",
+    "base_url": "https://bialobrzegi.praca.gov.pl",
+    "homepage": "https://bialobrzegi.praca.gov.pl/",
+    "aktualnosci_url": "https://bialobrzegi.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bialobrzegi.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Białogard",
+    "base_url": "https://bialogard.praca.gov.pl",
+    "homepage": "https://bialogard.praca.gov.pl/",
+    "aktualnosci_url": "https://bialogard.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bialogard.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Białystok",
+    "base_url": "https://bialystok.praca.gov.pl",
+    "homepage": "https://bialystok.praca.gov.pl/",
+    "aktualnosci_url": "https://bialystok.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bialystok.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bielsk Podlaski",
+    "base_url": "https://bielskpodlaski.praca.gov.pl",
+    "homepage": "https://bielskpodlaski.praca.gov.pl/",
+    "aktualnosci_url": "https://bielskpodlaski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bielskpodlaski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bielsko-Biała",
+    "base_url": "https://bielsko-biala.praca.gov.pl",
+    "homepage": "https://bielsko-biala.praca.gov.pl/",
+    "aktualnosci_url": "https://bielsko-biala.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bielsko-biala.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Biłgoraj",
+    "base_url": "https://bilgoraj.praca.gov.pl",
+    "homepage": "https://bilgoraj.praca.gov.pl/",
+    "aktualnosci_url": "https://bilgoraj.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bilgoraj.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bochnia",
+    "base_url": "https://bochnia.praca.gov.pl",
+    "homepage": "https://bochnia.praca.gov.pl/",
+    "aktualnosci_url": "https://bochnia.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bochnia.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bolesławiec",
+    "base_url": "https://boleslawiec.praca.gov.pl",
+    "homepage": "https://boleslawiec.praca.gov.pl/",
+    "aktualnosci_url": "https://boleslawiec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://boleslawiec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Braniewo",
+    "base_url": "https://braniewo.praca.gov.pl",
+    "homepage": "https://braniewo.praca.gov.pl/",
+    "aktualnosci_url": "https://braniewo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://braniewo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Brodnica",
+    "base_url": "https://brodnica.praca.gov.pl",
+    "homepage": "https://brodnica.praca.gov.pl/",
+    "aktualnosci_url": "https://brodnica.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://brodnica.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Brzeg",
+    "base_url": "https://brzeg.praca.gov.pl",
+    "homepage": "https://brzeg.praca.gov.pl/",
+    "aktualnosci_url": "https://brzeg.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://brzeg.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Brzesko",
+    "base_url": "https://brzesko.praca.gov.pl",
+    "homepage": "https://brzesko.praca.gov.pl/",
+    "aktualnosci_url": "https://brzesko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://brzesko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Brzeziny",
+    "base_url": "https://brzeziny.praca.gov.pl",
+    "homepage": "https://brzeziny.praca.gov.pl/",
+    "aktualnosci_url": "https://brzeziny.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://brzeziny.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Brzozów",
+    "base_url": "https://brzozow.praca.gov.pl",
+    "homepage": "https://brzozow.praca.gov.pl/",
+    "aktualnosci_url": "https://brzozow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://brzozow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Busko-Zdroj",
+    "base_url": "https://busko.praca.gov.pl",
+    "homepage": "https://busko.praca.gov.pl/",
+    "aktualnosci_url": "https://busko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://busko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bydgoszcz",
+    "base_url": "https://bydgoszcz.praca.gov.pl",
+    "homepage": "https://bydgoszcz.praca.gov.pl/",
+    "aktualnosci_url": "https://bydgoszcz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bydgoszcz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bytom",
+    "base_url": "https://bytom.praca.gov.pl",
+    "homepage": "https://bytom.praca.gov.pl/",
+    "aktualnosci_url": "https://bytom.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bytom.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Bytow",
+    "base_url": "https://bytow.praca.gov.pl",
+    "homepage": "https://bytow.praca.gov.pl/",
+    "aktualnosci_url": "https://bytow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bytow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Będzinin",
+    "base_url": "https://bedzin.praca.gov.pl",
+    "homepage": "https://bedzin.praca.gov.pl/",
+    "aktualnosci_url": "https://bedzin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://bedzin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Chełm",
+    "base_url": "https://chelm.praca.gov.pl",
+    "homepage": "https://chelm.praca.gov.pl/",
+    "aktualnosci_url": "https://chelm.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://chelm.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Chełmno",
+    "base_url": "https://chelmno.praca.gov.pl",
+    "homepage": "https://chelmno.praca.gov.pl/",
+    "aktualnosci_url": "https://chelmno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://chelmno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Chodzież",
+    "base_url": "https://chodziez.praca.gov.pl",
+    "homepage": "https://chodziez.praca.gov.pl/",
+    "aktualnosci_url": "https://chodziez.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://chodziez.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Chojnice",
+    "base_url": "https://chojnice.praca.gov.pl",
+    "homepage": "https://chojnice.praca.gov.pl/",
+    "aktualnosci_url": "https://chojnice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://chojnice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Chorzow",
+    "base_url": "https://chorzow.praca.gov.pl",
+    "homepage": "https://chorzow.praca.gov.pl/",
+    "aktualnosci_url": "https://chorzow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://chorzow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Choszczno",
+    "base_url": "https://choszczno.praca.gov.pl",
+    "homepage": "https://choszczno.praca.gov.pl/",
+    "aktualnosci_url": "https://choszczno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://choszczno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Chrzanów",
+    "base_url": "https://chrzanow.praca.gov.pl",
+    "homepage": "https://chrzanow.praca.gov.pl/",
+    "aktualnosci_url": "https://chrzanow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://chrzanow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ciechanów",
+    "base_url": "https://ciechanow.praca.gov.pl",
+    "homepage": "https://ciechanow.praca.gov.pl/",
+    "aktualnosci_url": "https://ciechanow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ciechanow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Cieszyn",
+    "base_url": "https://cieszyn.praca.gov.pl",
+    "homepage": "https://cieszyn.praca.gov.pl/",
+    "aktualnosci_url": "https://cieszyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://cieszyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Czarnkow",
+    "base_url": "https://czarnkow.praca.gov.pl",
+    "homepage": "https://czarnkow.praca.gov.pl/",
+    "aktualnosci_url": "https://czarnkow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://czarnkow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Częstochowa",
+    "base_url": "https://czestochowa.praca.gov.pl",
+    "homepage": "https://czestochowa.praca.gov.pl/",
+    "aktualnosci_url": "https://czestochowa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://czestochowa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Człuchow",
+    "base_url": "https://czluchow.praca.gov.pl",
+    "homepage": "https://czluchow.praca.gov.pl/",
+    "aktualnosci_url": "https://czluchow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://czluchow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Drawsko Pomorskie",
+    "base_url": "https://drawskopomorskie.praca.gov.pl",
+    "homepage": "https://drawskopomorskie.praca.gov.pl/",
+    "aktualnosci_url": "https://drawskopomorskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://drawskopomorskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Działdowo",
+    "base_url": "https://dzialdowo.praca.gov.pl",
+    "homepage": "https://dzialdowo.praca.gov.pl/",
+    "aktualnosci_url": "https://dzialdowo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://dzialdowo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Dzierzgon",
+    "base_url": "https://sztum.praca.gov.pl",
+    "homepage": "https://sztum.praca.gov.pl/",
+    "aktualnosci_url": "https://sztum.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sztum.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Dzierżoniów",
+    "base_url": "https://dzierzoniow.praca.gov.pl",
+    "homepage": "https://dzierzoniow.praca.gov.pl/",
+    "aktualnosci_url": "https://dzierzoniow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://dzierzoniow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Dąbrowa Górnicza",
+    "base_url": "https://dabrowagornicza.praca.gov.pl",
+    "homepage": "https://dabrowagornicza.praca.gov.pl/",
+    "aktualnosci_url": "https://dabrowagornicza.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://dabrowagornicza.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Dąbrowa Tarnowska",
+    "base_url": "https://dabrowatarnowska.praca.gov.pl",
+    "homepage": "https://dabrowatarnowska.praca.gov.pl/",
+    "aktualnosci_url": "https://dabrowatarnowska.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://dabrowatarnowska.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Dębica",
+    "base_url": "https://debica.praca.gov.pl",
+    "homepage": "https://debica.praca.gov.pl/",
+    "aktualnosci_url": "https://debica.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://debica.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Elbląg",
+    "base_url": "https://elblag.praca.gov.pl",
+    "homepage": "https://elblag.praca.gov.pl/",
+    "aktualnosci_url": "https://elblag.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://elblag.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ełk",
+    "base_url": "https://elk.praca.gov.pl",
+    "homepage": "https://elk.praca.gov.pl/",
+    "aktualnosci_url": "https://elk.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://elk.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Garwolin",
+    "base_url": "https://garwolin.praca.gov.pl",
+    "homepage": "https://garwolin.praca.gov.pl/",
+    "aktualnosci_url": "https://garwolin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://garwolin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gdańsk GUP",
+    "base_url": "https://gdansk.praca.gov.pl",
+    "homepage": "https://gdansk.praca.gov.pl/",
+    "aktualnosci_url": "https://gdansk.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gdansk.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gdynia",
+    "base_url": "https://gdynia.praca.gov.pl",
+    "homepage": "https://gdynia.praca.gov.pl/",
+    "aktualnosci_url": "https://gdynia.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gdynia.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Giżycko",
+    "base_url": "https://gizycko.praca.gov.pl",
+    "homepage": "https://gizycko.praca.gov.pl/",
+    "aktualnosci_url": "https://gizycko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gizycko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gliwice",
+    "base_url": "https://gliwice.praca.gov.pl",
+    "homepage": "https://gliwice.praca.gov.pl/",
+    "aktualnosci_url": "https://gliwice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gliwice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gniezno",
+    "base_url": "https://gniezno.praca.gov.pl",
+    "homepage": "https://gniezno.praca.gov.pl/",
+    "aktualnosci_url": "https://gniezno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gniezno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Goleniow",
+    "base_url": "https://goleniow.praca.gov.pl",
+    "homepage": "https://goleniow.praca.gov.pl/",
+    "aktualnosci_url": "https://goleniow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://goleniow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Golub-Dobrzyń",
+    "base_url": "https://golub-dobrzyn.praca.gov.pl",
+    "homepage": "https://golub-dobrzyn.praca.gov.pl/",
+    "aktualnosci_url": "https://golub-dobrzyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://golub-dobrzyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gorlice",
+    "base_url": "https://gorlice.praca.gov.pl",
+    "homepage": "https://gorlice.praca.gov.pl/",
+    "aktualnosci_url": "https://gorlice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gorlice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gorzów Wielkopolski",
+    "base_url": "https://gorzow.praca.gov.pl",
+    "homepage": "https://gorzow.praca.gov.pl/",
+    "aktualnosci_url": "https://gorzow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gorzow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gostyn",
+    "base_url": "https://gostyn.praca.gov.pl",
+    "homepage": "https://gostyn.praca.gov.pl/",
+    "aktualnosci_url": "https://gostyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gostyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gostynin",
+    "base_url": "https://gostynin.praca.gov.pl",
+    "homepage": "https://gostynin.praca.gov.pl/",
+    "aktualnosci_url": "https://gostynin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gostynin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gołdap",
+    "base_url": "https://goldap.praca.gov.pl",
+    "homepage": "https://goldap.praca.gov.pl/",
+    "aktualnosci_url": "https://goldap.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://goldap.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Grajewo",
+    "base_url": "https://grajewo.praca.gov.pl",
+    "homepage": "https://grajewo.praca.gov.pl/",
+    "aktualnosci_url": "https://grajewo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://grajewo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Grodzisk Mazowiecki",
+    "base_url": "https://grodziskmazowiecki.praca.gov.pl",
+    "homepage": "https://grodziskmazowiecki.praca.gov.pl/",
+    "aktualnosci_url": "https://grodziskmazowiecki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://grodziskmazowiecki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Grodzisk Wlkp.",
+    "base_url": "https://grodziskwielkopolski.praca.gov.pl",
+    "homepage": "https://grodziskwielkopolski.praca.gov.pl/",
+    "aktualnosci_url": "https://grodziskwielkopolski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://grodziskwielkopolski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Grudziądz",
+    "base_url": "https://grudziadz.praca.gov.pl",
+    "homepage": "https://grudziadz.praca.gov.pl/",
+    "aktualnosci_url": "https://grudziadz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://grudziadz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gryfice",
+    "base_url": "https://gryfice.praca.gov.pl",
+    "homepage": "https://gryfice.praca.gov.pl/",
+    "aktualnosci_url": "https://gryfice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gryfice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Gryfino",
+    "base_url": "https://gryfino.praca.gov.pl",
+    "homepage": "https://gryfino.praca.gov.pl/",
+    "aktualnosci_url": "https://gryfino.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gryfino.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Grójec",
+    "base_url": "https://grojec.praca.gov.pl",
+    "homepage": "https://grojec.praca.gov.pl/",
+    "aktualnosci_url": "https://grojec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://grojec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Góra",
+    "base_url": "https://gora.praca.gov.pl",
+    "homepage": "https://gora.praca.gov.pl/",
+    "aktualnosci_url": "https://gora.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gora.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Głogów",
+    "base_url": "https://glogow.praca.gov.pl",
+    "homepage": "https://glogow.praca.gov.pl/",
+    "aktualnosci_url": "https://glogow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://glogow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Głubczyce",
+    "base_url": "https://glubczyce.praca.gov.pl",
+    "homepage": "https://glubczyce.praca.gov.pl/",
+    "aktualnosci_url": "https://glubczyce.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://glubczyce.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Hajnówka",
+    "base_url": "https://hajnowka.praca.gov.pl",
+    "homepage": "https://hajnowka.praca.gov.pl/",
+    "aktualnosci_url": "https://hajnowka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://hajnowka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Hrubieszów",
+    "base_url": "https://hrubieszow.praca.gov.pl",
+    "homepage": "https://hrubieszow.praca.gov.pl/",
+    "aktualnosci_url": "https://hrubieszow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://hrubieszow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Inowrocław",
+    "base_url": "https://inowroclaw.praca.gov.pl",
+    "homepage": "https://inowroclaw.praca.gov.pl/",
+    "aktualnosci_url": "https://inowroclaw.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://inowroclaw.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Iława",
+    "base_url": "https://ilawa.praca.gov.pl",
+    "homepage": "https://ilawa.praca.gov.pl/",
+    "aktualnosci_url": "https://ilawa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ilawa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Janów Lubelski",
+    "base_url": "https://janowlubelski.praca.gov.pl",
+    "homepage": "https://janowlubelski.praca.gov.pl/",
+    "aktualnosci_url": "https://janowlubelski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://janowlubelski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jarocin",
+    "base_url": "https://jarocin.praca.gov.pl",
+    "homepage": "https://jarocin.praca.gov.pl/",
+    "aktualnosci_url": "https://jarocin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jarocin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jarosław",
+    "base_url": "https://jaroslaw.praca.gov.pl",
+    "homepage": "https://jaroslaw.praca.gov.pl/",
+    "aktualnosci_url": "https://jaroslaw.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jaroslaw.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jastrzębie Zdrój",
+    "base_url": "https://jastrzebiezdroj.praca.gov.pl",
+    "homepage": "https://jastrzebiezdroj.praca.gov.pl/",
+    "aktualnosci_url": "https://jastrzebiezdroj.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jastrzebiezdroj.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jasło",
+    "base_url": "https://jaslo.praca.gov.pl",
+    "homepage": "https://jaslo.praca.gov.pl/",
+    "aktualnosci_url": "https://jaslo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jaslo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jawor",
+    "base_url": "https://jawor.praca.gov.pl",
+    "homepage": "https://jawor.praca.gov.pl/",
+    "aktualnosci_url": "https://jawor.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jawor.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jaworzno",
+    "base_url": "https://jaworzno.praca.gov.pl",
+    "homepage": "https://jaworzno.praca.gov.pl/",
+    "aktualnosci_url": "https://jaworzno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jaworzno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jelenia Góra",
+    "base_url": "https://jeleniagora.praca.gov.pl",
+    "homepage": "https://jeleniagora.praca.gov.pl/",
+    "aktualnosci_url": "https://jeleniagora.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jeleniagora.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Jędrzejow",
+    "base_url": "https://jedrzejow.praca.gov.pl",
+    "homepage": "https://jedrzejow.praca.gov.pl/",
+    "aktualnosci_url": "https://jedrzejow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://jedrzejow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kalisz",
+    "base_url": "https://kalisz.praca.gov.pl",
+    "homepage": "https://kalisz.praca.gov.pl/",
+    "aktualnosci_url": "https://kalisz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kalisz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kamienna Góra",
+    "base_url": "https://kamiennagora.praca.gov.pl",
+    "homepage": "https://kamiennagora.praca.gov.pl/",
+    "aktualnosci_url": "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kamiennagora.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kamień Pomorski",
+    "base_url": "https://kamienpomorski.praca.gov.pl",
+    "homepage": "https://kamienpomorski.praca.gov.pl/",
+    "aktualnosci_url": "https://kamienpomorski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kamienpomorski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kartuzy",
+    "base_url": "https://kartuzy.praca.gov.pl",
+    "homepage": "https://kartuzy.praca.gov.pl/",
+    "aktualnosci_url": "https://kartuzy.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kartuzy.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Katowice",
+    "base_url": "https://katowice.praca.gov.pl",
+    "homepage": "https://katowice.praca.gov.pl/",
+    "aktualnosci_url": "https://katowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://katowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kazimierza Wielka",
+    "base_url": "https://kazimierzawielka.praca.gov.pl",
+    "homepage": "https://kazimierzawielka.praca.gov.pl/",
+    "aktualnosci_url": "https://kazimierzawielka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kazimierzawielka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kielce MUP",
+    "base_url": "https://mupkielce.praca.gov.pl",
+    "homepage": "https://mupkielce.praca.gov.pl/",
+    "aktualnosci_url": "https://mupkielce.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mupkielce.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kielce PUP",
+    "base_url": "https://kielce.praca.gov.pl",
+    "homepage": "https://kielce.praca.gov.pl/",
+    "aktualnosci_url": "https://kielce.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kielce.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kluczbork",
+    "base_url": "https://kluczbork.praca.gov.pl",
+    "homepage": "https://kluczbork.praca.gov.pl/",
+    "aktualnosci_url": "https://kluczbork.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kluczbork.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kolbuszowa",
+    "base_url": "https://kolbuszowa.praca.gov.pl",
+    "homepage": "https://kolbuszowa.praca.gov.pl/",
+    "aktualnosci_url": "https://kolbuszowa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kolbuszowa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kolno",
+    "base_url": "https://kolno.praca.gov.pl",
+    "homepage": "https://kolno.praca.gov.pl/",
+    "aktualnosci_url": "https://kolno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kolno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Konin",
+    "base_url": "https://konin.praca.gov.pl",
+    "homepage": "https://konin.praca.gov.pl/",
+    "aktualnosci_url": "https://konin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://konin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Koszalin",
+    "base_url": "https://koszalin.praca.gov.pl",
+    "homepage": "https://koszalin.praca.gov.pl/",
+    "aktualnosci_url": "https://koszalin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://koszalin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kozienice",
+    "base_url": "https://kozienice.praca.gov.pl",
+    "homepage": "https://kozienice.praca.gov.pl/",
+    "aktualnosci_url": "https://kozienice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kozienice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Koło",
+    "base_url": "https://kolo.praca.gov.pl",
+    "homepage": "https://kolo.praca.gov.pl/",
+    "aktualnosci_url": "https://kolo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kolo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kołobrzeg",
+    "base_url": "https://kolobrzeg.praca.gov.pl",
+    "homepage": "https://kolobrzeg.praca.gov.pl/",
+    "aktualnosci_url": "https://kolobrzeg.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kolobrzeg.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Końskie",
+    "base_url": "https://konskie.praca.gov.pl",
+    "homepage": "https://konskie.praca.gov.pl/",
+    "aktualnosci_url": "https://konskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://konskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kościan",
+    "base_url": "https://koscian.praca.gov.pl",
+    "homepage": "https://koscian.praca.gov.pl/",
+    "aktualnosci_url": "https://koscian.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://koscian.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kościerzyna",
+    "base_url": "https://koscierzyna.praca.gov.pl",
+    "homepage": "https://koscierzyna.praca.gov.pl/",
+    "aktualnosci_url": "https://koscierzyna.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://koscierzyna.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kraków GUP",
+    "base_url": "https://gupkrakow.praca.gov.pl",
+    "homepage": "https://gupkrakow.praca.gov.pl/",
+    "aktualnosci_url": "https://gupkrakow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://gupkrakow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kraków PUP",
+    "base_url": "https://uppkrakow.praca.gov.pl",
+    "homepage": "https://uppkrakow.praca.gov.pl/",
+    "aktualnosci_url": "https://uppkrakow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://uppkrakow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Krapkowice",
+    "base_url": "https://krapkowice.praca.gov.pl",
+    "homepage": "https://krapkowice.praca.gov.pl/",
+    "aktualnosci_url": "https://krapkowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://krapkowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Krasnystaw",
+    "base_url": "https://krasnystaw.praca.gov.pl",
+    "homepage": "https://krasnystaw.praca.gov.pl/",
+    "aktualnosci_url": "https://krasnystaw.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://krasnystaw.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kraśnik",
+    "base_url": "https://krasnik.praca.gov.pl",
+    "homepage": "https://krasnik.praca.gov.pl/",
+    "aktualnosci_url": "https://krasnik.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://krasnik.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Krosno",
+    "base_url": "https://krosno.praca.gov.pl",
+    "homepage": "https://krosno.praca.gov.pl/",
+    "aktualnosci_url": "https://krosno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://krosno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Krosno Odrzańskie",
+    "base_url": "https://krosnoodrzanskie.praca.gov.pl",
+    "homepage": "https://krosnoodrzanskie.praca.gov.pl/",
+    "aktualnosci_url": "https://krosnoodrzanskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://krosnoodrzanskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Krotoszyn",
+    "base_url": "https://krotoszyn.praca.gov.pl",
+    "homepage": "https://krotoszyn.praca.gov.pl/",
+    "aktualnosci_url": "https://krotoszyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://krotoszyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kutno",
+    "base_url": "https://kutno.praca.gov.pl",
+    "homepage": "https://kutno.praca.gov.pl/",
+    "aktualnosci_url": "https://kutno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kutno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kwidzyn",
+    "base_url": "https://kwidzyn.praca.gov.pl",
+    "homepage": "https://kwidzyn.praca.gov.pl/",
+    "aktualnosci_url": "https://kwidzyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kwidzyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kędzierzyn-Koźle",
+    "base_url": "https://kedzierzyn-kozle.praca.gov.pl",
+    "homepage": "https://kedzierzyn-kozle.praca.gov.pl/",
+    "aktualnosci_url": "https://kedzierzyn-kozle.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kedzierzyn-kozle.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kępno",
+    "base_url": "https://kepno.praca.gov.pl",
+    "homepage": "https://kepno.praca.gov.pl/",
+    "aktualnosci_url": "https://kepno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://kepno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kętrzyn",
+    "base_url": "https://ketrzyn.praca.gov.pl",
+    "homepage": "https://ketrzyn.praca.gov.pl/",
+    "aktualnosci_url": "https://ketrzyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ketrzyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kłobuck",
+    "base_url": "https://klobuck.praca.gov.pl",
+    "homepage": "https://klobuck.praca.gov.pl/",
+    "aktualnosci_url": "https://klobuck.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://klobuck.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Kłodzko",
+    "base_url": "https://klodzko.praca.gov.pl",
+    "homepage": "https://klodzko.praca.gov.pl/",
+    "aktualnosci_url": "https://klodzko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://klodzko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Legionów",
+    "base_url": "https://legionowo.praca.gov.pl",
+    "homepage": "https://legionowo.praca.gov.pl/",
+    "aktualnosci_url": "https://legionowo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://legionowo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Legnica",
+    "base_url": "https://legnica.praca.gov.pl",
+    "homepage": "https://legnica.praca.gov.pl/",
+    "aktualnosci_url": "https://legnica.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://legnica.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lesko",
+    "base_url": "https://lesko.praca.gov.pl",
+    "homepage": "https://lesko.praca.gov.pl/",
+    "aktualnosci_url": "https://lesko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lesko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Leszno",
+    "base_url": "https://leszno.praca.gov.pl",
+    "homepage": "https://leszno.praca.gov.pl/",
+    "aktualnosci_url": "https://leszno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://leszno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Leżajsk",
+    "base_url": "https://lezajsk.praca.gov.pl",
+    "homepage": "https://lezajsk.praca.gov.pl/",
+    "aktualnosci_url": "https://lezajsk.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lezajsk.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lidzbark Warmiński",
+    "base_url": "https://lidzbarkwarminski.praca.gov.pl",
+    "homepage": "https://lidzbarkwarminski.praca.gov.pl/",
+    "aktualnosci_url": "https://lidzbarkwarminski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lidzbarkwarminski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Limanowa",
+    "base_url": "https://limanowa.praca.gov.pl",
+    "homepage": "https://limanowa.praca.gov.pl/",
+    "aktualnosci_url": "https://limanowa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://limanowa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lipno",
+    "base_url": "https://lipno.praca.gov.pl",
+    "homepage": "https://lipno.praca.gov.pl/",
+    "aktualnosci_url": "https://lipno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lipno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lipsk",
+    "base_url": "https://lipsko.praca.gov.pl",
+    "homepage": "https://lipsko.praca.gov.pl/",
+    "aktualnosci_url": "https://lipsko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lipsko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lubaczów",
+    "base_url": "https://lubaczow.praca.gov.pl",
+    "homepage": "https://lubaczow.praca.gov.pl/",
+    "aktualnosci_url": "https://lubaczow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lubaczow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lubartów",
+    "base_url": "https://lubartow.praca.gov.pl",
+    "homepage": "https://lubartow.praca.gov.pl/",
+    "aktualnosci_url": "https://lubartow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lubartow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lubań",
+    "base_url": "https://luban.praca.gov.pl",
+    "homepage": "https://luban.praca.gov.pl/",
+    "aktualnosci_url": "https://luban.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://luban.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lubin",
+    "base_url": "https://lubin.praca.gov.pl",
+    "homepage": "https://lubin.praca.gov.pl/",
+    "aktualnosci_url": "https://lubin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lubin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lublin MUP",
+    "base_url": "https://muplublin.praca.gov.pl",
+    "homepage": "https://muplublin.praca.gov.pl/",
+    "aktualnosci_url": "https://muplublin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://muplublin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lublin PUP",
+    "base_url": "https://lublin.praca.gov.pl",
+    "homepage": "https://lublin.praca.gov.pl/",
+    "aktualnosci_url": "https://lublin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lublin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lubliniec",
+    "base_url": "https://lubliniec.praca.gov.pl",
+    "homepage": "https://lubliniec.praca.gov.pl/",
+    "aktualnosci_url": "https://lubliniec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lubliniec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lwówek Śląski",
+    "base_url": "https://lwowekslaski.praca.gov.pl",
+    "homepage": "https://lwowekslaski.praca.gov.pl/",
+    "aktualnosci_url": "https://lwowekslaski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lwowekslaski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Lębork",
+    "base_url": "https://lebork.praca.gov.pl",
+    "homepage": "https://lebork.praca.gov.pl/",
+    "aktualnosci_url": "https://lebork.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lebork.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "MUP Toruń",
+    "base_url": "https://muptorun.praca.gov.pl",
+    "homepage": "https://muptorun.praca.gov.pl/",
+    "aktualnosci_url": "https://muptorun.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://muptorun.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Maków Mazowiecki",
+    "base_url": "https://makowmazowiecki.praca.gov.pl",
+    "homepage": "https://makowmazowiecki.praca.gov.pl/",
+    "aktualnosci_url": "https://makowmazowiecki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://makowmazowiecki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Malbork",
+    "base_url": "https://malbork.praca.gov.pl",
+    "homepage": "https://malbork.praca.gov.pl/",
+    "aktualnosci_url": "https://malbork.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://malbork.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Miechów",
+    "base_url": "https://miechow.praca.gov.pl",
+    "homepage": "https://miechow.praca.gov.pl/",
+    "aktualnosci_url": "https://miechow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://miechow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mielec",
+    "base_url": "https://mielec.praca.gov.pl",
+    "homepage": "https://mielec.praca.gov.pl/",
+    "aktualnosci_url": "https://mielec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mielec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mikołow",
+    "base_url": "https://mikolow.praca.gov.pl",
+    "homepage": "https://mikolow.praca.gov.pl/",
+    "aktualnosci_url": "https://mikolow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mikolow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Milicz",
+    "base_url": "https://milicz.praca.gov.pl",
+    "homepage": "https://milicz.praca.gov.pl/",
+    "aktualnosci_url": "https://milicz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://milicz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Międzychód",
+    "base_url": "https://miedzychod.praca.gov.pl",
+    "homepage": "https://miedzychod.praca.gov.pl/",
+    "aktualnosci_url": "https://miedzychod.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://miedzychod.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Międzyrzecz",
+    "base_url": "https://miedzyrzecz.praca.gov.pl",
+    "homepage": "https://miedzyrzecz.praca.gov.pl/",
+    "aktualnosci_url": "https://miedzyrzecz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://miedzyrzecz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mińsk Mazowiecki",
+    "base_url": "https://minskmazowiecki.praca.gov.pl",
+    "homepage": "https://minskmazowiecki.praca.gov.pl/",
+    "aktualnosci_url": "https://minskmazowiecki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://minskmazowiecki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mogilno",
+    "base_url": "https://mogilno.praca.gov.pl",
+    "homepage": "https://mogilno.praca.gov.pl/",
+    "aktualnosci_url": "https://mogilno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mogilno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mońki",
+    "base_url": "https://monki.praca.gov.pl",
+    "homepage": "https://monki.praca.gov.pl/",
+    "aktualnosci_url": "https://monki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://monki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mrągowo",
+    "base_url": "https://mragowo.praca.gov.pl",
+    "homepage": "https://mragowo.praca.gov.pl/",
+    "aktualnosci_url": "https://mragowo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mragowo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Myszkow",
+    "base_url": "https://myszkow.praca.gov.pl",
+    "homepage": "https://myszkow.praca.gov.pl/",
+    "aktualnosci_url": "https://myszkow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://myszkow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mysłowice",
+    "base_url": "https://myslowice.praca.gov.pl",
+    "homepage": "https://myslowice.praca.gov.pl/",
+    "aktualnosci_url": "https://myslowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://myslowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Myślenice",
+    "base_url": "https://myslenice.praca.gov.pl",
+    "homepage": "https://myslenice.praca.gov.pl/",
+    "aktualnosci_url": "https://myslenice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://myslenice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Myślibórz",
+    "base_url": "https://mysliborz.praca.gov.pl",
+    "homepage": "https://mysliborz.praca.gov.pl/",
+    "aktualnosci_url": "https://mysliborz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mysliborz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Mława",
+    "base_url": "https://mlawa.praca.gov.pl",
+    "homepage": "https://mlawa.praca.gov.pl/",
+    "aktualnosci_url": "https://mlawa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mlawa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nakło nad Notecią",
+    "base_url": "https://naklo.praca.gov.pl",
+    "homepage": "https://naklo.praca.gov.pl/",
+    "aktualnosci_url": "https://naklo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://naklo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Namysłów",
+    "base_url": "https://namyslow.praca.gov.pl",
+    "homepage": "https://namyslow.praca.gov.pl/",
+    "aktualnosci_url": "https://namyslow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://namyslow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nidzica",
+    "base_url": "https://nidzica.praca.gov.pl",
+    "homepage": "https://nidzica.praca.gov.pl/",
+    "aktualnosci_url": "https://nidzica.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nidzica.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nisko",
+    "base_url": "https://nisko.praca.gov.pl",
+    "homepage": "https://nisko.praca.gov.pl/",
+    "aktualnosci_url": "https://nisko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nisko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowa Sól",
+    "base_url": "https://nowasol.praca.gov.pl",
+    "homepage": "https://nowasol.praca.gov.pl/",
+    "aktualnosci_url": "https://nowasol.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nowasol.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowe Miasto Lubawskie",
+    "base_url": "https://nowemiastolubawskie.praca.gov.pl",
+    "homepage": "https://nowemiastolubawskie.praca.gov.pl/",
+    "aktualnosci_url": "https://nowemiastolubawskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nowemiastolubawskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowy Dwór Gdański",
+    "base_url": "https://nowydworgdanski.praca.gov.pl",
+    "homepage": "https://nowydworgdanski.praca.gov.pl/",
+    "aktualnosci_url": "https://nowydworgdanski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nowydworgdanski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowy Dwór Mazowiecki",
+    "base_url": "https://ndm.praca.gov.pl",
+    "homepage": "https://ndm.praca.gov.pl/",
+    "aktualnosci_url": "https://ndm.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ndm.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowy Sącz PUP",
+    "base_url": "https://nowysacz.praca.gov.pl",
+    "homepage": "https://nowysacz.praca.gov.pl/",
+    "aktualnosci_url": "https://nowysacz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nowysacz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowy Sącz SUP",
+    "base_url": "https://supnowysacz.praca.gov.pl",
+    "homepage": "https://supnowysacz.praca.gov.pl/",
+    "aktualnosci_url": "https://supnowysacz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://supnowysacz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowy Targ",
+    "base_url": "https://nowytarg.praca.gov.pl",
+    "homepage": "https://nowytarg.praca.gov.pl/",
+    "aktualnosci_url": "https://nowytarg.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nowytarg.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nowy Tomyśl",
+    "base_url": "https://nowytomysl.praca.gov.pl",
+    "homepage": "https://nowytomysl.praca.gov.pl/",
+    "aktualnosci_url": "https://nowytomysl.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nowytomysl.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Nysa",
+    "base_url": "https://nysa.praca.gov.pl",
+    "homepage": "https://nysa.praca.gov.pl/",
+    "aktualnosci_url": "https://nysa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://nysa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Oborniki",
+    "base_url": "https://oborniki.praca.gov.pl",
+    "homepage": "https://oborniki.praca.gov.pl/",
+    "aktualnosci_url": "https://oborniki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://oborniki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Olecko",
+    "base_url": "https://olecko.praca.gov.pl",
+    "homepage": "https://olecko.praca.gov.pl/",
+    "aktualnosci_url": "https://olecko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://olecko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Olesno",
+    "base_url": "https://olesno.praca.gov.pl",
+    "homepage": "https://olesno.praca.gov.pl/",
+    "aktualnosci_url": "https://olesno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://olesno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Oleśnica",
+    "base_url": "https://olesnica.praca.gov.pl",
+    "homepage": "https://olesnica.praca.gov.pl/",
+    "aktualnosci_url": "https://olesnica.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://olesnica.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Olkusz",
+    "base_url": "https://olkusz.praca.gov.pl",
+    "homepage": "https://olkusz.praca.gov.pl/",
+    "aktualnosci_url": "https://olkusz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://olkusz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Olsztyn MUP",
+    "base_url": "https://mupolsztyn.praca.gov.pl",
+    "homepage": "https://mupolsztyn.praca.gov.pl/",
+    "aktualnosci_url": "https://mupolsztyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mupolsztyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Olsztyn PUP",
+    "base_url": "https://uppolsztyn.praca.gov.pl",
+    "homepage": "https://uppolsztyn.praca.gov.pl/",
+    "aktualnosci_url": "https://uppolsztyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://uppolsztyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Opoczno",
+    "base_url": "https://opoczno.praca.gov.pl",
+    "homepage": "https://opoczno.praca.gov.pl/",
+    "aktualnosci_url": "https://opoczno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://opoczno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Opole",
+    "base_url": "https://opole.praca.gov.pl",
+    "homepage": "https://opole.praca.gov.pl/",
+    "aktualnosci_url": "https://opole.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://opole.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Opole Lubelskie",
+    "base_url": "https://opolelubelskie.praca.gov.pl",
+    "homepage": "https://opolelubelskie.praca.gov.pl/",
+    "aktualnosci_url": "https://opolelubelskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://opolelubelskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ostrowiec Świętokrzyski",
+    "base_url": "https://ostrowiec.praca.gov.pl",
+    "homepage": "https://ostrowiec.praca.gov.pl/",
+    "aktualnosci_url": "https://ostrowiec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ostrowiec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ostrołęka",
+    "base_url": "https://ostroleka.praca.gov.pl",
+    "homepage": "https://ostroleka.praca.gov.pl/",
+    "aktualnosci_url": "https://ostroleka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ostroleka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ostrzeszow",
+    "base_url": "https://ostrzeszow.praca.gov.pl",
+    "homepage": "https://ostrzeszow.praca.gov.pl/",
+    "aktualnosci_url": "https://ostrzeszow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ostrzeszow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ostróda",
+    "base_url": "https://ostroda.praca.gov.pl",
+    "homepage": "https://ostroda.praca.gov.pl/",
+    "aktualnosci_url": "https://ostroda.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ostroda.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ostrów Mazowiecka",
+    "base_url": "https://ostrowmazowiecka.praca.gov.pl",
+    "homepage": "https://ostrowmazowiecka.praca.gov.pl/",
+    "aktualnosci_url": "https://ostrowmazowiecka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ostrowmazowiecka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ostrów Wlkp.",
+    "base_url": "https://ostrowwielkopolski.praca.gov.pl",
+    "homepage": "https://ostrowwielkopolski.praca.gov.pl/",
+    "aktualnosci_url": "https://ostrowwielkopolski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ostrowwielkopolski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Otwock",
+    "base_url": "https://otwock.praca.gov.pl",
+    "homepage": "https://otwock.praca.gov.pl/",
+    "aktualnosci_url": "https://otwock.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://otwock.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Oława",
+    "base_url": "https://olawa.praca.gov.pl",
+    "homepage": "https://olawa.praca.gov.pl/",
+    "aktualnosci_url": "https://olawa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://olawa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Oświęcim",
+    "base_url": "https://oswiecim.praca.gov.pl",
+    "homepage": "https://oswiecim.praca.gov.pl/",
+    "aktualnosci_url": "https://oswiecim.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://oswiecim.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "PUP Toruń",
+    "base_url": "https://torun.praca.gov.pl",
+    "homepage": "https://torun.praca.gov.pl/",
+    "aktualnosci_url": "https://torun.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://torun.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pabianice",
+    "base_url": "https://pabianice.praca.gov.pl",
+    "homepage": "https://pabianice.praca.gov.pl/",
+    "aktualnosci_url": "https://pabianice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pabianice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pajęczno",
+    "base_url": "https://pajeczno.praca.gov.pl",
+    "homepage": "https://pajeczno.praca.gov.pl/",
+    "aktualnosci_url": "https://pajeczno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pajeczno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Parczew",
+    "base_url": "https://parczew.praca.gov.pl",
+    "homepage": "https://parczew.praca.gov.pl/",
+    "aktualnosci_url": "https://parczew.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://parczew.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Piaseczno",
+    "base_url": "https://piaseczno.praca.gov.pl",
+    "homepage": "https://piaseczno.praca.gov.pl/",
+    "aktualnosci_url": "https://piaseczno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://piaseczno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Piekary Śląskie",
+    "base_url": "https://piekaryslaskie.praca.gov.pl",
+    "homepage": "https://piekaryslaskie.praca.gov.pl/",
+    "aktualnosci_url": "https://piekaryslaskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://piekaryslaskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Piotrków Trybunalski",
+    "base_url": "https://piotrkowtrybunalski.praca.gov.pl",
+    "homepage": "https://piotrkowtrybunalski.praca.gov.pl/",
+    "aktualnosci_url": "https://piotrkowtrybunalski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://piotrkowtrybunalski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pisz",
+    "base_url": "https://pisz.praca.gov.pl",
+    "homepage": "https://pisz.praca.gov.pl/",
+    "aktualnosci_url": "https://pisz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pisz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Piła",
+    "base_url": "https://pila.praca.gov.pl",
+    "homepage": "https://pila.praca.gov.pl/",
+    "aktualnosci_url": "https://pila.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pila.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pińczow",
+    "base_url": "https://pinczow.praca.gov.pl",
+    "homepage": "https://pinczow.praca.gov.pl/",
+    "aktualnosci_url": "https://pinczow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pinczow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pleszew",
+    "base_url": "https://pleszew.praca.gov.pl",
+    "homepage": "https://pleszew.praca.gov.pl/",
+    "aktualnosci_url": "https://pleszew.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pleszew.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Poddębice",
+    "base_url": "https://poddebice.praca.gov.pl",
+    "homepage": "https://poddebice.praca.gov.pl/",
+    "aktualnosci_url": "https://poddebice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://poddebice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Police",
+    "base_url": "https://police.praca.gov.pl",
+    "homepage": "https://police.praca.gov.pl/",
+    "aktualnosci_url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://police.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Polkowice",
+    "base_url": "https://polkowice.praca.gov.pl",
+    "homepage": "https://polkowice.praca.gov.pl/",
+    "aktualnosci_url": "https://polkowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://polkowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Poznan",
+    "base_url": "https://poznan.praca.gov.pl",
+    "homepage": "https://poznan.praca.gov.pl/",
+    "aktualnosci_url": "https://poznan.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://poznan.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Proszowice",
+    "base_url": "https://proszowice.praca.gov.pl",
+    "homepage": "https://proszowice.praca.gov.pl/",
+    "aktualnosci_url": "https://proszowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://proszowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pruszków",
+    "base_url": "https://pruszkow.praca.gov.pl",
+    "homepage": "https://pruszkow.praca.gov.pl/",
+    "aktualnosci_url": "https://pruszkow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pruszkow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Przasnysz",
+    "base_url": "https://przasnysz.praca.gov.pl",
+    "homepage": "https://przasnysz.praca.gov.pl/",
+    "aktualnosci_url": "https://przasnysz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://przasnysz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Przemyśl",
+    "base_url": "https://przemysl.praca.gov.pl",
+    "homepage": "https://przemysl.praca.gov.pl/",
+    "aktualnosci_url": "https://przemysl.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://przemysl.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Przeworsk",
+    "base_url": "https://przeworsk.praca.gov.pl",
+    "homepage": "https://przeworsk.praca.gov.pl/",
+    "aktualnosci_url": "https://przeworsk.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://przeworsk.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Przysucha",
+    "base_url": "https://przysucha.praca.gov.pl",
+    "homepage": "https://przysucha.praca.gov.pl/",
+    "aktualnosci_url": "https://przysucha.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://przysucha.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pszczyna",
+    "base_url": "https://pszczyna.praca.gov.pl",
+    "homepage": "https://pszczyna.praca.gov.pl/",
+    "aktualnosci_url": "https://pszczyna.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pszczyna.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Puck",
+    "base_url": "https://puck.praca.gov.pl",
+    "homepage": "https://puck.praca.gov.pl/",
+    "aktualnosci_url": "https://puck.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://puck.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Puławy",
+    "base_url": "https://pulawy.praca.gov.pl",
+    "homepage": "https://pulawy.praca.gov.pl/",
+    "aktualnosci_url": "https://pulawy.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pulawy.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pułtusk",
+    "base_url": "https://pultusk.praca.gov.pl",
+    "homepage": "https://pultusk.praca.gov.pl/",
+    "aktualnosci_url": "https://pultusk.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pultusk.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Pyrzyce",
+    "base_url": "https://pyrzyce.praca.gov.pl",
+    "homepage": "https://pyrzyce.praca.gov.pl/",
+    "aktualnosci_url": "https://pyrzyce.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://pyrzyce.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Płock MUP",
+    "base_url": "https://mupplock.praca.gov.pl",
+    "homepage": "https://mupplock.praca.gov.pl/",
+    "aktualnosci_url": "https://mupplock.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://mupplock.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Płock PUP",
+    "base_url": "https://plock.praca.gov.pl",
+    "homepage": "https://plock.praca.gov.pl/",
+    "aktualnosci_url": "https://plock.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://plock.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Płońsk",
+    "base_url": "https://plonsk.praca.gov.pl",
+    "homepage": "https://plonsk.praca.gov.pl/",
+    "aktualnosci_url": "https://plonsk.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://plonsk.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Raciborz",
+    "base_url": "https://raciborz.praca.gov.pl",
+    "homepage": "https://raciborz.praca.gov.pl/",
+    "aktualnosci_url": "https://raciborz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://raciborz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Radom",
+    "base_url": "https://radom.praca.gov.pl",
+    "homepage": "https://radom.praca.gov.pl/",
+    "aktualnosci_url": "https://radom.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://radom.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Radomso",
+    "base_url": "https://radomsko.praca.gov.pl",
+    "homepage": "https://radomsko.praca.gov.pl/",
+    "aktualnosci_url": "https://radomsko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://radomsko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Radziejów",
+    "base_url": "https://radziejow.praca.gov.pl",
+    "homepage": "https://radziejow.praca.gov.pl/",
+    "aktualnosci_url": "https://radziejow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://radziejow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Radzyń Podlaski",
+    "base_url": "https://radzynpodlaski.praca.gov.pl",
+    "homepage": "https://radzynpodlaski.praca.gov.pl/",
+    "aktualnosci_url": "https://radzynpodlaski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://radzynpodlaski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Rawa Mazowiecka",
+    "base_url": "https://rawamazowiecka.praca.gov.pl",
+    "homepage": "https://rawamazowiecka.praca.gov.pl/",
+    "aktualnosci_url": "https://rawamazowiecka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://rawamazowiecka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Rawicz",
+    "base_url": "https://rawicz.praca.gov.pl",
+    "homepage": "https://rawicz.praca.gov.pl/",
+    "aktualnosci_url": "https://rawicz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://rawicz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ropczyce",
+    "base_url": "https://ropczyce.praca.gov.pl",
+    "homepage": "https://ropczyce.praca.gov.pl/",
+    "aktualnosci_url": "https://ropczyce.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ropczyce.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ruda Śląska",
+    "base_url": "https://rudaslaska.praca.gov.pl",
+    "homepage": "https://rudaslaska.praca.gov.pl/",
+    "aktualnosci_url": "https://rudaslaska.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://rudaslaska.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Rybnik",
+    "base_url": "https://rybnik.praca.gov.pl",
+    "homepage": "https://rybnik.praca.gov.pl/",
+    "aktualnosci_url": "https://rybnik.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://rybnik.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ryki",
+    "base_url": "https://ryki.praca.gov.pl",
+    "homepage": "https://ryki.praca.gov.pl/",
+    "aktualnosci_url": "https://ryki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ryki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Rypin",
+    "base_url": "https://rypin.praca.gov.pl",
+    "homepage": "https://rypin.praca.gov.pl/",
+    "aktualnosci_url": "https://rypin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://rypin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Rzeszów",
+    "base_url": "https://rzeszow.praca.gov.pl",
+    "homepage": "https://rzeszow.praca.gov.pl/",
+    "aktualnosci_url": "https://rzeszow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://rzeszow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sandomierz",
+    "base_url": "https://sandomierz.praca.gov.pl",
+    "homepage": "https://sandomierz.praca.gov.pl/",
+    "aktualnosci_url": "https://sandomierz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sandomierz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sanok",
+    "base_url": "https://sanok.praca.gov.pl",
+    "homepage": "https://sanok.praca.gov.pl/",
+    "aktualnosci_url": "https://sanok.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sanok.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sejny",
+    "base_url": "https://sejny.praca.gov.pl",
+    "homepage": "https://sejny.praca.gov.pl/",
+    "aktualnosci_url": "https://sejny.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sejny.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Siedlce",
+    "base_url": "https://siedlce.praca.gov.pl",
+    "homepage": "https://siedlce.praca.gov.pl/",
+    "aktualnosci_url": "https://siedlce.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://siedlce.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Siemianowice Śląskie",
+    "base_url": "https://siemianowiceslaskie.praca.gov.pl",
+    "homepage": "https://siemianowiceslaskie.praca.gov.pl/",
+    "aktualnosci_url": "https://siemianowiceslaskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://siemianowiceslaskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Siemiatycze",
+    "base_url": "https://siemiatycze.praca.gov.pl",
+    "homepage": "https://siemiatycze.praca.gov.pl/",
+    "aktualnosci_url": "https://siemiatycze.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://siemiatycze.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sieradz",
+    "base_url": "https://sieradz.praca.gov.pl",
+    "homepage": "https://sieradz.praca.gov.pl/",
+    "aktualnosci_url": "https://sieradz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sieradz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sierpc",
+    "base_url": "https://sierpc.praca.gov.pl",
+    "homepage": "https://sierpc.praca.gov.pl/",
+    "aktualnosci_url": "https://sierpc.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sierpc.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Skarżysko Kamienna",
+    "base_url": "https://skarzysko.praca.gov.pl",
+    "homepage": "https://skarzysko.praca.gov.pl/",
+    "aktualnosci_url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://skarzysko.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Skierniewice",
+    "base_url": "https://skierniewice.praca.gov.pl",
+    "homepage": "https://skierniewice.praca.gov.pl/",
+    "aktualnosci_url": "https://skierniewice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://skierniewice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sochaczew",
+    "base_url": "https://sochaczew.praca.gov.pl",
+    "homepage": "https://sochaczew.praca.gov.pl/",
+    "aktualnosci_url": "https://sochaczew.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sochaczew.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sokołów Podlaski",
+    "base_url": "https://sokolowpodlaski.praca.gov.pl",
+    "homepage": "https://sokolowpodlaski.praca.gov.pl/",
+    "aktualnosci_url": "https://sokolowpodlaski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sokolowpodlaski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sokółka",
+    "base_url": "https://sokolka.praca.gov.pl",
+    "homepage": "https://sokolka.praca.gov.pl/",
+    "aktualnosci_url": "https://sokolka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sokolka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sosnowiec",
+    "base_url": "https://sosnowiec.praca.gov.pl",
+    "homepage": "https://sosnowiec.praca.gov.pl/",
+    "aktualnosci_url": "https://sosnowiec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sosnowiec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Stalowa Wola",
+    "base_url": "https://stalowawola.praca.gov.pl",
+    "homepage": "https://stalowawola.praca.gov.pl/",
+    "aktualnosci_url": "https://stalowawola.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://stalowawola.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Starachowice",
+    "base_url": "https://starachowice.praca.gov.pl",
+    "homepage": "https://starachowice.praca.gov.pl/",
+    "aktualnosci_url": "https://starachowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://starachowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Stargard Szczeciński",
+    "base_url": "https://stargard.praca.gov.pl",
+    "homepage": "https://stargard.praca.gov.pl/",
+    "aktualnosci_url": "https://stargard.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://stargard.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Starogard Gdański",
+    "base_url": "https://starogardgdanski.praca.gov.pl",
+    "homepage": "https://starogardgdanski.praca.gov.pl/",
+    "aktualnosci_url": "https://starogardgdanski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://starogardgdanski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Staszow",
+    "base_url": "https://staszow.praca.gov.pl",
+    "homepage": "https://staszow.praca.gov.pl/",
+    "aktualnosci_url": "https://staszow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://staszow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Strzelce Krajeńskie",
+    "base_url": "https://strzelcekrajenskie.praca.gov.pl",
+    "homepage": "https://strzelcekrajenskie.praca.gov.pl/",
+    "aktualnosci_url": "https://strzelcekrajenskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://strzelcekrajenskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Strzelce Opolskie",
+    "base_url": "https://strzelceopolskie.praca.gov.pl",
+    "homepage": "https://strzelceopolskie.praca.gov.pl/",
+    "aktualnosci_url": "https://strzelceopolskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://strzelceopolskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Strzelin",
+    "base_url": "https://strzelin.praca.gov.pl",
+    "homepage": "https://strzelin.praca.gov.pl/",
+    "aktualnosci_url": "https://strzelin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://strzelin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Strzyżow",
+    "base_url": "https://strzyzow.praca.gov.pl",
+    "homepage": "https://strzyzow.praca.gov.pl/",
+    "aktualnosci_url": "https://strzyzow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://strzyzow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sucha Beskidzka",
+    "base_url": "https://suchabeskidzka.praca.gov.pl",
+    "homepage": "https://suchabeskidzka.praca.gov.pl/",
+    "aktualnosci_url": "https://suchabeskidzka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://suchabeskidzka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sulęcin",
+    "base_url": "https://sulecin.praca.gov.pl",
+    "homepage": "https://sulecin.praca.gov.pl/",
+    "aktualnosci_url": "https://sulecin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sulecin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Suwałki",
+    "base_url": "https://suwalki.praca.gov.pl",
+    "homepage": "https://suwalki.praca.gov.pl/",
+    "aktualnosci_url": "https://suwalki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://suwalki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Szamotuły",
+    "base_url": "https://szamotuly.praca.gov.pl",
+    "homepage": "https://szamotuly.praca.gov.pl/",
+    "aktualnosci_url": "https://szamotuly.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://szamotuly.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Szczecin",
+    "base_url": "https://szczecin.praca.gov.pl",
+    "homepage": "https://szczecin.praca.gov.pl/",
+    "aktualnosci_url": "https://szczecin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://szczecin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Szczecinek",
+    "base_url": "https://szczecinek.praca.gov.pl",
+    "homepage": "https://szczecinek.praca.gov.pl/",
+    "aktualnosci_url": "https://szczecinek.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://szczecinek.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Szczytno",
+    "base_url": "https://szczytno.praca.gov.pl",
+    "homepage": "https://szczytno.praca.gov.pl/",
+    "aktualnosci_url": "https://szczytno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://szczytno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Szydłowiec",
+    "base_url": "https://szydlowiec.praca.gov.pl",
+    "homepage": "https://szydlowiec.praca.gov.pl/",
+    "aktualnosci_url": "https://szydlowiec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://szydlowiec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sępólno Krajeńskie",
+    "base_url": "https://sepolnokrajenskie.praca.gov.pl",
+    "homepage": "https://sepolnokrajenskie.praca.gov.pl/",
+    "aktualnosci_url": "https://sepolnokrajenskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://sepolnokrajenskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Sławno",
+    "base_url": "https://slawno.praca.gov.pl",
+    "homepage": "https://slawno.praca.gov.pl/",
+    "aktualnosci_url": "https://slawno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://slawno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Słupca",
+    "base_url": "https://slupca.praca.gov.pl",
+    "homepage": "https://slupca.praca.gov.pl/",
+    "aktualnosci_url": "https://slupca.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://slupca.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Słupsk",
+    "base_url": "https://slupsk.praca.gov.pl",
+    "homepage": "https://slupsk.praca.gov.pl/",
+    "aktualnosci_url": "https://slupsk.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://slupsk.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tarnobrzeg",
+    "base_url": "https://tarnobrzeg.praca.gov.pl",
+    "homepage": "https://tarnobrzeg.praca.gov.pl/",
+    "aktualnosci_url": "https://tarnobrzeg.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tarnobrzeg.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tarnów",
+    "base_url": "https://tarnow.praca.gov.pl",
+    "homepage": "https://tarnow.praca.gov.pl/",
+    "aktualnosci_url": "https://tarnow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tarnow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tarnowskie Góry",
+    "base_url": "https://tarnowskiegory.praca.gov.pl",
+    "homepage": "https://tarnowskiegory.praca.gov.pl/",
+    "aktualnosci_url": "https://tarnowskiegory.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tarnowskiegory.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tczew",
+    "base_url": "https://tczew.praca.gov.pl",
+    "homepage": "https://tczew.praca.gov.pl/",
+    "aktualnosci_url": "https://tczew.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tczew.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tomaszów Lubelski",
+    "base_url": "https://tomaszowlubelski.praca.gov.pl",
+    "homepage": "https://tomaszowlubelski.praca.gov.pl/",
+    "aktualnosci_url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tomaszowlubelski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tomaszów Mazowiecki",
+    "base_url": "https://tomaszowmazowiecki.praca.gov.pl",
+    "homepage": "https://tomaszowmazowiecki.praca.gov.pl/",
+    "aktualnosci_url": "https://tomaszowmazowiecki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tomaszowmazowiecki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Trzebnica",
+    "base_url": "https://trzebnica.praca.gov.pl",
+    "homepage": "https://trzebnica.praca.gov.pl/",
+    "aktualnosci_url": "https://trzebnica.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://trzebnica.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tuchola",
+    "base_url": "https://tuchola.praca.gov.pl",
+    "homepage": "https://tuchola.praca.gov.pl/",
+    "aktualnosci_url": "https://tuchola.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tuchola.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Turek",
+    "base_url": "https://turek.praca.gov.pl",
+    "homepage": "https://turek.praca.gov.pl/",
+    "aktualnosci_url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://turek.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Tychy",
+    "base_url": "https://tychy.praca.gov.pl",
+    "homepage": "https://tychy.praca.gov.pl/",
+    "aktualnosci_url": "https://tychy.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://tychy.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ustrzyki Dolne",
+    "base_url": "https://ustrzykidolne.praca.gov.pl",
+    "homepage": "https://ustrzykidolne.praca.gov.pl/",
+    "aktualnosci_url": "https://ustrzykidolne.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ustrzykidolne.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wadowice",
+    "base_url": "https://wadowice.praca.gov.pl",
+    "homepage": "https://wadowice.praca.gov.pl/",
+    "aktualnosci_url": "https://wadowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wadowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Warszawa MUP",
+    "base_url": "https://warszawa.praca.gov.pl",
+    "homepage": "https://warszawa.praca.gov.pl/",
+    "aktualnosci_url": "https://warszawa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://warszawa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Warszawa Zachód",
+    "base_url": "https://ozarowmazowiecki.praca.gov.pl",
+    "homepage": "https://ozarowmazowiecki.praca.gov.pl/",
+    "aktualnosci_url": "https://ozarowmazowiecki.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://ozarowmazowiecki.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wałbrzych",
+    "base_url": "https://walbrzych.praca.gov.pl",
+    "homepage": "https://walbrzych.praca.gov.pl/",
+    "aktualnosci_url": "https://walbrzych.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://walbrzych.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wałcz",
+    "base_url": "https://walcz.praca.gov.pl",
+    "homepage": "https://walcz.praca.gov.pl/",
+    "aktualnosci_url": "https://walcz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://walcz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wejherowo",
+    "base_url": "https://wejherowo.praca.gov.pl",
+    "homepage": "https://wejherowo.praca.gov.pl/",
+    "aktualnosci_url": "https://wejherowo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wejherowo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wieliczka",
+    "base_url": "https://wieliczka.praca.gov.pl",
+    "homepage": "https://wieliczka.praca.gov.pl/",
+    "aktualnosci_url": "https://wieliczka.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wieliczka.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wieluń",
+    "base_url": "https://wielun.praca.gov.pl",
+    "homepage": "https://wielun.praca.gov.pl/",
+    "aktualnosci_url": "https://wielun.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wielun.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wieruszów",
+    "base_url": "https://wieruszow.praca.gov.pl",
+    "homepage": "https://wieruszow.praca.gov.pl/",
+    "aktualnosci_url": "https://wieruszow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wieruszow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wodzisław Śląski",
+    "base_url": "https://wodzislawslaski.praca.gov.pl",
+    "homepage": "https://wodzislawslaski.praca.gov.pl/",
+    "aktualnosci_url": "https://wodzislawslaski.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wodzislawslaski.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wolsztyn",
+    "base_url": "https://wolsztyn.praca.gov.pl",
+    "homepage": "https://wolsztyn.praca.gov.pl/",
+    "aktualnosci_url": "https://wolsztyn.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wolsztyn.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wołomin",
+    "base_url": "https://wolomin.praca.gov.pl",
+    "homepage": "https://wolomin.praca.gov.pl/",
+    "aktualnosci_url": "https://wolomin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wolomin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wołów",
+    "base_url": "https://wolow.praca.gov.pl",
+    "homepage": "https://wolow.praca.gov.pl/",
+    "aktualnosci_url": "https://wolow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wolow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wrocław",
+    "base_url": "https://wroclaw.praca.gov.pl",
+    "homepage": "https://wroclaw.praca.gov.pl/",
+    "aktualnosci_url": "https://wroclaw.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wroclaw.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Września",
+    "base_url": "https://wrzesnia.praca.gov.pl",
+    "homepage": "https://wrzesnia.praca.gov.pl/",
+    "aktualnosci_url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wrzesnia.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wschowa",
+    "base_url": "https://wschowa.praca.gov.pl",
+    "homepage": "https://wschowa.praca.gov.pl/",
+    "aktualnosci_url": "https://wschowa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wschowa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wysokie Mazowieckie",
+    "base_url": "https://wysokiemazowieckie.praca.gov.pl",
+    "homepage": "https://wysokiemazowieckie.praca.gov.pl/",
+    "aktualnosci_url": "https://wysokiemazowieckie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wysokiemazowieckie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wyszków",
+    "base_url": "https://wyszkow.praca.gov.pl",
+    "homepage": "https://wyszkow.praca.gov.pl/",
+    "aktualnosci_url": "https://wyszkow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wyszkow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wąbrzeźno",
+    "base_url": "https://wabrzezno.praca.gov.pl",
+    "homepage": "https://wabrzezno.praca.gov.pl/",
+    "aktualnosci_url": "https://wabrzezno.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wabrzezno.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Wągrowiec",
+    "base_url": "https://wagrowiec.praca.gov.pl",
+    "homepage": "https://wagrowiec.praca.gov.pl/",
+    "aktualnosci_url": "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wagrowiec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Węgorzewo",
+    "base_url": "https://wegorzewo.praca.gov.pl",
+    "homepage": "https://wegorzewo.praca.gov.pl/",
+    "aktualnosci_url": "https://wegorzewo.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wegorzewo.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Węgrów",
+    "base_url": "https://wegrow.praca.gov.pl",
+    "homepage": "https://wegrow.praca.gov.pl/",
+    "aktualnosci_url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wegrow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Włocławek",
+    "base_url": "https://wloclawek.praca.gov.pl",
+    "homepage": "https://wloclawek.praca.gov.pl/",
+    "aktualnosci_url": "https://wloclawek.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wloclawek.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Włodawa",
+    "base_url": "https://wlodawa.praca.gov.pl",
+    "homepage": "https://wlodawa.praca.gov.pl/",
+    "aktualnosci_url": "https://wlodawa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wlodawa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Włoszczowa",
+    "base_url": "https://wloszczowa.praca.gov.pl",
+    "homepage": "https://wloszczowa.praca.gov.pl/",
+    "aktualnosci_url": "https://wloszczowa.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://wloszczowa.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zabrze",
+    "base_url": "https://zabrze.praca.gov.pl",
+    "homepage": "https://zabrze.praca.gov.pl/",
+    "aktualnosci_url": "https://zabrze.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zabrze.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zakopane",
+    "base_url": "https://zakopane.praca.gov.pl",
+    "homepage": "https://zakopane.praca.gov.pl/",
+    "aktualnosci_url": "https://zakopane.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zakopane.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zambrow",
+    "base_url": "https://zambrow.praca.gov.pl",
+    "homepage": "https://zambrow.praca.gov.pl/",
+    "aktualnosci_url": "https://zambrow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zambrow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zamość",
+    "base_url": "https://zamosc.praca.gov.pl",
+    "homepage": "https://zamosc.praca.gov.pl/",
+    "aktualnosci_url": "https://zamosc.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zamosc.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zawiercie",
+    "base_url": "https://zawiercie.praca.gov.pl",
+    "homepage": "https://zawiercie.praca.gov.pl/",
+    "aktualnosci_url": "https://zawiercie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zawiercie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zduńska Wola",
+    "base_url": "https://zdunskawola.praca.gov.pl",
+    "homepage": "https://zdunskawola.praca.gov.pl/",
+    "aktualnosci_url": "https://zdunskawola.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zdunskawola.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zgierz",
+    "base_url": "https://zgierz.praca.gov.pl",
+    "homepage": "https://zgierz.praca.gov.pl/",
+    "aktualnosci_url": "https://zgierz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zgierz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zgorzelec",
+    "base_url": "https://zgorzelec.praca.gov.pl",
+    "homepage": "https://zgorzelec.praca.gov.pl/",
+    "aktualnosci_url": "https://zgorzelec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zgorzelec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zielona Góra",
+    "base_url": "https://zielonagora.praca.gov.pl",
+    "homepage": "https://zielonagora.praca.gov.pl/",
+    "aktualnosci_url": "https://zielonagora.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zielonagora.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Zwoleń",
+    "base_url": "https://zwolen.praca.gov.pl",
+    "homepage": "https://zwolen.praca.gov.pl/",
+    "aktualnosci_url": "https://zwolen.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zwolen.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Ząbkowice Śląskie",
+    "base_url": "https://zabkowiceslaskie.praca.gov.pl",
+    "homepage": "https://zabkowiceslaskie.praca.gov.pl/",
+    "aktualnosci_url": "https://zabkowiceslaskie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zabkowiceslaskie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Złotoryja",
+    "base_url": "https://zlotoryja.praca.gov.pl",
+    "homepage": "https://zlotoryja.praca.gov.pl/",
+    "aktualnosci_url": "https://zlotoryja.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zlotoryja.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Złotow",
+    "base_url": "https://zlotow.praca.gov.pl",
+    "homepage": "https://zlotow.praca.gov.pl/",
+    "aktualnosci_url": "https://zlotow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zlotow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łask",
+    "base_url": "https://lask.praca.gov.pl",
+    "homepage": "https://lask.praca.gov.pl/",
+    "aktualnosci_url": "https://lask.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lask.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łańcut",
+    "base_url": "https://lancut.praca.gov.pl",
+    "homepage": "https://lancut.praca.gov.pl/",
+    "aktualnosci_url": "https://lancut.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lancut.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łobez",
+    "base_url": "https://lobez.praca.gov.pl",
+    "homepage": "https://lobez.praca.gov.pl/",
+    "aktualnosci_url": "https://lobez.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lobez.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łomża",
+    "base_url": "https://lomza.praca.gov.pl",
+    "homepage": "https://lomza.praca.gov.pl/",
+    "aktualnosci_url": "https://lomza.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lomza.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łosice",
+    "base_url": "https://losice.praca.gov.pl",
+    "homepage": "https://losice.praca.gov.pl/",
+    "aktualnosci_url": "https://losice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://losice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łowicz",
+    "base_url": "https://lowicz.praca.gov.pl",
+    "homepage": "https://lowicz.praca.gov.pl/",
+    "aktualnosci_url": "https://lowicz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lowicz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łuków",
+    "base_url": "https://lukow.praca.gov.pl",
+    "homepage": "https://lukow.praca.gov.pl/",
+    "aktualnosci_url": "https://lukow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lukow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łódź",
+    "base_url": "https://lodz.praca.gov.pl",
+    "homepage": "https://lodz.praca.gov.pl/",
+    "aktualnosci_url": "https://lodz.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lodz.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łódź- Wschód",
+    "base_url": "https://lodz-wschod.praca.gov.pl",
+    "homepage": "https://lodz-wschod.praca.gov.pl/",
+    "aktualnosci_url": "https://lodz-wschod.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://lodz-wschod.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łęczna",
+    "base_url": "https://leczna.praca.gov.pl",
+    "homepage": "https://leczna.praca.gov.pl/",
+    "aktualnosci_url": "https://leczna.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://leczna.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Łęczyca",
+    "base_url": "https://leczyca.praca.gov.pl",
+    "homepage": "https://leczyca.praca.gov.pl/",
+    "aktualnosci_url": "https://leczyca.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://leczyca.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Śrem",
+    "base_url": "https://srem.praca.gov.pl",
+    "homepage": "https://srem.praca.gov.pl/",
+    "aktualnosci_url": "https://srem.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://srem.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Środa Wlkp.",
+    "base_url": "https://srodawielkopolska.praca.gov.pl",
+    "homepage": "https://srodawielkopolska.praca.gov.pl/",
+    "aktualnosci_url": "https://srodawielkopolska.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://srodawielkopolska.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Środa Śląska",
+    "base_url": "https://srodaslaska.praca.gov.pl",
+    "homepage": "https://srodaslaska.praca.gov.pl/",
+    "aktualnosci_url": "https://srodaslaska.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://srodaslaska.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Świdnica",
+    "base_url": "https://swidnica.praca.gov.pl",
+    "homepage": "https://swidnica.praca.gov.pl/",
+    "aktualnosci_url": "https://swidnica.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://swidnica.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Świdnik",
+    "base_url": "https://swidnik.praca.gov.pl",
+    "homepage": "https://swidnik.praca.gov.pl/",
+    "aktualnosci_url": "https://swidnik.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://swidnik.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Świdwin",
+    "base_url": "https://swidwin.praca.gov.pl",
+    "homepage": "https://swidwin.praca.gov.pl/",
+    "aktualnosci_url": "https://swidwin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://swidwin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Świebodzin",
+    "base_url": "https://swiebodzin.praca.gov.pl",
+    "homepage": "https://swiebodzin.praca.gov.pl/",
+    "aktualnosci_url": "https://swiebodzin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://swiebodzin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Świecie",
+    "base_url": "https://swiecie.praca.gov.pl",
+    "homepage": "https://swiecie.praca.gov.pl/",
+    "aktualnosci_url": "https://swiecie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://swiecie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Świnoujście",
+    "base_url": "https://swinoujscie.praca.gov.pl",
+    "homepage": "https://swinoujscie.praca.gov.pl/",
+    "aktualnosci_url": "https://swinoujscie.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://swinoujscie.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Świętochłowice",
+    "base_url": "https://swietochlowice.praca.gov.pl",
+    "homepage": "https://swietochlowice.praca.gov.pl/",
+    "aktualnosci_url": "https://swietochlowice.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://swietochlowice.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Żagań",
+    "base_url": "https://zagan.praca.gov.pl",
+    "homepage": "https://zagan.praca.gov.pl/",
+    "aktualnosci_url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zagan.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Żary",
+    "base_url": "https://zary.praca.gov.pl",
+    "homepage": "https://zary.praca.gov.pl/",
+    "aktualnosci_url": "https://zary.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zary.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Żnin",
+    "base_url": "https://znin.praca.gov.pl",
+    "homepage": "https://znin.praca.gov.pl/",
+    "aktualnosci_url": "https://znin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://znin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Żory",
+    "base_url": "https://zory.praca.gov.pl",
+    "homepage": "https://zory.praca.gov.pl/",
+    "aktualnosci_url": "https://zory.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zory.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Żuromin",
+    "base_url": "https://zuromin.praca.gov.pl",
+    "homepage": "https://zuromin.praca.gov.pl/",
+    "aktualnosci_url": "https://zuromin.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zuromin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Żyrardów",
+    "base_url": "https://zyrardow.praca.gov.pl",
+    "homepage": "https://zyrardow.praca.gov.pl/",
+    "aktualnosci_url": "https://zyrardow.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zyrardow.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  },
+  {
+    "name": "Żywiec",
+    "base_url": "https://zywiec.praca.gov.pl",
+    "homepage": "https://zywiec.praca.gov.pl/",
+    "aktualnosci_url": "https://zywiec.praca.gov.pl/rynek-pracy/aktualnosci",
+    "kfs_url": "https://zywiec.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy"
+  }
+]
