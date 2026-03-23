@@ -278,63 +278,69 @@ def extract_kfs(soup, kfs_url):
     return {"title": "KFS", "url": kfs_url, "snippet": text[:MAX_SNIPPET], "date": "", "source_type": "KFS"}
 
 
+def _scrape_one(i, urzad, total):
+    """Scrapuje jeden urząd — zwraca (articles, errors)."""
+    name = urzad["name"]
+    homepage = urzad.get("homepage", "")
+    kfs_url = urzad.get("kfs_url", "")
+    base_url = urzad.get("base_url", homepage.rstrip("/"))
+    articles = []
+    errs = []
+
+    # Aktualności
+    soup, err = fetch(urzad.get("aktualnosci_url", homepage))
+    news = extract_articles(soup, base_url) if soup else []
+    if not news and urzad.get("aktualnosci_url") and urzad["aktualnosci_url"] != homepage:
+        soup2, err2 = fetch(urzad["aktualnosci_url"])
+        if soup2:
+            news = extract_articles(soup2, base_url)
+
+    for a in news:
+        a["urzad"] = name
+    # Pobierz pełną treść TYLKO dla artykułów z KFS keywords w tytule
+    for a in news:
+        if not KFS_KEYWORDS.search(a.get("title", "")):
+            continue
+        detail = fetch_detail_content(a["url"])
+        if detail and len(detail) > len(a.get("snippet", "")):
+            a["snippet"] = detail
+    articles.extend(news)
+
+    if not news:
+        errs.append({"urzad": name, "url": homepage, "typ": "Aktualnosci",
+                      "blad": err or "Brak artykulow"})
+
+    # KFS
+    if kfs_url:
+        ks, ke = fetch(kfs_url)
+        if ks:
+            kfs_art = extract_kfs(ks, kfs_url)
+            if kfs_art:
+                kfs_art["urzad"] = name
+                articles.append(kfs_art)
+        else:
+            errs.append({"urzad": name, "url": kfs_url, "typ": "KFS", "blad": ke})
+
+    print(f"  [{i}/{total}] {name} -> {len(news)} art.")
+    return articles, errs
+
+
 def scrape_all(urzedy):
-    """Scrapuje wszystkie urzędy, zwraca (articles, errors)."""
+    """Scrapuje wszystkie urzędy równolegle, zwraca (articles, errors)."""
     all_articles = []
     errors = []
+    total = len(urzedy)
 
-    for i, urzad in enumerate(urzedy, 1):
-        name = urzad["name"]
-        homepage = urzad.get("homepage", "")
-        kfs_url = urzad.get("kfs_url", "")
-        base_url = urzad.get("base_url", homepage.rstrip("/"))
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = {}
+        for i, urzad in enumerate(urzedy, 1):
+            future = executor.submit(_scrape_one, i, urzad, total)
+            futures[future] = urzad
 
-        print(f"  [{i}/{len(urzedy)}] {name}", end="", flush=True)
-
-        # Aktualności
-        soup, err = fetch(urzad.get("aktualnosci_url", homepage))
-        time.sleep(REQUEST_DELAY)
-        news = extract_articles(soup, base_url) if soup else []
-        if not news and urzad.get("aktualnosci_url") and urzad["aktualnosci_url"] != homepage:
-            soup2, err2 = fetch(urzad["aktualnosci_url"])
-            time.sleep(REQUEST_DELAY)
-            if soup2:
-                news = extract_articles(soup2, base_url)
-
-        for a in news:
-            a["urzad"] = name
-        # Pobierz pełną treść ze stron szczegółowych
-        for a in news:
-            detail = fetch_detail_content(a["url"])
-            if detail and len(detail) > len(a.get("snippet", "")):
-                a["snippet"] = detail
-            time.sleep(0.2)
-        # Retry dla artykułów z KFS w tytule i krótkim snippetem
-        for a in news:
-            if len(a.get("snippet", "")) < 200 and KFS_KEYWORDS.search(a.get("title", "")):
-                time.sleep(1)
-                detail = fetch_detail_content(a["url"])
-                if detail and len(detail) > len(a.get("snippet", "")):
-                    a["snippet"] = detail
-        all_articles.extend(news)
-
-        if not news:
-            errors.append({"urzad": name, "url": homepage, "typ": "Aktualnosci",
-                          "blad": err or "Brak artykulow"})
-
-        # KFS
-        if kfs_url:
-            ks, ke = fetch(kfs_url)
-            time.sleep(REQUEST_DELAY)
-            if ks:
-                kfs_art = extract_kfs(ks, kfs_url)
-                if kfs_art:
-                    kfs_art["urzad"] = name
-                    all_articles.append(kfs_art)
-            else:
-                errors.append({"urzad": name, "url": kfs_url, "typ": "KFS", "blad": ke})
-
-        print(f" -> {len(news)} art.")
+        for future in as_completed(futures):
+            arts, errs = future.result()
+            all_articles.extend(arts)
+            errors.extend(errs)
 
     return all_articles, errors
 
