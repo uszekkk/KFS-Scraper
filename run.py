@@ -501,6 +501,79 @@ def classify_all(articles, cache):
 
 
 # ============================================================
+# WYSYŁKA DO ESPOCRM
+# ============================================================
+def push_to_crm(results):
+    """Wysyła nowe nabory TAK do EspoCRM."""
+    crm_url = os.environ.get("ESPOCRM_URL", "").rstrip("/")
+    crm_key = os.environ.get("ESPOCRM_API_KEY", "")
+    if not crm_url or not crm_key:
+        print("  Brak ESPOCRM_URL/ESPOCRM_API_KEY — pomijam CRM")
+        return
+
+    tak = [r for r in results if r.get("wynik") == "TAK"]
+    print(f"\n  CRM: {len(tak)} naborów TAK do wysłania")
+
+    headers = {
+        "X-Api-Key": crm_key,
+        "Content-Type": "application/json",
+    }
+
+    # Pobierz istniejące URL-e z CRM żeby nie duplikować
+    existing = set()
+    try:
+        resp = requests.get(
+            f"{crm_url}/api/v1/NaborKFS",
+            headers=headers,
+            params={"select": "url", "maxSize": 200},
+            timeout=15,
+        )
+        if resp.ok:
+            for rec in resp.json().get("list", []):
+                if rec.get("url"):
+                    existing.add(rec["url"])
+    except Exception as ex:
+        print(f"  CRM: Błąd pobierania istniejących: {ex}")
+
+    added = 0
+    for r in tak:
+        if r.get("url") in existing:
+            continue
+        # Parsuj datę DD.MM.YYYY → YYYY-MM-DD
+        crm_date = ""
+        if r.get("date"):
+            parts = r["date"].split(".")
+            if len(parts) == 3:
+                crm_date = f"{parts[2]}-{parts[1]}-{parts[0]}"
+
+        payload = {
+            "name": r.get("title", "")[:255],
+            "urzad": r.get("urzad", ""),
+            "termin": r.get("termin", ""),
+            "kwota": r.get("kwota", ""),
+            "url": r.get("url", ""),
+            "datapublikacji": crm_date,
+            "powod": r.get("powod", ""),
+            "status": "Nowy",
+        }
+        try:
+            resp = requests.post(
+                f"{crm_url}/api/v1/NaborKFS",
+                headers=headers,
+                json=payload,
+                timeout=15,
+            )
+            if resp.status_code in (200, 201):
+                added += 1
+            else:
+                print(f"  CRM: Błąd {resp.status_code} dla {r.get('urzad','')}")
+        except Exception as ex:
+            print(f"  CRM: {ex}")
+
+    print(f"  CRM: Dodano {added} nowych naborów (pominięto {len(tak) - added} istniejących)")
+
+
+# ============================================================
 # GENEROWANIE RAPORTU HTML
 # ============================================================
 def generate_report(results, errors):
@@ -795,6 +868,9 @@ def main():
         json.dump(results, f, ensure_ascii=False, indent=2)
     with open(ERRORS_FILE, "w", encoding="utf-8") as f:
         json.dump(errors, f, ensure_ascii=False, indent=2)
+
+    # Push to CRM
+    push_to_crm(results)
 
     # Generate report
     count_tak, count_powiaty = generate_report(results, errors)

@@ -26,6 +26,8 @@ jobs:
       - name: Uruchom scraper
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          ESPOCRM_URL: ${{ secrets.ESPOCRM_URL }}
+          ESPOCRM_API_KEY: ${{ secrets.ESPOCRM_API_KEY }}
         run: python run.py
 
       - name: Commituj wyniki
