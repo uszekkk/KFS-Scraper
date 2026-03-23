@@ -113,21 +113,23 @@ SESSION.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 
 
 def _article_fingerprint(url):
-    """Canonical key for Liferay articles — (domain, content_slug, assetEntryId).
+    """Canonical key for Liferay articles — (domain, slug).
 
-    The same article can appear under different asset_publisher paths
-    (e.g. /rynek-pracy/aktualnosci/ vs /strona-glowna/) but shares the
-    content slug and assetEntryId.  Returns a tuple usable as a set key,
-    or None if the URL doesn't look like a Liferay article.
+    Liferay URLs have two formats for the same article:
+      1) /page/-/asset_publisher/ID/content/SLUG?p_r_p_assetEntryId=...
+      2) /-/SLUG  (friendly URL)
+    Both share the same slug. Returns (domain, slug) or None.
     """
     parsed = urlparse(url)
+    # Format 1: .../content/SLUG
     m = re.search(r"/content/([^/?]+)", parsed.path)
-    if not m:
-        return None
-    slug = m.group(1)
-    qs = parse_qs(parsed.query)
-    entry_id = qs.get("p_r_p_assetEntryId", [""])[0]
-    return (parsed.netloc, slug, entry_id)
+    if m:
+        return (parsed.netloc, m.group(1))
+    # Format 2: /-/SLUG (friendly URL)
+    m = re.search(r"/-/([^/?]+)", parsed.path)
+    if m:
+        return (parsed.netloc, m.group(1))
+    return None
 
 
 def fetch(url):
