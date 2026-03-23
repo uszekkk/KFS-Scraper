@@ -690,7 +690,7 @@ def push_to_crm(results):
     existing_records = []  # do aktualizacji statusów
     try:
         resp = requests.get(
-            f"{crm_url}/api/v1/NaborKFS",
+            f"{crm_url}/api/v1/NaboryKfs",
             headers=headers,
             params={"select": "url,status,termin", "maxSize": 200},
             timeout=15,
@@ -726,7 +726,7 @@ def push_to_crm(results):
             if new_status != rec.get("status"):
                 try:
                     resp = requests.put(
-                        f"{crm_url}/api/v1/NaborKFS/{rec['id']}",
+                        f"{crm_url}/api/v1/NaboryKfs/{rec['id']}",
                         headers=headers,
                         json={"status": new_status},
                         timeout=15,
@@ -779,7 +779,7 @@ def push_to_crm(results):
         }
         try:
             resp = requests.post(
-                f"{crm_url}/api/v1/NaborKFS",
+                f"{crm_url}/api/v1/NaboryKfs",
                 headers=headers,
                 json=payload,
                 timeout=15,
