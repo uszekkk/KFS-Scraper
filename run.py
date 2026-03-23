@@ -340,8 +340,23 @@ def scrape_all(urzedy):
 progress_lock = threading.Lock()
 progress = {"done": 0, "total": 0, "tak": 0}
 
+# Rate limiter — 5 RPM per key, globalnie max 1 request / 2.5s
+RPM_PER_KEY = 5
+_rate_lock = threading.Lock()
+_key_last_used = {}  # api_key -> timestamp ostatniego użycia
+
 
 def call_gemini(api_key, prompt):
+    # Throttle: odczekaj min 12s od ostatniego użycia tego klucza (60/5=12s)
+    min_interval = 60.0 / RPM_PER_KEY
+    with _rate_lock:
+        now = time.time()
+        last = _key_last_used.get(api_key, 0)
+        wait = last + min_interval - now
+        if wait > 0:
+            time.sleep(wait)
+        _key_last_used[api_key] = time.time()
+
     url = f"{GEMINI_URL}?key={api_key}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     for attempt in range(1, MAX_RETRIES + 1):
@@ -350,6 +365,9 @@ def call_gemini(api_key, prompt):
             if resp.status_code == 429:
                 if attempt < MAX_RETRIES:
                     time.sleep(RETRY_WAIT * attempt)
+                    # Zaktualizuj timestamp po retry
+                    with _rate_lock:
+                        _key_last_used[api_key] = time.time()
                     continue
                 return None
             resp.raise_for_status()
