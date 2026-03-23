@@ -704,11 +704,8 @@ def push_to_crm(results):
         print(f"  CRM: Błąd pobierania istniejących: {ex}")
 
     # Aktualizuj statusy istniejących rekordów (Nowy→W trakcie→Nieaktualny)
-    auto_statuses = {"Nowy", "W trakcie"}  # tylko te zmieniamy automatycznie
     updated = 0
     for rec in existing_records:
-        if rec.get("status") not in auto_statuses:
-            continue
         termin_raw = rec.get("termin", "")
         termin_dates = re.findall(r"(\d{2})\.(\d{2})\.(\d{4})", termin_raw)
         if not termin_dates:
