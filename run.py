@@ -323,6 +323,12 @@ def extract_kfs(soup, kfs_url):
     text = div.get_text(separator="\n", strip=True)
     if not text or len(text) < 20:
         return None
+    # Szukaj "Data modyfikacji" na stronie — jeśli z 2025 lub wcześniej, odrzuć
+    mod_match = re.search(r"[Dd]ata\s+modyfikacji[:\s]*(\d{2})\.(\d{2})\.(\d{4})", soup.get_text())
+    if mod_match:
+        mod_year = int(mod_match.group(3))
+        if mod_year < 2026:
+            return None
     return {"title": "KFS", "url": kfs_url, "snippet": text[:MAX_SNIPPET], "date": "", "source_type": "KFS"}
 
 
