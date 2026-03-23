@@ -5473,13 +5473,6 @@
     "kwota": "",
     "classified_date": "20.03.2026"
   },
-  "https://gryfino.praca.gov.pl/-/kfs-spotkanie-dla-przedsiebiorcow-nt.-ogloszonego-naboru-wnioskow": {
-    "wynik": "TAK",
-    "powod": "Ogłasza nabór wniosków KFS, szczegóły w załączniku.",
-    "termin": "",
-    "kwota": "",
-    "classified_date": "20.03.2026"
-  },
   "https://gryfino.praca.gov.pl/-/ii-konkurs-wnioskow-staz-dla-osob-bezrobotnych-w-wieku-18-29-lat-oraz-55-lat-i-wiecej-efs-iii-2026": {
     "wynik": "NIE",
     "powod": "To nabór na staże EFS+, nie KFS.",
@@ -7164,13 +7157,6 @@
     "wynik": "NIE",
     "powod": "Dotyczy wejścia w życie ustawy o obywatelach Ukrainy.",
     "termin": "",
-    "kwota": "",
-    "classified_date": "20.03.2026"
-  },
-  "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/ncxEicTXv58N/content/zalozenie-konta-organizacji-na-platformie-www.praca.gov.pl?p_r_p_assetEntryId=59700373": {
-    "wynik": "TAK",
-    "powod": "Ogłoszenie informuje o planowanym naborze wniosków KFS.",
-    "termin": "w załączniku",
     "kwota": "",
     "classified_date": "20.03.2026"
   },
@@ -31036,5 +31022,775 @@
     "termin": "",
     "kwota": "",
     "classified_date": "20.03.2026"
+  },
+  "https://braniewo.praca.gov.pl/-/nabor-wnioskow-w-ramach-rezerwy-funduszu-pracy-na-finansowanie-kosztow-form-pomocy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://belchatow.praca.gov.pl/-/rejestracja-osob-bezrobotnych-w-pik-w-zelowie-poniedzialki-i-piatki": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://boleslawiec.praca.gov.pl/-/krajowy-fundusz-szkoleniowy-metoda-wyliczania-stanu-zatrudnienia": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://bilgoraj.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-szkolenie-grupowe-2026?p_r_p_assetEntryId=60899981": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://bilgoraj.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/konto-organizacji-krok-po-kroku?p_r_p_assetEntryId=60896033": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://bielskpodlaski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/r2c1KjyedSKq/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=60906295": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://cieszyn.praca.gov.pl/-/nabor-wnioskow-o-zorganizowanie-stazy-dla-osob-z-niepelnosprawnosciami-poszukujacych-pracy-niepozostajacych-w-zatrudnieniu": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://czarnkow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zaproszenie-do-skladania-propozycji-szkolenia-prawo-jazdy-kat.-ce-?p_r_p_assetEntryId=60911599": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://bydgoszcz.praca.gov.pl/-/dyplom-i-co-dalej-22": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://ciechanow.praca.gov.pl/-/ogloszenie-z-dnia-20.03.2026-r.-wstrzymanie-dofinansowanie-wynagrodzenia-50-fundusz-pracy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://brzeg.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/warsztaty-aktywizacyjne-pt.-odkrywam-planuje-tworze-?p_r_p_assetEntryId=60972010": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://dabrowagornicza.praca.gov.pl/-/w-dniu-23.03.2026-r.-rozpoczynamy-nabor-wnioskow-o-organizacje-stazu-ze-srodkow-rezerwy-funduszu-pracy.": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://debica.praca.gov.pl/-/nabor-wnioskow-o-refundacje-kosztow-wyposazenia-stanowiska-pracy-ze-srodkow-funduszu-pracy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://debica.praca.gov.pl/-/nabor-wnioskow-o-refundacje-kosztow-wyposazenia-stanowiska-pracy-w-ramach-projektu-aktywizacja-osob-bezrobotnych-z-powiatu-debickiego-iii-": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://gizycko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-bonu-na-zasiedlenie?p_r_p_assetEntryId=60906846": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://debica.praca.gov.pl/-/spotkanie-z-maturzystami-zespolu-szkol-zawodowych-nr-1-w-debicy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://goleniow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-braku-srodkow-na-prace-interwencyjne?p_r_p_assetEntryId=60896377": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://golub-dobrzyn.praca.gov.pl/-/jak-zalozyc-konto-uzytkownika-w-praca.gov.pl-instrukcja": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://goldap.praca.gov.pl/-/fajni-lokalni-biblioteka-publiczna-w-goldapi": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://goldap.praca.gov.pl/-/dzien-otwarty-w-medyku": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://grodziskmazowiecki.praca.gov.pl/-/powiatowy-urzad-pracy-w-grodzisku-mazowieckim-na-miedzynarodowym-salonie-edukacyjnym-perspektywy-2026": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://grodziskwielkopolski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-dotyczace-stazy?p_r_p_assetEntryId=60906244": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://gryfino.praca.gov.pl/-/wyniki-iii-konkursu-srodki-na-podjecie-dzialalnosci-gospodarczej-dla-osob-bezrobotnych-18-29-lat-fepz-iii-2026": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://goldap.praca.gov.pl/-/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-1": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://jaroslaw.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/8.-jaroslawskie-targi-pracy-za-nami-?p_r_p_assetEntryId=60961637": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://jaroslaw.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/bon-na-zasiedlenie-w-2025-roku-podsumowanie-formy-wspierania-aktywnosci-zawodowej?p_r_p_assetEntryId=59477738": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://ilawa.praca.gov.pl/-/filia-susz-zamknieta-25-marca-2026-r.": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://ilawa.praca.gov.pl/-/koniec-naboru-na-staze-zawodowe-w-ramach-pfron": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://gora.praca.gov.pl/-/zaproszenie-na-spotkanie-informacyjne-wlasny-biznes-": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://jawor.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/powiatowy-urzad-pracy-w-jaworze-oglasza-nabor-wnioskow.?p_r_p_assetEntryId=60911506": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://jawor.praca.gov.pl/-/zlecenie-wykonania-dokumentacji-projektowej-i-kosztorysu": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://mupkielce.praca.gov.pl/-/spotkanie-informacyjne-dla-osob-z-orzeczeniem-o-niepelnosprawnosci": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://jedrzejow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/koniec-naboru-wnioskow-dotyczacych-organizacji-robot-publicznych-w-ramach-dodatkowych-srodkow-z-rezerwy-funduszu-pracy-przeznaczonych-na-finansowanie-w-2026r.-kosztow-realizacji-form-pomocy-bez-efs-?p_r_p_assetEntryId=60909616": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://jawor.praca.gov.pl/-/nabor-wnioskow-o-zwrot-kosztow-przejazdu-na-staz.": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://kolobrzeg.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/rozpoczecie-naboru-wnioskow-z-krajowego-funduszu-szkoleniowego-23.03.2026-r.?p_r_p_assetEntryId=60912493": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://uppkrakow.praca.gov.pl/-/projekt-dyplom-i-co-dalej-absolwenci-z-niepelnosprawnosciami-na-rynku-pracy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://uppkrakow.praca.gov.pl/-/qaktywnosci-mocna-ekipa-iv": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://uppkrakow.praca.gov.pl/-/qaktywnosci-mocna-ekipa-iv-dofinansowane-ze-srodkow-funduszu-pracy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://krapkowice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie?p_r_p_assetEntryId=60840968": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://kutno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-jednorazowo-srodkow-na-podjecie-dzialalnosci-gospodarczej-4?p_r_p_assetEntryId=60972090": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://kutno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy-7?p_r_p_assetEntryId=60973765": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://kutno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-?p_r_p_assetEntryId=60970408": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://lidzbarkwarminski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-z-maturzystami-z-liceum-ogolnoksztalcacego-w-ornecie?p_r_p_assetEntryId=60973951": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://limanowa.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/warsztaty-w-kolejnej-edycji-projektu-spin-camp?p_r_p_assetEntryId=60900023": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://limanowa.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-kfs-2026?p_r_p_assetEntryId=60892474": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://lublin.praca.gov.pl/-/zaproszenie-na-spotkanie-informacyjne-zorganizowane-we-wspolpracy-z-fundacja-heros": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://lwowekslaski.praca.gov.pl/-/i-nabor-wnioskowkrajowego-funduszu-szkoleniowego-2026": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://lebork.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ix-edycja-internetowych-targow-pracy-seize-the-summer-with-eures-?p_r_p_assetEntryId=60893421": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://miechow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-na-staz-w-ramach-fp?p_r_p_assetEntryId=60906719": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://lebork.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-informacyjne-na-temat-warunkow-zycia-i-pracy-w-szwecji?p_r_p_assetEntryId=60893243": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://miechow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-na-staz?p_r_p_assetEntryId=60904702": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://miechow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-realizacji-projektu-pn.-aktywizacja-zawodowa-bezrobotnych-powiatu-miechowskiego-fem-iv-?p_r_p_assetEntryId=60895549": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://milicz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/rozeznanie-rynku-szkoleniowego-26?p_r_p_assetEntryId=60909241": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://minskmazowiecki.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/startujemy-z-przygotowaniami-do-21.-minskich-targow-pracy-i-przedsiebiorczosci-?p_r_p_assetEntryId=60909744": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://naklo.praca.gov.pl/-/ogloszenie-o-konkursie-kfs-2026": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://mragowo.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/VAOq2Ug7om8j/content/informacja-o-szkoleniu-z-zakresu-krajowego-systemu-e-faktur-ksef-?p_r_p_assetEntryId=60969893": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://myszkow.praca.gov.pl/-/i-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://oborniki.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowisk-pracy?p_r_p_assetEntryId=60959720": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://naklo.praca.gov.pl/-/https-//naklo.praca.gov.pl/-/oferta-pracy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://oborniki.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-zawarcie-umowy-o-dofinansowanie-wynagrodzenia-za-zatrudnienie-skierowanego-bezrobotnego-ktory-ukonczyl-50-rok-zycia-lub-poszukujacego-pracy-ktory-ukonczyl-60-lub-65-rok-zycia-1?p_r_p_assetEntryId=60959548": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://opole.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/webinarium-dla-bezrobotnych-zamierzajacych-ubiegac-sie-o-jednorazowe-srodki-na-podjecie-dzialalnosci-gospodarczej?p_r_p_assetEntryId=41764215": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://pabianice.praca.gov.pl/-/spotkanie-otwarte-dla-mieszkancow-gminy-lutomiersk": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://ostroleka.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekt-aktywizujacy-zawodowo-osoby-z-niepelnosprawnoscia?p_r_p_assetEntryId=60913107": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://przemysl.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/godziny-pracy-urzedu-w-dniu-03.04.2026-r.?p_r_p_assetEntryId=60914384": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://przasnysz.praca.gov.pl/-/dolacz-do-projektu-dyplom-i-co-dalej-": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://przemysl.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/grupowa-porada-zawodowa-on-line-przygotowanie-do-rozmowy-kwalifikacyjnej-2?p_r_p_assetEntryId=60911470": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://pszczyna.praca.gov.pl/-/projekt-dyplom-i-co-dalej-absolwenci-z-niepelnosprawnosciami-na-rynku-pracy-1": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://pyrzyce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy?p_r_p_assetEntryId=60899935": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://plock.praca.gov.pl/-/targi-edukacji-i-aktywnosci-zawodowej-w-gabinie": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://pulawy.praca.gov.pl/-/pulawskie-targi-pracy-2026-2": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://rawamazowiecka.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/pomysl-na-wlasny-biznes-konsultacje-grupowe?p_r_p_assetEntryId=60912634": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://rawamazowiecka.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ankieta-projekt-lokalny-osrodek-wiedzy-i-edukacji-lowe-przystanek-dwojka?p_r_p_assetEntryId=60908607": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://ryki.praca.gov.pl/-/informacja-o-drugim-naborze-na-szkolenia-grupowe-z-projektu-wspolfinansowanego-z-efs-na-rok-2026": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://rzeszow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/17-uniwersyteckie-targi-pracy?p_r_p_assetEntryId=60972175": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://rypin.praca.gov.pl/-/ogloszenie-o-naborze-wnioskow-o-srodki-krajowego-funduszu-szkoleniowego-w-2026-r.": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://rzeszow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wsparcie-dla-niewidomych-i-slabowidzacych?p_r_p_assetEntryId=60899063": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://sandomierz.praca.gov.pl/-/bezplatne-szkolenie-ekspert-ds.-social-mediow": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-naborow-wnioskow-o-organizacje-prac-interwencyjnych?p_r_p_assetEntryId=60905888": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://strzelceopolskie.praca.gov.pl/-/zaproszenie-na-strzeleckie-targi-pracy-i-edukacji-dla-doroslych-2026": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://sosnowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/bare-minimum-monday-sposob-na-wypalenie-czy-nowe-podejscie-do-pracy-?p_r_p_assetEntryId=60344747": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://strzelin.praca.gov.pl/-/nabor-wnioskow-na-szkolenia-ze-srodkow-kfs": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://suchabeskidzka.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-ramach-krajowego-funduszu-szkoleniowego-1?p_r_p_assetEntryId=60894588": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://suwalki.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekt-zewnetrzny-dyplom-i-co-dalej-absolwenci-z-niepelnosprawnosciami-na-rynku-pracy-1?p_r_p_assetEntryId=60904314": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://slupsk.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/termin-naboru-wnioskow-kfs?p_r_p_assetEntryId=60968776": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://trzebnica.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-naborze-wnioskow-o-przyznanie-bonow-na-ksztalcenie-ustawczne?p_r_p_assetEntryId=60899563": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://tczew.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/stvvjHQcsYTb/content/remont-w-pup-tczew?p_r_p_assetEntryId=60909388": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/srodki-rezerwy-funduszu-pracy-na-finansowanie-kosztow-realizacji-form-pomocy-bez-efs-?p_r_p_assetEntryId=60910908": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://tarnow.praca.gov.pl/-/plan-szkolen-na-2026-rok": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://tychy.praca.gov.pl/-/nabory-wnioskow-w-powiatowym-urzedzie-pracy-w-tychach": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://tychy.praca.gov.pl/-/spotkania-informacyjne-fundusze-europejskie-na-rozpoczecie-dzialalnosci-gospodarczej": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://walbrzych.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-informacyjne-dotyczace-krajowego-funduszu-szkoleniowego-kfs-?p_r_p_assetEntryId=60911099": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wroclaw.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zapraszamy-na-spotkanie-informacyjne-dotyczace-dofinansowania-dzialalnosci-gospodarczej?p_r_p_assetEntryId=60907087": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wolomin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ruszyl-nabor-wnioskow-do-krajowego-funduszu-szkoleniowego-kfs-2026-?p_r_p_assetEntryId=60906278": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://warszawa.praca.gov.pl/-/20374584-jest-praca-w-urzedzie-pracy-dolacz-do-nas-": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wroclaw.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-dofinansowanie-na-rozpoczecie-dzialalnosci-gospodarczej?p_r_p_assetEntryId=60906637": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wyszkow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekt-dyplom-i-co-dalej-?p_r_p_assetEntryId=60970674": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-na-staz-skopiuj-3-?p_r_p_assetEntryId=60895723": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/pfron-nabor-wnioskow-so-sfinansowanie-wybranego-szkolenia?p_r_p_assetEntryId=60975213": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/pfron-nab%C3%B3r-wniosk%C3%B3w-na-organizacj%C4%99-prac-interwencyjnych?p_r_p_assetEntryId=60972216": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/staz-pfron?p_r_p_assetEntryId=60974414": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-dofinansowanie-wynagrodzenia-za-zatrudnienie-skierowanego-bezrobotnego-ktory-ukonczyl-50-rok-zycia?p_r_p_assetEntryId=60895243": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://wlodawa.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/i-nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-1?p_r_p_assetEntryId=60897060": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://leczyca.praca.gov.pl/-/projekt-dyplom-i-co-dalej-absolwenci-z-niepelnosprawnosciami-na-rynku-pracy-2": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://zgorzelec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/pierwszy-w-2026-r.-nabor-wnioskow-kfs?p_r_p_assetEntryId=60887165": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://zabkowiceslaskie.praca.gov.pl/-/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://zdunskawola.praca.gov.pl/-/nabor-wnioskow-na-staze-i-szkolenia-rezerwa-ministra": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://zawiercie.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-z-uczniami-zespolu-szkol-centrum-ksztalcenia-rolniczego-w-zarnowcu?p_r_p_assetEntryId=60903934": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://swiebodzin.praca.gov.pl/-/nabor-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-z-rezerwy-funduszu-pracy": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://swinoujscie.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wazna-informacja-1?p_r_p_assetEntryId=60970338": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://swiebodzin.praca.gov.pl/-/nabor-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-efs-1": {
+    "wynik": "NIE",
+    "powod": "",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
   }
 }

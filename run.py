@@ -32,6 +32,7 @@ MAPPING_FILE = BASE_DIR / "urzad_to_powiat.json"
 
 TODAY = date.today().strftime("%d.%m.%Y")
 REQUEST_DELAY = 0.3
+MAX_SNIPPET = 10000
 
 # Klucze API Gemini — ze zmiennej środowiskowej GEMINI_API_KEYS (rozdzielone przecinkiem)
 API_KEYS_ENV = os.environ.get("GEMINI_API_KEYS", "")
@@ -65,19 +66,22 @@ TAK jeśli:
 
 NIE jeśli:
 - termin końcowy naboru już MINĄŁ (przed {today}) -> NIE
-- zapowiedzi naboru ("wkrótce ruszy", "przygotuj się", "planowany nabór") -> NIE
+- zapowiedzi naboru ("wkrótce ruszy", "przygotuj się", "planowany nabór", \
+  "w związku z planowanym naborem") -> NIE
+- przygotowania do naboru (zakładanie kont, rejestracja na platformie, instrukcje \
+  techniczne przed naborem) -> NIE
 - ogólne informacje o KFS (priorytety, czym jest KFS, warsztaty) -> NIE
 - przypomnienia o naborze ("przypominamy", "przypomnienie") -> NIE
 - instrukcje techniczne (jak złożyć wniosek, założyć konto, wzory, RODO) -> NIE
-- punkty konsultacyjne, dostęp do komputera, dni otwarte -> NIE
+- spotkania, konsultacje, szkolenia, dni otwarte, punkty konsultacyjne, \
+  dostęp do komputera dla przedsiębiorców -> NIE
 - wstrzymanie/zawieszenie/zakończenie naboru -> NIE
 - inny nabór niż KFS (staże, szkolenia indywidualne z FP, bony, prace interwencyjne, \
   rezerwa FP BEZ wzmianki o KFS, dotacje) -> NIE
 - cokolwiek innego -> NIE
 
-WAŻNE: Samo "nabór" w tytule NIE WYSTARCZY. Musi być jasne że chodzi o KFS.
-WAŻNE: Jeśli tytuł mówi wprost o "naborze wniosków KFS/Krajowego Funduszu Szkoleniowego" \
-ale treść jest krótka lub ucięta - daj TAK. Krótka treść oznacza że szczegóły są w załącznikach.
+WAŻNE: Samo "nabór" lub "KFS" w tytule NIE WYSTARCZY. Tekst musi FAKTYCZNIE ogłaszać nabór wniosków.
+WAŻNE: Jeśli treść mówi o "planowanym naborze", przygotowaniach, zakładaniu kont — to NIE jest nabór, to zapowiedź.
 
 KRYTYCZNIE WAŻNE - TERMIN I KWOTA:
 - Przeszukaj CAŁY tekst w poszukiwaniu dat i kwot. Nie pisz "brak" jeśli informacja JEST w tekście!
@@ -174,7 +178,7 @@ def fetch_detail_content(url):
                 best = max((t for t, _ in candidates), key=len)
             lines = [l.strip() for l in best.split("\n") if l.strip()]
             text = "\n".join(lines)
-            if len(text) <= 3000:
+            if len(text) <= MAX_SNIPPET:
                 return text
             date_pattern = re.compile(r"\d{2}\.\d{2}\.\d{4}")
             amount_pattern = re.compile(r"\d[\d\s.,]+\s*z[łl]", re.IGNORECASE)
@@ -185,17 +189,17 @@ def fetch_detail_content(url):
                 last_important = max(last_important, date_matches[-1].end())
             if amount_matches:
                 last_important = max(last_important, amount_matches[-1].end())
-            if last_important > 3000:
+            if last_important > MAX_SNIPPET:
                 tail_size = min(last_important + 200, len(text)) - max(0, last_important - 1500)
-                head_size = 3000 - tail_size - 20
+                head_size = MAX_SNIPPET - tail_size - 20
                 if head_size < 500:
                     head_size = 500
                     tail_start = max(0, last_important - 1500)
-                    return text[:head_size] + "\n[...]\n" + text[tail_start:tail_start + 3000 - head_size - 10]
+                    return text[:head_size] + "\n[...]\n" + text[tail_start:tail_start + MAX_SNIPPET - head_size - 10]
                 tail_start = max(0, last_important - 1500)
                 tail_end = min(len(text), last_important + 200)
                 return text[:head_size] + "\n[...]\n" + text[tail_start:tail_end]
-            return text[:3000]
+            return text[:MAX_SNIPPET]
         except Exception:
             if attempt == 0:
                 time.sleep(2)
@@ -247,7 +251,7 @@ def extract_articles(soup, base_url):
         anchor = parent if parent and parent.name == "a" else h3
         next_p = anchor.find_next("p")
         if next_p:
-            snippet = next_p.get_text(strip=True)[:3000]
+            snippet = next_p.get_text(strip=True)[:MAX_SNIPPET]
 
         articles.append({
             "title": title, "url": href, "snippet": snippet,
@@ -266,7 +270,7 @@ def extract_kfs(soup, kfs_url):
     text = div.get_text(separator="\n", strip=True)
     if not text or len(text) < 20:
         return None
-    return {"title": "KFS", "url": kfs_url, "snippet": text[:3000], "date": "", "source_type": "KFS"}
+    return {"title": "KFS", "url": kfs_url, "snippet": text[:MAX_SNIPPET], "date": "", "source_type": "KFS"}
 
 
 def scrape_all(urzedy):
@@ -409,7 +413,7 @@ def classify_article(art, key_index, cache):
     api_key = API_KEYS[key_index % len(API_KEYS)]
     prompt = CLASSIFY_PROMPT.format(
         title=art.get("title", ""),
-        snippet=(art.get("snippet", "") or art.get("title", ""))[:3000],
+        snippet=(art.get("snippet", "") or art.get("title", ""))[:MAX_SNIPPET],
         today=TODAY,
     )
     text = call_gemini(api_key, prompt)
@@ -466,7 +470,7 @@ def classify_all(articles, cache):
                 "powod": r.get("powod", ""),
                 "termin": r.get("termin", ""),
                 "kwota": r.get("kwota", ""),
-                "snippet": art.get("snippet", "")[:3000],
+                "snippet": art.get("snippet", "")[:MAX_SNIPPET],
             })
 
     # Nowe artykuły — klasyfikuj równolegle
@@ -494,7 +498,7 @@ def classify_all(articles, cache):
                     "powod": result.get("powod", ""),
                     "termin": result.get("termin", ""),
                     "kwota": result.get("kwota", ""),
-                    "snippet": art.get("snippet", "")[:3000],
+                    "snippet": art.get("snippet", "")[:MAX_SNIPPET],
                 })
 
     return results
@@ -595,13 +599,17 @@ def generate_report(results, errors):
             urzad_to_powiat = json.load(f)
 
     tak = [r for r in results if r["wynik"] == "TAK"]
+    related = [r for r in results if r["wynik"] != "TAK" and KFS_KEYWORDS.search(
+        r.get("title", "") + " " + r.get("snippet", "")[:500])]
     total = len(results)
     count_tak = len(tak)
+    count_related = len(related)
     tak_powiaty = sorted(set(r["urzad"] for r in tak))
     count_tak_powiaty = len(tak_powiaty)
     count_err = len(errors)
 
     tak.sort(key=lambda r: r.get("date", ""), reverse=True)
+    related.sort(key=lambda r: r.get("date", ""), reverse=True)
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     # Enrich GeoJSON
@@ -653,7 +661,7 @@ def generate_report(results, errors):
     geojson_json = json.dumps(geojson, ensure_ascii=False)
 
     # Build cards
-    def card(r):
+    def card(r, show_move_btn=False):
         is_tak = r["wynik"] == "TAK"
         badge = '<span class="badge tak">NABOR KFS</span>' if is_tak else '<span class="badge nie">INNE</span>'
         dt = f'<span class="date">{e(r["date"])}</span>' if r.get("date") else ""
@@ -663,13 +671,16 @@ def generate_report(results, errors):
         kwota_h = f'<span class="kwota">{e(kwota)}</span>' if kwota and is_tak else ""
         snippet = r.get("snippet", "")[:200]
         sd = f'{r.get("urzad","")} {r.get("title","")} {snippet}'.lower()
-        return f'''<div class="card" data-search="{e(sd)}">
-<div class="row1"><span class="urzad">{e(r.get("urzad",""))}</span>{badge}{termin_h}{kwota_h}{dt}</div>
-<div class="title"><a href="{e(r.get("url",""))}" target="_blank">{e(r.get("title",""))}</a></div>
+        url = e(r.get("url", ""))
+        move_btn = f'<button class="btn-promote" onclick="promote(this)" title="Przeniес do naborów">&#x2714; Do naborów</button>' if show_move_btn else ""
+        return f'''<div class="card" data-search="{e(sd)}" data-url="{url}">
+<div class="row1"><span class="urzad">{e(r.get("urzad",""))}</span>{badge}{termin_h}{kwota_h}{move_btn}{dt}</div>
+<div class="title"><a href="{url}" target="_blank">{e(r.get("title",""))}</a></div>
 <div class="snippet">{e(snippet)}</div>
 <div class="ai">AI: {e(r.get("powod",""))}</div></div>'''
 
     tak_cards = "\n".join(card(r) for r in tak)
+    related_cards = "\n".join(card(r, show_move_btn=True) for r in related)
     err_cards = "\n".join(
         f'<div class="card err-card"><div class="row1"><span class="urzad">{e(x.get("urzad",""))}</span>'
         f'<span class="err-kfs">{e(x.get("typ",""))}</span></div>'
@@ -717,6 +728,12 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 .snippet{{font-size:13px;color:#6b7280;line-height:1.5;margin-bottom:4px}}
 .ai{{font-size:12px;color:#9ca3af;font-style:italic}}
 .err-msg{{font-size:13px;color:#b91c1c}}.err-kfs{{background:#e0e7ff;color:#3730a3;padding:2px 10px;border-radius:5px;font-size:12px;font-weight:600}}
+.btn-promote{{background:#dcfce7;color:#166534;border:1px solid #86efac;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}}
+.btn-promote:hover{{background:#bbf7d0}}
+.btn-demote{{background:#fef3c7;color:#92400e;border:1px solid #fcd34d;border-radius:6px;padding:2px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}}
+.btn-demote:hover{{background:#fde68a}}
+.promoted-badge{{background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:600}}
+.tab.related-tab{{color:#2563eb}}.tab.related-tab.active{{color:#2563eb;border-bottom-color:#2563eb}}
 .empty{{text-align:center;padding:48px;color:#9ca3af;display:none}}
 #map{{width:100%;height:calc(100vh - 140px);min-height:500px}}
 .map-legend{{background:rgba(255,255,255,.95);padding:14px 18px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);font-size:13px;line-height:2}}
@@ -741,7 +758,8 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 </div>
 <div class="tabs">
 <div class="tab map-tab active" data-tab="map">&#x1F5FA; Mapa ({count_tak_powiaty})</div>
-<div class="tab" data-tab="nabory">&#x1F7E2; Nabory KFS ({count_tak})</div>
+<div class="tab" data-tab="nabory">&#x1F7E2; Nabory KFS (<span id="cnt-nabory">{count_tak}</span>)</div>
+<div class="tab related-tab" data-tab="related">&#x1F517; Powiazane z KFS ({count_related})</div>
 <div class="tab err-tab" data-tab="errors">&#x26A0; Bledy ({count_err})</div>
 </div>
 <div class="panel map-panel active" id="p-map"><div style="position:relative">
@@ -752,7 +770,11 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 <div>Artykulow: {total}</div></div></div></div>
 <div class="panel" id="p-nabory">
 <input class="search" placeholder="Szukaj po urzedzie lub tytule..." data-list="l-nabory">
+<div id="promoted-section" style="display:none"><h3 style="font-size:14px;color:#92400e;margin:12px 0 8px">Recznie przeniesione</h3><div id="l-promoted"></div></div>
 <div id="l-nabory">{tak_cards}</div><div class="empty" id="e-nabory">Brak wynikow.</div></div>
+<div class="panel" id="p-related">
+<input class="search" placeholder="Szukaj po urzedzie lub tytule..." data-list="l-related">
+<div id="l-related">{related_cards}</div><div class="empty" id="e-related">Brak wynikow.</div></div>
 <div class="panel" id="p-errors"><div id="l-errors">{err_cards}</div></div>
 <script>
 document.querySelectorAll(".tab").forEach(function(t){{t.addEventListener("click",function(){{
@@ -802,6 +824,40 @@ d.innerHTML='<h4>Nabory KFS</h4><div class="legend-item"><span class="swatch" st
 +'<div class="legend-item"><span class="swatch" style="background:#15803d"></span> 3+</div>'
 +'<div class="legend-item"><span class="swatch" style="background:#e8e8e8"></span> Brak</div>';return d}};
 leg.addTo(map);map.fitBounds(gl.getBounds().pad(.02));
+
+/* Promote/demote: przenoszenie kart miedzy zakladkami */
+var STORE_KEY="kfs_promoted";
+function getPromoted(){{try{{return JSON.parse(localStorage.getItem(STORE_KEY)||"[]")}}catch(e){{return[]}}}}
+function savePromoted(arr){{localStorage.setItem(STORE_KEY,JSON.stringify(arr))}}
+function updateCount(){{var n=document.querySelectorAll("#l-nabory .card").length+document.querySelectorAll("#l-promoted .card").length;document.getElementById("cnt-nabory").textContent=n}}
+function promote(btn){{
+var card=btn.closest(".card"),url=card.dataset.url,pr=getPromoted();
+if(pr.indexOf(url)===-1)pr.push(url);savePromoted(pr);
+card.querySelector(".btn-promote").remove();
+var db=document.createElement("button");db.className="btn-demote";db.textContent="Cofnij";
+db.setAttribute("onclick","demote(this)");card.querySelector(".row1").appendChild(db);
+var pb=document.createElement("span");pb.className="promoted-badge";pb.textContent="reczne";card.querySelector(".row1").appendChild(pb);
+document.getElementById("l-promoted").appendChild(card);
+document.getElementById("promoted-section").style.display="block";updateCount()}}
+function demote(btn){{
+var card=btn.closest(".card"),url=card.dataset.url,pr=getPromoted();
+pr=pr.filter(function(u){{return u!==url}});savePromoted(pr);
+btn.remove();var pb=card.querySelector(".promoted-badge");if(pb)pb.remove();
+var mb=document.createElement("button");mb.className="btn-promote";mb.textContent="\\u2714 Do naborow";
+mb.setAttribute("onclick","promote(this)");card.querySelector(".row1").appendChild(mb);
+document.getElementById("l-related").prepend(card);
+if(!document.querySelectorAll("#l-promoted .card").length)document.getElementById("promoted-section").style.display="none";updateCount()}}
+/* Restore promoted on load */
+(function(){{var pr=getPromoted();if(!pr.length)return;
+var cards=document.querySelectorAll("#l-related .card");
+cards.forEach(function(c){{if(pr.indexOf(c.dataset.url)!==-1){{
+var btn=c.querySelector(".btn-promote");if(btn)btn.remove();
+var db=document.createElement("button");db.className="btn-demote";db.textContent="Cofnij";
+db.setAttribute("onclick","demote(this)");c.querySelector(".row1").appendChild(db);
+var pb=document.createElement("span");pb.className="promoted-badge";pb.textContent="reczne";c.querySelector(".row1").appendChild(pb);
+document.getElementById("l-promoted").appendChild(c);}}}});
+if(document.querySelectorAll("#l-promoted .card").length)document.getElementById("promoted-section").style.display="block";
+updateCount()}})();
 </script></body></html>'''
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
