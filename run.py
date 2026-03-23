@@ -598,17 +598,24 @@ def generate_report(results, errors):
         with open(MAPPING_FILE, "r", encoding="utf-8") as f:
             urzad_to_powiat = json.load(f)
 
-    tak = [r for r in results if r["wynik"] == "TAK"]
-    related = [r for r in results if r["wynik"] != "TAK" and KFS_KEYWORDS.search(
+    # Potwierdzone nabory: TAK + konkretny termin (nie "w załączniku"/"brak"/pusty)
+    _uncertain = {"w załączniku", "brak", ""}
+    confirmed = [r for r in results if r["wynik"] == "TAK"
+                 and r.get("termin", "").lower() not in _uncertain]
+    # Artykuły KFS: TAK bez szczegółów + NIE wspominające KFS
+    tak_no_details = [r for r in results if r["wynik"] == "TAK"
+                      and r.get("termin", "").lower() in _uncertain]
+    nie_kfs = [r for r in results if r["wynik"] != "TAK" and KFS_KEYWORDS.search(
         r.get("title", "") + " " + r.get("snippet", "")[:500])]
+    related = tak_no_details + nie_kfs
     total = len(results)
-    count_tak = len(tak)
+    count_tak = len(confirmed)
     count_related = len(related)
-    tak_powiaty = sorted(set(r["urzad"] for r in tak))
+    tak_powiaty = sorted(set(r["urzad"] for r in confirmed))
     count_tak_powiaty = len(tak_powiaty)
     count_err = len(errors)
 
-    tak.sort(key=lambda r: r.get("date", ""), reverse=True)
+    confirmed.sort(key=lambda r: r.get("date", ""), reverse=True)
     related.sort(key=lambda r: r.get("date", ""), reverse=True)
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -679,7 +686,7 @@ def generate_report(results, errors):
 <div class="snippet">{e(snippet)}</div>
 <div class="ai">AI: {e(r.get("powod",""))}</div></div>'''
 
-    tak_cards = "\n".join(card(r) for r in tak)
+    tak_cards = "\n".join(card(r) for r in confirmed)
     related_cards = "\n".join(card(r, show_move_btn=True) for r in related)
     err_cards = "\n".join(
         f'<div class="card err-card"><div class="row1"><span class="urzad">{e(x.get("urzad",""))}</span>'
@@ -759,7 +766,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 <div class="tabs">
 <div class="tab map-tab active" data-tab="map">&#x1F5FA; Mapa ({count_tak_powiaty})</div>
 <div class="tab" data-tab="nabory">&#x1F7E2; Nabory KFS (<span id="cnt-nabory">{count_tak}</span>)</div>
-<div class="tab related-tab" data-tab="related">&#x1F517; Powiazane z KFS ({count_related})</div>
+<div class="tab related-tab" data-tab="related">&#x1F4C4; Artykuly KFS ({count_related})</div>
 <div class="tab err-tab" data-tab="errors">&#x26A0; Bledy ({count_err})</div>
 </div>
 <div class="panel map-panel active" id="p-map"><div style="position:relative">
