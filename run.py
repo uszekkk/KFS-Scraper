@@ -415,19 +415,23 @@ def classify_article(art, key_index, cache):
     url = art.get("url", "")
     title = art.get("title", "")
 
+    snippet = art.get("snippet", "")
+    text_to_check = title + " " + snippet[:1000]
+
+    # Pre-filtr: brak słów kluczowych KFS → automatycznie NIE (bez AI)
+    if not KFS_KEYWORDS.search(text_to_check):
+        result = {"wynik": "NIE", "powod": "Brak słów kluczowych KFS",
+                  "termin": "", "kwota": "", "classified_date": TODAY}
+        with progress_lock:
+            progress["done"] += 1
+        return result, False
+
     # Sprawdź cache
     if url in cache:
         cached = cache[url]
-        # Reklasyfikuj jeśli: cache=NIE ale tytuł/snippet sugeruje nabór KFS
-        # (prawdopodobnie wcześniej snippet był za krótki)
-        snippet = art.get("snippet", "")
-        title_or_snippet = title + " " + snippet[:500]
-        if cached.get("wynik") == "NIE" and KFS_NABOR_TITLE.search(title_or_snippet):
-            pass  # pomijamy cache, reklasyfikuj
-        else:
-            return cached, True
+        return cached, True
 
-    # Nowy artykuł — wyślij do AI
+    # Nowy artykuł z KFS keywords — wyślij do AI
     api_key = API_KEYS[key_index % len(API_KEYS)]
     prompt = CLASSIFY_PROMPT.format(
         title=art.get("title", ""),
@@ -464,9 +468,13 @@ def classify_article(art, key_index, cache):
 def classify_all(articles, cache):
     """Klasyfikuje wszystkie artykuły — nowe przez AI, stare z cache."""
     new_articles = [a for a in articles if a.get("url", "") not in cache]
+    # Ile z nowych ma KFS keywords (pójdzie do AI), ile bez (auto-NIE)
+    kfs_new = [a for a in new_articles if KFS_KEYWORDS.search(
+        a.get("title", "") + " " + a.get("snippet", "")[:1000])]
+    skip_count = len(new_articles) - len(kfs_new)
     cached_count = len(articles) - len(new_articles)
 
-    print(f"\n  Artykulow: {len(articles)} (z cache: {cached_count}, nowych: {len(new_articles)})")
+    print(f"\n  Artykulow: {len(articles)} (z cache: {cached_count}, nowych: {len(new_articles)}, do AI: {len(kfs_new)}, auto-NIE: {skip_count})")
 
     progress["total"] = len(new_articles)
     progress["done"] = 0
