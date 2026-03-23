@@ -880,16 +880,12 @@ def generate_report(results, errors):
             urzad_to_woj = json.load(f)
     all_woj = sorted(set(urzad_to_woj.values()))
 
-    # Potwierdzone nabory: TAK + konkretny termin (nie "w załączniku"/"brak"/pusty)
-    _uncertain = {"w załączniku", "brak", ""}
-    confirmed = [r for r in results if r["wynik"] == "TAK"
-                 and r.get("termin", "").lower() not in _uncertain]
-    # Artykuły KFS: TAK bez szczegółów + NIE wspominające KFS
-    tak_no_details = [r for r in results if r["wynik"] == "TAK"
-                      and r.get("termin", "").lower() in _uncertain]
+    # Potwierdzone nabory: wszystkie TAK
+    confirmed = [r for r in results if r["wynik"] == "TAK"]
+    # Artykuły KFS: NIE ale wspominające KFS
     nie_kfs = [r for r in results if r["wynik"] != "TAK" and KFS_KEYWORDS.search(
         r.get("title", "") + " " + r.get("snippet", "")[:500])]
-    related = tak_no_details + nie_kfs
+    related = nie_kfs
     total = len(results)
     count_tak = len(confirmed)
     count_related = len(related)
