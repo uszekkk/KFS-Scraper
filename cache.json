@@ -27865,5 +27865,33 @@
     "termin": "08-04-2026 - 14-04-2026",
     "kwota": "431 575,00 zł",
     "classified_date": "23.03.2026"
+  },
+  "https://myszkow.praca.gov.pl/-/zakonczenie-naboru-wnioskow-na-prace-interwencyjne-efs-": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://myszkow.praca.gov.pl/-/zakonczenie-naboru-wnioskow-na-prace-interwencyjne-fp": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://pabianice.praca.gov.pl/-/krajowy-fundusz-szkoleniowy-przygotuj-sie-do-naboru-": {
+    "wynik": "NIE",
+    "powod": "Przygotowania do naboru, nabór ruszy wkrótce.",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.03.2026"
+  },
+  "https://brzesko.praca.gov.pl/strona-glowna/-/asset_publisher/Qat7ebECUfDp/content/informacja-o-naborze-wnioskow-o-przyznanie-srodkow-kfs?p_r_p_assetEntryId=61007681": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin naboru, kwotę KFS i ogłasza nabór.",
+    "termin": "09.04.2026 - 15.04.2026",
+    "kwota": "861 500,00 zł",
+    "classified_date": "23.03.2026"
   }
 }
