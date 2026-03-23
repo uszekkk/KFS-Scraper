@@ -685,21 +685,60 @@ def push_to_crm(results):
         "Content-Type": "application/json",
     }
 
-    # Pobierz istniejące URL-e z CRM żeby nie duplikować
+    # Pobierz istniejące rekordy z CRM (URL, ID, status, termin)
     existing = set()
+    existing_records = []  # do aktualizacji statusów
     try:
         resp = requests.get(
             f"{crm_url}/api/v1/NaborKFS",
             headers=headers,
-            params={"select": "url", "maxSize": 200},
+            params={"select": "url,status,termin", "maxSize": 200},
             timeout=15,
         )
         if resp.ok:
             for rec in resp.json().get("list", []):
                 if rec.get("url"):
                     existing.add(rec["url"])
+                existing_records.append(rec)
     except Exception as ex:
         print(f"  CRM: Błąd pobierania istniejących: {ex}")
+
+    # Aktualizuj statusy istniejących rekordów (Nowy→W trakcie→Nieaktualny)
+    auto_statuses = {"Nowy", "W trakcie"}  # tylko te zmieniamy automatycznie
+    updated = 0
+    for rec in existing_records:
+        if rec.get("status") not in auto_statuses:
+            continue
+        termin_raw = rec.get("termin", "")
+        termin_dates = re.findall(r"(\d{2})\.(\d{2})\.(\d{4})", termin_raw)
+        if not termin_dates:
+            continue
+        try:
+            today = date.today()
+            start = date(int(termin_dates[0][2]), int(termin_dates[0][1]), int(termin_dates[0][0]))
+            end = date(int(termin_dates[-1][2]), int(termin_dates[-1][1]), int(termin_dates[-1][0]))
+            if today > end:
+                new_status = "Nieaktualny"
+            elif today >= start:
+                new_status = "W trakcie"
+            else:
+                new_status = "Nowy"
+            if new_status != rec.get("status"):
+                try:
+                    resp = requests.put(
+                        f"{crm_url}/api/v1/NaborKFS/{rec['id']}",
+                        headers=headers,
+                        json={"status": new_status},
+                        timeout=15,
+                    )
+                    if resp.ok:
+                        updated += 1
+                except Exception:
+                    pass
+        except ValueError:
+            continue
+    if updated:
+        print(f"  CRM: Zaktualizowano status {updated} istniejących naborów")
 
     added = 0
     for r in tak:
@@ -712,6 +751,22 @@ def push_to_crm(results):
             if len(parts) == 3:
                 crm_date = f"{parts[2]}-{parts[1]}-{parts[0]}"
 
+        # Status na podstawie terminu naboru
+        status = "Nowy"
+        termin_raw = r.get("termin", "")
+        termin_dates = re.findall(r"(\d{2})\.(\d{2})\.(\d{4})", termin_raw)
+        if termin_dates:
+            today = date.today()
+            try:
+                start = date(int(termin_dates[0][2]), int(termin_dates[0][1]), int(termin_dates[0][0]))
+                end = date(int(termin_dates[-1][2]), int(termin_dates[-1][1]), int(termin_dates[-1][0]))
+                if today > end:
+                    status = "Nieaktualny"
+                elif today >= start:
+                    status = "W trakcie"
+            except ValueError:
+                pass
+
         payload = {
             "name": r.get("title", "")[:255],
             "urzad": r.get("urzad", ""),
@@ -720,7 +775,7 @@ def push_to_crm(results):
             "url": r.get("url", ""),
             "datapublikacji": crm_date,
             "powod": r.get("powod", ""),
-            "status": "Nowy",
+            "status": status,
         }
         try:
             resp = requests.post(
