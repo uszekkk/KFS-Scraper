@@ -689,23 +689,35 @@ def push_to_crm(results):
     headers = {
         "X-Api-Key": crm_key,
         "Content-Type": "application/json",
+        "Accept": "application/json",
     }
 
-    # Pobierz istniejące rekordy z CRM (URL, ID, status, termin)
+    # Pobierz istniejące rekordy z CRM (URL, ID, status, termin) — z paginacją
     existing = set()
     existing_records = []  # do aktualizacji statusów
     try:
-        resp = requests.get(
-            f"{crm_url}/api/v1/NaboryKfs",
-            headers=headers,
-            params={"select": "url,status,termin", "maxSize": 200},
-            timeout=15,
-        )
-        if resp.ok:
-            for rec in resp.json().get("list", []):
+        offset = 0
+        page_size = 200
+        while True:
+            resp = requests.get(
+                f"{crm_url}/api/v1/NaboryKfs",
+                headers=headers,
+                params={"select": "name,url,status,termin", "maxSize": page_size, "offset": offset},
+                timeout=15,
+            )
+            if not resp.ok:
+                print(f"  CRM: Błąd pobierania istniejących: HTTP {resp.status_code}")
+                break
+            page = resp.json().get("list", [])
+            for rec in page:
                 if rec.get("url"):
                     existing.add(rec["url"])
+                if rec.get("name"):
+                    existing.add(rec["name"])
                 existing_records.append(rec)
+            if len(page) < page_size:
+                break
+            offset += page_size
     except Exception as ex:
         print(f"  CRM: Błąd pobierania istniejących: {ex}")
 
@@ -744,8 +756,12 @@ def push_to_crm(results):
         print(f"  CRM: Zaktualizowano status {updated} istniejących naborów")
 
     added = 0
+    skipped = 0
+    errors = 0
     for r in tak:
-        if r.get("url") in existing:
+        title = r.get("title", "")[:255]
+        if r.get("url") in existing or title in existing:
+            skipped += 1
             continue
         # Parsuj datę DD.MM.YYYY → YYYY-MM-DD
         crm_date = ""
@@ -771,7 +787,7 @@ def push_to_crm(results):
                 pass
 
         payload = {
-            "name": r.get("title", "")[:255],
+            "name": title,
             "urzad": r.get("urzad", ""),
             "termin": r.get("termin", ""),
             "kwota": r.get("kwota", ""),
@@ -790,11 +806,14 @@ def push_to_crm(results):
             if resp.status_code in (200, 201):
                 added += 1
             else:
-                print(f"  CRM: Błąd {resp.status_code} dla {r.get('urzad','')}")
+                errors += 1
+                detail = resp.text[:200] if resp.text else ""
+                print(f"  CRM: Błąd {resp.status_code} dla {r.get('urzad','')} — {detail}")
         except Exception as ex:
+            errors += 1
             print(f"  CRM: {ex}")
 
-    print(f"  CRM: Dodano {added} nowych naborów (pominięto {len(tak) - added} istniejących)")
+    print(f"  CRM: Dodano {added} nowych, pominięto {skipped} istniejących, błędów: {errors}")
 
 
 # ============================================================
