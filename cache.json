@@ -28789,5 +28789,460 @@
     "termin": "",
     "kwota": "",
     "classified_date": "25.03.2026"
+  },
+  "https://chrzanow.praca.gov.pl/-/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego": {
+    "wynik": "TAK",
+    "powod": "Ogłoszenie o naborze KFS z terminem i kwotą.",
+    "termin": "08.04.2026 - 14.04.2026",
+    "kwota": "879.000,00 zł",
+    "classified_date": "23.03.2026"
+  },
+  "https://kielce.praca.gov.pl/-/ogloszenie-o-naborze-wnioskow-z-krajowego-funduszu-szkoleniowego": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin naboru, kwotę i ogłasza nabór.",
+    "termin": "19.03.2026 - 25.03.2026",
+    "kwota": "2.029.000,00 zł",
+    "classified_date": "23.03.2026"
+  },
+  "https://wyszkow.praca.gov.pl/strona-glowna/-/asset_publisher/Qat7ebECUfDp/content/krajowy-fundusz-szkoleniowy-2026?p_r_p_assetEntryId=57700852": {
+    "wynik": "NIE",
+    "powod": "Zapowiedź naboru, \"nabór zostanie ogłoszony\".",
+    "termin": "",
+    "kwota": "1 200 000,00 zł",
+    "classified_date": "23.03.2026"
+  },
+  "https://aleksandrowkujawski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-na-wolne-stanowisko-pracy-w-komendzie-powiatowej-policji-w-aleksandrowie-kujawskim?p_r_p_assetEntryId=61082971": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://golub-dobrzyn.praca.gov.pl/-/zyczenia-wielkanocne": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://elblag.praca.gov.pl/-/wyczerpany-limit-srodkow-o-zwrot-czesci-kosztow-wynagrodzenia-za-zatrudnienie-w-dps-lub-wripz-rezerwa-funduszu-pracy": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://bochnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/lTVxWJvaYb1y/content/dyplom-i-co-dalej-absolwenci-z-niepelnosprawnosciami-na-rynku-pracy-1?p_r_p_assetEntryId=61073776": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://bialobrzegi.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypomnienie-nabor-uzupelniajacy-na-dofinansowanie-podjecia-dzialalnosci-gospodarczej-efs-?p_r_p_assetEntryId=61088119": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://brodnica.praca.gov.pl/-/staze-nabor-wnioskow-o-zorganizowanie-stazu-w-ramach-srodkow-krajowych": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://chrzanow.praca.gov.pl/-/zamkniety-nabor-wnioskow-o-przyznanie-srodkow-na-dzialalnosc-gospodarcza-z-efs-iv-": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://elk.praca.gov.pl/-/konferencja-pn.-edukacja-bez-konca-wyzwania-i-mozliwosci": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://czestochowa.praca.gov.pl/-/grupowa-informacja-zawodowa-dla-osob-zarejestrowanych-w-powiatowym-urzedzie-pracy-w-czestochowie-pt.-tu-i-teraz-czyli-jak-efektywnie-korzystac-z-pomocy-urzedu.-2": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://gostynin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zakonczenie-naboru-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy?p_r_p_assetEntryId=61078471": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://glogow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/doposazenia-stanowiska-pracy-nabor-wnioskow?p_r_p_assetEntryId=61082947": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://glogow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/dodatkowe-srodki-z-rezerwy-funduszu-pracy?p_r_p_assetEntryId=61081681": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://jaroslaw.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-3?p_r_p_assetEntryId=61073739": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kalisz.praca.gov.pl/-/zakonczenie-naboru-wnioskow-o-organizowanie-robot-publicznych.-2": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/-/podsumowanie-cyklu-spotkan-informacyjnych-pn.-przygotuj-poprawny-wniosek-narodziny-firmy-krok-po-kroku": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/-/wstrzymanie-naboru-wnioskow-o-zorganizowanie-prac-interwencyjnych-1": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/-/przewodnik-o-formach-pomocy-2": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-odbiorze-pit-11-1?p_r_p_assetEntryId=59003022": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ha?p_r_p_assetEntryId=58873014": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/sytuacja-na?p_r_p_assetEntryId=58857237": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/-/informacja-o-odbiorze-pit-11": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/-/zyczenia-z-okazji-pracownika-publicznych-sluzb-zatrudnienia": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/-/informacja-o-odbiorze-pit-11-skopiuj-": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nowa-kadencja-powiatowej-rady-rynku-pracy?p_r_p_assetEntryId=57710680": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://uppkrakow.praca.gov.pl/-/warsztaty-pn-moj-debiut-zawodowy-w-filii-krakow": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://klodzko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-pi-1?p_r_p_assetEntryId=61081037": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://klodzko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-zawarcie-umowy-o-pi-2?p_r_p_assetEntryId=61082348": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://lubliniec.praca.gov.pl/-/zapraszamy-na-wojskowe-targi-sluzby-i-pracy": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://minskmazowiecki.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/bezplatny-webinar-dla-osob-przygotowujacych-sie-do-zalozenia-wlasnej-dzialalnosci-gospodarczej.?p_r_p_assetEntryId=61088542": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://nidzica.praca.gov.pl/-/nabor-na-wolne-stanowisko-pracy-1": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://nowytomysl.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/e-doreczenia?p_r_p_assetEntryId=61080982": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://olkusz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-dot.-naboru-wnioskow-o-organizacje-stazu-1?p_r_p_assetEntryId=61086484": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://olkusz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekt-nowa-praca-w-lepszym-klimacie?p_r_p_assetEntryId=61080110": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://olkusz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekt-strefa-efektywnej-transformacji?p_r_p_assetEntryId=61078842": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://olkusz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekt-dyplom-i-co-dalej-absolwenci-z-niepelnosprawnosciami-na-rynku-pracy?p_r_p_assetEntryId=61078746": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://olkusz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/o-handlu-ludzmi-podczas-targow-pracy-w-olkuszu?p_r_p_assetEntryId=61073999": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://olkusz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/powiatowe-targi-pracy-w-olkuszu-podsumowanie-wydarzenia?p_r_p_assetEntryId=61073933": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://opoczno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/stopa-bezrobocia.-stan-na-koniec-lutego-2026-r.?p_r_p_assetEntryId=61060555": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://opole.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-informacyjne-on-line-z-pracownikiem-zus?p_r_p_assetEntryId=61076873": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://przysucha.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/plan-szkolen-na-2026-rok?p_r_p_assetEntryId=61081320": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://radzynpodlaski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/rekrutacja-do-projektu-systemowe-ksztalcenie-specjalistow-i-specjalistek-ds.-dostepnosci-cyfrowej?p_r_p_assetEntryId=61084214": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://radziejow.praca.gov.pl/-/ogloszenie-o-gieldzie-pracy-dla-firmy-ekonstal-sp.-z-o.o.": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://plock.praca.gov.pl/-/powiatowy-dzien-soltysa": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://szczytno.praca.gov.pl/-/-program-aktywizacji-zawodowej-osob-bezrobotnych-w-regionach-wysokiego-bezrobocia-skopiuj-1-": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://wadowice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-dotyczaca-obslugi-klientow-w-dniu-26.03.2026-r.?p_r_p_assetEntryId=61081108": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://walbrzych.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-jednorazowe-srodki-na-podjecie-dzialalnosci-gospodarczej-dla-bezrobotnych-w-ramach-srodkow-rezerwy-ministry?p_r_p_assetEntryId=61084232": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://walbrzych.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-jednorazowe-srodki-na-podjecie-dzialalnosci-gospodarczej-w-ramach-realizacji-projektu-pn.-czas-na-zmiane-feds?p_r_p_assetEntryId=61083112": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://wejherowo.praca.gov.pl/-/przyjdz-na-spotkanie-z-pracodawca-8": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://bielsko-biala.praca.gov.pl/-/porady-eksperckie-temat-kfs-wszystko-o-etapach-naboru-wnioskow-oraz-ich-oceny-formalnej-i-merytorycznej.": {
+    "wynik": "NIE",
+    "powod": "Ogłoszenie o poradach, nie o naborze KFS.",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://wyszkow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekty-program-aktywizacji-i-integracji-oraz-akcja-integracja-2?p_r_p_assetEntryId=61087987": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://wyszkow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/bezplatne-webinary-dla-osob-przygotowujacych-sie-do-zalozenia-wlasnej-dzialalnosci-gospodarczej-2?p_r_p_assetEntryId=61084773": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://puck.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-dla-podmiotow-wnioskujacych-o-srodki-kfs?p_r_p_assetEntryId=61084629": {
+    "wynik": "NIE",
+    "powod": "Brak terminu naboru i kwoty do rozdysponowania.",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://zdunskawola.praca.gov.pl/-/zatrudnienie-osadzonych": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://lodz.praca.gov.pl/-/nabor-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-w-ramach-projektu-lodz-aktywizuje-zawodowo-iv-1": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://lodz.praca.gov.pl/-/nabor-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://leczyca.praca.gov.pl/-/zaproszenie-do-udzialu-w-konsultacjach-spolecznych.": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://zuromin.praca.gov.pl/-/informacja-o-wstrzymaniu-naboru-wnioskow-o-zawarcie-umowy-o-organizowanie-stazu-3": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://bochnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/lTVxWJvaYb1y/content/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61085500": {
+    "wynik": "TAK",
+    "powod": "Ogłasza nabór KFS z terminem i kwotą.",
+    "termin": "13.04.2026 - 17.04.2026",
+    "kwota": "1 253 700,00 zł",
+    "classified_date": "25.03.2026"
+  },
+  "https://sosnowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/kfs-2026-na-co-mozesz-przeznaczyc-dofinansowanie-?p_r_p_assetEntryId=61074058": {
+    "wynik": "TAK",
+    "powod": "Jest termin naboru KFS.",
+    "termin": "30.03.2026 - 03.04.2026",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://zawiercie.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/kfs-warsztaty-dla-wnioskodawcow.?p_r_p_assetEntryId=61084613": {
+    "wynik": "NIE",
+    "powod": "Warsztaty informacyjne, nie ogłoszenie naboru.",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://ostroleka.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/problemy-ze-zlozeniem-wniosku-o-dofinansowanie-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61078163": {
+    "wynik": "NIE",
+    "powod": "Tekst nie ogłasza naboru, tylko informuje o problemach.",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://wolsztyn.praca.gov.pl/-/nabor-wnioskow-krajowego-funduszu-szkoleniowego": {
+    "wynik": "NIE",
+    "powod": "Termin naboru minął (jest z 2025).",
+    "termin": "07.04.2025 - 13.04.2025",
+    "kwota": "500 000,00 zł",
+    "classified_date": "25.03.2026"
   }
 }
