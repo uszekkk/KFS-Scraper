@@ -29909,5 +29909,19 @@
     "termin": "20.04.2026 - 24.04.2026",
     "kwota": "900 000,00 zł",
     "classified_date": "25.03.2026"
+  },
+  "https://srodaslaska.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/-ksef-szkolenia-dla-branzy-szkolenia-w-urzedzie-skarbowym-w-srodzie-slaskiej?p_r_p_assetEntryId=59671946": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://wroclaw.praca.gov.pl/-/nabor-wnioskow-kfs": {
+    "wynik": "TAK",
+    "powod": "Ogłasza nabór KFS, podany termin i kwota.",
+    "termin": "13.04.2026 - 17.04.2026",
+    "kwota": "5 400 000,00 zł",
+    "classified_date": "25.03.2026"
   }
 }
