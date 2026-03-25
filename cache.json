@@ -29244,5 +29244,61 @@
     "termin": "07.04.2025 - 13.04.2025",
     "kwota": "500 000,00 zł",
     "classified_date": "25.03.2026"
+  },
+  "https://kielce.praca.gov.pl/strona-glowna/-/asset_publisher/4ZVCltRaWuqp/content/ogloszenie-o-naborze-wnioskow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=60080744": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin naboru, kwotę i ogłasza nabór.",
+    "termin": "19.03.2026 - 25.03.2026",
+    "kwota": "2.029.000,00 zł",
+    "classified_date": "23.03.2026"
+  },
+  "https://nowysacz.praca.gov.pl/-/informacja-o-sytuacji-na-rynku-pracy-w-powiecie-nowosadeckim-za-miesiac-luty-2025-r.-1": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://gniezno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-uslugi-i-instrumenty-rynku-pracy-oferowane-przez-powiatowy-urzad-pracy-w-gnieznie?p_r_p_assetEntryId=61087592": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://wyszkow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/projekt-systemowe-ksztalcenie-specjalistow-i-specjalistek-ds.-dostepnosci-cyfrowej-fers.03.02-ip.03-0001-24-w-ramach-programu-fundusze-europejskie-dla-rozwoju-spolecznego-2021-2027-os-priorytetowa-iii-dostepnosc-i-uslugi-dla-osob-z-niepelnosprawnosciami-d?p_r_p_assetEntryId=61089507": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://piekaryslaskie.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/komunikat-z-dnia-26.09.2025r.?p_r_p_assetEntryId=61036100": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://myszkow.praca.gov.pl/-/przypominamy-to-juz-jutro-bezplatne-konsultacje-indywidualne-organizowane-przez-slaski-fundusz-rozwoju": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://zgorzelec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-informacyjne-dla-uczniow-szkoly-podstawowej-nr-5-w-zgorzelcu?p_r_p_assetEntryId=61091632": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "25.03.2026"
+  },
+  "https://dzierzoniow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-?p_r_p_assetEntryId=61090864": {
+    "wynik": "TAK",
+    "powod": "Ogłasza nabór KFS z terminem w przyszłości.",
+    "termin": "10.04.2026 - 16.04.2026",
+    "kwota": "",
+    "classified_date": "25.03.2026"
   }
 }
