@@ -1273,9 +1273,9 @@ def main():
     # Push to CRM
     push_to_crm(results)
 
-    # Email notification
-    new_tak = [r for r in results if r.get("url") in new_tak_urls]
-    send_email_notification(new_tak)
+    # Email notification — tymczasowo wszystkie TAK (potem tylko nowe)
+    all_tak = [r for r in results if r.get("wynik") == "TAK"]
+    send_email_notification(all_tak)
 
     # Generate report
     count_tak, count_powiaty = generate_report(results, errors)
