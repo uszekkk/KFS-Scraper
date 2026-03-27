@@ -30805,5 +30805,26 @@
     "termin": "",
     "kwota": "",
     "classified_date": "27.03.2026"
+  },
+  "https://boleslawiec.praca.gov.pl/-/nabor-wnioskow-kfs-2026": {
+    "wynik": "TAK",
+    "powod": "Ogłoszenie naboru KFS, termin i kwota podane.",
+    "termin": "13.04.2026 - 17.04.2026",
+    "kwota": "1 100 000,00 zł",
+    "classified_date": "27.03.2026"
+  },
+  "https://raciborz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-2026-1?p_r_p_assetEntryId=61162968": {
+    "wynik": "TAK",
+    "powod": "Ogłoszenie o naborze KFS z terminem i kwotą.",
+    "termin": "13.04.2026 - 17.04.2026",
+    "kwota": "1 000 000 zł",
+    "classified_date": "27.03.2026"
+  },
+  "https://gupkrakow.praca.gov.pl/strona-glowna/-/asset_publisher/4TIYC2JvFF9a/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-1?p_r_p_assetEntryId=61180657": {
+    "wynik": "TAK",
+    "powod": "Ogłoszenie o naborze KFS z terminem i kwotą.",
+    "termin": "13.04.2026 - 17.04.2026",
+    "kwota": "14 109 100,00 zł",
+    "classified_date": "27.03.2026"
   }
 }
