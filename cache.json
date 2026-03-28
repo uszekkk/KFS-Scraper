@@ -31708,5 +31708,12 @@
     "termin": "",
     "kwota": "",
     "classified_date": "28.03.2026"
+  },
+  "https://chelmno.praca.gov.pl/-/wojskowe-targi-sluzby-i-pracy-grudziadz": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "28.03.2026"
   }
 }
