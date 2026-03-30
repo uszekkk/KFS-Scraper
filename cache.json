@@ -31715,5 +31715,103 @@
     "termin": "",
     "kwota": "",
     "classified_date": "28.03.2026"
+  },
+  "https://lezajsk.praca.gov.pl/-/informacja-7": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://wadowice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-dotyczaca-obslugi-klientow-w-dniu-26.03.2026-r.-1?p_r_p_assetEntryId=61268381": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://mogilno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/dofinansowanie-podjecia-dzialalnosci-gospodarczej-informacja-o-terminie-naboru-wnioskow?p_r_p_assetEntryId=61268632": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://rawicz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor?p_r_p_assetEntryId=43811220": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://lidzbarkwarminski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-naboru-wnioskow-o-finansowanie-kosztow-szkolenia-kosztow-potwierdzenia-nabycia-wiedzy-i-umiejetnosci-oraz-kosztow-uzyskania-dokumentu-potwierdzajacego-nabycie-wiedzy-i-umiejetnosci.?p_r_p_assetEntryId=61224693": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://radzynpodlaski.praca.gov.pl/strona-glowna": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://kutno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/1.-nabor-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy?p_r_p_assetEntryId=61269626": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://tczew.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/stvvjHQcsYTb/content/komunikat-17?p_r_p_assetEntryId=61270928": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://kutno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/1.-nabor-wnioskow-o-przyznanie-jednorazowo-srodkow-na-podjecie-dzialalnosci-gospodarczej?p_r_p_assetEntryId=61269657": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://rawicz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-na-podjecie-dzialalnosci-gospodarczej-w-ramach-projektu-nowe-perspektywy-z-efs-ii-edycja-.?p_r_p_assetEntryId=60903796": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypominamy-o-trwajacym-naborze-wnioskow-o-organizacje-stazu?p_r_p_assetEntryId=61269676": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://wabrzezno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/DD5r9QQCXbhs/content/zyczenia-wielkanocne?p_r_p_assetEntryId=61270584": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://sosnowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/30.03-03.04-rusza-nabor-wnioskow-o-dofinansowanie-z-kfs?p_r_p_assetEntryId=61262909": {
+    "wynik": "TAK",
+    "powod": "Jest termin, ogłasza nabór wniosków KFS",
+    "termin": "30.03.2026 - 03.04.2026",
+    "kwota": "",
+    "classified_date": "30.03.2026"
+  },
+  "https://zwolen.praca.gov.pl/-/informacja-o-naborze-wnioskow-o-przyznanie-srodkow-z-kfs-2025-i-tura-skopiuj-": {
+    "wynik": "TAK",
+    "powod": "Ogłasza nabór KFS, termin i kwota podane.",
+    "termin": "09.04.2026 - 15.04.2026",
+    "kwota": "600 000 zł",
+    "classified_date": "30.03.2026"
   }
 }
