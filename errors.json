@@ -24,27 +24,27 @@
     "blad": "Brak artykulow"
   },
   {
-    "urzad": "Poznan",
-    "url": "https://poznan.praca.gov.pl/",
-    "typ": "Aktualnosci",
-    "blad": "404 Client Error:  for url: https://poznan.praca.gov.pl/rynek-pracy/aktualnosci"
-  },
-  {
     "urzad": "Przeworsk",
     "url": "https://przeworsk.praca.gov.pl/",
     "typ": "Aktualnosci",
     "blad": "Brak artykulow"
   },
   {
-    "urzad": "Środa Wlkp.",
-    "url": "https://srodawielkopolska.praca.gov.pl/",
+    "urzad": "Poznan",
+    "url": "https://poznan.praca.gov.pl/",
     "typ": "Aktualnosci",
-    "blad": "Brak artykulow"
+    "blad": "404 Client Error:  for url: https://poznan.praca.gov.pl/rynek-pracy/aktualnosci"
   },
   {
     "urzad": "Łowicz",
     "url": "https://lowicz.praca.gov.pl/",
     "typ": "Aktualnosci",
     "blad": "404 Client Error:  for url: https://lowicz.praca.gov.pl/rynek-pracy/aktualnosci"
+  },
+  {
+    "urzad": "Środa Wlkp.",
+    "url": "https://srodawielkopolska.praca.gov.pl/",
+    "typ": "Aktualnosci",
+    "blad": "Brak artykulow"
   }
 ]
