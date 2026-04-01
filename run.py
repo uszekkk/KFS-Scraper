@@ -32,6 +32,7 @@ ERRORS_FILE = BASE_DIR / "errors.json"
 OUTPUT_FILE = BASE_DIR / "index.html"
 GEOJSON_FILE = BASE_DIR / "powiaty.geojson"
 MAPPING_FILE = BASE_DIR / "urzad_to_powiat.json"
+WOJ_FILE = BASE_DIR / "urzad_to_woj.json"
 
 TODAY = date.today().strftime("%d.%m.%Y")
 REQUEST_DELAY = 0.3
@@ -675,13 +676,100 @@ def classify_all(articles, cache):
 # ============================================================
 # WYSYŁKA DO ESPOCRM
 # ============================================================
+
+def _parse_termin_dates(termin_raw):
+    """Parsuje termin '20.04.2026 - 24.04.2026' → (date_start, date_end) lub (None, None)."""
+    termin_dates = re.findall(r"(\d{2})\.(\d{2})\.(\d{4})", termin_raw)
+    if not termin_dates:
+        return None, None
+    try:
+        start = date(int(termin_dates[0][2]), int(termin_dates[0][1]), int(termin_dates[0][0]))
+        end = date(int(termin_dates[-1][2]), int(termin_dates[-1][1]), int(termin_dates[-1][0]))
+        return start, end
+    except ValueError:
+        return None, None
+
+
+def _compute_status_kfs(start, end):
+    """Oblicza status NaboryKfs na podstawie terminu."""
+    if not start or not end:
+        return "Nowy"
+    today = date.today()
+    if today > end:
+        return "Nieaktualny"
+    elif today >= start:
+        return "W trakcie"
+    return "Nowy"
+
+
+def _parse_kwota_number(kwota_str):
+    """Parsuje '1 500 000 zł' → 1500000 (int) lub None."""
+    if not kwota_str:
+        return None
+    digits = re.sub(r"[^\d]", "", kwota_str)
+    if digits:
+        return int(digits)
+    return None
+
+
+def _crm_paginate(crm_url, entity, headers, select_fields):
+    """Pobiera wszystkie rekordy encji z CRM z paginacją."""
+    records = []
+    offset = 0
+    page_size = 200
+    try:
+        while True:
+            resp = requests.get(
+                f"{crm_url}/api/v1/{entity}",
+                headers=headers,
+                params={"select": select_fields, "maxSize": page_size, "offset": offset},
+                timeout=15,
+            )
+            if not resp.ok:
+                print(f"  CRM: Błąd pobierania {entity}: HTTP {resp.status_code}")
+                break
+            page = resp.json().get("list", [])
+            records.extend(page)
+            if len(page) < page_size:
+                break
+            offset += page_size
+    except Exception as ex:
+        print(f"  CRM: Błąd pobierania {entity}: {ex}")
+    return records
+
+
+def _get_powiat_name(urzad, urzad_to_powiat):
+    """Mapuje nazwę urzędu na nazwę powiatu do encji Nabory (np. 'Świdnicki')."""
+    raw = urzad_to_powiat.get(urzad, "")
+    if not raw:
+        return ""
+    # "powiat świdnicki" → "świdnicki" → "Świdnicki"
+    name = re.sub(r"^powiat\s+", "", raw, flags=re.IGNORECASE).strip()
+    if name:
+        name = name[0].upper() + name[1:]
+    return name
+
+
 def push_to_crm(results):
-    """Wysyła nowe nabory TAK do EspoCRM."""
+    """Wysyła nowe nabory TAK do EspoCRM (NaboryKfs + Nabory). Zwraca listę nowo dodanych."""
     crm_url = os.environ.get("ESPOCRM_URL", "").rstrip("/")
     crm_key = os.environ.get("ESPOCRM_API_KEY", "")
     if not crm_url or not crm_key:
         print("  Brak ESPOCRM_URL/ESPOCRM_API_KEY — pomijam CRM")
-        return
+        return []
+
+    # Wczytaj mapowania urzad → powiat i urzad → województwo
+    urzad_to_powiat = {}
+    urzad_to_woj = {}
+    try:
+        if MAPPING_FILE.exists():
+            with open(MAPPING_FILE, "r", encoding="utf-8") as f:
+                urzad_to_powiat = json.load(f)
+        if WOJ_FILE.exists():
+            with open(WOJ_FILE, "r", encoding="utf-8") as f:
+                urzad_to_woj = json.load(f)
+    except Exception as ex:
+        print(f"  CRM: Błąd wczytywania mapowań: {ex}")
 
     tak = [r for r in results if r.get("wynik") == "TAK"]
     print(f"\n  CRM: {len(tak)} naborów TAK do wysłania")
@@ -692,128 +780,165 @@ def push_to_crm(results):
         "Accept": "application/json",
     }
 
-    # Pobierz istniejące rekordy z CRM (URL, ID, status, termin) — z paginacją
-    existing = set()
-    existing_records = []  # do aktualizacji statusów
-    try:
-        offset = 0
-        page_size = 200
-        while True:
-            resp = requests.get(
-                f"{crm_url}/api/v1/NaboryKfs",
-                headers=headers,
-                params={"select": "name,url,status,termin", "maxSize": page_size, "offset": offset},
-                timeout=15,
-            )
-            if not resp.ok:
-                print(f"  CRM: Błąd pobierania istniejących: HTTP {resp.status_code}")
-                break
-            page = resp.json().get("list", [])
-            for rec in page:
-                if rec.get("url"):
-                    existing.add(rec["url"])
-                if rec.get("name"):
-                    existing.add(rec["name"])
-                existing_records.append(rec)
-            if len(page) < page_size:
-                break
-            offset += page_size
-    except Exception as ex:
-        print(f"  CRM: Błąd pobierania istniejących: {ex}")
+    # --- NaboryKfs: pobierz istniejące ---
+    kfs_existing = set()
+    kfs_records = []
+    for rec in _crm_paginate(crm_url, "NaboryKfs", headers, "name,url,status,termin"):
+        if rec.get("url"):
+            kfs_existing.add(rec["url"])
+        if rec.get("name"):
+            kfs_existing.add(rec["name"])
+        kfs_records.append(rec)
+    print(f"  CRM NaboryKfs: {len(kfs_records)} istniejących rekordów")
 
-    # Aktualizuj statusy istniejących rekordów (Nowy→W trakcie→Nieaktualny)
+    # Aktualizuj statusy istniejących NaboryKfs (Nowy→W trakcie→Nieaktualny)
     updated = 0
-    for rec in existing_records:
-        termin_raw = rec.get("termin", "")
-        termin_dates = re.findall(r"(\d{2})\.(\d{2})\.(\d{4})", termin_raw)
-        if not termin_dates:
+    for rec in kfs_records:
+        start, end = _parse_termin_dates(rec.get("termin", ""))
+        if not start:
             continue
-        try:
-            today = date.today()
-            start = date(int(termin_dates[0][2]), int(termin_dates[0][1]), int(termin_dates[0][0]))
-            end = date(int(termin_dates[-1][2]), int(termin_dates[-1][1]), int(termin_dates[-1][0]))
-            if today > end:
-                new_status = "Nieaktualny"
-            elif today >= start:
-                new_status = "W trakcie"
-            else:
-                new_status = "Nowy"
-            if new_status != rec.get("status"):
-                try:
-                    resp = requests.put(
-                        f"{crm_url}/api/v1/NaboryKfs/{rec['id']}",
-                        headers=headers,
-                        json={"status": new_status},
-                        timeout=15,
-                    )
-                    if resp.ok:
-                        updated += 1
-                except Exception:
-                    pass
-        except ValueError:
-            continue
+        new_status = _compute_status_kfs(start, end)
+        if new_status != rec.get("status"):
+            try:
+                resp = requests.put(
+                    f"{crm_url}/api/v1/NaboryKfs/{rec['id']}",
+                    headers=headers,
+                    json={"status": new_status},
+                    timeout=15,
+                )
+                if resp.ok:
+                    updated += 1
+            except Exception:
+                pass
     if updated:
-        print(f"  CRM: Zaktualizowano status {updated} istniejących naborów")
+        print(f"  CRM NaboryKfs: Zaktualizowano status {updated} rekordów")
 
-    added = 0
-    skipped = 0
-    errors = 0
+    # --- Nabory: pobierz istniejące z 2026 (do deduplikacji po powiat+od+do+kwota) ---
+    nabory_keys = set()  # (powiat_lower, od, do, kwota_int)
+    for rec in _crm_paginate(crm_url, "Nabory", headers, "powiat,od,do,kwota"):
+        od_raw = rec.get("od", "")
+        do_raw = rec.get("do", "")
+        if od_raw and "2026" not in od_raw:
+            continue
+        powiaty = rec.get("powiat") or []
+        kwota_val = rec.get("kwota")
+        if isinstance(kwota_val, (int, float)):
+            kwota_int = int(kwota_val)
+        else:
+            kwota_int = _parse_kwota_number(str(kwota_val)) if kwota_val else None
+        for p in powiaty:
+            nabory_keys.add((p.lower().strip(), od_raw, do_raw, kwota_int))
+    print(f"  CRM Nabory: {len(nabory_keys)} kluczy deduplikacji (powiat+od+do+kwota) z 2026")
+
+    # --- Dodawanie nowych rekordów ---
+    added_kfs = 0
+    added_nabory = 0
+    skipped_kfs = 0
+    skipped_nabory = 0
+    errors_count = 0
+    newly_added = []
+
     for r in tak:
         title = r.get("title", "")[:255]
-        if r.get("url") in existing or title in existing:
-            skipped += 1
-            continue
-        # Parsuj datę DD.MM.YYYY → YYYY-MM-DD
-        crm_date = ""
-        if r.get("date"):
-            parts = r["date"].split(".")
-            if len(parts) == 3:
-                crm_date = f"{parts[2]}-{parts[1]}-{parts[0]}"
-
-        # Status na podstawie terminu naboru
-        status = "Nowy"
+        urzad = r.get("urzad", "")
+        url = r.get("url", "")
         termin_raw = r.get("termin", "")
-        termin_dates = re.findall(r"(\d{2})\.(\d{2})\.(\d{4})", termin_raw)
-        if termin_dates:
-            today = date.today()
+        kwota_str = r.get("kwota", "")
+        start, end = _parse_termin_dates(termin_raw)
+
+        # --- NaboryKfs ---
+        kfs_is_new = url not in kfs_existing and title not in kfs_existing
+        if kfs_is_new:
+            crm_date = ""
+            if r.get("date"):
+                parts = r["date"].split(".")
+                if len(parts) == 3:
+                    crm_date = f"{parts[2]}-{parts[1]}-{parts[0]}"
+            status = _compute_status_kfs(start, end)
+            payload_kfs = {
+                "name": title,
+                "urzad": urzad,
+                "termin": termin_raw,
+                "kwota": kwota_str,
+                "url": url,
+                "datapublikacji": crm_date,
+                "powod": r.get("powod", ""),
+                "status": status,
+            }
             try:
-                start = date(int(termin_dates[0][2]), int(termin_dates[0][1]), int(termin_dates[0][0]))
-                end = date(int(termin_dates[-1][2]), int(termin_dates[-1][1]), int(termin_dates[-1][0]))
-                if today > end:
-                    status = "Nieaktualny"
-                elif today >= start:
-                    status = "W trakcie"
-            except ValueError:
-                pass
+                resp = requests.post(
+                    f"{crm_url}/api/v1/NaboryKfs",
+                    headers=headers,
+                    json=payload_kfs,
+                    timeout=15,
+                )
+                if resp.status_code in (200, 201):
+                    added_kfs += 1
+                    kfs_existing.add(url)
+                    kfs_existing.add(title)
+                else:
+                    errors_count += 1
+                    detail = resp.text[:200] if resp.text else ""
+                    print(f"  CRM NaboryKfs: Błąd {resp.status_code} dla {urzad} — {detail}")
+            except Exception as ex:
+                errors_count += 1
+                print(f"  CRM NaboryKfs: {ex}")
+        else:
+            skipped_kfs += 1
 
-        payload = {
-            "name": title,
-            "urzad": r.get("urzad", ""),
-            "termin": r.get("termin", ""),
-            "kwota": r.get("kwota", ""),
-            "url": r.get("url", ""),
-            "datapublikacji": crm_date,
-            "powod": r.get("powod", ""),
-            "status": status,
-        }
-        try:
-            resp = requests.post(
-                f"{crm_url}/api/v1/NaboryKfs",
-                headers=headers,
-                json=payload,
-                timeout=15,
-            )
-            if resp.status_code in (200, 201):
-                added += 1
-            else:
-                errors += 1
-                detail = resp.text[:200] if resp.text else ""
-                print(f"  CRM: Błąd {resp.status_code} dla {r.get('urzad','')} — {detail}")
-        except Exception as ex:
-            errors += 1
-            print(f"  CRM: {ex}")
+        # --- Nabory: deduplikacja po powiat+od+do+kwota ---
+        powiat_name = _get_powiat_name(urzad, urzad_to_powiat)
+        kwota_int = _parse_kwota_number(kwota_str)
+        od_str = start.isoformat() if start else ""
+        do_str = end.isoformat() if end else ""
+        nabory_key = (powiat_name.lower().strip(), od_str, do_str, kwota_int)
+        nabory_is_new = nabory_key not in nabory_keys and od_str and kwota_int
 
-    print(f"  CRM: Dodano {added} nowych, pominięto {skipped} istniejących, błędów: {errors}")
+        if nabory_is_new:
+            woj = urzad_to_woj.get(urzad, "")
+            payload_nabory = {
+                "name": f"I limit PUP {urzad}",
+                "powiat": [powiat_name] if powiat_name else [],
+                "od": od_str,
+                "do": do_str,
+                "kwota": kwota_int,
+                "kwotaCurrency": "PLN",
+                "miasto": urzad,
+                "link": url,
+                "wojewodztwo": woj,
+                "status": "Do weryfikacji",
+                "priorytetyZ": "limit",
+            }
+            try:
+                resp = requests.post(
+                    f"{crm_url}/api/v1/Nabory",
+                    headers=headers,
+                    json=payload_nabory,
+                    timeout=15,
+                )
+                if resp.status_code in (200, 201):
+                    added_nabory += 1
+                    nabory_keys.add(nabory_key)
+                else:
+                    errors_count += 1
+                    detail = resp.text[:200] if resp.text else ""
+                    print(f"  CRM Nabory: Błąd {resp.status_code} dla {urzad} — {detail}")
+            except Exception as ex:
+                errors_count += 1
+                print(f"  CRM Nabory: {ex}")
+        else:
+            skipped_nabory += 1
+
+        # Rekord jest nowy jeśli dodany do którejkolwiek encji
+        if kfs_is_new or nabory_is_new:
+            newly_added.append(r)
+
+    print(f"  CRM NaboryKfs: Dodano {added_kfs}, pominięto {skipped_kfs}")
+    print(f"  CRM Nabory:    Dodano {added_nabory}, pominięto {skipped_nabory}")
+    if errors_count:
+        print(f"  CRM: Błędów łącznie: {errors_count}")
+
+    return newly_added
 
 
 # ============================================================
@@ -1270,12 +1395,11 @@ def main():
     with open(ERRORS_FILE, "w", encoding="utf-8") as f:
         json.dump(errors, f, ensure_ascii=False, indent=2)
 
-    # Push to CRM
-    push_to_crm(results)
+    # Push to CRM (zwraca listę nowo dodanych)
+    newly_added = push_to_crm(results)
 
-    # Email notification — tymczasowo wszystkie TAK (potem tylko nowe)
-    all_tak = [r for r in results if r.get("wynik") == "TAK"]
-    send_email_notification(all_tak)
+    # Email notification — tylko nowo dodane nabory
+    send_email_notification(newly_added or [])
 
     # Generate report
     count_tak, count_powiaty = generate_report(results, errors)
