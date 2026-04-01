@@ -36,15 +36,15 @@
     "blad": "Brak artykulow"
   },
   {
-    "urzad": "Środa Wlkp.",
-    "url": "https://srodawielkopolska.praca.gov.pl/",
-    "typ": "Aktualnosci",
-    "blad": "Brak artykulow"
-  },
-  {
     "urzad": "Łowicz",
     "url": "https://lowicz.praca.gov.pl/",
     "typ": "Aktualnosci",
     "blad": "404 Client Error:  for url: https://lowicz.praca.gov.pl/rynek-pracy/aktualnosci"
+  },
+  {
+    "urzad": "Środa Wlkp.",
+    "url": "https://srodawielkopolska.praca.gov.pl/",
+    "typ": "Aktualnosci",
+    "blad": "Brak artykulow"
   }
 ]
