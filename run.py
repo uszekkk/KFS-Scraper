@@ -702,16 +702,6 @@ def _compute_status_kfs(start, end):
     return "Nowy"
 
 
-def _parse_kwota_number(kwota_str):
-    """Parsuje '1 500 000 zł' → 1500000 (int) lub None."""
-    if not kwota_str:
-        return None
-    digits = re.sub(r"[^\d]", "", kwota_str)
-    if digits:
-        return int(digits)
-    return None
-
-
 def _crm_paginate(crm_url, entity, headers, select_fields):
     """Pobiera wszystkie rekordy encji z CRM z paginacją."""
     records = []
@@ -738,16 +728,37 @@ def _crm_paginate(crm_url, entity, headers, select_fields):
     return records
 
 
-def _get_powiat_name(urzad, urzad_to_powiat):
-    """Mapuje nazwę urzędu na nazwę powiatu do encji Nabory (np. 'Świdnicki')."""
-    raw = urzad_to_powiat.get(urzad, "")
-    if not raw:
+_PL_MAP = str.maketrans("ąćęłńóśźżĄĆĘŁŃÓŚŹŻ", "acelnoszzACELNOSZZ")
+
+
+def _normalize_miasto(name):
+    """Normalizuje nazwę miasta do porównań: usuwa polskie znaki, PUP/MUP/WUP, skróty."""
+    if not name:
         return ""
-    # "powiat świdnicki" → "świdnicki" → "Świdnicki"
-    name = re.sub(r"^powiat\s+", "", raw, flags=re.IGNORECASE).strip()
-    if name:
-        name = name[0].upper() + name[1:]
-    return name
+    s = name.lower().strip().translate(_PL_MAP)
+    s = re.sub(r"\b(pup|mup|wup|gup|up)\b", "", s)
+    s = re.sub(r"[^a-z0-9 ]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    s = s.replace("wlkp", "wielkopolski")
+    return s
+
+
+def _parse_kwota_number(kwota_str):
+    """Parsuje '1 500 000,00 zł' → 1500000 (int) lub None.
+    Odcina grosze (po przecinku), ignoruje 'w załączniku' / 'brak' / 'tys'."""
+    if not kwota_str:
+        return None
+    if re.search(r"(za[lł][aą]cznik|brak|tys)", kwota_str, re.IGNORECASE):
+        return None
+    # Usuń 'zł', 'PLN', 'złotych'
+    s = re.sub(r"(z[łl](otych)?|pln)\s*$", "", kwota_str.strip(), flags=re.IGNORECASE).strip()
+    # Odetnij grosze po przecinku (np. ',00' ',46')
+    s = re.sub(r",\d{1,2}$", "", s)
+    # Zostaje np. '900.000' '1 500 000' '531 000' — wyciągnij cyfry
+    digits = re.sub(r"[^\d]", "", s)
+    if digits and 3 <= len(digits) <= 12:
+        return int(digits)
+    return None
 
 
 def push_to_crm(results):
@@ -781,15 +792,22 @@ def push_to_crm(results):
     }
 
     # --- NaboryKfs: pobierz istniejące ---
-    kfs_existing = set()
+    kfs_existing = set()       # url / name — szybka dedup po URL
+    kfs_dedup_keys = set()     # (urzad, termin, kwota) — dedup treściowa
     kfs_records = []
-    for rec in _crm_paginate(crm_url, "NaboryKfs", headers, "name,url,status,termin"):
+    for rec in _crm_paginate(crm_url, "NaboryKfs", headers, "name,url,status,termin,urzad,kwota"):
         if rec.get("url"):
             kfs_existing.add(rec["url"])
         if rec.get("name"):
             kfs_existing.add(rec["name"])
+        # Klucz treściowy: ten sam urząd + termin + kwota = ten sam nabór
+        u = (rec.get("urzad") or "").strip().lower()
+        t = (rec.get("termin") or "").strip().lower()
+        k = (rec.get("kwota") or "").strip().lower()
+        if u and (t or k):
+            kfs_dedup_keys.add((u, t, k))
         kfs_records.append(rec)
-    print(f"  CRM NaboryKfs: {len(kfs_records)} istniejących rekordów")
+    print(f"  CRM NaboryKfs: {len(kfs_records)} istniejących rekordów, {len(kfs_dedup_keys)} kluczy dedup")
 
     # Aktualizuj statusy istniejących NaboryKfs (Nowy→W trakcie→Nieaktualny)
     updated = 0
@@ -813,28 +831,9 @@ def push_to_crm(results):
     if updated:
         print(f"  CRM NaboryKfs: Zaktualizowano status {updated} rekordów")
 
-    # --- Nabory: pobierz istniejące z 2026 (do deduplikacji po powiat+od+do+kwota) ---
-    nabory_keys = set()  # (powiat_lower, od, do, kwota_int)
-    for rec in _crm_paginate(crm_url, "Nabory", headers, "powiat,od,do,kwota"):
-        od_raw = rec.get("od", "")
-        do_raw = rec.get("do", "")
-        if od_raw and "2026" not in od_raw:
-            continue
-        powiaty = rec.get("powiat") or []
-        kwota_val = rec.get("kwota")
-        if isinstance(kwota_val, (int, float)):
-            kwota_int = int(kwota_val)
-        else:
-            kwota_int = _parse_kwota_number(str(kwota_val)) if kwota_val else None
-        for p in powiaty:
-            nabory_keys.add((p.lower().strip(), od_raw, do_raw, kwota_int))
-    print(f"  CRM Nabory: {len(nabory_keys)} kluczy deduplikacji (powiat+od+do+kwota) z 2026")
-
     # --- Dodawanie nowych rekordów ---
     added_kfs = 0
-    added_nabory = 0
     skipped_kfs = 0
-    skipped_nabory = 0
     errors_count = 0
     newly_added = []
 
@@ -847,7 +846,12 @@ def push_to_crm(results):
         start, end = _parse_termin_dates(termin_raw)
 
         # --- NaboryKfs ---
+        # Dedup 1: po URL/tytule
         kfs_is_new = url not in kfs_existing and title not in kfs_existing
+        # Dedup 2: po treści (urzad+termin+kwota) — ten sam nabór w innym artykule
+        dedup_key = (urzad.strip().lower(), termin_raw.strip().lower(), kwota_str.strip().lower())
+        if urzad and (termin_raw or kwota_str) and dedup_key in kfs_dedup_keys:
+            kfs_is_new = False
         if kfs_is_new:
             crm_date = ""
             if r.get("date"):
@@ -876,6 +880,7 @@ def push_to_crm(results):
                     added_kfs += 1
                     kfs_existing.add(url)
                     kfs_existing.add(title)
+                    kfs_dedup_keys.add(dedup_key)
                 else:
                     errors_count += 1
                     detail = resp.text[:200] if resp.text else ""
@@ -886,54 +891,99 @@ def push_to_crm(results):
         else:
             skipped_kfs += 1
 
-        # --- Nabory: deduplikacja po powiat+od+do+kwota ---
-        powiat_name = _get_powiat_name(urzad, urzad_to_powiat)
-        kwota_int = _parse_kwota_number(kwota_str)
-        od_str = start.isoformat() if start else ""
-        do_str = end.isoformat() if end else ""
-        nabory_key = (powiat_name.lower().strip(), od_str, do_str, kwota_int)
-        nabory_is_new = nabory_key not in nabory_keys and od_str and kwota_int
-
-        if nabory_is_new:
-            woj = urzad_to_woj.get(urzad, "")
-            payload_nabory = {
-                "name": f"I limit PUP {urzad}",
-                "powiat": [powiat_name] if powiat_name else [],
-                "od": od_str,
-                "do": do_str,
-                "kwota": kwota_int,
-                "kwotaCurrency": "PLN",
-                "miasto": urzad,
-                "link": url,
-                "wojewodztwo": woj,
-                "status": "Do weryfikacji",
-                "priorytetyZ": "limit",
-            }
-            try:
-                resp = requests.post(
-                    f"{crm_url}/api/v1/Nabory",
-                    headers=headers,
-                    json=payload_nabory,
-                    timeout=15,
-                )
-                if resp.status_code in (200, 201):
-                    added_nabory += 1
-                    nabory_keys.add(nabory_key)
-                else:
-                    errors_count += 1
-                    detail = resp.text[:200] if resp.text else ""
-                    print(f"  CRM Nabory: Błąd {resp.status_code} dla {urzad} — {detail}")
-            except Exception as ex:
-                errors_count += 1
-                print(f"  CRM Nabory: {ex}")
-        else:
-            skipped_nabory += 1
-
-        # Rekord jest nowy jeśli dodany do którejkolwiek encji
-        if kfs_is_new or nabory_is_new:
+        if kfs_is_new:
             newly_added.append(r)
 
     print(f"  CRM NaboryKfs: Dodano {added_kfs}, pominięto {skipped_kfs}")
+
+    # --- Nabory: uzupełnij brakujące na podstawie NaboryKfs ---
+    # Pobierz istniejące miasta z Nabory 2026
+    nabory_miasta_norm = set()
+    for rec in _crm_paginate(crm_url, "Nabory", headers, "miasto,od"):
+        od_raw = rec.get("od", "")
+        if od_raw and "2026" not in od_raw:
+            continue
+        m = _normalize_miasto(rec.get("miasto", ""))
+        if m:
+            nabory_miasta_norm.add(m)
+    print(f"  CRM Nabory: {len(nabory_miasta_norm)} unikalnych miast (norm) w 2026")
+
+    added_nabory = 0
+    skipped_nabory = 0
+    for r in tak:
+        urzad = r.get("urzad", "").strip()
+        termin_raw = r.get("termin", "").strip()
+        kwota_str = r.get("kwota", "").strip()
+        url = r.get("url", "")
+        start, end = _parse_termin_dates(termin_raw)
+
+        norm = _normalize_miasto(urzad)
+        if not norm:
+            continue
+
+        # Sprawdź czy miasto (znormalizowane) już jest w Nabory
+        already = any(norm == nm or norm in nm or nm in norm for nm in nabory_miasta_norm)
+        if already:
+            skipped_nabory += 1
+            continue
+
+        # Potrzebujemy przynajmniej daty 'od'
+        od_str = start.isoformat() if start else ""
+        do_str = end.isoformat() if end else ""
+        if not od_str:
+            skipped_nabory += 1
+            continue
+
+        kwota_int = _parse_kwota_number(kwota_str)
+        woj = urzad_to_woj.get(urzad, "")
+        powiat_raw = urzad_to_powiat.get(urzad, "")
+        powiat_name = ""
+        if powiat_raw:
+            powiat_name = re.sub(r"^powiat\s+", "", powiat_raw, flags=re.IGNORECASE).strip()
+            if powiat_name:
+                powiat_name = powiat_name[0].upper() + powiat_name[1:]
+
+        crm_date = ""
+        if r.get("date"):
+            parts = r["date"].split(".")
+            if len(parts) == 3:
+                crm_date = f"{parts[2]}-{parts[1]}-{parts[0]}"
+
+        payload_nabory = {
+            "name": f"I limit PUP {urzad}",
+            "powiat": [powiat_name] if powiat_name else [],
+            "od": od_str,
+            "do": do_str,
+            "kwota": kwota_int,
+            "kwotaCurrency": "PLN" if kwota_int else None,
+            "miasto": urzad,
+            "link": url,
+            "wojewodztwo": woj,
+            "status": "Do weryfikacji",
+            "priorytetyZ": "limit",
+            "dataPublikacji": crm_date,
+        }
+        # Usuń None wartości
+        payload_nabory = {k: v for k, v in payload_nabory.items() if v is not None}
+
+        try:
+            resp = requests.post(
+                f"{crm_url}/api/v1/Nabory",
+                headers=headers,
+                json=payload_nabory,
+                timeout=15,
+            )
+            if resp.status_code in (200, 201):
+                added_nabory += 1
+                nabory_miasta_norm.add(norm)
+            else:
+                errors_count += 1
+                detail = resp.text[:200] if resp.text else ""
+                print(f"  CRM Nabory: Błąd {resp.status_code} dla {urzad} — {detail}")
+        except Exception as ex:
+            errors_count += 1
+            print(f"  CRM Nabory: {ex}")
+
     print(f"  CRM Nabory:    Dodano {added_nabory}, pominięto {skipped_nabory}")
     if errors_count:
         print(f"  CRM: Błędów łącznie: {errors_count}")
