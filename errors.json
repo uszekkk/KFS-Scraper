@@ -24,16 +24,16 @@
     "blad": "Brak artykulow"
   },
   {
-    "urzad": "Przeworsk",
-    "url": "https://przeworsk.praca.gov.pl/",
-    "typ": "Aktualnosci",
-    "blad": "Brak artykulow"
-  },
-  {
     "urzad": "Poznan",
     "url": "https://poznan.praca.gov.pl/",
     "typ": "Aktualnosci",
     "blad": "404 Client Error:  for url: https://poznan.praca.gov.pl/rynek-pracy/aktualnosci"
+  },
+  {
+    "urzad": "Przeworsk",
+    "url": "https://przeworsk.praca.gov.pl/",
+    "typ": "Aktualnosci",
+    "blad": "Brak artykulow"
   },
   {
     "urzad": "Łowicz",
