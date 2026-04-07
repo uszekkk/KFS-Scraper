@@ -37105,5 +37105,75 @@
     "termin": "",
     "kwota": "",
     "classified_date": "03.04.2026"
+  },
+  "https://gostyn.praca.gov.pl/-/wojskowe-targi-sluzby-i-pracy": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://gorzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zyczenia-dla-pracownikow-powiatowego-urzedu-pracy-w-gorzowie-wielkopolskim-z-okazji-dnia-pracownika-psz?p_r_p_assetEntryId=58584965": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://swiebodzin.praca.gov.pl/-/nabor-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-efs-2": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://sosnowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/rusza-nabor-wnioskow-o-prace-interwencyjne?p_r_p_assetEntryId=61635973": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://nowasol.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/24930416-dyzur-inspektora-okregowej-inspekcji-pracy?p_r_p_assetEntryId=24930427": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://tarnowskiegory.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-zakonczeniu-naboru-wnioskow-o-zorganizowanie-prac-interwencyjnych-dla-osob-bezrobotnych?p_r_p_assetEntryId=61423129": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://oswiecim.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-1?p_r_p_assetEntryId=61673546": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://bytom.praca.gov.pl/-/nabor-wnioskow-o-dotacje-na-podj.-dzial.-gospodarczej-efs-": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://warszawa.praca.gov.pl/-/prace-planowe-baza-kontaktow": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "07.04.2026"
+  },
+  "https://gostynin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026-1?p_r_p_assetEntryId=61677178": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin, kwotę i ogłasza nabór KFS",
+    "termin": "07.04.2026 - 13.04.2026",
+    "kwota": "1 565 050,74 zł",
+    "classified_date": "07.04.2026"
   }
 }
