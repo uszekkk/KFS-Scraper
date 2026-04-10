@@ -39436,5 +39436,96 @@
     "termin": "",
     "kwota": "",
     "classified_date": "09.04.2026"
+  },
+  "https://rzeszow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-organizacje-stazu?p_r_p_assetEntryId=61803185": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://chojnice.praca.gov.pl/-/ocen-nasze-uslugi-ankieta-dla-klientow": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://strzelcekrajenskie.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-ze-srodkow-finansowych-pfron?p_r_p_assetEntryId=61803834": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://miedzyrzecz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/mow-cialem-nie-milcz-na-rozmowie-kwalifikacyjnej-1?p_r_p_assetEntryId=61806077": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://jaroslaw.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/medale-za-dlugoletnia-sluzbe-dla-pracownikow-powiatowego-urzedu-pracy-w-jaroslawiu?p_r_p_assetEntryId=61804954": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://ilawa.praca.gov.pl/-/filia-kisielice-13-15-kwietnia-zamknieta": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://ostrowwielkopolski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-naboru-wnioskow-na-dotacje-na-rozpoczecie-dzialalnosci-gospodarczej-dla-osoby-niepelnosprawnej?p_r_p_assetEntryId=61804215": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://ostrowwielkopolski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniety-nabor-na-refundacje-kosztow-wyposazenia-stanowiska-pracy-dla-osoby-niepelnosprawnej?p_r_p_assetEntryId=61804189": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://wlodawa.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wstrzymanie-naboru-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy-dla-skierowanego-bezrobotnego-w-ramach-iii-edycji-efs-plus?p_r_p_assetEntryId=61721101": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://wolow.praca.gov.pl/-/nabor-wnioskow-na-dotacje-dla-osoby-niepelnosprawnej-pfron-1": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "10.04.2026"
+  },
+  "https://grudziadz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-naborze-wnioskow-o-udzielenie-pomocy-w-ramach-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61788194": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin, kwotę i ogłasza nabór KFS.",
+    "termin": "24.04.2026 - 30.04.2026",
+    "kwota": "1 277 887 zł",
+    "classified_date": "10.04.2026"
+  },
+  "https://pleszew.praca.gov.pl/-/krajowy-fundusz-szkoleniowy-podsumowanie-naboru.": {
+    "wynik": "NIE",
+    "powod": "Ogłoszenie o zakończeniu naboru, nie o rozpoczęciu",
+    "termin": "25.03.2026 - 02.04.2026",
+    "kwota": "1 594 604,95 zł",
+    "classified_date": "10.04.2026"
+  },
+  "https://jaworzno.praca.gov.pl/-/23112048-i-nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego": {
+    "wynik": "TAK",
+    "powod": "Ogłasza nabór KFS, termin i kwota podane.",
+    "termin": "27.04.2026 - 04.05.2026",
+    "kwota": "1 570 000,00 zł",
+    "classified_date": "10.04.2026"
   }
 }
