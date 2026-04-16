@@ -42747,5 +42747,75 @@
     "termin": "04.05.2026 - 08.05.2026",
     "kwota": "469 627,98 zł",
     "classified_date": "15.04.2026"
+  },
+  "https://lezajsk.praca.gov.pl/-/harmonogram-wyplat-swiadczen-maj-2026": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://rzeszow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wsparcie-dla-osob-z-niepelnosprawnosciami?p_r_p_assetEntryId=62019739": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://znin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/festiwal-zawodow-juz-wkrotce?p_r_p_assetEntryId=62017955": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://parczew.praca.gov.pl/-/szkolenie-dla-pracodawc%C3%B3w": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://kolobrzeg.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/srodki-panstwowego-funduszu-rehabilitacji-osob-niepelnosprawnych?p_r_p_assetEntryId=62014581": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://sieradz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/miedzynarodowe-targi-pracy-with-eures-to-europe-?p_r_p_assetEntryId=62018831": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://kolbuszowa.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/LdiUWd1dHLrn/content/krajowe-centrum-interwencyjno-konsultacyjne-dla-ofiar-handlu-ludzmi?p_r_p_assetEntryId=62017291": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://dabrowagornicza.praca.gov.pl/-/wnioski-z-naboru-od-25-do-31-marca-zostaly-ocenione.": {
+    "wynik": "NIE",
+    "powod": "Ocena wniosków, a nie nabór. Termin minął.",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://chojnice.praca.gov.pl/-/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin naboru KFS, ogłasza nabór KFS.",
+    "termin": "04.05.2026 - 08.05.2026",
+    "kwota": "",
+    "classified_date": "16.04.2026"
+  },
+  "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=62018603": {
+    "wynik": "TAK",
+    "powod": "Ogłoszenie naboru KFS, termin i kwota podane.",
+    "termin": "04.05.2026 - 08.05.2026",
+    "kwota": "780000,00 zł",
+    "classified_date": "16.04.2026"
   }
 }
