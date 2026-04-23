@@ -46646,5 +46646,96 @@
     "termin": "",
     "kwota": "",
     "classified_date": "22.04.2026"
+  },
+  "https://uppkrakow.praca.gov.pl/-/spotkanie-informacyjne-dotyczace-projektu-nowa-sciezka-sukcesu": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://jeleniagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-z-partnerem-sklepu-zabka?p_r_p_assetEntryId=62280026": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://sosnowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/kogo-szuka-europa-nowoczesne-narzedzia-analizy-rynku-pracy-i-siec-eures?p_r_p_assetEntryId=62163851": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://legnica.praca.gov.pl/-/srodki-na-aktywizacje-zawodowa-osob-bezrobotnych-z-rezerwy-funduszu-pracy": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://legnica.praca.gov.pl/-/aktywizacja-osob-niepelnosprawnych-poszukujacych-pracy-w-ramach-srodkow-panstwowego-funduszu-rehabilitacji-osob-niepelnosprawnych-pfron": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://gdansk.praca.gov.pl/-/zglos-swoja-firme-do-udzialu-w-strefie-stoisk-ukraine-recovery-conference-2026": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/dyzur-doradcy-eures-2?p_r_p_assetEntryId=62277735": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://kolobrzeg.praca.gov.pl/-/xx-targi-edukacyjne-dla-uczniow-klas-osmych": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://uppkrakow.praca.gov.pl/-/badania-rynku-pracy-w-polsce-realizowane-przez-polski-czerwony-krzyz": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://plock.praca.gov.pl/-/nowa-aplikacja-mobilna-zus-dla-przedsiebiorcow": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://zdunskawola.praca.gov.pl/-/spotkanie-informacyjne-projekt-abonament-na-rozwoj": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://zyrardow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wykaz-pracodawcow-przedsiebiorcow-i-innych-podmiotow-z-ktorymi-w-i-kwartale-2026r.-r.-zawarto-umowy-w-ramach-form-pomocy.?p_r_p_assetEntryId=62279898": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "23.04.2026"
+  },
+  "https://kalisz.praca.gov.pl/-/komunikat-w-sprawie-ogloszonego-naboru-wnioskow-z-kfs": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin naboru KFS. Kwota nie podana.",
+    "termin": "04.05.2026 - 22.05.2026",
+    "kwota": "",
+    "classified_date": "23.04.2026"
   }
 }
