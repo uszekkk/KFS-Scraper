@@ -24,15 +24,21 @@
     "blad": "Brak artykulow"
   },
   {
-    "urzad": "Środa Wlkp.",
-    "url": "https://srodawielkopolska.praca.gov.pl/",
-    "typ": "Aktualnosci",
-    "blad": "Brak artykulow"
+    "urzad": "Puck",
+    "url": "https://puck.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy",
+    "typ": "KFS",
+    "blad": "502 Server Error: Bad Gateway for url: https://puck.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/p"
   },
   {
     "urzad": "Łowicz",
     "url": "https://lowicz.praca.gov.pl/",
     "typ": "Aktualnosci",
     "blad": "404 Client Error:  for url: https://lowicz.praca.gov.pl/rynek-pracy/aktualnosci"
+  },
+  {
+    "urzad": "Środa Wlkp.",
+    "url": "https://srodawielkopolska.praca.gov.pl/",
+    "typ": "Aktualnosci",
+    "blad": "Brak artykulow"
   }
 ]
