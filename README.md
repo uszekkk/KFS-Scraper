@@ -26,9 +26,10 @@ urzedy.json (lista ~340 urzędów)
   index.html — interaktywna mapa + lista naborów
 ```
 
-1. **Scraping** — pobiera strony aktualności i podstrony KFS z powiatowych urzędów pracy (Liferay CMS)
+1. **Scraping** — pobiera strony aktualności, podstrony KFS i typowe strony budżetowe KFS 2026 z powiatowych urzędów pracy (Liferay CMS)
 2. **Klasyfikacja** — Gemini 2.0 Flash ocenia każdy artykuł: czy to aktualny nabór KFS? Wyciąga termin składania wniosków i kwotę środków
-3. **Raport** — generuje samodzielny plik HTML z mapą Leaflet, kolorując powiaty z aktywnymi naborami
+3. **Prognoza** — wykrywa frazy o rocznym limicie środków, porównuje je z pulami naborów i nadaje prawdopodobieństwo kolejnego naboru
+4. **Raport** — generuje samodzielny plik HTML z mapą Leaflet, kolorując powiaty z aktywnymi naborami
 
 ## Funkcje
 
@@ -37,6 +38,7 @@ urzedy.json (lista ~340 urzędów)
 - Wyszukiwarka po nazwie urzędu
 - Szczegóły naboru: termin, kwota, link do ogłoszenia
 - Prognoza kolejnych naborów: limit roczny, suma wykrytych pul, szacowane pozostałe środki i poziom prawdopodobieństwa
+- Dodatkowy fallback dla brakujących limitów: sprawdza typowe URL-e `kfs_2026`, `krajowy-fundusz-szkoleniowy-2026r.` i warianty `asset_publisher`
 - Flagi do wniosku o informację publiczną, gdy środki wyglądają na nierozliczone albo pojawiają się kwoty przy promocji/badaniach/analizach KFS
 - Cache klasyfikacji (nie powtarza zapytań do API)
 - Filtrowanie starych artykułów (< 2026)

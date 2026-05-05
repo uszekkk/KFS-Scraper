@@ -167,6 +167,60 @@ class RegressionTests(unittest.TestCase):
 
         self.assertFalse(run._has_exhausted_signal(norm))
 
+    def test_budget_forecast_detects_annual_limit_language_from_manual_audit(self):
+        samples = [
+            "Powiatowy Urzad Pracy informuje, iz otrzymal srodki KFS na rok 2026 w wysokosci 1 850 000,00 zl.",
+            "Powiatowy Urzad Pracy dysponuje w 2026 roku srodkami Krajowego Funduszu Szkoleniowego w wysokosci 1 500 000 zl.",
+            "Limit przyznanych srodkow Krajowego Funduszu Szkoleniowego na 2026 rok wynosi 902 486,00 zl.",
+            "Na realizacje ksztalcenia ustawicznego w ramach KFS posiada do rozdysponowania srodki w wysokosci: 5.233.876,00 zl.",
+        ]
+
+        for snippet in samples:
+            result = {
+                "urzad": "Testowo",
+                "title": "Krajowy Fundusz Szkoleniowy w 2026 roku",
+                "snippet": snippet,
+                "url": "https://example.com/kfs",
+                "wynik": "NIE",
+                "termin": "",
+                "kwota": "",
+            }
+
+            candidates = run._extract_limit_candidates(result)
+
+            self.assertTrue(candidates, snippet)
+
+    def test_budget_forecast_does_not_promote_pure_call_pool_to_annual_limit(self):
+        result = {
+            "urzad": "Testowo",
+            "title": "Nabor wnioskow KFS",
+            "snippet": "Kwota srodkow w ramach naboru wynosi 214.000,00 zl. Wnioski od 24.04.2026 r.",
+            "url": "https://example.com/nabor",
+            "wynik": "TAK",
+            "termin": "24.04.2026 - 30.04.2026",
+            "kwota": "214 000 zl",
+        }
+
+        self.assertEqual(run._extract_limit_candidates(result), [])
+
+    def test_extra_kfs_urls_include_common_2026_budget_slugs(self):
+        existing = [{
+            "url": "https://example.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/abc123/content/stary-artykul"
+        }]
+        urls = run._extra_kfs_source_urls("https://example.praca.gov.pl/", existing)
+
+        self.assertIn("https://example.praca.gov.pl/-/kfs_2026", urls)
+        self.assertIn("https://example.praca.gov.pl/-/krajowy-fundusz-szkoleniowy-2026r.", urls)
+        self.assertIn("https://example.praca.gov.pl/-/krajowy-fundusz-szkoleniowy-w-2026-r.", urls)
+        self.assertIn(
+            "https://example.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/abc123/content/kfs_2026",
+            urls,
+        )
+        self.assertIn(
+            "https://example.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026r.",
+            urls,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -40,6 +40,8 @@ TODAY = date.today().strftime("%d.%m.%Y")
 REQUEST_DELAY = 0.3
 MAX_SNIPPET = 10000
 NEWS_PAGE_LIMIT = int(os.environ.get("NEWS_PAGE_LIMIT", "8"))
+EXTRA_KFS_URL_LIMIT = int(os.environ.get("EXTRA_KFS_URL_LIMIT", "24"))
+EXTRA_KFS_TIMEOUT = float(os.environ.get("EXTRA_KFS_TIMEOUT", "2"))
 
 # Klucze API Gemini — ze zmiennej środowiskowej GEMINI_API_KEYS (rozdzielone przecinkiem)
 API_KEYS_ENV = os.environ.get("GEMINI_API_KEYS", "")
@@ -136,14 +138,14 @@ def _article_fingerprint(url):
     return None
 
 
-def fetch(url):
-    for attempt in range(2):
+def fetch(url, timeout=20, attempts=2):
+    for attempt in range(attempts):
         try:
-            resp = SESSION.get(url, timeout=20)
+            resp = SESSION.get(url, timeout=timeout)
             resp.raise_for_status()
             return BeautifulSoup(resp.text, "html.parser"), ""
         except requests.RequestException as e:
-            if attempt == 0:
+            if attempt < attempts - 1:
                 time.sleep(2)
                 continue
             return None, str(e)[:100]
@@ -208,6 +210,71 @@ KFS_KEYWORDS = re.compile(
     r"|(?:KFS|fundusz\w* szkoleniow) .{0,20}nab[oó]r",
     re.IGNORECASE,
 )
+
+EXTRA_KFS_SLUGS = (
+    "kfs-2026",
+    "-/kfs_2026",
+    "-/informacje-kfs-2026",
+    "-/informacje-dot.-kfs-w-2026-roku",
+    "-/informacje-nt.-realizacji-kfs-w-2026-roku",
+    "-/nabor-wnioskow-kfs",
+    "-/nabor-wnioskow-kfs-2026",
+    "-/krajowy-fundusz-szkoleniowy-2026",
+    "-/krajowy-fundusz-szkoleniowy-2026r.",
+    "-/krajowy-fundusz-szkoleniowy-w-2026",
+    "-/krajowy-fundusz-szkoleniowy-w-2026-r.",
+    "-/krajowy-fundusz-szkoleniowy-w-2026-roku",
+    "-/krajowy-fundusz-szkoleniowy-w-2026-roku-2",
+)
+
+COMMON_ASSET_PUBLISHERS = (
+    ("rynek-pracy/aktualnosci", "8VCc6CLiHUaO"),
+    ("strona-glowna", "Qat7ebECUfDp"),
+    ("strona-glowna", "wFB1IsAzzH1j"),
+    ("strona-glowna", "wczuQ2ZsLSsq"),
+)
+
+
+def _asset_publisher_prefixes(base_url, existing_articles=None):
+    root = (base_url or "").rstrip("/")
+    if not root:
+        return []
+    prefixes = []
+    seen = set()
+    for article in existing_articles or []:
+        parsed = urlparse(article.get("url", ""))
+        m = re.search(r"(.*/-/asset_publisher/[^/]+/content)(?:/|$)", parsed.path)
+        if not m:
+            continue
+        prefix = f"{parsed.scheme}://{parsed.netloc}{m.group(1)}"
+        if prefix not in seen:
+            seen.add(prefix)
+            prefixes.append(prefix)
+    for path, publisher_id in COMMON_ASSET_PUBLISHERS:
+        prefix = f"{root}/{path}/-/asset_publisher/{publisher_id}/content"
+        if prefix not in seen:
+            seen.add(prefix)
+            prefixes.append(prefix)
+    return prefixes
+
+
+def _extra_kfs_source_urls(base_url, existing_articles=None):
+    root = (base_url or "").rstrip("/")
+    if not root:
+        return []
+
+    urls = [f"{root}/{slug}" for slug in EXTRA_KFS_SLUGS]
+    article_slugs = [slug[2:] for slug in EXTRA_KFS_SLUGS if slug.startswith("-/")]
+    for prefix in _asset_publisher_prefixes(root, existing_articles):
+        urls.extend(f"{prefix}/{slug}" for slug in article_slugs)
+
+    unique = []
+    seen = set()
+    for url in urls:
+        if url not in seen:
+            seen.add(url)
+            unique.append(url)
+    return unique
 
 
 def fetch_detail_content(url):
@@ -427,6 +494,46 @@ def extract_kfs(soup, kfs_url):
     return {"title": "KFS", "url": kfs_url, "snippet": text[:MAX_SNIPPET], "date": "", "source_type": "KFS"}
 
 
+def fetch_extra_kfs_articles(urzad, existing_articles):
+    """Fetch common PSZ 2026 KFS slugs when regular news pagination missed budget pages."""
+    name = urzad.get("name", "")
+    base_url = urzad.get("base_url") or urzad.get("homepage", "")
+    seen_urls = {_clean_url(a.get("url", "")) for a in existing_articles}
+    seen_fps = {_article_fingerprint(a.get("url", "")) for a in existing_articles} - {None}
+    extra = []
+
+    for url in _extra_kfs_source_urls(base_url, existing_articles)[:EXTRA_KFS_URL_LIMIT]:
+        clean = _clean_url(url)
+        fp = _article_fingerprint(clean)
+        if clean in seen_urls or (fp and fp in seen_fps):
+            continue
+
+        soup, _ = fetch(url, timeout=EXTRA_KFS_TIMEOUT, attempts=1)
+        if not soup:
+            continue
+        art = extract_kfs(soup, clean)
+        if not art:
+            continue
+
+        art["urzad"] = name
+        art["source_type"] = "KFS-extra"
+        norm = _ascii_lower(_result_text(art))
+        if not ("2026" in norm and _kfs_text(art)):
+            continue
+        limit_candidates = _extract_limit_candidates(art)
+        if not (limit_candidates or PLANNED_RE.search(norm)):
+            continue
+
+        extra.append(art)
+        if limit_candidates:
+            break
+        seen_urls.add(clean)
+        if fp:
+            seen_fps.add(fp)
+
+    return extra
+
+
 def _scrape_one(i, urzad, total):
     """Scrapuje jeden urząd — zwraca (articles, errors)."""
     name = urzad["name"]
@@ -499,6 +606,9 @@ def _scrape_one(i, urzad, total):
                 articles.append(kfs_art)
         else:
             errs.append({"urzad": name, "url": kfs_url, "typ": "KFS", "blad": ke})
+
+    if not any(_extract_limit_candidates(a) for a in articles):
+        articles.extend(fetch_extra_kfs_articles(urzad, articles))
 
     print(f"  [{i}/{total}] {name} -> {len(articles)} art.")
     return articles, errs
@@ -1158,17 +1268,34 @@ def _forecast_level(probability):
 
 
 LIMIT_CONTEXT_RE = re.compile(
-    r"(dostepn\w*.{0,80}(?:rok|2026|kwot|srodk)|"
-    r"przyznan\w*.{0,80}(?:limit|kwot|srodk)|"
-    r"limit\w*.{0,80}(?:kfs|srodk|rok|2026)|"
-    r"kwot\w*.{0,80}(?:na\s+rok|2026|dostepn|srodkow\s+kfs)|"
-    r"srodk\w*.{0,80}(?:na\s+rok|2026|dostepn))"
+    r"(dostepn\w*.{0,120}(?:rok|2026|kwot|srodk)|"
+    r"przyznan\w*.{0,120}(?:limit|kwot|srodk)|"
+    r"limit\w*.{0,120}(?:kfs|srodk|rok|2026|przyznan)|"
+    r"limit\s+przyznan\w*.{0,120}srodk|"
+    r"kwot\w*.{0,120}(?:na\s+rok|2026|dostepn|srodkow\s+kfs|limit\w*)|"
+    r"srodk\w*.{0,120}(?:na\s+rok|2026|dostepn|w\s+wysokosci|w\s+limicie)|"
+    r"otrzymal\w*.{0,140}(?:srodk|kwot|limit)|"
+    r"pozyskal\w*.{0,140}(?:srodk|kwot|limit)|"
+    r"dysponuj\w*.{0,140}(?:srodk|kwot|limit)|"
+    r"bedzie\s+dysponowal\w*.{0,140}(?:srodk|kwot|limit)|"
+    r"posiada.{0,120}(?:do\s+rozdysponowania\s+)?srodk\w*.{0,80}wysokosci|"
+    r"przeznaczono.{0,140}(?:srodk|kwot|kfs)|"
+    r"na\s+realizacj\w*.{0,160}(?:przeznaczono|posiada|otrzymal|dysponuj)|"
+    r"pula\s+srodk\w*.{0,120}(?:kfs|przeznaczon|wynosi))"
 )
 
 NABOR_CONTEXT_RE = re.compile(
     r"(obecnego\s+naboru|w\s+ramach\s+naboru|prowadzon\w*\s+nabor|"
     r"naboru\s+dostepn|do\s+rozdysponowania|pozostal\w*|"
     r"wniosk\w*\s+mozna\s+skladac)"
+)
+
+NABOR_ONLY_CONTEXT_RE = re.compile(
+    r"(kwot\w*\s+srodk\w*.{0,70}w\s+ramach\s+naboru|"
+    r"w\s+ramach\s+naboru.{0,90}wynosi|"
+    r"w\s+aktualn\w*\s+naborze|"
+    r"w\s+obecn\w*\s+naborze|"
+    r"kwot\w*\s+kfs\s+do\s+rozdysponowania)"
 )
 
 EXHAUSTED_RE = re.compile(
@@ -1230,16 +1357,21 @@ def _extract_limit_candidates(result):
         start = entry.get("start", 0)
         context = _ascii_lower(text[max(0, start - 260):start + 260])
         score = entry.get("score", 0)
-        if LIMIT_CONTEXT_RE.search(context):
+        has_limit_context = bool(LIMIT_CONTEXT_RE.search(context))
+        has_nabor_context = bool(NABOR_CONTEXT_RE.search(context))
+        has_nabor_only_context = bool(NABOR_ONLY_CONTEXT_RE.search(context))
+        if has_limit_context:
             score += 55
         if "2026" in context:
             score += 10
-        if result.get("source_type") == "KFS" or _ascii_lower(result.get("title", "")).strip() == "kfs":
+        if result.get("source_type") in {"KFS", "KFS-extra"} or _ascii_lower(result.get("title", "")).strip() == "kfs":
             score += 15
         if result.get("wynik") == "TAK":
             score -= 10
-        if NABOR_CONTEXT_RE.search(context):
-            score -= 25
+        if has_nabor_context:
+            score -= 10 if has_limit_context else 25
+        if has_nabor_only_context:
+            score -= 55
         if re.search(r"(na\s+jedn\w*|przecietn\w*\s+wynagrodz|maksymaln\w*)", context):
             score -= 70
         if entry["number"] < 20000:
