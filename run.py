@@ -11,6 +11,7 @@ import smtplib
 import sys
 import time
 import threading
+import unicodedata
 from datetime import date, datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -37,6 +38,7 @@ WOJ_FILE = BASE_DIR / "urzad_to_woj.json"
 TODAY = date.today().strftime("%d.%m.%Y")
 REQUEST_DELAY = 0.3
 MAX_SNIPPET = 10000
+NEWS_PAGE_LIMIT = int(os.environ.get("NEWS_PAGE_LIMIT", "8"))
 
 # Klucze API Gemini — ze zmiennej środowiskowej GEMINI_API_KEYS (rozdzielone przecinkiem)
 API_KEYS_ENV = os.environ.get("GEMINI_API_KEYS", "")
@@ -147,6 +149,53 @@ def fetch(url):
     return None, "timeout"
 
 
+def _clean_url(url):
+    """URL without a fragment; enough for visited/dedup keys."""
+    return url.split("#", 1)[0]
+
+
+_ASCII_PL_MAP = str.maketrans("ąćęłńóśźżĄĆĘŁŃÓŚŹŻ", "acelnoszzACELNOSZZ")
+
+
+def _ascii_lower(text):
+    """Lowercase ASCII approximation used for robust Polish text matching."""
+    text = str(text or "").translate(_ASCII_PL_MAP)
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii").lower()
+
+
+def _pagination_links(soup, current_url):
+    """Find likely news-list pagination links on the same host."""
+    links = []
+    current = urlparse(current_url)
+    for link in soup.find_all("a", href=True):
+        href = _clean_url(urljoin(current_url, link["href"]))
+        parsed = urlparse(href)
+        if parsed.netloc != current.netloc or href == _clean_url(current_url):
+            continue
+
+        text = _ascii_lower(link.get_text(" ", strip=True))
+        rel_attr = link.get("rel") or []
+        if isinstance(rel_attr, str):
+            rel = rel_attr.lower()
+        else:
+            rel = " ".join(rel_attr).lower()
+        qs = parse_qs(parsed.query)
+        qkeys = {k.lower() for k in qs}
+
+        has_page_param = any(
+            k == "cur" or k.endswith("_cur") or k in {"page", "pagenum"}
+            for k in qkeys
+        )
+        has_pager_text = (
+            "next" in rel
+            or text in {">", ">>", "»", "next", "nastepna", "nastepne"}
+            or bool(re.fullmatch(r"\d{1,3}", text))
+        )
+        if has_page_param or has_pager_text:
+            links.append(href)
+    return links
+
+
 KFS_KEYWORDS = re.compile(
     r"KFS"
     r"|Krajow\w+ Fundusz\w* Szkoleniow"
@@ -241,7 +290,14 @@ def _extract_date(element):
     """Szuka daty DD.MM.YYYY w kontenerze nadrzędnym lub poprzedzającym elemencie."""
     container = element.find_parent("div", class_=re.compile(r"nnk|asset|results-row"))
     if container:
-        dm = re.search(r"\d{2}\.\d{2}\.\d{4}", container.get_text())
+        date_nodes = container.find_all(
+            class_=re.compile(r"date|data|publish|modified|metadata|subinfo|czas", re.IGNORECASE)
+        )
+        for node in date_nodes:
+            dm = re.search(r"\d{2}\.\d{2}\.\d{4}", node.get_text(" ", strip=True))
+            if dm:
+                return dm.group()
+        dm = re.search(r"\d{2}\.\d{2}\.\d{4}", container.get_text(" ", strip=True)[:250])
         if dm:
             return dm.group()
     prev = element.find_previous(string=re.compile(r"\d{2}\.\d{2}\.\d{4}"))
@@ -314,6 +370,43 @@ def extract_articles(soup, base_url):
     return articles
 
 
+def fetch_news_articles(start_url, base_url, max_pages=NEWS_PAGE_LIMIT):
+    """Fetch news list plus a small number of pagination pages."""
+    if not start_url:
+        return [], "Brak URL aktualnosci"
+
+    queue = [_clean_url(start_url)]
+    visited = set()
+    articles = []
+    seen = set()
+    first_err = ""
+
+    while queue and len(visited) < max_pages:
+        url = queue.pop(0)
+        if url in visited:
+            continue
+        visited.add(url)
+
+        soup, err = fetch(url)
+        if not soup:
+            first_err = first_err or err
+            continue
+
+        for art in extract_articles(soup, base_url):
+            clean = _clean_url(art.get("url", ""))
+            key = _article_fingerprint(clean) or clean or art.get("title", "").strip().lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            articles.append(art)
+
+        for href in _pagination_links(soup, url):
+            if href not in visited and href not in queue and len(visited) + len(queue) < max_pages:
+                queue.append(href)
+
+    return articles, first_err
+
+
 def extract_kfs(soup, kfs_url):
     for cls in [r"journal-content-article", r"portlet-body"]:
         div = soup.find("div", class_=re.compile(cls))
@@ -343,12 +436,10 @@ def _scrape_one(i, urzad, total):
     errs = []
 
     # Aktualności
-    soup, err = fetch(urzad.get("aktualnosci_url", homepage))
-    news = extract_articles(soup, base_url) if soup else []
+    news, err = fetch_news_articles(urzad.get("aktualnosci_url", homepage), base_url)
     if not news and urzad.get("aktualnosci_url") and urzad["aktualnosci_url"] != homepage:
-        soup2, err2 = fetch(urzad["aktualnosci_url"])
-        if soup2:
-            news = extract_articles(soup2, base_url)
+        news, err2 = fetch_news_articles(homepage, base_url)
+        err = err or err2
 
     for a in news:
         a["urzad"] = name
@@ -525,6 +616,207 @@ KFS_NABOR_TITLE = re.compile(
 )
 
 
+DATE_DMY_RE = re.compile(r"\b([0-3]?\d)[.\-/]([01]?\d)[.\-/](20\d{2})\b")
+DATE_ISO_RE = re.compile(r"\b(20\d{2})-([01]\d)-([0-3]\d)\b")
+AMOUNT_RE = re.compile(
+    r"\b\d{1,3}(?:[\s.]\d{3})+(?:,\d{1,2})?\s*(?:z[l\u0142]|PLN)\b"
+    r"|\b\d{4,12}(?:,\d{1,2})?\s*(?:z[l\u0142]|PLN)\b",
+    re.IGNORECASE,
+)
+
+
+def _date_from_parts(day, month, year):
+    try:
+        return date(int(year), int(month), int(day))
+    except ValueError:
+        return None
+
+
+def _format_date_pl(d):
+    return d.strftime("%d.%m.%Y")
+
+
+def _format_date_range(date_range):
+    return f"{_format_date_pl(date_range[0])} - {_format_date_pl(date_range[1])}"
+
+
+def _extract_date_ranges(text):
+    """Extract explicit date ranges while preserving text order."""
+    text = str(text or "")
+    matches = []
+    for m in DATE_DMY_RE.finditer(text):
+        d = _date_from_parts(m.group(1), m.group(2), m.group(3))
+        if d:
+            matches.append({"start": m.start(), "end": m.end(), "date": d})
+    for m in DATE_ISO_RE.finditer(text):
+        d = _date_from_parts(m.group(3), m.group(2), m.group(1))
+        if d:
+            matches.append({"start": m.start(), "end": m.end(), "date": d})
+    matches.sort(key=lambda x: x["start"])
+
+    ranges = []
+    used = set()
+    for i in range(len(matches) - 1):
+        if i in used or i + 1 in used:
+            continue
+        gap = text[matches[i]["end"]:matches[i + 1]["start"]]
+        gap_norm = _ascii_lower(gap)
+        if len(gap) <= 90 and (
+            "-" in gap or "do" in gap_norm or "od" in gap_norm or "w dniach" in gap_norm
+        ):
+            start = matches[i]["date"]
+            end = matches[i + 1]["date"]
+            if end >= start:
+                ranges.append((start, end))
+                used.add(i)
+                used.add(i + 1)
+
+    unique = []
+    seen = set()
+    for item in ranges:
+        if item not in seen:
+            seen.add(item)
+            unique.append(item)
+    return unique
+
+
+def _extract_amount_strings(text):
+    return [entry["raw"] for entry in _extract_amount_entries(text)]
+
+
+def _extract_amount_entries(text):
+    text = str(text or "")
+    amounts = []
+    seen = set()
+    for m in AMOUNT_RE.finditer(str(text or "")):
+        raw = re.sub(r"\s+", " ", m.group(0)).strip()
+        number = _parse_kwota_number(raw)
+        if not number or number < 1000:
+            continue
+        key = re.sub(r"[^\d]", "", raw)
+        if key not in seen:
+            seen.add(key)
+            before = _ascii_lower(text[max(0, m.start() - 140):m.start()])
+            after = _ascii_lower(text[m.end():m.end() + 100])
+            context = before + " " + after
+            score = 0
+            if any(x in before for x in ("obecnego naboru", "pozostalo", "w ramach obecnego")):
+                score += 30
+            if any(x in context for x in ("limit srodkow", "kwota srodkow", "do rozdysponowania")):
+                score += 15
+            if any(x in after for x in ("obecnego naboru", "pozostalo", "w ramach obecnego")):
+                score += 5
+            if any(x in context for x in ("na jednego", "przecietnego wynagrodzenia", "maksymalna")):
+                score -= 50
+            amounts.append({"raw": raw, "number": number, "start": m.start(), "score": score})
+    return amounts
+
+
+def _article_text(art):
+    return f"{art.get('title', '')}\n{art.get('snippet', '')}"
+
+
+def _is_strong_kfs_nabor(art):
+    """Conservative deterministic recognizer for obvious KFS calls."""
+    raw = _article_text(art)
+    norm = _ascii_lower(raw)
+    title_norm = _ascii_lower(art.get("title", ""))
+    head_norm = norm[:1200]
+    has_kfs = "kfs" in norm or "krajowy fundusz szkoleniowy" in norm
+    has_nabor = "nabor" in norm and ("wniosk" in norm or "pracodawc" in norm)
+    has_action = any(x in norm for x in ("oglasza", "ogloszenie", "rozpocz", "prowadzi", "przyjm"))
+    if not has_kfs or not (has_nabor or has_action):
+        return False
+
+    hard_reject = (
+        any(x in title_norm for x in ("wstrzym", "zawiesz", "zakoncz", "rozstrzyg", "wynik"))
+        or any(x in head_norm for x in ("wstrzym", "zawiesz", "zakoncz", "rozstrzyg"))
+        or bool(re.search(r"(wynik.{0,40}nabor|nabor.{0,40}wynik)", head_norm))
+        or bool(re.search(r"(planowan.{0,50}nabor|nabor.{0,50}planowan)", head_norm))
+        or bool(re.search(r"(przygotuj.{0,50}nabor|nabor.{0,50}przygotuj)", head_norm))
+    )
+    if hard_reject:
+        return False
+    soft_reject = any(x in norm for x in (
+        "spotkan", "warsztat", "konsultac", "konto", "instrukcj",
+    ))
+    if soft_reject and not has_action:
+        return False
+    return True
+
+
+def rule_based_classify_kfs(art):
+    """Return a TAK/NIE result for obvious KFS calls without spending Gemini."""
+    if not _is_strong_kfs_nabor(art):
+        return None
+
+    text = _article_text(art)
+    norm = _ascii_lower(text)
+    ranges = _extract_date_ranges(text)
+    if ranges:
+        active_or_future = [r for r in ranges if r[1] >= date.today()]
+        if not active_or_future:
+            return {
+                "wynik": "NIE",
+                "powod": "Termin minal",
+                "termin": " oraz ".join(_format_date_range(r) for r in ranges),
+                "kwota": "",
+                "classified_date": TODAY,
+            }
+        ranges = active_or_future
+
+    amount_entries = _extract_amount_entries(text)
+    if len(ranges) == 1 and len(amount_entries) > 1:
+        best = max(amount_entries, key=lambda x: (x["score"], x["start"]))
+        amounts = [best["raw"]] if best["score"] > 0 else [amount_entries[0]["raw"]]
+    else:
+        amounts = [entry["raw"] for entry in amount_entries]
+    amount_limit = len(ranges) if ranges and len(amounts) >= len(ranges) else len(amounts)
+    kwota = " oraz ".join(amounts[:amount_limit])
+    termin = " oraz ".join(_format_date_range(r) for r in ranges)
+
+    attachment_hint = any(x in norm for x in ("zalacznik", "szczegolowe informacje", "dokument"))
+    if not termin and attachment_hint:
+        termin = "w zalaczniku"
+    if not kwota and attachment_hint:
+        kwota = "w zalaczniku"
+
+    return {
+        "wynik": "TAK",
+        "powod": "Regula: nabor KFS",
+        "termin": termin,
+        "kwota": kwota,
+        "classified_date": TODAY,
+    }
+
+
+def _cache_lookup(art, cache):
+    url = art.get("url", "")
+    if url in cache:
+        return cache[url]
+    fp = _article_fingerprint(url)
+    if fp and fp in _cache_fp_index:
+        cached = _cache_fp_index[fp]
+        cache[url] = cached
+        return cached
+    return None
+
+
+def _cache_needs_refresh(art, cached):
+    if not cached:
+        return True
+    reason = _ascii_lower(cached.get("powod", ""))
+    if any(x in reason for x in ("blad api", "rate limit", "brak odpowiedzi gemini")):
+        return True
+    if _is_strong_kfs_nabor(art):
+        wynik = cached.get("wynik", "NIE")
+        if wynik != "TAK" and (not reason or "brak slow kluczowych kfs" in reason):
+            return True
+        if wynik == "TAK" and not (cached.get("termin") or cached.get("kwota")):
+            return True
+    return False
+
+
 def classify_article(art, key_index, cache):
     """Klasyfikuje artykuł — zwraca wynik (z cache lub z AI)."""
     url = art.get("url", "")
@@ -532,26 +824,36 @@ def classify_article(art, key_index, cache):
 
     snippet = art.get("snippet", "")
     text_to_check = title + " " + snippet[:1000]
+    cached = _cache_lookup(art, cache)
+    if cached and not _cache_needs_refresh(art, cached):
+        return cached, True, True
 
     # Pre-filtr: brak słów kluczowych KFS → automatycznie NIE (bez AI)
-    if not KFS_KEYWORDS.search(text_to_check):
+    if not KFS_KEYWORDS.search(text_to_check) and not _is_strong_kfs_nabor(art):
         result = {"wynik": "NIE", "powod": "Brak słów kluczowych KFS",
                   "termin": "", "kwota": "", "classified_date": TODAY}
         with progress_lock:
             progress["done"] += 1
-        return result, False
+        return result, False, True
 
     # Sprawdź cache (po URL lub po fingerprint — ten sam artykuł pod inną ścieżką)
-    if url in cache:
-        cached = cache[url]
-        return cached, True
-    fp = _article_fingerprint(url)
-    if fp and fp in _cache_fp_index:
-        cached = _cache_fp_index[fp]
-        cache[url] = cached  # dodaj alias do cache
-        return cached, True
-
     # Nowy artykuł z KFS keywords — wyślij do AI
+    rule_result = rule_based_classify_kfs(art)
+    if rule_result:
+        with progress_lock:
+            progress["done"] += 1
+            if rule_result.get("wynik") == "TAK":
+                progress["tak"] += 1
+            done = progress["done"]
+            total = progress["total"]
+        extra = ""
+        if rule_result.get("termin"):
+            extra += f" [{rule_result['termin']}]"
+        if rule_result.get("kwota"):
+            extra += f" {rule_result['kwota']}"
+        print(f"    RULE [{done}/{total}] {art.get('urzad',''):18s} -> {rule_result.get('wynik')}{extra}")
+        return rule_result, False, True
+
     api_key = API_KEYS[key_index % len(API_KEYS)]
     prompt = CLASSIFY_PROMPT.format(
         title=art.get("title", ""),
@@ -559,6 +861,15 @@ def classify_article(art, key_index, cache):
         today=TODAY,
     )
     text = call_gemini(api_key, prompt)
+    if not text:
+        result = {"wynik": "NIE", "powod": "Blad API Gemini",
+                  "termin": "", "kwota": "", "classified_date": TODAY}
+        with progress_lock:
+            progress["done"] += 1
+        print(f"    API [{progress['done']}/{progress['total']}] "
+              f"{art.get('urzad',''):18s} -> NIE (bez cache)")
+        return result, False, False
+
     wynik, powod, termin, kwota = parse_response(text)
 
     result = {
@@ -582,7 +893,7 @@ def classify_article(art, key_index, cache):
     print(f"    AI [{progress['done']}/{progress['total']}] "
           f"{art.get('urzad',''):18s} -> {wynik}{extra}")
 
-    return result, False
+    return result, False, True
 
 
 _cache_fp_index = {}  # fingerprint -> cache value (budowany w classify_all)
@@ -598,18 +909,14 @@ def classify_all(articles, cache):
         if fp:
             _cache_fp_index[fp] = val
 
-    def _in_cache(url):
-        if url in cache:
-            return True
-        fp = _article_fingerprint(url)
-        if fp and fp in _cache_fp_index:
-            cache[url] = _cache_fp_index[fp]  # alias
-            return True
-        return False
-    new_articles = [a for a in articles if not _in_cache(a.get("url", ""))]
+    def _cache_usable(art):
+        cached = _cache_lookup(art, cache)
+        return bool(cached and not _cache_needs_refresh(art, cached))
+
+    new_articles = [a for a in articles if not _cache_usable(a)]
     # Ile z nowych ma KFS keywords (pójdzie do AI), ile bez (auto-NIE)
     kfs_new = [a for a in new_articles if KFS_KEYWORDS.search(
-        a.get("title", "") + " " + a.get("snippet", "")[:1000])]
+        a.get("title", "") + " " + a.get("snippet", "")[:1000]) or _is_strong_kfs_nabor(a)]
     skip_count = len(new_articles) - len(kfs_new)
     cached_count = len(articles) - len(new_articles)
 
@@ -625,8 +932,8 @@ def classify_all(articles, cache):
     # Cache hits — przetwarzaj synchronicznie
     for art in articles:
         url = art.get("url", "")
-        if url in cache:
-            r = cache[url]
+        r = _cache_lookup(art, cache)
+        if r and not _cache_needs_refresh(art, r):
             results.append({
                 "url": url,
                 "title": art.get("title", ""),
@@ -649,11 +956,12 @@ def classify_all(articles, cache):
 
             for future in as_completed(futures):
                 art = futures[future]
-                result, from_cache = future.result()
+                result, from_cache, cacheable = future.result()
                 url = art.get("url", "")
 
                 # Zapisz do cache
-                cache[url] = result
+                if cacheable:
+                    cache[url] = result
 
                 wynik = result.get("wynik", "NIE")
                 results.append({
@@ -671,6 +979,42 @@ def classify_all(articles, cache):
                     new_tak_urls.add(url)
 
     return results, new_tak_urls
+
+
+def expand_multi_nabory(results):
+    """Split one TAK result with multiple date ranges into separate calls."""
+    expanded = []
+    split_count = 0
+    for r in results:
+        if r.get("wynik") != "TAK":
+            expanded.append(r)
+            continue
+
+        ranges = _extract_date_ranges(r.get("termin", ""))
+        if len(ranges) <= 1:
+            expanded.append(r)
+            continue
+
+        amounts = _extract_amount_strings(r.get("kwota", ""))
+        for idx, date_range in enumerate(ranges):
+            item = dict(r)
+            item["termin"] = _format_date_range(date_range)
+            if len(amounts) == len(ranges):
+                item["kwota"] = amounts[idx]
+            elif len(amounts) > 1 and idx < len(amounts):
+                item["kwota"] = amounts[idx]
+            elif len(amounts) == 1:
+                item["kwota"] = amounts[0]
+            item["multiIndex"] = idx + 1
+            item["multiTotal"] = len(ranges)
+            powod = item.get("powod", "")
+            item["powod"] = f"{powod}; wielotermin {idx + 1}/{len(ranges)}".strip("; ")
+            expanded.append(item)
+            split_count += 1
+
+    if split_count:
+        print(f"  Rozbito wieloterminowe nabory: {split_count} rekordow wynikowych")
+    return expanded
 
 
 # ============================================================
@@ -731,16 +1075,40 @@ def _crm_paginate(crm_url, entity, headers, select_fields):
 _PL_MAP = str.maketrans("ąćęłńóśźżĄĆĘŁŃÓŚŹŻ", "acelnoszzACELNOSZZ")
 
 
+def _stem_city_word(word):
+    if len(word) <= 4:
+        return word
+    for suffix in ("ach", "owie", "iego", "skiej", "ckiej"):
+        if word.endswith(suffix):
+            word = word[:-len(suffix)]
+            break
+    else:
+        for suffix in ("ie", "iu", "u"):
+            if len(word) > 5 and word.endswith(suffix):
+                word = word[:-len(suffix)]
+                break
+        else:
+            if len(word) > 5 and word[-1] in "aeiy":
+                word = word[:-1]
+    return word
+
+
 def _normalize_miasto(name):
     """Normalizuje nazwę miasta do porównań: usuwa polskie znaki, PUP/MUP/WUP, skróty."""
     if not name:
         return ""
     s = name.lower().strip().translate(_PL_MAP)
     s = re.sub(r"\b(pup|mup|wup|gup|up)\b", "", s)
+    s = re.sub(
+        r"\b(powiatowy|powiatowego|miejski|miejskiego|grodzki|grodzkiego|wojewodzki|"
+        r"wojewodzkiego|urzad|pracy|powiatu|dla|w|z|siedziba|siedziba w)\b",
+        " ",
+        s,
+    )
     s = re.sub(r"[^a-z0-9 ]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
     s = s.replace("wlkp", "wielkopolski")
-    return s
+    return " ".join(_stem_city_word(part) for part in s.split())
 
 
 def _parse_kwota_number(kwota_str):
@@ -759,6 +1127,24 @@ def _parse_kwota_number(kwota_str):
     if digits and 3 <= len(digits) <= 12:
         return int(digits)
     return None
+
+
+def _date_field(value):
+    if not value:
+        return ""
+    return str(value)[:10]
+
+
+def _coerce_kwota_int(value):
+    if value in (None, ""):
+        return None
+    if isinstance(value, (int, float)):
+        return int(value)
+    return _parse_kwota_number(str(value))
+
+
+def make_nabory_key(miasto, od_str, do_str, kwota_int):
+    return (_normalize_miasto(miasto), od_str or "", do_str or "", kwota_int or 0)
 
 
 def push_to_crm(results):
@@ -850,7 +1236,10 @@ def push_to_crm(results):
         kfs_is_new = url not in kfs_existing and title not in kfs_existing
         # Dedup 2: po treści (urzad+termin+kwota) — ten sam nabór w innym artykule
         dedup_key = (urzad.strip().lower(), termin_raw.strip().lower(), kwota_str.strip().lower())
-        if urzad and (termin_raw or kwota_str) and dedup_key in kfs_dedup_keys:
+        has_content_key = bool(urzad and (termin_raw or kwota_str))
+        if has_content_key:
+            kfs_is_new = dedup_key not in kfs_dedup_keys
+        elif dedup_key in kfs_dedup_keys:
             kfs_is_new = False
         if kfs_is_new:
             crm_date = ""
@@ -880,7 +1269,8 @@ def push_to_crm(results):
                     added_kfs += 1
                     kfs_existing.add(url)
                     kfs_existing.add(title)
-                    kfs_dedup_keys.add(dedup_key)
+                    if has_content_key:
+                        kfs_dedup_keys.add(dedup_key)
                 else:
                     errors_count += 1
                     detail = resp.text[:200] if resp.text else ""
@@ -898,17 +1288,29 @@ def push_to_crm(results):
 
     # --- Nabory: uzupełnij brakujące na podstawie NaboryKfs ---
     # Pobierz istniejące miasta z Nabory 2026
-    nabory_miasta_norm = set()
-    for rec in _crm_paginate(crm_url, "Nabory", headers, "miasto,od"):
-        od_raw = rec.get("od", "")
-        if od_raw and "2026" not in od_raw:
+    nabory_existing_keys = set()
+    nabory_by_link = {}
+    nabory_records = _crm_paginate(
+        crm_url,
+        "Nabory",
+        headers,
+        "id,name,miasto,od,do,kwota,kwotaConverted,link",
+    )
+    for rec in nabory_records:
+        od_raw = _date_field(rec.get("od", ""))
+        if od_raw and not od_raw.startswith("2026"):
             continue
-        m = _normalize_miasto(rec.get("miasto", ""))
-        if m:
-            nabory_miasta_norm.add(m)
-    print(f"  CRM Nabory: {len(nabory_miasta_norm)} unikalnych miast (norm) w 2026")
+        do_raw = _date_field(rec.get("do", ""))
+        kwota_existing = _coerce_kwota_int(rec.get("kwota") or rec.get("kwotaConverted"))
+        norm = _normalize_miasto(rec.get("miasto", ""))
+        if norm:
+            nabory_existing_keys.add(make_nabory_key(rec.get("miasto", ""), od_raw, do_raw, kwota_existing))
+        if rec.get("link"):
+            nabory_by_link.setdefault(_clean_url(rec["link"]), []).append(rec)
+    print(f"  CRM Nabory: {len(nabory_existing_keys)} istniejacych kluczy (miasto+termin+kwota) w 2026")
 
     added_nabory = 0
+    updated_nabory = 0
     skipped_nabory = 0
     for r in tak:
         urzad = r.get("urzad", "").strip()
@@ -922,11 +1324,6 @@ def push_to_crm(results):
             continue
 
         # Sprawdź czy miasto (znormalizowane) już jest w Nabory
-        already = any(norm == nm or norm in nm or nm in norm for nm in nabory_miasta_norm)
-        if already:
-            skipped_nabory += 1
-            continue
-
         # Potrzebujemy przynajmniej daty 'od'
         od_str = start.isoformat() if start else ""
         do_str = end.isoformat() if end else ""
@@ -935,6 +1332,27 @@ def push_to_crm(results):
             continue
 
         kwota_int = _parse_kwota_number(kwota_str)
+        nabory_key = make_nabory_key(urzad, od_str, do_str, kwota_int)
+        update_rec = None
+        already = nabory_key in nabory_existing_keys
+        for rec in nabory_by_link.get(_clean_url(url), []):
+            rec_norm = _normalize_miasto(rec.get("miasto", ""))
+            rec_od = _date_field(rec.get("od", ""))
+            rec_do = _date_field(rec.get("do", ""))
+            rec_kwota = _coerce_kwota_int(rec.get("kwota") or rec.get("kwotaConverted"))
+            rec_key = make_nabory_key(rec.get("miasto", ""), rec_od, rec_do, rec_kwota)
+            same_city = rec_norm and (norm == rec_norm or norm in rec_norm or rec_norm in norm)
+            if same_city and rec_key == nabory_key:
+                already = True
+                break
+            if same_city and rec_od == od_str and rec_do == do_str and not rec_kwota:
+                update_rec = rec
+            if same_city and not rec_od and not rec_do and not rec_kwota:
+                update_rec = rec
+        if already:
+            skipped_nabory += 1
+            continue
+
         woj = urzad_to_woj.get(urzad, "")
         powiat_raw = urzad_to_powiat.get(urzad, "")
         powiat_name = ""
@@ -967,15 +1385,35 @@ def push_to_crm(results):
         payload_nabory = {k: v for k, v in payload_nabory.items() if v is not None}
 
         try:
-            resp = requests.post(
-                f"{crm_url}/api/v1/Nabory",
-                headers=headers,
-                json=payload_nabory,
-                timeout=15,
-            )
+            if update_rec:
+                resp = requests.put(
+                    f"{crm_url}/api/v1/Nabory/{update_rec['id']}",
+                    headers=headers,
+                    json=payload_nabory,
+                    timeout=15,
+                )
+            else:
+                resp = requests.post(
+                    f"{crm_url}/api/v1/Nabory",
+                    headers=headers,
+                    json=payload_nabory,
+                    timeout=15,
+                )
             if resp.status_code in (200, 201):
-                added_nabory += 1
-                nabory_miasta_norm.add(norm)
+                if update_rec:
+                    updated_nabory += 1
+                else:
+                    added_nabory += 1
+                nabory_existing_keys.add(nabory_key)
+                if url:
+                    nabory_by_link.setdefault(_clean_url(url), []).append({
+                        "id": update_rec.get("id") if update_rec else "",
+                        "miasto": urzad,
+                        "od": od_str,
+                        "do": do_str,
+                        "kwota": kwota_int,
+                        "link": url,
+                    })
             else:
                 errors_count += 1
                 detail = resp.text[:200] if resp.text else ""
@@ -984,7 +1422,7 @@ def push_to_crm(results):
             errors_count += 1
             print(f"  CRM Nabory: {ex}")
 
-    print(f"  CRM Nabory:    Dodano {added_nabory}, pominięto {skipped_nabory}")
+    print(f"  CRM Nabory:    Dodano {added_nabory}, zaktualizowano {updated_nabory}, pominięto {skipped_nabory}")
     if errors_count:
         print(f"  CRM: Błędów łącznie: {errors_count}")
 
@@ -1434,6 +1872,7 @@ def main():
     # Classify
     print(f"\n[4/4] Klasyfikacja AI...")
     results, new_tak_urls = classify_all(articles, cache)
+    results = expand_multi_nabory(results)
 
     # Save cache
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
