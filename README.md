@@ -36,6 +36,8 @@ urzedy.json (lista ~340 urzędów)
 - Powiaty z naborami podświetlone na zielono
 - Wyszukiwarka po nazwie urzędu
 - Szczegóły naboru: termin, kwota, link do ogłoszenia
+- Prognoza kolejnych naborów: limit roczny, suma wykrytych pul, szacowane pozostałe środki i poziom prawdopodobieństwa
+- Flagi do wniosku o informację publiczną, gdy środki wyglądają na nierozliczone albo pojawiają się kwoty przy promocji/badaniach/analizach KFS
 - Cache klasyfikacji (nie powtarza zapytań do API)
 - Filtrowanie starych artykułów (< 2026)
 
@@ -64,6 +66,7 @@ Wygenerowany raport: `index.html`
 | `run.py` | Główny pipeline: scrape → classify → HTML |
 | `urzedy.json` | Lista ~340 urzędów z URL-ami |
 | `cache.json` | Cache klasyfikacji (URL → wynik) |
+| `forecasts.json` | Prognozy kolejnych naborów i szacowany bilans środków per PUP |
 | `powiaty.geojson` | Granice powiatów do mapy |
 | `urzad_to_powiat.json` | Mapowanie urząd → powiat GeoJSON |
 | `index.html` | Wygenerowany raport (output) |

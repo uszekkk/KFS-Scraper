@@ -103,6 +103,70 @@ class RegressionTests(unittest.TestCase):
         self.assertNotEqual(first, second)
         self.assertEqual(first[0], second[0])
 
+    def test_budget_forecast_flags_remaining_limit_as_hot(self):
+        results = [
+            {
+                "urzad": "Testowo",
+                "title": "KFS 2026",
+                "snippet": "Dostepna na dany rok kwota srodkow KFS wynosi 1 000 000 zl.",
+                "url": "https://example.com/kfs",
+                "wynik": "NIE",
+                "termin": "",
+                "kwota": "",
+            },
+            {
+                "urzad": "Testowo",
+                "title": "Nabor wnioskow KFS",
+                "snippet": "Urzad oglasza nabor KFS.",
+                "url": "https://example.com/nabor",
+                "wynik": "TAK",
+                "termin": "01.03.2026 - 05.03.2026",
+                "kwota": "300 000 zl",
+            },
+        ]
+
+        forecast = run.build_budget_forecasts(results)[0]
+
+        self.assertEqual(forecast["level"], "HOT")
+        self.assertEqual(forecast["limit_roczny"], 1000000)
+        self.assertEqual(forecast["suma_naborow"], 300000)
+        self.assertEqual(forecast["szacowane_pozostalo"], 700000)
+        self.assertTrue(forecast["ask_public_info"])
+
+    def test_budget_forecast_exhausted_signal_overrides_gap(self):
+        results = [
+            {
+                "urzad": "Testowo",
+                "title": "KFS 2026",
+                "snippet": "Dostepna na dany rok kwota srodkow KFS wynosi 1 000 000 zl.",
+                "url": "https://example.com/kfs",
+                "wynik": "NIE",
+                "termin": "",
+                "kwota": "",
+            },
+            {
+                "urzad": "Testowo",
+                "title": "Informacja KFS",
+                "snippet": "Srodki KFS zostaly wyczerpane i rozdysponowane w calosci.",
+                "url": "https://example.com/koniec",
+                "wynik": "NIE",
+                "termin": "",
+                "kwota": "",
+            },
+        ]
+
+        forecast = run.build_budget_forecasts(results)[0]
+
+        self.assertEqual(forecast["level"], "COLD")
+        self.assertTrue(forecast["has_exhausted_signal"])
+
+    def test_budget_forecast_does_not_treat_until_exhaustion_rule_as_exhausted(self):
+        norm = run._ascii_lower(
+            "Nabor wnioskow jest powtarzany do wyczerpania limitu srodkow KFS."
+        )
+
+        self.assertFalse(run._has_exhausted_signal(norm))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -29,6 +29,7 @@ BASE_DIR = Path(__file__).parent
 URZEDY_FILE = BASE_DIR / "urzedy.json"
 CACHE_FILE = BASE_DIR / "cache.json"
 RESULTS_FILE = BASE_DIR / "results.json"
+FORECASTS_FILE = BASE_DIR / "forecasts.json"
 ERRORS_FILE = BASE_DIR / "errors.json"
 OUTPUT_FILE = BASE_DIR / "index.html"
 GEOJSON_FILE = BASE_DIR / "powiaty.geojson"
@@ -944,6 +945,7 @@ def classify_all(articles, cache):
                 "termin": r.get("termin", ""),
                 "kwota": r.get("kwota", ""),
                 "snippet": art.get("snippet", "")[:MAX_SNIPPET],
+                "source_type": art.get("source_type", ""),
             })
 
     # Nowe artykuły — klasyfikuj równolegle
@@ -974,6 +976,7 @@ def classify_all(articles, cache):
                     "termin": result.get("termin", ""),
                     "kwota": result.get("kwota", ""),
                     "snippet": art.get("snippet", "")[:MAX_SNIPPET],
+                    "source_type": art.get("source_type", ""),
                 })
                 if wynik == "TAK":
                     new_tak_urls.add(url)
@@ -1127,6 +1130,336 @@ def _parse_kwota_number(kwota_str):
     if digits and 3 <= len(digits) <= 12:
         return int(digits)
     return None
+
+
+def _format_money_pln(value):
+    if value in (None, ""):
+        return ""
+    try:
+        return f"{int(value):,}".replace(",", " ") + " zl"
+    except (TypeError, ValueError):
+        return ""
+
+
+def _dates_overlap(a_start, a_end, b_start, b_end):
+    if not all((a_start, a_end, b_start, b_end)):
+        return False
+    return a_start <= b_end and b_start <= a_end
+
+
+def _forecast_level(probability):
+    if probability >= 75:
+        return "HOT", "Wysokie"
+    if probability >= 50:
+        return "WARM", "Srednie"
+    if probability >= 25:
+        return "WATCH", "Obserwuj"
+    return "COLD", "Niskie"
+
+
+LIMIT_CONTEXT_RE = re.compile(
+    r"(dostepn\w*.{0,80}(?:rok|2026|kwot|srodk)|"
+    r"przyznan\w*.{0,80}(?:limit|kwot|srodk)|"
+    r"limit\w*.{0,80}(?:kfs|srodk|rok|2026)|"
+    r"kwot\w*.{0,80}(?:na\s+rok|2026|dostepn|srodkow\s+kfs)|"
+    r"srodk\w*.{0,80}(?:na\s+rok|2026|dostepn))"
+)
+
+NABOR_CONTEXT_RE = re.compile(
+    r"(obecnego\s+naboru|w\s+ramach\s+naboru|prowadzon\w*\s+nabor|"
+    r"naboru\s+dostepn|do\s+rozdysponowania|pozostal\w*|"
+    r"wniosk\w*\s+mozna\s+skladac)"
+)
+
+EXHAUSTED_RE = re.compile(
+    r"(wyczerpan\w*.{0,80}(?:srodk|limit|kfs)|"
+    r"(?:srodki|limit).{0,80}wyczerpan\w*|"
+    r"brak\s+srodkow|"
+    r"rozdysponowan[ey]\w*.{0,80}(?:wszystk|cal\w*)|"
+    r"rozdysponowano.{0,80}(?:wszystk|cal\w*)|"
+    r"(?:wszystk|cal\w*).{0,80}rozdysponowan[ey]\w*|"
+    r"wykorzystan[ey]\w*.{0,80}(?:wszystk|cal\w*)|"
+    r"wykorzystano.{0,80}(?:wszystk|cal\w*))"
+)
+
+RESERVE_RE = re.compile(
+    r"(rezerw\w*\s+kfs|zmniejszen\w*\s+limitu|niewykorzystan\w*\s+srodk|"
+    r"zwrot\w*\s+srodk|oddan\w*\s+srodk)"
+)
+
+PLANNED_RE = re.compile(
+    r"(planowan\w*.{0,60}nabor|kolejn\w*.{0,60}nabor|"
+    r"dodatkow\w*.{0,60}nabor|nabor.{0,60}(?:w\s+krotce|wkrotce|planowan|kolejn|dodatkow))"
+)
+
+PROMOTION_RE = re.compile(
+    r"(promocj\w*|badan\w*|analiz\w*|art\.?\s*125\s*ust\.?\s*7)"
+)
+
+
+def _has_exhausted_signal(norm_text):
+    for match in EXHAUSTED_RE.finditer(norm_text):
+        context = norm_text[max(0, match.start() - 80):match.end() + 80]
+        if (
+            "do wyczerpania" in context
+            or "do czasu wyczerpania" in context
+            or "powtarzany do wyczerpania" in context
+            or "az do wyczerpania" in context
+        ):
+            continue
+        return True
+    return False
+
+
+def _result_text(result):
+    return f"{result.get('title', '')}\n{result.get('snippet', '')}"
+
+
+def _kfs_text(result):
+    text = _result_text(result)
+    return bool(KFS_KEYWORDS.search(text))
+
+
+def _extract_limit_candidates(result):
+    text = _result_text(result)
+    if not _kfs_text(result):
+        return []
+
+    candidates = []
+    for entry in _extract_amount_entries(text):
+        start = entry.get("start", 0)
+        context = _ascii_lower(text[max(0, start - 260):start + 260])
+        score = entry.get("score", 0)
+        if LIMIT_CONTEXT_RE.search(context):
+            score += 55
+        if "2026" in context:
+            score += 10
+        if result.get("source_type") == "KFS" or _ascii_lower(result.get("title", "")).strip() == "kfs":
+            score += 15
+        if result.get("wynik") == "TAK":
+            score -= 10
+        if NABOR_CONTEXT_RE.search(context):
+            score -= 25
+        if re.search(r"(na\s+jedn\w*|przecietn\w*\s+wynagrodz|maksymaln\w*)", context):
+            score -= 70
+        if entry["number"] < 20000:
+            score -= 20
+        if score > 15:
+            candidates.append({
+                "amount": entry["number"],
+                "raw": entry["raw"],
+                "score": score,
+                "title": result.get("title", ""),
+                "url": result.get("url", ""),
+            })
+    return candidates
+
+
+def _extract_promotion_candidates(result):
+    text = _result_text(result)
+    norm = _ascii_lower(text)
+    if not (_kfs_text(result) and PROMOTION_RE.search(norm)):
+        return []
+    items = []
+    for entry in _extract_amount_entries(text):
+        start = entry.get("start", 0)
+        context = _ascii_lower(text[max(0, start - 220):start + 220])
+        if PROMOTION_RE.search(context):
+            items.append({
+                "amount": entry["number"],
+                "raw": entry["raw"],
+                "title": result.get("title", ""),
+                "url": result.get("url", ""),
+            })
+    return items
+
+
+def _unique_nabor_entries(results):
+    entries = []
+    for r in results:
+        if r.get("wynik") != "TAK":
+            continue
+        amount = _parse_kwota_number(r.get("kwota", ""))
+        if not amount:
+            continue
+        start, end = _parse_termin_dates(r.get("termin", ""))
+        fp = _article_fingerprint(r.get("url", "")) or r.get("url", "")
+
+        duplicate = False
+        for existing in entries:
+            if existing["amount"] != amount:
+                continue
+            same_source = existing["fingerprint"] and existing["fingerprint"] == fp
+            same_end = existing["end"] and end and existing["end"] == end
+            overlap = _dates_overlap(existing["start"], existing["end"], start, end)
+            no_dates_same_amount = not any((existing["start"], existing["end"], start, end))
+            if same_source or same_end or overlap or no_dates_same_amount:
+                duplicate = True
+                break
+        if duplicate:
+            continue
+
+        entries.append({
+            "amount": amount,
+            "raw": r.get("kwota", ""),
+            "start": start,
+            "end": end,
+            "fingerprint": fp,
+            "title": r.get("title", ""),
+            "url": r.get("url", ""),
+        })
+    return entries
+
+
+def build_budget_forecasts(results, urzad_to_woj=None):
+    """Build per-PUP budget and next-call probability from scraped public text."""
+    urzad_to_woj = urzad_to_woj or {}
+    by_office = {}
+    for r in results:
+        office = r.get("urzad", "")
+        if not office:
+            continue
+        bucket = by_office.setdefault(office, {
+            "results": [],
+            "kfs_count": 0,
+            "exhausted": [],
+            "reserve": [],
+            "planned": [],
+            "promotion": [],
+            "limits": [],
+        })
+        bucket["results"].append(r)
+        text_norm = _ascii_lower(_result_text(r))
+        if _kfs_text(r):
+            bucket["kfs_count"] += 1
+        if _has_exhausted_signal(text_norm):
+            bucket["exhausted"].append(r)
+        if RESERVE_RE.search(text_norm):
+            bucket["reserve"].append(r)
+        if PLANNED_RE.search(text_norm):
+            bucket["planned"].append(r)
+        bucket["limits"].extend(_extract_limit_candidates(r))
+        bucket["promotion"].extend(_extract_promotion_candidates(r))
+
+    today = date.today()
+    forecasts = []
+    for office, bucket in by_office.items():
+        office_results = bucket["results"]
+        nabor_entries = _unique_nabor_entries(office_results)
+        allocated = sum(x["amount"] for x in nabor_entries)
+        active_entries = [x for x in nabor_entries if x["end"] and x["end"] >= today]
+        ended_entries = [x for x in nabor_entries if x["end"] and x["end"] < today]
+
+        limits = sorted(bucket["limits"], key=lambda x: (x["score"], x["amount"]), reverse=True)
+        best_limit = limits[0] if limits else None
+        annual_limit = best_limit["amount"] if best_limit else None
+        remaining = None
+        if annual_limit and allocated:
+            remaining = annual_limit - allocated
+            if remaining < 0 and abs(remaining) <= max(50000, annual_limit * 0.08):
+                remaining = 0
+
+        signals = []
+        probability = 15
+        ask_public_info = False
+
+        if bucket["exhausted"]:
+            probability = 5
+            signals.append("Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow.")
+        elif bucket["reserve"]:
+            probability = 20
+            signals.append("Sa sygnaly rezerwy albo zmniejszenia/niewykorzystania limitu.")
+        elif remaining is not None:
+            if remaining > max(25000, annual_limit * 0.03):
+                ratio = remaining / annual_limit if annual_limit else 0
+                probability = 62 + min(28, int(ratio * 45))
+                signals.append("Limit roczny jest wyzszy niz suma wykrytych pul naborow.")
+                ask_public_info = True
+            else:
+                probability = 18
+                signals.append("Wykryte pule naborow prawie domykaja limit roczny.")
+        elif bucket["planned"]:
+            probability = 72
+            signals.append("W tekstach pojawia sie planowany/kolejny/dodatkowy nabor.")
+        elif ended_entries and not active_entries:
+            probability = 44
+            signals.append("Byl nabor, termin minal, brak jednoznacznego komunikatu o wyczerpaniu.")
+            ask_public_info = True
+        elif active_entries:
+            probability = 30
+            signals.append("Jest aktywny lub przyszly nabor; kolejny zalezy od rozstrzygniecia.")
+        elif bucket["kfs_count"]:
+            probability = 38
+            signals.append("Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia.")
+            ask_public_info = True
+        else:
+            signals.append("Brak wystarczajacych danych KFS dla urzedu.")
+
+        if (
+            bucket["planned"]
+            and not bucket["exhausted"]
+            and not bucket["reserve"]
+            and (
+                remaining is None
+                or remaining > max(25000, (annual_limit or 0) * 0.03)
+                or allocated == 0
+            )
+        ):
+            probability = max(probability, 70)
+        if active_entries and not bucket["planned"]:
+            probability = min(probability, 45)
+        if remaining is not None and remaining > 0 and bucket["promotion"]:
+            signals.append("Znaleziono wzmianki o promocji/badaniach/analizach KFS przy kwotach.")
+            ask_public_info = True
+        if annual_limit and allocated == 0 and bucket["kfs_count"] and not bucket["exhausted"]:
+            probability = max(probability, 55)
+            signals.append("Limit roczny jest wykryty, ale nie znaleziono puli naboru.")
+
+        probability = max(0, min(95, probability))
+        level, label = _forecast_level(probability)
+        sources = []
+        for source in (limits[:2] + bucket["planned"][:2] + bucket["exhausted"][:1]):
+            title = source.get("title", "")
+            url = source.get("url", "")
+            if url and not any(s["url"] == url for s in sources):
+                sources.append({"title": title, "url": url})
+
+        forecasts.append({
+            "urzad": office,
+            "woj": urzad_to_woj.get(office, ""),
+            "probability": probability,
+            "level": level,
+            "label": label,
+            "limit_roczny": annual_limit,
+            "limit_roczny_text": _format_money_pln(annual_limit),
+            "limit_source_url": best_limit.get("url", "") if best_limit else "",
+            "limit_confidence": best_limit.get("score", 0) if best_limit else 0,
+            "suma_naborow": allocated or None,
+            "suma_naborow_text": _format_money_pln(allocated) if allocated else "",
+            "szacowane_pozostalo": remaining if remaining is not None and remaining >= 0 else None,
+            "szacowane_pozostalo_text": _format_money_pln(remaining) if remaining is not None and remaining >= 0 else "",
+            "nabor_count": len(nabor_entries),
+            "active_count": len(active_entries),
+            "ended_count": len(ended_entries),
+            "kfs_articles": bucket["kfs_count"],
+            "has_exhausted_signal": bool(bucket["exhausted"]),
+            "has_reserve_signal": bool(bucket["reserve"]),
+            "has_planned_signal": bool(bucket["planned"]),
+            "promotion_candidates": bucket["promotion"][:5],
+            "ask_public_info": ask_public_info,
+            "signals": signals[:5],
+            "sources": sources[:5],
+        })
+
+    forecasts.sort(
+        key=lambda x: (
+            x["probability"],
+            x.get("szacowane_pozostalo") or 0,
+            x.get("limit_roczny") or 0,
+        ),
+        reverse=True,
+    )
+    return forecasts
 
 
 def _date_field(value):
@@ -1493,7 +1826,7 @@ def send_email_notification(new_tak):
 # ============================================================
 # GENEROWANIE RAPORTU HTML
 # ============================================================
-def generate_report(results, errors):
+def generate_report(results, errors, forecasts=None):
     """Generuje raport HTML z mapą powiatów."""
     import html as html_mod
 
@@ -1517,6 +1850,8 @@ def generate_report(results, errors):
         with open(WOJ_FILE, "r", encoding="utf-8") as f:
             urzad_to_woj = json.load(f)
     all_woj = sorted(set(urzad_to_woj.values()))
+    if forecasts is None:
+        forecasts = build_budget_forecasts(results, urzad_to_woj)
 
     # Potwierdzone nabory: wszystkie TAK
     confirmed = [r for r in results if r["wynik"] == "TAK"]
@@ -1530,9 +1865,12 @@ def generate_report(results, errors):
     tak_powiaty = sorted(set(r["urzad"] for r in confirmed))
     count_tak_powiaty = len(tak_powiaty)
     count_err = len(errors)
+    count_forecast_hot = len([f for f in forecasts if f.get("probability", 0) >= 75])
+    count_forecast_watch = len([f for f in forecasts if f.get("probability", 0) >= 50])
 
     confirmed.sort(key=lambda r: r.get("date", ""), reverse=True)
     related.sort(key=lambda r: r.get("date", ""), reverse=True)
+    forecasts.sort(key=lambda f: (f.get("probability", 0), f.get("szacowane_pozostalo") or 0), reverse=True)
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     # Enrich GeoJSON
@@ -1603,8 +1941,47 @@ def generate_report(results, errors):
 <div class="snippet">{e(snippet)}</div>
 <div class="ai">AI: {e(r.get("powod",""))}</div></div>'''
 
+    def forecast_card(f):
+        prob = int(f.get("probability", 0))
+        level = f.get("level", "COLD").lower()
+        woj = f.get("woj", "")
+        sd = " ".join([
+            f.get("urzad", ""),
+            woj,
+            " ".join(f.get("signals", [])),
+            f.get("limit_roczny_text", ""),
+            f.get("szacowane_pozostalo_text", ""),
+        ]).lower()
+        limit = f.get("limit_roczny_text") or "brak"
+        allocated = f.get("suma_naborow_text") or "brak"
+        remaining = f.get("szacowane_pozostalo_text") or "nieznane"
+        info_badge = '<span class="ask-info">wniosek info</span>' if f.get("ask_public_info") else ""
+        signals = "".join(f'<li>{e(x)}</li>' for x in f.get("signals", [])[:4])
+        sources = "".join(
+            f'<a href="{e(s.get("url",""))}" target="_blank" rel="noopener">{e((s.get("title") or "zrodlo")[:70])}</a>'
+            for s in f.get("sources", [])[:3]
+        )
+        if sources:
+            sources = f'<div class="forecast-sources">{sources}</div>'
+        promo = ""
+        if f.get("promotion_candidates"):
+            promo = '<div class="forecast-warn">Wykryto kwoty przy promocji/badaniach/analizach KFS - warto zapytac o rozbicie.</div>'
+        return f'''<div class="card forecast-card forecast-{level}" data-search="{e(sd)}" data-woj="{e(woj)}" data-prob="{prob}">
+<div class="row1"><span class="urzad">{e(f.get("urzad",""))}</span><span class="prob prob-{level}">{prob}% {e(f.get("label",""))}</span>{info_badge}</div>
+<div class="money-grid">
+  <div><b>Limit roczny</b><span>{e(limit)}</span></div>
+  <div><b>Suma naborow</b><span>{e(allocated)}</span></div>
+  <div><b>Szac. zostalo</b><span>{e(remaining)}</span></div>
+  <div><b>Nabory</b><span>{f.get("nabor_count", 0)} / aktywne {f.get("active_count", 0)}</span></div>
+</div>
+<ul class="forecast-signals">{signals}</ul>
+{promo}
+{sources}
+</div>'''
+
     tak_cards = "\n".join(card(r) for r in confirmed)
     related_cards = "\n".join(card(r, show_move_btn=True) for r in related)
+    forecast_cards = "\n".join(forecast_card(f) for f in forecasts)
     err_cards = "\n".join(
         f'<div class="card err-card"><div class="row1"><span class="urzad">{e(x.get("urzad",""))}</span>'
         f'<span class="err-kfs">{e(x.get("typ",""))}</span></div>'
@@ -1665,6 +2042,23 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 .btn-demote:hover{{background:#fde68a}}
 .promoted-badge{{background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:600}}
 .tab.related-tab{{color:#2563eb}}.tab.related-tab.active{{color:#2563eb;border-bottom-color:#2563eb}}
+.tab.forecast-tab{{color:#7c3aed}}.tab.forecast-tab.active{{color:#7c3aed;border-bottom-color:#7c3aed}}
+.forecast-card{{border-left:4px solid #9ca3af}}
+.forecast-hot{{border-left-color:#dc2626}}.forecast-warm{{border-left-color:#f59e0b}}
+.forecast-watch{{border-left-color:#2563eb}}.forecast-cold{{border-left-color:#9ca3af}}
+.prob{{padding:2px 10px;border-radius:5px;font-size:12px;font-weight:700;text-transform:uppercase}}
+.prob-hot{{background:#fee2e2;color:#991b1b}}.prob-warm{{background:#fef3c7;color:#92400e}}
+.prob-watch{{background:#dbeafe;color:#1e40af}}.prob-cold{{background:#f3f4f6;color:#6b7280}}
+.ask-info{{background:#ede9fe;color:#5b21b6;padding:2px 8px;border-radius:5px;font-size:12px;font-weight:700}}
+.money-grid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:8px 0 6px}}
+.money-grid div{{background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:8px 10px}}
+.money-grid b{{display:block;font-size:11px;color:#64748b;text-transform:uppercase;margin-bottom:2px}}
+.money-grid span{{font-size:14px;font-weight:700;color:#1f2937}}
+.forecast-signals{{margin:8px 0 0 18px;color:#4b5563;font-size:13px;line-height:1.45}}
+.forecast-warn{{font-size:12px;color:#92400e;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:8px 10px;margin-top:8px}}
+.forecast-sources{{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}}
+.forecast-sources a{{font-size:12px;color:#1e3a5f;background:#eff6ff;border-radius:6px;padding:4px 8px;text-decoration:none}}
+.forecast-sources a:hover{{text-decoration:underline}}
 .woj-filter{{width:100%;padding:10px 16px;font-size:15px;border:1px solid #d1d5db;border-radius:8px;margin-bottom:8px;outline:none;background:#fff}}
 .woj-filter:focus{{border-color:#2d5a8e;box-shadow:0 0 0 3px rgba(45,90,142,.15)}}
 .empty{{text-align:center;padding:48px;color:#9ca3af;display:none}}
@@ -1683,15 +2077,17 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 .popup-article:last-child{{border-bottom:none}}
 .popup-article a{{color:#1e3a5f;text-decoration:none;font-size:12px;font-weight:500}}.popup-article a:hover{{text-decoration:underline}}
 .popup-termin{{font-size:11px;color:#1e40af;font-weight:600}}.popup-date{{font-size:11px;color:#9ca3af}}
+@media(max-width:760px){{.money-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
 </style></head><body>
 <div class="header">
 <h1>Nabory KFS - Powiatowe Urzedy Pracy</h1>
 <div class="meta">Aktualizacja: {now} | {count_tak} naborow KFS w {count_tak_powiaty} powiatach / {total} artykulow</div>
-<div class="meta2">Automatyczna aktualizacja co 5h | Bledy: {count_err}</div>
+<div class="meta2">Automatyczna aktualizacja co 5h | Prognozy wysokie: {count_forecast_hot} | Do obserwacji: {count_forecast_watch} | Bledy: {count_err}</div>
 </div>
 <div class="tabs">
 <div class="tab map-tab active" data-tab="map">&#x1F5FA; Mapa ({count_tak_powiaty})</div>
 <div class="tab" data-tab="nabory">&#x1F7E2; Nabory KFS (<span id="cnt-nabory">{count_tak}</span>)</div>
+<div class="tab forecast-tab" data-tab="forecast">&#x1F52E; Prognoza ({count_forecast_hot})</div>
 <div class="tab related-tab" data-tab="related">&#x1F4C4; Artykuly KFS ({count_related})</div>
 <div class="tab err-tab" data-tab="errors">&#x26A0; Bledy ({count_err})</div>
 </div>
@@ -1700,12 +2096,17 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-ser
 <div class="map-stats"><h4>Statystyki</h4>
 <div>Nabory KFS: <span class="stat-num">{count_tak}</span></div>
 <div>Powiaty z naborem: <span class="stat-num">{count_tak_powiaty}</span></div>
+<div>Prognozy wysokie: <span class="stat-num">{count_forecast_hot}</span></div>
 <div>Artykulow: {total}</div></div></div></div>
 <div class="panel" id="p-nabory">
 <select class="woj-filter" data-list="l-nabory">{woj_options}</select>
 <input class="search" placeholder="Szukaj po urzedzie lub tytule..." data-list="l-nabory">
 <div id="promoted-section" style="display:none"><h3 style="font-size:14px;color:#92400e;margin:12px 0 8px">Recznie przeniesione</h3><div id="l-promoted"></div></div>
 <div id="l-nabory">{tak_cards}</div><div class="empty" id="e-nabory">Brak wynikow.</div></div>
+<div class="panel" id="p-forecast">
+<select class="woj-filter" data-list="l-forecast">{woj_options}</select>
+<input class="search" placeholder="Szukaj w prognozach..." data-list="l-forecast">
+<div id="l-forecast">{forecast_cards}</div><div class="empty" id="e-forecast">Brak wynikow.</div></div>
 <div class="panel" id="p-related">
 <select class="woj-filter" data-list="l-related">{woj_options}</select>
 <input class="search" placeholder="Szukaj po urzedzie lub tytule..." data-list="l-related">
@@ -1818,7 +2219,7 @@ else{{suffix=" (jeszcze "+diff+" dn.)";el.classList.add("termin-green")}}
 el.textContent=el.textContent+suffix}});}})();
 </script></body></html>'''
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
         f.write(page)
 
     return count_tak, count_tak_powiaty
@@ -1873,6 +2274,11 @@ def main():
     print(f"\n[4/4] Klasyfikacja AI...")
     results, new_tak_urls = classify_all(articles, cache)
     results = expand_multi_nabory(results)
+    urzad_to_woj = {}
+    if WOJ_FILE.exists():
+        with open(WOJ_FILE, "r", encoding="utf-8") as f:
+            urzad_to_woj = json.load(f)
+    forecasts = build_budget_forecasts(results, urzad_to_woj)
 
     # Save cache
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
@@ -1881,6 +2287,8 @@ def main():
     # Save results
     with open(RESULTS_FILE, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
+    with open(FORECASTS_FILE, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(forecasts, f, ensure_ascii=False, indent=2)
     with open(ERRORS_FILE, "w", encoding="utf-8") as f:
         json.dump(errors, f, ensure_ascii=False, indent=2)
 
@@ -1891,12 +2299,13 @@ def main():
     send_email_notification(newly_added or [])
 
     # Generate report
-    count_tak, count_powiaty = generate_report(results, errors)
+    count_tak, count_powiaty = generate_report(results, errors, forecasts)
 
     # Summary
     print(f"\n{'='*60}")
     print(f"  GOTOWE!")
     print(f"  Nabory KFS: {count_tak} (w {count_powiaty} powiatach)")
+    print(f"  Prognozy wysokie: {len([f for f in forecasts if f.get('probability', 0) >= 75])}")
     print(f"  Artykulow: {len(results)}")
     print(f"  Nowych (AI): {progress['done']}")
     print(f"  Z cache: {len(results) - progress['done']}")
