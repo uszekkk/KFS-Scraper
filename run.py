@@ -12,6 +12,7 @@ import sys
 import time
 import threading
 import unicodedata
+from io import BytesIO
 from datetime import date, datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -35,6 +36,7 @@ OUTPUT_FILE = BASE_DIR / "index.html"
 GEOJSON_FILE = BASE_DIR / "powiaty.geojson"
 MAPPING_FILE = BASE_DIR / "urzad_to_powiat.json"
 WOJ_FILE = BASE_DIR / "urzad_to_woj.json"
+WUP_BUDGET_SOURCES_FILE = BASE_DIR / "wup_budget_sources.json"
 
 TODAY = date.today().strftime("%d.%m.%Y")
 REQUEST_DELAY = 0.3
@@ -42,6 +44,7 @@ MAX_SNIPPET = 10000
 NEWS_PAGE_LIMIT = int(os.environ.get("NEWS_PAGE_LIMIT", "8"))
 EXTRA_KFS_URL_LIMIT = int(os.environ.get("EXTRA_KFS_URL_LIMIT", "24"))
 EXTRA_KFS_TIMEOUT = float(os.environ.get("EXTRA_KFS_TIMEOUT", "2"))
+WUP_BUDGET_TIMEOUT = float(os.environ.get("WUP_BUDGET_TIMEOUT", "15"))
 
 # Klucze API Gemini — ze zmiennej środowiskowej GEMINI_API_KEYS (rozdzielone przecinkiem)
 API_KEYS_ENV = os.environ.get("GEMINI_API_KEYS", "")
@@ -1251,6 +1254,210 @@ def _format_money_pln(value):
         return ""
 
 
+WUP_BUDGET_AMOUNT_RE = re.compile(
+    r"(?P<amount>\d{1,3}(?:[\s.]\d{3})+(?:,\d{1,2})?|\d{4,12}(?:,\d{1,2})?)\s*(?:z[l\u0142])?\s*$",
+    re.IGNORECASE,
+)
+
+
+def _load_wup_budget_sources():
+    if not WUP_BUDGET_SOURCES_FILE.exists():
+        return []
+    try:
+        with open(WUP_BUDGET_SOURCES_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError) as ex:
+        print(f"  WUP: nie mozna wczytac {WUP_BUDGET_SOURCES_FILE.name}: {ex}")
+        return []
+    if isinstance(data, dict):
+        data = data.get("sources", [])
+    if not isinstance(data, list):
+        return []
+    return [item for item in data if isinstance(item, dict) and item.get("url") and item.get("woj")]
+
+
+def _extract_pdf_text(content):
+    try:
+        from pypdf import PdfReader
+    except Exception:
+        return ""
+    try:
+        reader = PdfReader(BytesIO(content))
+        return "\n".join((page.extract_text() or "") for page in reader.pages)
+    except Exception:
+        return ""
+
+
+def _fetch_wup_budget_source_text(source):
+    if source.get("text"):
+        return str(source.get("text") or "")
+    url = source.get("url", "")
+    if not url:
+        return ""
+    try:
+        resp = SESSION.get(url, timeout=WUP_BUDGET_TIMEOUT)
+        resp.raise_for_status()
+    except requests.RequestException as ex:
+        print(f"  WUP: blad pobierania {url}: {str(ex)[:120]}")
+        return ""
+
+    content_type = resp.headers.get("content-type", "").lower()
+    source_format = _ascii_lower(source.get("format", ""))
+    if source_format == "pdf" or "pdf" in content_type or urlparse(url).path.lower().endswith(".pdf"):
+        text = _extract_pdf_text(resp.content)
+        if text:
+            return text
+        try:
+            return resp.content.decode(resp.encoding or "utf-8", errors="ignore")
+        except Exception:
+            return ""
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for tag in soup.find_all(["script", "style", "nav", "footer", "header"]):
+        tag.decompose()
+    return soup.get_text(separator="\n", strip=True)
+
+
+def _extract_wup_budget_rows(text, source=None):
+    """Extract rows like '7 Lebork 612 200,00' from WUP allocation tables."""
+    source = source or {}
+    source_woj = _normalize_miasto(source.get("woj", ""))
+    rows = []
+    seen = set()
+    for raw_line in str(text or "").splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip(" \t|;")
+        if not line:
+            continue
+        norm_line = _ascii_lower(line)
+        if any(x in norm_line for x in ("lp.", "kwoty w zl", "przyznane limity", "powiatowe urzedy pracy")):
+            continue
+        match = WUP_BUDGET_AMOUNT_RE.search(line)
+        if not match:
+            continue
+        amount = _parse_kwota_number(match.group("amount") + " zl")
+        if not amount or amount < 20000:
+            continue
+        name = line[:match.start()].strip(" \t|;-")
+        name = re.sub(r"^\d{1,3}\s+", "", name).strip(" \t|;-")
+        if not name:
+            continue
+        norm_name = _normalize_miasto(name)
+        if not norm_name or norm_name == source_woj or norm_name in {"lacznie", "suma", "minister"}:
+            continue
+        key = (norm_name, amount)
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append({
+            "name": name,
+            "amount": amount,
+            "raw": line,
+        })
+    return rows
+
+
+def _source_alias_matches(source, row_name, office_names):
+    aliases = source.get("aliases") or {}
+    row_key = _normalize_miasto(row_name)
+    matched = []
+    office_by_key = {_normalize_miasto(name): name for name in office_names}
+    for alias, targets in aliases.items():
+        alias_key = _normalize_miasto(alias)
+        if not alias_key:
+            continue
+        if alias_key == row_key:
+            if isinstance(targets, str):
+                targets = [targets]
+            for target in targets or []:
+                target_key = _normalize_miasto(target)
+                if target_key in office_by_key:
+                    matched.append(office_by_key[target_key])
+    return matched
+
+
+def _match_wup_budget_row_to_offices(row_name, office_names, source=None):
+    source = source or {}
+    alias_matches = _source_alias_matches(source, row_name, office_names)
+    if alias_matches:
+        return alias_matches
+
+    row_key = _normalize_miasto(row_name.replace("+", " "))
+    if not row_key:
+        return []
+    matches = []
+    for office in office_names:
+        office_key = _normalize_miasto(office)
+        if len(office_key) < 4:
+            continue
+        score = 0
+        if office_key == row_key:
+            score = 100
+        elif row_key in office_key:
+            score = 80
+        elif office_key in row_key:
+            score = 40 + len(office_key.split())
+        if score:
+            matches.append((score, len(office_key), office))
+    matches.sort(reverse=True)
+    return [office for _, _, office in matches[:1]]
+
+
+def _build_wup_budget_results_from_text(source, text, urzedy, urzad_to_woj):
+    source_woj = _normalize_miasto(source.get("woj", ""))
+    office_names = []
+    for urzad in urzedy or []:
+        office = urzad.get("name", "")
+        if not office:
+            continue
+        mapped_woj = _normalize_miasto(urzad_to_woj.get(office, ""))
+        if source_woj and mapped_woj != source_woj:
+            continue
+        office_names.append(office)
+
+    results = []
+    seen = set()
+    for row in _extract_wup_budget_rows(text, source):
+        for office in _match_wup_budget_row_to_offices(row["name"], office_names, source):
+            key = (office, row["amount"], source.get("url", ""))
+            if key in seen:
+                continue
+            seen.add(key)
+            amount_text = _format_money_pln(row["amount"])
+            results.append({
+                "urzad": office,
+                "title": f"Limit KFS 2026 z WUP - {row['name']}",
+                "snippet": (
+                    f"Zrodlo WUP: przyznane limity KFS na 2026 r. dla {row['name']}: {amount_text}. "
+                    "To limit roczny PUP z dokumentu wojewodzkiego, nie pula pojedynczego naboru."
+                ),
+                "url": source.get("url", ""),
+                "date": source.get("date", ""),
+                "wynik": "NIE",
+                "powod": "Zrodlo WUP: limit roczny KFS",
+                "termin": "",
+                "kwota": "",
+                "source_type": "WUP-budget",
+                "budget_source_layer": "WUP",
+                "budget_source_name": source.get("name", ""),
+                "budget_row": row["raw"],
+            })
+    return results
+
+
+def fetch_wup_budget_results(urzedy, urzad_to_woj):
+    """Fetch configured WUP/BIP allocation documents and turn rows into budget evidence."""
+    results = []
+    for source in _load_wup_budget_sources():
+        text = _fetch_wup_budget_source_text(source)
+        if not text:
+            continue
+        source_results = _build_wup_budget_results_from_text(source, text, urzedy, urzad_to_woj)
+        if source_results:
+            print(f"  WUP: {source.get('name') or source.get('woj')} -> {len(source_results)} limitow")
+            results.extend(source_results)
+    return results
+
+
 def _dates_overlap(a_start, a_end, b_start, b_end):
     if not all((a_start, a_end, b_start, b_end)):
         return False
@@ -1292,7 +1499,13 @@ NABOR_CONTEXT_RE = re.compile(
 
 NABOR_ONLY_CONTEXT_RE = re.compile(
     r"(kwot\w*\s+srodk\w*.{0,70}w\s+ramach\s+naboru|"
+    r"kwot\w*\s+srodk\w*\s+dostepn\w*.{0,90}nabor|"
+    r"dostepn\w*\s+kwot\w*\s+srodk\w*\s+kfs.{0,90}(?:prowadzon\w*|ogloszon\w*|aktualn\w*)\s+nabor|"
     r"w\s+ramach\s+naboru.{0,90}wynosi|"
+    r"w\s+ramach\s+naboru.{0,120}(?:kwot|srodk|pozostal|do\s+rozdysponowania)|"
+    r"naboru.{0,120}do\s+rozdysponowania|"
+    r"pozostal\w*.{0,70}(?:kwot|srodk)\w*|"
+    r"(?:prowadzon\w*|ogloszon\w*|aktualn\w*|tegoroczn\w*)\s+nabor\w*.{0,90}(?:kwot|srodk)|"
     r"w\s+aktualn\w*\s+naborze|"
     r"w\s+obecn\w*\s+naborze|"
     r"kwot\w*\s+kfs\s+do\s+rozdysponowania)"
@@ -1310,7 +1523,9 @@ EXHAUSTED_RE = re.compile(
 )
 
 RESERVE_RE = re.compile(
-    r"(rezerw\w*\s+kfs|zmniejszen\w*\s+limitu|niewykorzystan\w*\s+srodk|"
+    r"(rezerw\w*\s+kfs|rezerw\w*\s+krajowego\s+funduszu\s+szkoleniowego|"
+    r"srodk\w*\s+rezerw\w*|limitu\s+podstawow\w*.{0,80}rezerw\w*|"
+    r"zmniejszen\w*\s+limitu|niewykorzystan\w*\s+srodk|"
     r"zwrot\w*\s+srodk|oddan\w*\s+srodk)"
 )
 
@@ -1320,7 +1535,27 @@ PLANNED_RE = re.compile(
 )
 
 PROMOTION_RE = re.compile(
-    r"(promocj\w*|badan\w*|analiz\w*|art\.?\s*125\s*ust\.?\s*7)"
+    r"(promocj\w*|badan\w*|analiz\w*|koszt\w*\s+obslug|koszt\w*\s+administr|art\.?\s*125\s*ust\.?\s*7)"
+)
+
+NON_KFS_BUDGET_RE = re.compile(
+    r"(fundusz\s+pracy|form\w*\s+pomoc\w*|aktywizac\w*|bezrobotn\w*|algorytm\w*|"
+    r"plan\s+finansow\w*|pozostale\s+zadania)"
+)
+
+PER_PERSON_LIMIT_RE = re.compile(
+    r"(na\s+jedn\w*|dla\s+jedn\w*\s+wnioskodawc|dla\s+wskazan\w*.{0,50}uczestnik|"
+    r"na\s+osob\w*|w\s+przeliczeniu|konkretn\w*\s+osob|nie\s+moze\s+przekroczyc|"
+    r"przecietn\w*\s+wynagrodz|maksymaln\w*)"
+)
+
+REGIONAL_TOTAL_RE = re.compile(
+    r"(dla\s+wojewodztw\w*|wojewodztw\w*.{0,40}limit|samorzad\w*\s+wojewodztw|"
+    r"wszystk\w*\s+powiat\w*)"
+)
+
+LOCAL_LIMIT_SCOPE_RE = re.compile(
+    r"(dla\s+(?:powiatu|pup|tutejsz\w*|urzedu)|w\s+powiecie|powiatow\w*\s+urzed\w*\s+pracy)"
 )
 
 
@@ -1356,23 +1591,36 @@ def _extract_limit_candidates(result):
     for entry in _extract_amount_entries(text):
         start = entry.get("start", 0)
         context = _ascii_lower(text[max(0, start - 260):start + 260])
+        tight_context = _ascii_lower(text[max(0, start - 120):start + 120])
+        very_tight_context = _ascii_lower(text[max(0, start - 80):start + 80])
         score = entry.get("score", 0)
+        source_type = result.get("source_type", "")
         has_limit_context = bool(LIMIT_CONTEXT_RE.search(context))
         has_nabor_context = bool(NABOR_CONTEXT_RE.search(context))
         has_nabor_only_context = bool(NABOR_ONLY_CONTEXT_RE.search(context))
+        if source_type != "WUP-budget" and (
+            PROMOTION_RE.search(context)
+            or RESERVE_RE.search(context)
+            or PER_PERSON_LIMIT_RE.search(tight_context)
+            or NON_KFS_BUDGET_RE.search(very_tight_context)
+            or (REGIONAL_TOTAL_RE.search(tight_context) and not LOCAL_LIMIT_SCOPE_RE.search(tight_context))
+        ):
+            continue
         if has_limit_context:
             score += 55
         if "2026" in context:
             score += 10
         if result.get("source_type") in {"KFS", "KFS-extra"} or _ascii_lower(result.get("title", "")).strip() == "kfs":
             score += 15
+        if source_type == "WUP-budget":
+            score += 90
         if result.get("wynik") == "TAK":
             score -= 10
         if has_nabor_context:
             score -= 10 if has_limit_context else 25
         if has_nabor_only_context:
-            score -= 55
-        if re.search(r"(na\s+jedn\w*|przecietn\w*\s+wynagrodz|maksymaln\w*)", context):
+            score -= 85
+        if PER_PERSON_LIMIT_RE.search(context):
             score -= 70
         if entry["number"] < 20000:
             score -= 20
@@ -1383,6 +1631,8 @@ def _extract_limit_candidates(result):
                 "score": score,
                 "title": result.get("title", ""),
                 "url": result.get("url", ""),
+                "source_type": result.get("source_type", ""),
+                "budget_source_layer": result.get("budget_source_layer", ""),
             })
     return candidates
 
@@ -1461,7 +1711,8 @@ def build_budget_forecasts(results, urzad_to_woj=None):
             "limits": [],
         })
         bucket["results"].append(r)
-        text_norm = _ascii_lower(_result_text(r))
+        url_norm = re.sub(r"[-_/]+", " ", _ascii_lower(r.get("url", "")))
+        text_norm = _ascii_lower(_result_text(r)) + "\n" + url_norm
         if _kfs_text(r):
             bucket["kfs_count"] += 1
         if _has_exhausted_signal(text_norm):
@@ -1546,6 +1797,8 @@ def build_budget_forecasts(results, urzad_to_woj=None):
         if annual_limit and allocated == 0 and bucket["kfs_count"] and not bucket["exhausted"]:
             probability = max(probability, 55)
             signals.append("Limit roczny jest wykryty, ale nie znaleziono puli naboru.")
+        if best_limit and best_limit.get("source_type") == "WUP-budget":
+            signals.append("Limit roczny pochodzi z dokumentu WUP/BIP z podzialem na PUP.")
 
         probability = max(0, min(95, probability))
         level, label = _forecast_level(probability)
@@ -1566,6 +1819,8 @@ def build_budget_forecasts(results, urzad_to_woj=None):
             "limit_roczny_text": _format_money_pln(annual_limit),
             "limit_source_url": best_limit.get("url", "") if best_limit else "",
             "limit_confidence": best_limit.get("score", 0) if best_limit else 0,
+            "limit_source_type": best_limit.get("source_type", "") if best_limit else "",
+            "limit_source_title": best_limit.get("title", "") if best_limit else "",
             "suma_naborow": allocated or None,
             "suma_naborow_text": _format_money_pln(allocated) if allocated else "",
             "szacowane_pozostalo": remaining if remaining is not None and remaining >= 0 else None,
@@ -2410,6 +2665,10 @@ def main():
     if WOJ_FILE.exists():
         with open(WOJ_FILE, "r", encoding="utf-8") as f:
             urzad_to_woj = json.load(f)
+    wup_budget_results = fetch_wup_budget_results(urzedy, urzad_to_woj)
+    if wup_budget_results:
+        results.extend(wup_budget_results)
+        print(f"  Dodano {len(wup_budget_results)} limitow z dokumentow WUP/BIP")
     forecasts = build_budget_forecasts(results, urzad_to_woj)
 
     # Save cache

@@ -190,6 +190,174 @@ class RegressionTests(unittest.TestCase):
 
             self.assertTrue(candidates, snippet)
 
+    def test_budget_forecast_extracts_annual_limits_from_wup_style_tables(self):
+        samples = [
+            (
+                "Podzial limitu srodkow KFS na 2026 rok\n"
+                "Lp. Jednostka Limit\n"
+                "1 Powiatowy Urzad Pracy w Brzesku 902 486,00 zl\n"
+                "2 Powiatowy Urzad Pracy w Bochni 1 234 567,00 zl",
+                {902486, 1234567},
+            ),
+            (
+                "Krajowy Fundusz Szkoleniowy 2026\n"
+                "Tabela WUP: nazwa urzedu | limit przyznanych srodkow KFS | kwota\n"
+                "PUP Testowo | 1 850 000,00 zl |",
+                {1850000},
+            ),
+        ]
+
+        for snippet, expected_amounts in samples:
+            with self.subTest(snippet=snippet):
+                result = {
+                    "urzad": "Testowo",
+                    "title": "Podzial srodkow KFS 2026",
+                    "snippet": snippet,
+                    "url": "https://example.com/wup-kfs",
+                    "wynik": "NIE",
+                    "termin": "",
+                    "kwota": "",
+                }
+
+                actual_amounts = {c["amount"] for c in run._extract_limit_candidates(result)}
+
+                self.assertTrue(expected_amounts.issubset(actual_amounts))
+
+    def test_wup_budget_source_maps_document_rows_to_offices(self):
+        source = {
+            "name": "WUP test",
+            "woj": "pomorskie",
+            "url": "https://example.com/wup.pdf",
+            "aliases": {"Sztum": ["Dzierzgon"]},
+        }
+        text = (
+            "Krajowy Fundusz Szkoleniowy w 2026 r. (plan)\n"
+            "Lp. Powiaty Powiatowe Urzedy Pracy Przyznane limity KFS na 2026 r.\n"
+            "1 Lebork 612 200,00\n"
+            "2 Sztum 343 100,00\n"
+            "Pomorskie 25 753 000,00\n"
+        )
+        urzedy = [{"name": "Lebork"}, {"name": "Dzierzgon"}, {"name": "Test spoza woj"}]
+        mapping = {"Lebork": "pomorskie", "Dzierzgon": "pomorskie", "Test spoza woj": "slaskie"}
+
+        results = run._build_wup_budget_results_from_text(source, text, urzedy, mapping)
+        by_office = {item["urzad"]: item for item in results}
+
+        self.assertEqual(by_office["Lebork"]["source_type"], "WUP-budget")
+        self.assertIn("612 200 zl", by_office["Lebork"]["snippet"])
+        self.assertIn("343 100 zl", by_office["Dzierzgon"]["snippet"])
+        self.assertNotIn("Test spoza woj", by_office)
+
+    def test_budget_forecast_rejects_non_annual_limit_false_positives(self):
+        samples = [
+            (
+                "per-applicant limit",
+                "Maksymalna kwota na jednego pracodawce wynosi 300 000 zl "
+                "ze srodkow KFS w 2026 roku.",
+            ),
+            (
+                "promotion budget",
+                "Na promocje KFS i badania przeznaczono srodki w wysokosci 80 000 zl.",
+            ),
+            (
+                "reserve budget",
+                "Rezerwa KFS na 2026 rok wynosi 400 000 zl.",
+            ),
+            (
+                "call-only pool",
+                "W ramach naboru do rozdysponowania pozostaje kwota srodkow KFS 500 000 zl. "
+                "Wnioski beda przyjmowane od 10.06.2026 r.",
+            ),
+        ]
+
+        for label, snippet in samples:
+            with self.subTest(label=label):
+                result = {
+                    "urzad": "Testowo",
+                    "title": "Krajowy Fundusz Szkoleniowy 2026",
+                    "snippet": snippet,
+                    "url": "https://example.com/kfs",
+                    "wynik": "NIE",
+                    "termin": "",
+                    "kwota": "",
+                }
+
+                self.assertEqual(run._extract_limit_candidates(result), [])
+
+    def test_budget_forecast_prefers_kfs_amount_over_fundusz_pracy_amount(self):
+        result = {
+            "urzad": "Testowo",
+            "title": "Krajowy Fundusz Szkoleniowy 2026",
+            "snippet": (
+                "Powiatowy Urzad Pracy otrzymal 4 202 341,39 zl z Funduszu Pracy "
+                "na formy pomocy dla osob bezrobotnych. "
+                "Na realizacje zadan KFS w 2026 roku limit przyznanych srodkow wynosi 700 000,00 zl."
+            ),
+            "url": "https://example.com/kfs",
+            "wynik": "NIE",
+            "termin": "",
+            "kwota": "",
+        }
+
+        candidates = sorted(
+            run._extract_limit_candidates(result),
+            key=lambda item: (item["score"], item["amount"]),
+            reverse=True,
+        )
+
+        self.assertEqual(candidates[0]["amount"], 700000)
+        self.assertNotIn(4202341, {item["amount"] for item in candidates})
+
+    def test_budget_forecast_rejects_more_call_pool_and_participant_variants(self):
+        samples = [
+            "Kwota srodkow dostepnych w prowadzonym naborze wynosi 452 908,00 zl.",
+            "Limit srodkow KFS dla wskazanego we wniosku uczestnika wynosi 15 000 zl.",
+            "Dofinansowanie na osobe nie moze przekroczyc kwoty 18 000 zl.",
+        ]
+
+        for snippet in samples:
+            with self.subTest(snippet=snippet):
+                result = {
+                    "urzad": "Testowo",
+                    "title": "Krajowy Fundusz Szkoleniowy 2026",
+                    "snippet": snippet,
+                    "url": "https://example.com/kfs",
+                    "wynik": "NIE",
+                    "termin": "",
+                    "kwota": "",
+                }
+
+                self.assertEqual(run._extract_limit_candidates(result), [])
+
+    def test_budget_forecast_detects_reserve_variants(self):
+        results = [{
+            "urzad": "Testowo",
+            "title": "KFS 2026",
+            "snippet": "Urzad informuje o srodkach rezerwy Krajowego Funduszu Szkoleniowego oraz limitu podstawowego i rezerwy.",
+            "url": "https://example.com/rezerwa",
+            "wynik": "NIE",
+            "termin": "",
+            "kwota": "",
+        }]
+
+        forecast = run.build_budget_forecasts(results)[0]
+
+        self.assertTrue(forecast["has_reserve_signal"])
+        self.assertEqual(forecast["level"], "COLD")
+
+    def test_budget_forecast_rejects_wojewodztwo_total_as_pup_limit(self):
+        result = {
+            "urzad": "Testowo",
+            "title": "Podzial srodkow KFS 2026",
+            "snippet": "Dla wojewodztwa pomorskiego przyznano limit KFS 25 753 000 zl dla wszystkich powiatow.",
+            "url": "https://example.com/wup",
+            "wynik": "NIE",
+            "termin": "",
+            "kwota": "",
+        }
+
+        self.assertEqual(run._extract_limit_candidates(result), [])
+
     def test_budget_forecast_does_not_promote_pure_call_pool_to_annual_limit(self):
         result = {
             "urzad": "Testowo",

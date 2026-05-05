@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {
+      "name": "WUP Gdansk - alokacja srodkow KFS 2026",
+      "woj": "pomorskie",
+      "date": "2026",
+      "format": "pdf",
+      "url": "https://wupgdansk.praca.gov.pl/documents/7776038/0/Alokacja%2B%C5%9Brodk%C3%B3w%2BKFS%2Bw%2Broku%2B2026.pdf/c216423c-f88a-772b-9a9b-fcf0792a0327?t=1767878517807",
+      "aliases": {
+        "Sztum": ["Dzierzgon"],
+        "Gdansk": ["Gdansk GUP"],
+        "Gdynia + Sopot": ["Gdynia"],
+        "Slupsk + Miasto Slupsk": ["Slupsk"]
+      }
+    }
+  ]
+}
