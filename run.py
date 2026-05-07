@@ -1613,7 +1613,7 @@ def make_nabory_key(miasto, od_str, do_str, kwota_int):
 
 
 def push_to_crm(results):
-    """Wysyła nowe nabory TAK do EspoCRM (NaboryKfs + Nabory). Zwraca listę nowo dodanych."""
+    """Wysyła nowe nabory TAK tylko do encji NaboryKfs. Zwraca listę nowo dodanych."""
     crm_url = os.environ.get("ESPOCRM_URL", "").rstrip("/")
     crm_key = os.environ.get("ESPOCRM_API_KEY", "")
     if not crm_url or not crm_key:
@@ -1750,144 +1750,7 @@ def push_to_crm(results):
             newly_added.append(r)
 
     print(f"  CRM NaboryKfs: Dodano {added_kfs}, pominięto {skipped_kfs}")
-
-    # --- Nabory: uzupełnij brakujące na podstawie NaboryKfs ---
-    # Pobierz istniejące miasta z Nabory 2026
-    nabory_existing_keys = set()
-    nabory_by_link = {}
-    nabory_records = _crm_paginate(
-        crm_url,
-        "Nabory",
-        headers,
-        "id,name,miasto,od,do,kwota,kwotaConverted,link",
-    )
-    for rec in nabory_records:
-        od_raw = _date_field(rec.get("od", ""))
-        if od_raw and not od_raw.startswith("2026"):
-            continue
-        do_raw = _date_field(rec.get("do", ""))
-        kwota_existing = _coerce_kwota_int(rec.get("kwota") or rec.get("kwotaConverted"))
-        norm = _normalize_miasto(rec.get("miasto", ""))
-        if norm:
-            nabory_existing_keys.add(make_nabory_key(rec.get("miasto", ""), od_raw, do_raw, kwota_existing))
-        if rec.get("link"):
-            nabory_by_link.setdefault(_clean_url(rec["link"]), []).append(rec)
-    print(f"  CRM Nabory: {len(nabory_existing_keys)} istniejacych kluczy (miasto+termin+kwota) w 2026")
-
-    added_nabory = 0
-    updated_nabory = 0
-    skipped_nabory = 0
-    for r in tak:
-        urzad = r.get("urzad", "").strip()
-        termin_raw = r.get("termin", "").strip()
-        kwota_str = r.get("kwota", "").strip()
-        url = r.get("url", "")
-        start, end = _parse_termin_dates(termin_raw)
-
-        norm = _normalize_miasto(urzad)
-        if not norm:
-            continue
-
-        # Sprawdź czy miasto (znormalizowane) już jest w Nabory
-        # Potrzebujemy przynajmniej daty 'od'
-        od_str = start.isoformat() if start else ""
-        do_str = end.isoformat() if end else ""
-        if not od_str:
-            skipped_nabory += 1
-            continue
-
-        kwota_int = _parse_kwota_number(kwota_str)
-        nabory_key = make_nabory_key(urzad, od_str, do_str, kwota_int)
-        update_rec = None
-        already = nabory_key in nabory_existing_keys
-        for rec in nabory_by_link.get(_clean_url(url), []):
-            rec_norm = _normalize_miasto(rec.get("miasto", ""))
-            rec_od = _date_field(rec.get("od", ""))
-            rec_do = _date_field(rec.get("do", ""))
-            rec_kwota = _coerce_kwota_int(rec.get("kwota") or rec.get("kwotaConverted"))
-            rec_key = make_nabory_key(rec.get("miasto", ""), rec_od, rec_do, rec_kwota)
-            same_city = rec_norm and (norm == rec_norm or norm in rec_norm or rec_norm in norm)
-            if same_city and rec_key == nabory_key:
-                already = True
-                break
-            if same_city and rec_od == od_str and rec_do == do_str and not rec_kwota:
-                update_rec = rec
-            if same_city and not rec_od and not rec_do and not rec_kwota:
-                update_rec = rec
-        if already:
-            skipped_nabory += 1
-            continue
-
-        woj = urzad_to_woj.get(urzad, "")
-        powiat_raw = urzad_to_powiat.get(urzad, "")
-        powiat_name = ""
-        if powiat_raw:
-            powiat_name = re.sub(r"^powiat\s+", "", powiat_raw, flags=re.IGNORECASE).strip()
-            if powiat_name:
-                powiat_name = powiat_name[0].upper() + powiat_name[1:]
-
-        crm_date = ""
-        if r.get("date"):
-            parts = r["date"].split(".")
-            if len(parts) == 3:
-                crm_date = f"{parts[2]}-{parts[1]}-{parts[0]}"
-
-        payload_nabory = {
-            "name": f"I limit PUP {urzad}",
-            "powiat": [powiat_name] if powiat_name else [],
-            "od": od_str,
-            "do": do_str,
-            "kwota": kwota_int,
-            "kwotaCurrency": "PLN" if kwota_int else None,
-            "miasto": urzad,
-            "link": url,
-            "wojewodztwo": woj,
-            "status": "Do weryfikacji",
-            "priorytetyZ": "limit",
-            "dataPublikacji": crm_date,
-        }
-        # Usuń None wartości
-        payload_nabory = {k: v for k, v in payload_nabory.items() if v is not None}
-
-        try:
-            if update_rec:
-                resp = requests.put(
-                    f"{crm_url}/api/v1/Nabory/{update_rec['id']}",
-                    headers=headers,
-                    json=payload_nabory,
-                    timeout=15,
-                )
-            else:
-                resp = requests.post(
-                    f"{crm_url}/api/v1/Nabory",
-                    headers=headers,
-                    json=payload_nabory,
-                    timeout=15,
-                )
-            if resp.status_code in (200, 201):
-                if update_rec:
-                    updated_nabory += 1
-                else:
-                    added_nabory += 1
-                nabory_existing_keys.add(nabory_key)
-                if url:
-                    nabory_by_link.setdefault(_clean_url(url), []).append({
-                        "id": update_rec.get("id") if update_rec else "",
-                        "miasto": urzad,
-                        "od": od_str,
-                        "do": do_str,
-                        "kwota": kwota_int,
-                        "link": url,
-                    })
-            else:
-                errors_count += 1
-                detail = resp.text[:200] if resp.text else ""
-                print(f"  CRM Nabory: Błąd {resp.status_code} dla {urzad} — {detail}")
-        except Exception as ex:
-            errors_count += 1
-            print(f"  CRM Nabory: {ex}")
-
-    print(f"  CRM Nabory:    Dodano {added_nabory}, zaktualizowano {updated_nabory}, pominięto {skipped_nabory}")
+    print("  CRM Nabory: pominięto — wysyłka do tej encji jest wyłączona")
     if errors_count:
         print(f"  CRM: Błędów łącznie: {errors_count}")
 
