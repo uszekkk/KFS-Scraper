@@ -37,9 +37,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add results.json errors.json cache.json index.html
-          git diff --staged --quiet || git commit -m "Aktualizacja wyników $(date +'%Y-%m-%d %H:%M')"
-          git pull --rebase origin main
+          git add results.json errors.json cache.json forecasts.json index.html
+          if git diff --staged --quiet; then
+            echo "Brak zmian do commitowania"
+            exit 0
+          fi
+          git commit -m "Aktualizacja wynikow $(date +'%Y-%m-%d %H:%M')"
+          git pull --rebase --autostash origin main
           git push
 
   deploy:
