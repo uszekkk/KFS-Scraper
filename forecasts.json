@@ -1917,34 +1917,6 @@
     "sources": []
   },
   {
-    "urzad": "Kielce MUP",
-    "woj": "świętokrzyskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Kraków GUP",
     "woj": "małopolskie",
     "probability": 38,
@@ -1962,6 +1934,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Kielce MUP",
+    "woj": "świętokrzyskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2141,34 +2141,6 @@
     "sources": []
   },
   {
-    "urzad": "Pisz",
-    "woj": "warmińsko-mazurskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Piekary Śląskie",
     "woj": "śląskie",
     "probability": 38,
@@ -2186,6 +2158,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Pisz",
+    "woj": "warmińsko-mazurskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2253,8 +2253,8 @@
     "sources": []
   },
   {
-    "urzad": "Strzelce Krajeńskie",
-    "woj": "lubuskie",
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2281,8 +2281,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Strzelce Krajeńskie",
+    "woj": "lubuskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2589,8 +2589,8 @@
     "sources": []
   },
   {
-    "urzad": "Łęczyca",
-    "woj": "łódzkie",
+    "urzad": "Środa Wlkp.",
+    "woj": "wielkopolskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2605,7 +2605,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2645,8 +2645,8 @@
     "sources": []
   },
   {
-    "urzad": "Środa Wlkp.",
-    "woj": "wielkopolskie",
+    "urzad": "Łęczyca",
+    "woj": "łódzkie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2661,7 +2661,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 1,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -10287,7 +10287,7 @@
     "nabor_count": 1,
     "active_count": 1,
     "ended_count": 0,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -10623,7 +10623,7 @@
       },
       {
         "title": "Zamknięcie otwartego naboru wniosków o refundację kosztów wyposażenia lub doposażenia stanowiska pracy z EFS+(IV)",
-        "url": "https://chrzanow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-otwartego-naboru-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy-z-efs-iv-?p_r_p_assetEntryId=61401835"
+        "url": "https://chrzanow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-otwartego-naboru-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy-z-efs-iv-?p_r_p_resetCur=false&p_r_p_assetEntryId=61401835"
       }
     ]
   },
@@ -10746,7 +10746,7 @@
       },
       {
         "title": "Planowany nabór wniosków na podjęcie działalności gospodarczej",
-        "url": "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabor-wnioskow-na-podjecie-dzialalnosci-gospodarczej-oraz-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy?p_r_p_assetEntryId=43693337"
+        "url": "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabor-wnioskow-na-podjecie-dzialalnosci-gospodarczej-oraz-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy?p_r_p_resetCur=false&p_r_p_assetEntryId=43693337"
       },
       {
         "title": "Nabór wniosków o przyznanie bonu na kształcenie ustawiczne",
@@ -10860,8 +10860,8 @@
         "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=62018603"
       },
       {
-        "title": "Wstrzymanie naboru WNIOSKÓW  O ZORGANIZOWANIE PRAC INTERWENCYJNYCH,  w ramach Środków Rezerwy Funduszu Pracy na finansowanie kosztów realizacji form pomocy bez EFS+",
-        "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wstrzymanie-naboru-wnioskow-o-zorganizowanie-prac-interwencyjnych-w-ramach-srodkow-rezerwy-funduszu-pracy-na-finansowanie-kosztow-realizacji-form-pomocy-bez-efs-?p_r_p_resetCur=false&p_r_p_assetEntryId=61092545"
+        "title": "Wstrzymanie naboru WNIOSKÓW O ZAWARCIE UMOWY O ZORGANIZOWANIE STAŻU,  w ramach Środków Rezerwy Funduszu Pracy na finansowanie kosztów realizacji form pomocy bez EFS+",
+        "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wstrzymanie-naboru-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-w-ramach-srodkow-rezerwy-funduszu-pracy-na-finansowanie-kosztow-realizacji-form-pomocy-bez-efs-?p_r_p_assetEntryId=62757618"
       }
     ]
   },
