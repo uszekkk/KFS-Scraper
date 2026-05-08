@@ -1736,34 +1736,6 @@
     "sources": []
   },
   {
-    "urzad": "Choszczno",
-    "woj": "zachodniopomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Będzinin",
     "woj": "śląskie",
     "probability": 38,
@@ -1781,6 +1753,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Choszczno",
+    "woj": "zachodniopomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1917,34 +1917,6 @@
     "sources": []
   },
   {
-    "urzad": "Kielce MUP",
-    "woj": "świętokrzyskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Kraków GUP",
     "woj": "małopolskie",
     "probability": 38,
@@ -1962,6 +1934,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Kielce MUP",
+    "woj": "świętokrzyskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2141,34 +2141,6 @@
     "sources": []
   },
   {
-    "urzad": "Piekary Śląskie",
-    "woj": "śląskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Pisz",
     "woj": "warmińsko-mazurskie",
     "probability": 38,
@@ -2186,6 +2158,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Piekary Śląskie",
+    "woj": "śląskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2253,6 +2253,34 @@
     "sources": []
   },
   {
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Strzelce Krajeńskie",
     "woj": "lubuskie",
     "probability": 38,
@@ -2281,8 +2309,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Suwałki",
+    "woj": "podlaskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2297,7 +2325,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 2,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2354,34 +2382,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Suwałki",
-    "woj": "podlaskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2533,34 +2533,6 @@
     "sources": []
   },
   {
-    "urzad": "Łowicz",
-    "woj": "łódzkie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Łuków",
     "woj": "lubelskie",
     "probability": 38,
@@ -2578,6 +2550,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Łowicz",
+    "woj": "łódzkie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2617,34 +2617,6 @@
     "sources": []
   },
   {
-    "urzad": "Środa Wlkp.",
-    "woj": "wielkopolskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Świdnik",
     "woj": "lubelskie",
     "probability": 38,
@@ -2662,6 +2634,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Środa Wlkp.",
+    "woj": "wielkopolskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6793,7 +6793,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -8442,39 +8442,6 @@
     ]
   },
   {
-    "urzad": "Węgrów",
-    "woj": "mazowieckie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 500000,
-    "limit_roczny_text": "500 000 zl",
-    "limit_source_url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662",
-    "limit_confidence": 55,
-    "suma_naborow": 500000,
-    "suma_naborow_text": "500 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Informacja o wysokości limitu przyznanych środków KFS na 2026 r.",
-        "url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662"
-      }
-    ]
-  },
-  {
     "urzad": "Września",
     "woj": "wielkopolskie",
     "probability": 18,
@@ -8504,6 +8471,39 @@
       {
         "title": "Krajowy Fundusz Szkoleniowy 2026 - ważne informacje",
         "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372"
+      }
+    ]
+  },
+  {
+    "urzad": "Węgrów",
+    "woj": "mazowieckie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 500000,
+    "limit_roczny_text": "500 000 zl",
+    "limit_source_url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662",
+    "limit_confidence": 55,
+    "suma_naborow": 500000,
+    "suma_naborow_text": "500 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "Informacja o wysokości limitu przyznanych środków KFS na 2026 r.",
+        "url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662"
       }
     ]
   },
@@ -11991,8 +11991,8 @@
     ],
     "sources": [
       {
-        "title": "Zamknięcie naborów",
-        "url": "https://swiebodzin.praca.gov.pl/-/zamkniecie-naborow"
+        "title": "Informacja dotycząca zamknięcia naborów",
+        "url": "https://swiebodzin.praca.gov.pl/-/informacja-dotyczaca-zamkniecia-naborow"
       }
     ]
   }
