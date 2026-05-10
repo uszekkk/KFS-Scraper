@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "urzad": "Kluczbork",
+    "url": "https://kluczbork.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy",
+    "typ": "KFS",
+    "blad": "502 Server Error: Bad Gateway for url: https://kluczbork.praca.gov.pl/dla-pracodawcow-i-przedsiebior"
+  }
+]
