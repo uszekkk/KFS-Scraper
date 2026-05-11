@@ -1769,34 +1769,6 @@
     "sources": []
   },
   {
-    "urzad": "Będzinin",
-    "woj": "śląskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Choszczno",
     "woj": "zachodniopomorskie",
     "probability": 38,
@@ -1825,8 +1797,8 @@
     "sources": []
   },
   {
-    "urzad": "Człuchow",
-    "woj": "pomorskie",
+    "urzad": "Będzinin",
+    "woj": "śląskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -1870,6 +1842,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Człuchow",
+    "woj": "pomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2286,8 +2286,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Strzelce Krajeńskie",
+    "woj": "lubuskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2314,8 +2314,8 @@
     "sources": []
   },
   {
-    "urzad": "Strzelce Krajeńskie",
-    "woj": "lubuskie",
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2370,8 +2370,8 @@
     "sources": []
   },
   {
-    "urzad": "Tczew",
-    "woj": "pomorskie",
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2398,8 +2398,8 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
+    "urzad": "Tczew",
+    "woj": "pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2622,34 +2622,6 @@
     "sources": []
   },
   {
-    "urzad": "Świdnik",
-    "woj": "lubelskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Łęczyca",
     "woj": "łódzkie",
     "probability": 38,
@@ -2695,6 +2667,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Świdnik",
+    "woj": "lubelskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -4943,14 +4943,14 @@
     "limit_roczny_text": "1 565 050 zl",
     "limit_source_url": "https://gostynin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026-1?p_r_p_resetCur=false&p_r_p_assetEntryId=61677178",
     "limit_confidence": 70,
-    "suma_naborow": 4695150,
-    "suma_naborow_text": "4 695 150 zl",
+    "suma_naborow": 950005645150,
+    "suma_naborow_text": "950 005 645 150 zl",
     "szacowane_pozostalo": null,
     "szacowane_pozostalo_text": "",
-    "nabor_count": 3,
+    "nabor_count": 4,
     "active_count": 0,
     "ended_count": 2,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6480,7 +6480,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6495,8 +6495,8 @@
         "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/kfs-na-2026-rok?p_r_p_assetEntryId=57829810"
       },
       {
-        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
-        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=61453337"
+        "title": "ZAPRASZAMY osoby bezrobotne i poszukujące pracy do składania wniosków o przyznanie bonu na kształcenie ustawiczne (do dn. 22.05.2026 r.)",
+        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/BHM0w787rVxb/content/zapraszamy-osoby-bezrobotne-i-poszukujace-pracy-do-skladania-wnioskow-o-przyznanie-bonu-na-ksztalcenie-ustawiczne-do-dn.-22.05.2026-r.-?p_r_p_assetEntryId=62909207"
       }
     ]
   },
@@ -7541,7 +7541,7 @@
     "limit_roczny": 636800,
     "limit_roczny_text": "636 800 zl",
     "limit_source_url": "https://debica.praca.gov.pl/-/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego",
-    "limit_confidence": 55,
+    "limit_confidence": 60,
     "suma_naborow": 636800,
     "suma_naborow_text": "636 800 zl",
     "szacowane_pozostalo": 0,
@@ -8401,39 +8401,6 @@
     ]
   },
   {
-    "urzad": "Września",
-    "woj": "wielkopolskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 500000,
-    "limit_roczny_text": "500 000 zl",
-    "limit_source_url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372",
-    "limit_confidence": 55,
-    "suma_naborow": 500000,
-    "suma_naborow_text": "500 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Krajowy Fundusz Szkoleniowy 2026 - ważne informacje",
-        "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372"
-      }
-    ]
-  },
-  {
     "urzad": "Wolsztyn",
     "woj": "wielkopolskie",
     "probability": 18,
@@ -8467,6 +8434,39 @@
       {
         "title": "Informacja o wysokości środków oraz priorytety wydatkowania KFS na 2026 rok",
         "url": "https://wolsztyn.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok"
+      }
+    ]
+  },
+  {
+    "urzad": "Września",
+    "woj": "wielkopolskie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 500000,
+    "limit_roczny_text": "500 000 zl",
+    "limit_source_url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372",
+    "limit_confidence": 55,
+    "suma_naborow": 500000,
+    "suma_naborow_text": "500 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "Krajowy Fundusz Szkoleniowy 2026 - ważne informacje",
+        "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372"
       }
     ]
   },
@@ -10423,6 +10423,51 @@
     ]
   },
   {
+    "urzad": "Police",
+    "woj": "zachodniopomorskie",
+    "probability": 5,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 1038153,
+    "limit_roczny_text": "1 038 153 zl",
+    "limit_source_url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypomnienie-o-trwajacym-naborze-wnioskow-w-ramach-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61135822",
+    "limit_confidence": 60,
+    "suma_naborow": 2038153,
+    "suma_naborow_text": "2 038 153 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 2,
+    "active_count": 0,
+    "ended_count": 2,
+    "kfs_articles": 7,
+    "has_exhausted_signal": true,
+    "has_reserve_signal": false,
+    "has_planned_signal": true,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
+    ],
+    "sources": [
+      {
+        "title": "Przypomnienie o trwającym naborze wniosków w ramach Krajowego Funduszu Szkoleniowego 2026",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypomnienie-o-trwajacym-naborze-wnioskow-w-ramach-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61135822"
+      },
+      {
+        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego w 2026 r.",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego-w-2026-r.?p_r_p_assetEntryId=60803498"
+      },
+      {
+        "title": "Spotkanie informacyjne dla pracodawców – Krajowy Fundusz Szkoleniowy 2026",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-informacyjne-dla-pracodawcow-krajowy-fundusz-szkoleniowy-2026-1?p_r_p_assetEntryId=60350696"
+      },
+      {
+        "title": "Nabór wniosków na dofinansowanie w ramach prac interwencyjnych zakończony",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-na-dofinansowanie-w-ramach-prac-interwencyjnych-zakonczony?p_r_p_assetEntryId=62492044"
+      }
+    ]
+  },
+  {
     "urzad": "Krosno",
     "woj": "podkarpackie",
     "probability": 5,
@@ -11845,39 +11890,6 @@
       {
         "title": "Zamknięcie naboru wniosków na organizację prac społecznie użytecznych",
         "url": "https://plonsk.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-naboru-wnioskow-na-organizacje-prac-spolecznie-uzytecznych?p_r_p_assetEntryId=62408995"
-      }
-    ]
-  },
-  {
-    "urzad": "Police",
-    "woj": "zachodniopomorskie",
-    "probability": 5,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": true,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
-    ],
-    "sources": [
-      {
-        "title": "Nabór wniosków na dofinansowanie w ramach prac interwencyjnych zakończony",
-        "url": "https://police.praca.gov.pl/strona-glowna/-/asset_publisher/7zxSrvoposCI/content/nabor-wnioskow-na-dofinansowanie-w-ramach-prac-interwencyjnych-zakonczony?p_r_p_assetEntryId=62492044"
       }
     ]
   },
