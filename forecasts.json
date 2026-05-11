@@ -1774,8 +1774,8 @@
     "sources": []
   },
   {
-    "urzad": "Będzinin",
-    "woj": "śląskie",
+    "urzad": "Choszczno",
+    "woj": "zachodniopomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -1790,7 +1790,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 3,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1830,8 +1830,8 @@
     "sources": []
   },
   {
-    "urzad": "Choszczno",
-    "woj": "zachodniopomorskie",
+    "urzad": "Będzinin",
+    "woj": "śląskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -1846,35 +1846,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Dzierżoniów",
-    "woj": "dolnośląskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1903,6 +1875,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Dzierżoniów",
+    "woj": "dolnośląskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2403,8 +2403,8 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
+    "urzad": "Tczew",
+    "woj": "pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2431,8 +2431,8 @@
     "sources": []
   },
   {
-    "urzad": "Tczew",
-    "woj": "pomorskie",
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2627,8 +2627,8 @@
     "sources": []
   },
   {
-    "urzad": "Łęczyca",
-    "woj": "łódzkie",
+    "urzad": "Środa Wlkp.",
+    "woj": "wielkopolskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2643,7 +2643,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2683,8 +2683,8 @@
     "sources": []
   },
   {
-    "urzad": "Środa Wlkp.",
-    "woj": "wielkopolskie",
+    "urzad": "Łęczyca",
+    "woj": "łódzkie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2699,7 +2699,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 1,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -3795,12 +3795,12 @@
         "url": "https://tarnow.praca.gov.pl/-/ogloszenie-o-terminie-naboru-wnioskow-o-finansowanie-dzialan-ze-srodkow-krajowego-funduszu-szkoleniowego-kfs-"
       },
       {
-        "title": "Dodatkowa pula środków rezerwy Funduszu Pracy – ogłaszamy nabór wniosków na formy pomocy.",
-        "url": "https://tarnow.praca.gov.pl/-/dodatkowa-pula-srodkow-rezerwy-funduszu-pracy-oglaszamy-nabor-wnioskow-na-formy-pomocy."
-      },
-      {
         "title": "OGŁOSZENIE O DODATKOWYM NABORZE WNIOSKÓW O PRZYZNANIE ŚRODKÓW Z KRAJOWEGO FUNDUSZU SZKOLENIOWEGO (KFS)",
         "url": "https://tarnow.praca.gov.pl/-/ogloszenie-o-dodatkowym-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-"
+      },
+      {
+        "title": "Dodatkowa pula środków rezerwy Funduszu Pracy – ogłaszamy nabór wniosków na formy pomocy.",
+        "url": "https://tarnow.praca.gov.pl/-/dodatkowa-pula-srodkow-rezerwy-funduszu-pracy-oglaszamy-nabor-wnioskow-na-formy-pomocy."
       }
     ]
   },
@@ -10986,7 +10986,7 @@
     "nabor_count": 1,
     "active_count": 1,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 6,
     "has_exhausted_signal": true,
     "has_reserve_signal": true,
     "has_planned_signal": false,
@@ -11495,7 +11495,7 @@
       },
       {
         "title": "Ogłoszenie o naborze wniosków o organizację staży w projekcie \"Aktywizacja zawodowa osób pozostających bez zatrudnienia realizowana przez PUP w Namysłowie (III)\"",
-        "url": "https://namyslow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-organizacje-stazy-w-projekcie-aktywizacja-zawodowa-osob-pozostajacych-bez-zatrudnienia-realizowana-przez-pup-w-namyslowie-iii-3?p_r_p_assetEntryId=60608478"
+        "url": "https://namyslow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-organizacje-stazy-w-projekcie-aktywizacja-zawodowa-osob-pozostajacych-bez-zatrudnienia-realizowana-przez-pup-w-namyslowie-iii-3?p_r_p_resetCur=false&p_r_p_assetEntryId=60608478"
       }
     ]
   },
@@ -11858,39 +11858,6 @@
     ]
   },
   {
-    "urzad": "Police",
-    "woj": "zachodniopomorskie",
-    "probability": 5,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": true,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
-    ],
-    "sources": [
-      {
-        "title": "Nabór wniosków na dofinansowanie w ramach prac interwencyjnych zakończony",
-        "url": "https://police.praca.gov.pl/strona-glowna/-/asset_publisher/7zxSrvoposCI/content/nabor-wnioskow-na-dofinansowanie-w-ramach-prac-interwencyjnych-zakonczony?p_r_p_assetEntryId=62492044"
-      }
-    ]
-  },
-  {
     "urzad": "Rawicz",
     "woj": "wielkopolskie",
     "probability": 5,
@@ -11920,6 +11887,39 @@
       {
         "title": "WYCZERPANA PULA ŚRODKÓW NA REALIZACJĘ PRAC INTERWENCYJNYCH, BONU NA ZASIEDLENIE ORAZ DOFINANSOWANIE WYNAGRODZENIA DLA OSÓB W WIEKU 50+",
         "url": "https://rawicz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wyczerpana-pula-srodkow-na-realizacje-bonu-na-zasiedlenie-oraz-dofinansowanie-wynagrodzenia-dla-osob-w-wieku-50-?p_r_p_assetEntryId=60545972"
+      }
+    ]
+  },
+  {
+    "urzad": "Police",
+    "woj": "zachodniopomorskie",
+    "probability": 5,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": true,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
+    ],
+    "sources": [
+      {
+        "title": "Nabór wniosków na dofinansowanie w ramach prac interwencyjnych zakończony",
+        "url": "https://police.praca.gov.pl/strona-glowna/-/asset_publisher/7zxSrvoposCI/content/nabor-wnioskow-na-dofinansowanie-w-ramach-prac-interwencyjnych-zakonczony?p_r_p_assetEntryId=62492044"
       }
     ]
   },
