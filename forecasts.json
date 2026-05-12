@@ -2071,14 +2071,14 @@
     "limit_roczny_text": "",
     "limit_source_url": "",
     "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
+    "suma_naborow": 9652,
+    "suma_naborow_text": "9 652 zl",
     "szacowane_pozostalo": null,
     "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
+    "nabor_count": 1,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 2,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2314,34 +2314,6 @@
     "sources": []
   },
   {
-    "urzad": "Strzelce Krajeńskie",
-    "woj": "lubuskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Starachowice",
     "woj": "świętokrzyskie",
     "probability": 38,
@@ -2370,8 +2342,8 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
+    "urzad": "Strzelce Krajeńskie",
+    "woj": "lubuskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2415,6 +2387,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2650,34 +2650,6 @@
     "sources": []
   },
   {
-    "urzad": "Świdnik",
-    "woj": "lubelskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Łęczyca",
     "woj": "łódzkie",
     "probability": 38,
@@ -2695,6 +2667,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Świdnik",
+    "woj": "lubelskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -3240,7 +3240,7 @@
     "label": "Niskie",
     "limit_roczny": 380000,
     "limit_roczny_text": "380 000 zl",
-    "limit_source_url": "https://miedzychod.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-3?p_r_p_assetEntryId=60837493",
+    "limit_source_url": "https://miedzychod.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-3?p_r_p_resetCur=false&p_r_p_assetEntryId=60837493",
     "limit_confidence": 70,
     "suma_naborow": 780000,
     "suma_naborow_text": "780 000 zl",
@@ -3261,7 +3261,7 @@
     "sources": [
       {
         "title": "NABÓR WNIOSKÓW Z KRAJOWEGO FUNDUSZU SZKOLENIOWEGO",
-        "url": "https://miedzychod.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-3?p_r_p_assetEntryId=60837493"
+        "url": "https://miedzychod.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-3?p_r_p_resetCur=false&p_r_p_assetEntryId=60837493"
       },
       {
         "title": "Krajowy Fundusz Szkoleniowy 2026",
@@ -6503,8 +6503,8 @@
         "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/kfs-na-2026-rok?p_r_p_assetEntryId=57829810"
       },
       {
-        "title": "ZAPRASZAMY osoby bezrobotne i poszukujące pracy do składania wniosków o przyznanie bonu na kształcenie ustawiczne (do dn. 22.05.2026 r.)",
-        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/BHM0w787rVxb/content/zapraszamy-osoby-bezrobotne-i-poszukujace-pracy-do-skladania-wnioskow-o-przyznanie-bonu-na-ksztalcenie-ustawiczne-do-dn.-22.05.2026-r.-?p_r_p_assetEntryId=62909207"
+        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
+        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=61453337"
       }
     ]
   },
@@ -7342,7 +7342,7 @@
     "label": "Niskie",
     "limit_roczny": 700000,
     "limit_roczny_text": "700 000 zl",
-    "limit_source_url": "https://strzyzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61412728",
+    "limit_source_url": "https://strzyzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=61412728",
     "limit_confidence": 70,
     "suma_naborow": 700000,
     "suma_naborow_text": "700 000 zl",
@@ -7363,7 +7363,7 @@
     "sources": [
       {
         "title": "Nabór wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego 2026",
-        "url": "https://strzyzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61412728"
+        "url": "https://strzyzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=61412728"
       },
       {
         "title": "Informacja na temat KFS.",
@@ -8409,6 +8409,39 @@
     ]
   },
   {
+    "urzad": "Września",
+    "woj": "wielkopolskie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 500000,
+    "limit_roczny_text": "500 000 zl",
+    "limit_source_url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372",
+    "limit_confidence": 55,
+    "suma_naborow": 500000,
+    "suma_naborow_text": "500 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "Krajowy Fundusz Szkoleniowy 2026 - ważne informacje",
+        "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372"
+      }
+    ]
+  },
+  {
     "urzad": "Wolsztyn",
     "woj": "wielkopolskie",
     "probability": 18,
@@ -8442,39 +8475,6 @@
       {
         "title": "Informacja o wysokości środków oraz priorytety wydatkowania KFS na 2026 rok",
         "url": "https://wolsztyn.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok"
-      }
-    ]
-  },
-  {
-    "urzad": "Września",
-    "woj": "wielkopolskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 500000,
-    "limit_roczny_text": "500 000 zl",
-    "limit_source_url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372",
-    "limit_confidence": 55,
-    "suma_naborow": 500000,
-    "suma_naborow_text": "500 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Krajowy Fundusz Szkoleniowy 2026 - ważne informacje",
-        "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372"
       }
     ]
   },
@@ -9238,43 +9238,6 @@
     ]
   },
   {
-    "urzad": "Kamienna Góra",
-    "woj": "dolnośląskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 400000,
-    "limit_roczny_text": "400 000 zl",
-    "limit_source_url": "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/ncxEicTXv58N/content/ogloszenie-o-naborze-wnioskow-krajowego-funduszu-szkoleniowego-2026-r.?p_r_p_assetEntryId=61105693",
-    "limit_confidence": 70,
-    "suma_naborow": 400000,
-    "suma_naborow_text": "400 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 1,
-    "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": true,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Ogłoszenie o naborze wniosków Krajowego Funduszu Szkoleniowego 2026 r.",
-        "url": "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/ncxEicTXv58N/content/ogloszenie-o-naborze-wnioskow-krajowego-funduszu-szkoleniowego-2026-r.?p_r_p_assetEntryId=61105693"
-      },
-      {
-        "title": "Założenie konta organizacji na platformie www.praca.gov.pl",
-        "url": "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/ncxEicTXv58N/content/zalozenie-konta-organizacji-na-platformie-www.praca.gov.pl?p_r_p_resetCur=false&p_r_p_assetEntryId=59700373"
-      }
-    ]
-  },
-  {
     "urzad": "Góra",
     "woj": "dolnośląskie",
     "probability": 18,
@@ -9308,6 +9271,43 @@
       {
         "title": "Informacja o wysokości środków oraz priorytety wydatkowania KFS na 2026 rok",
         "url": "https://gora.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok"
+      }
+    ]
+  },
+  {
+    "urzad": "Kamienna Góra",
+    "woj": "dolnośląskie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 400000,
+    "limit_roczny_text": "400 000 zl",
+    "limit_source_url": "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/ncxEicTXv58N/content/ogloszenie-o-naborze-wnioskow-krajowego-funduszu-szkoleniowego-2026-r.?p_r_p_assetEntryId=61105693",
+    "limit_confidence": 70,
+    "suma_naborow": 400000,
+    "suma_naborow_text": "400 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 1,
+    "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": true,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "Ogłoszenie o naborze wniosków Krajowego Funduszu Szkoleniowego 2026 r.",
+        "url": "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/ncxEicTXv58N/content/ogloszenie-o-naborze-wnioskow-krajowego-funduszu-szkoleniowego-2026-r.?p_r_p_assetEntryId=61105693"
+      },
+      {
+        "title": "Założenie konta organizacji na platformie www.praca.gov.pl",
+        "url": "https://kamiennagora.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/ncxEicTXv58N/content/zalozenie-konta-organizacji-na-platformie-www.praca.gov.pl?p_r_p_resetCur=false&p_r_p_assetEntryId=59700373"
       }
     ]
   },
@@ -10033,43 +10033,6 @@
       {
         "title": "Staże dla osób długotrwale bezrobotnych, powyżej 50 roku życia oraz osób z niepełnosprawnościami",
         "url": "https://supnowysacz.praca.gov.pl/-/staze-dla-osob-dlugotrwale-bezrobotnych-powyzej-50-roku-zycia-oraz-osob-z-niepelnosprawnosciami"
-      }
-    ]
-  },
-  {
-    "urzad": "Szczecin",
-    "woj": "zachodniopomorskie",
-    "probability": 5,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 4000000,
-    "limit_roczny_text": "4 000 000 zl",
-    "limit_source_url": "https://szczecin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-planowanym-naborze-wnioskow-o-dofinansowanie-kosztow-ksztalcenia-ustawicznego-ze-srodkow-krajowego-funduszu-szkoleniowego-1?p_r_p_assetEntryId=60433288",
-    "limit_confidence": 55,
-    "suma_naborow": 4000000,
-    "suma_naborow_text": "4 000 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 1,
-    "kfs_articles": 5,
-    "has_exhausted_signal": true,
-    "has_reserve_signal": false,
-    "has_planned_signal": true,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
-    ],
-    "sources": [
-      {
-        "title": "Informacja o planowanym naborze wniosków o dofinansowanie kosztów kształcenia ustawicznego ze środków Krajowego Funduszu Szkoleniowego",
-        "url": "https://szczecin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-planowanym-naborze-wnioskow-o-dofinansowanie-kosztow-ksztalcenia-ustawicznego-ze-srodkow-krajowego-funduszu-szkoleniowego-1?p_r_p_assetEntryId=60433288"
-      },
-      {
-        "title": "Krajowy Fundusz Szkoleniowy",
-        "url": "https://szczecin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy/-/asset_publisher/kfQIA8OcInMo/content/55453-krajowy-fundusz-szkoleniowy/10240"
       }
     ]
   },
@@ -11964,6 +11927,39 @@
       {
         "title": "Ogłoszenie o naborze wniosków o dofinansowanie podjęcia działalności gospodarczej",
         "url": "https://sulecin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-dofinansowanie-podjecia-dzialalnosci-gospodarczej?p_r_p_assetEntryId=59981072"
+      }
+    ]
+  },
+  {
+    "urzad": "Szczecin",
+    "woj": "zachodniopomorskie",
+    "probability": 5,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 4,
+    "has_exhausted_signal": true,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
+    ],
+    "sources": [
+      {
+        "title": "Krajowy Fundusz Szkoleniowy",
+        "url": "https://szczecin.praca.gov.pl/dla-pracodawcow-i-przedsiebiorcow/podnoszenie-kompetencji-i-kwalifikacji-pracownikow-i-kandydatow-do-pracy/krajowy-fundusz-szkoleniowy/-/asset_publisher/kfQIA8OcInMo/content/55453-krajowy-fundusz-szkoleniowy/10240"
       }
     ]
   },
