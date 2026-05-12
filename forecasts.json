@@ -1853,34 +1853,6 @@
     "sources": []
   },
   {
-    "urzad": "Dzierżoniów",
-    "woj": "dolnośląskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Człuchow",
     "woj": "pomorskie",
     "probability": 38,
@@ -1898,6 +1870,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Dzierżoniów",
+    "woj": "dolnośląskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2202,34 +2202,6 @@
     "sources": []
   },
   {
-    "urzad": "Piekary Śląskie",
-    "woj": "śląskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Pisz",
     "woj": "warmińsko-mazurskie",
     "probability": 38,
@@ -2247,6 +2219,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Piekary Śląskie",
+    "woj": "śląskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2314,8 +2314,8 @@
     "sources": []
   },
   {
-    "urzad": "Strzelce Krajeńskie",
-    "woj": "lubuskie",
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2342,8 +2342,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Strzelce Krajeńskie",
+    "woj": "lubuskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2398,8 +2398,8 @@
     "sources": []
   },
   {
-    "urzad": "Tczew",
-    "woj": "pomorskie",
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2426,8 +2426,8 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
+    "urzad": "Tczew",
+    "woj": "pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2622,34 +2622,6 @@
     "sources": []
   },
   {
-    "urzad": "Łęczyca",
-    "woj": "łódzkie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Świdnik",
     "woj": "lubelskie",
     "probability": 38,
@@ -2695,6 +2667,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Łęczyca",
+    "woj": "łódzkie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -11334,6 +11334,10 @@
       {
         "title": "Ogłoszenie o planowanym naborze wniosków z Krajowego Funduszu Szkoleniowego (KFS) w roku 2026",
         "url": "https://kamienpomorski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-planowanym-naborze-wnioskow-z-krajowego-funduszu-szkoleniowego-kfs-w-roku-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=60527321"
+      },
+      {
+        "title": "II nabór wniosków z Krajowego Funduszu Szkoleniowego (KFS) w roku 2026",
+        "url": "https://kamienpomorski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ii-nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-kfs-w-roku-2026?p_r_p_assetEntryId=63004754"
       },
       {
         "title": "Bon na zasiedlenie - brak środków",
