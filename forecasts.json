@@ -53,7 +53,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 9,
+    "kfs_articles": 10,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -1853,34 +1853,6 @@
     "sources": []
   },
   {
-    "urzad": "Człuchow",
-    "woj": "pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Dzierżoniów",
     "woj": "dolnośląskie",
     "probability": 38,
@@ -1898,6 +1870,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Człuchow",
+    "woj": "pomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2202,34 +2202,6 @@
     "sources": []
   },
   {
-    "urzad": "Pisz",
-    "woj": "warmińsko-mazurskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Piekary Śląskie",
     "woj": "śląskie",
     "probability": 38,
@@ -2247,6 +2219,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Pisz",
+    "woj": "warmińsko-mazurskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2314,8 +2314,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Strzelce Krajeńskie",
+    "woj": "lubuskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2342,8 +2342,8 @@
     "sources": []
   },
   {
-    "urzad": "Strzelce Krajeńskie",
-    "woj": "lubuskie",
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2398,8 +2398,8 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
+    "urzad": "Tczew",
+    "woj": "pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2426,8 +2426,8 @@
     "sources": []
   },
   {
-    "urzad": "Tczew",
-    "woj": "pomorskie",
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2622,34 +2622,6 @@
     "sources": []
   },
   {
-    "urzad": "Środa Wlkp.",
-    "woj": "wielkopolskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Łęczyca",
     "woj": "łódzkie",
     "probability": 38,
@@ -2695,6 +2667,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Środa Wlkp.",
+    "woj": "wielkopolskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -3192,6 +3192,43 @@
       {
         "title": "Krajowy Fundusz Szkoleniowy (KFS) – nabór wniosków w 2026 roku (I)",
         "url": "https://augustow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-kfs-nabor-wnioskow-w-2026-roku-i-?p_r_p_resetCur=false&p_r_p_assetEntryId=60547224"
+      }
+    ]
+  },
+  {
+    "urzad": "Września",
+    "woj": "wielkopolskie",
+    "probability": 20,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 500000,
+    "limit_roczny_text": "500 000 zl",
+    "limit_source_url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372",
+    "limit_confidence": 55,
+    "suma_naborow": 985000,
+    "suma_naborow_text": "985 000 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 2,
+    "active_count": 1,
+    "ended_count": 0,
+    "kfs_articles": 4,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": true,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Sa sygnaly rezerwy albo zmniejszenia/niewykorzystania limitu."
+    ],
+    "sources": [
+      {
+        "title": "Krajowy Fundusz Szkoleniowy 2026 - ważne informacje",
+        "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372"
+      },
+      {
+        "title": "Nabór wniosków na dofinansowanie szkoleń z Krajowego Funduszu Szkoleniowego",
+        "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-na-dofinansowanie-szkolen-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=62982253"
       }
     ]
   },
@@ -3775,7 +3812,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 11,
+    "kfs_articles": 12,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -4552,7 +4589,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 8,
+    "kfs_articles": 9,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6503,8 +6540,8 @@
         "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/kfs-na-2026-rok?p_r_p_assetEntryId=57829810"
       },
       {
-        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
-        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=61453337"
+        "title": "ZAPRASZAMY osoby bezrobotne i poszukujące pracy do składania wniosków o przyznanie bonu na kształcenie ustawiczne (do dn. 22.05.2026 r.)",
+        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/BHM0w787rVxb/content/zapraszamy-osoby-bezrobotne-i-poszukujace-pracy-do-skladania-wnioskow-o-przyznanie-bonu-na-ksztalcenie-ustawiczne-do-dn.-22.05.2026-r.-?p_r_p_assetEntryId=62909207"
       }
     ]
   },
@@ -8405,39 +8442,6 @@
       {
         "title": "Ogłoszenie o naborze wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego (PSZ-KFS) na finansowanie kosztów kształcenia ustawicznego na rok 2026",
         "url": "https://przysucha.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-kfs-2026?p_r_p_assetEntryId=62324210"
-      }
-    ]
-  },
-  {
-    "urzad": "Września",
-    "woj": "wielkopolskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 500000,
-    "limit_roczny_text": "500 000 zl",
-    "limit_source_url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372",
-    "limit_confidence": 55,
-    "suma_naborow": 500000,
-    "suma_naborow_text": "500 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Krajowy Fundusz Szkoleniowy 2026 - ważne informacje",
-        "url": "https://wrzesnia.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-2026-wazne-informacje?p_r_p_resetCur=false&p_r_p_assetEntryId=56723372"
       }
     ]
   },
@@ -11306,14 +11310,14 @@
     "limit_roczny_text": "433 743 zl",
     "limit_source_url": "https://kamienpomorski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-1-naborze-wnioskow-z-krajowego-funduszu-szkoleniowego-kfs-w-roku-2026?p_r_p_assetEntryId=61212376",
     "limit_confidence": 45,
-    "suma_naborow": 433743,
-    "suma_naborow_text": "433 743 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
+    "suma_naborow": 136901143305,
+    "suma_naborow_text": "136 901 143 305 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -11329,7 +11333,7 @@
       },
       {
         "title": "Ogłoszenie o planowanym naborze wniosków z Krajowego Funduszu Szkoleniowego (KFS) w roku 2026",
-        "url": "https://kamienpomorski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-planowanym-naborze-wnioskow-z-krajowego-funduszu-szkoleniowego-kfs-w-roku-2026?p_r_p_assetEntryId=60527321"
+        "url": "https://kamienpomorski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-planowanym-naborze-wnioskow-z-krajowego-funduszu-szkoleniowego-kfs-w-roku-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=60527321"
       },
       {
         "title": "Bon na zasiedlenie - brak środków",
@@ -11649,8 +11653,8 @@
     ],
     "sources": [
       {
-        "title": "Informacja o wyczerpanym limicie środków na prace interwencyjne w ramach Rezerwy Funduszu Pracy",
-        "url": "https://elblag.praca.gov.pl/-/informacja-o-wyczerpanym-limicie-srodkow-na-prace-interwencyjne-w-ramach-rezerwy-funduszu-pracy"
+        "title": "Komunikat o wyczerpanym limicie środków Rezerwy Funduszu Pracy na staże",
+        "url": "https://elblag.praca.gov.pl/-/komunikat-o-wyczerpanym-limicie-srodkow-rezerwy-funduszu-pracy-na-staze"
       }
     ]
   },
@@ -11774,7 +11778,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": false,
