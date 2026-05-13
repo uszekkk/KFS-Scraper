@@ -1735,34 +1735,6 @@
     "sources": []
   },
   {
-    "urzad": "Choszczno",
-    "woj": "zachodniopomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Będzinin",
     "woj": "śląskie",
     "probability": 38,
@@ -1780,6 +1752,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Choszczno",
+    "woj": "zachodniopomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2280,8 +2280,8 @@
     "sources": []
   },
   {
-    "urzad": "Strzelce Krajeńskie",
-    "woj": "lubuskie",
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2308,8 +2308,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Strzelce Krajeńskie",
+    "woj": "lubuskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2588,8 +2588,8 @@
     "sources": []
   },
   {
-    "urzad": "Łęczyca",
-    "woj": "łódzkie",
+    "urzad": "Świdnik",
+    "woj": "lubelskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2604,7 +2604,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2644,8 +2644,8 @@
     "sources": []
   },
   {
-    "urzad": "Świdnik",
-    "woj": "lubelskie",
+    "urzad": "Łęczyca",
+    "woj": "łódzkie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2660,7 +2660,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 3,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6116,7 +6116,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -6174,6 +6174,39 @@
     ]
   },
   {
+    "urzad": "Myszkow",
+    "woj": "śląskie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 1000000,
+    "limit_roczny_text": "1 000 000 zl",
+    "limit_source_url": "https://myszkow.praca.gov.pl/-/i-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego",
+    "limit_confidence": 55,
+    "suma_naborow": 1000000,
+    "suma_naborow_text": "1 000 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 1,
+    "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "I nabór wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego",
+        "url": "https://myszkow.praca.gov.pl/-/i-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego"
+      }
+    ]
+  },
+  {
     "urzad": "Nisko",
     "woj": "podkarpackie",
     "probability": 18,
@@ -6211,39 +6244,6 @@
       {
         "title": "Komunikat o wstrzymaniu naboru wniosków o dofinansowanie wynagrodzeń zatrudnionego bezrobotnego powyżej 50 roku życia, który nie osiągnął wieku emerytalnego",
         "url": "https://nisko.praca.gov.pl/-/komunikat-o-wstrzymaniu-naboru-wnioskow-o-dofinansowanie-wynagrodzen-zatrudnionego-bezrobotnego-powyzej-50-roku-zycia-ktory-nie-osiagnal-wieku-emerytalnego"
-      }
-    ]
-  },
-  {
-    "urzad": "Myszkow",
-    "woj": "śląskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 1000000,
-    "limit_roczny_text": "1 000 000 zl",
-    "limit_source_url": "https://myszkow.praca.gov.pl/-/i-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego",
-    "limit_confidence": 55,
-    "suma_naborow": 1000000,
-    "suma_naborow_text": "1 000 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 1,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "I nabór wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego",
-        "url": "https://myszkow.praca.gov.pl/-/i-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego"
       }
     ]
   },
