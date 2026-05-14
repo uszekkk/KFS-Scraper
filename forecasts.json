@@ -1853,34 +1853,6 @@
     "sources": []
   },
   {
-    "urzad": "Człuchow",
-    "woj": "pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Dzierżoniów",
     "woj": "dolnośląskie",
     "probability": 38,
@@ -1898,6 +1870,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Człuchow",
+    "woj": "pomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2342,34 +2342,6 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Suwałki",
     "woj": "podlaskie",
     "probability": 38,
@@ -2387,6 +2359,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2482,34 +2482,6 @@
     "sources": []
   },
   {
-    "urzad": "Węgorzewo",
-    "woj": "warmińsko-mazurskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 4,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Włodawa",
     "woj": "lubelskie",
     "probability": 38,
@@ -2538,8 +2510,8 @@
     "sources": []
   },
   {
-    "urzad": "Łuków",
-    "woj": "lubelskie",
+    "urzad": "Węgorzewo",
+    "woj": "warmińsko-mazurskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2554,7 +2526,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 1,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2594,8 +2566,8 @@
     "sources": []
   },
   {
-    "urzad": "Łęczyca",
-    "woj": "łódzkie",
+    "urzad": "Łuków",
+    "woj": "lubelskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2610,7 +2582,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2667,6 +2639,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Łęczyca",
+    "woj": "łódzkie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -5526,7 +5526,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -6261,7 +6261,7 @@
     "label": "Niskie",
     "limit_roczny": 1000000,
     "limit_roczny_text": "1 000 000 zl",
-    "limit_source_url": "https://raciborz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-2026-1?p_r_p_assetEntryId=61162968",
+    "limit_source_url": "https://raciborz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-2026-1?p_r_p_resetCur=false&p_r_p_assetEntryId=61162968",
     "limit_confidence": 55,
     "suma_naborow": 1000000,
     "suma_naborow_text": "1 000 000 zl",
@@ -6282,7 +6282,7 @@
     "sources": [
       {
         "title": "Nabór wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego (KFS) 2026 - ZAKOŃCZONY",
-        "url": "https://raciborz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-2026-1?p_r_p_assetEntryId=61162968"
+        "url": "https://raciborz.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-2026-1?p_r_p_resetCur=false&p_r_p_assetEntryId=61162968"
       }
     ]
   },
@@ -7169,12 +7169,12 @@
         "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-na-ksztalcenie-ustawiczne-finansowane-z-krajowego-funduszu-szkoleniowego-w-2026-roku?p_r_p_resetCur=false&p_r_p_assetEntryId=60499275"
       },
       {
-        "title": "Środki na podjęcie działalności gospodarczej – kolejny nabór wniosków w ramach projektu „Nie czekaj – zdobądź doświadczenie (IV)” współfinansowanego ze środków Europejskiego Funduszu Społecznego Plus (EFS+)",
-        "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/srodki-na-podjecie-dzialalnosci-gospodarczej-kolejny-nabor-wnioskow-w-ramach-projektu-nie-czekaj-zdobadz-doswiadczenie-iv-wspolfinansowanego-ze-srodkow-europejskiego-funduszu-spolecznego-plus-efs-?p_r_p_assetEntryId=62423774"
+        "title": "Dodatkowe bony na zasiedlenie dla bezrobotnych w ramach projektu współfinansowanego z EFS+",
+        "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/dodatkowe-bony-na-zasiedlenie-dla-bezrobotnych-w-ramach-projektu-wspolfinansowanego-z-efs-?p_r_p_assetEntryId=63207201"
       },
       {
-        "title": "Kolejny nabór na szkolenia grupowe",
-        "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/kolejny-nabor-na-szkolenia-grupowe?p_r_p_resetCur=false&p_r_p_assetEntryId=61556628"
+        "title": "Środki na podjęcie działalności gospodarczej – kolejny nabór wniosków w ramach projektu „Nie czekaj – zdobądź doświadczenie (IV)” współfinansowanego ze środków Europejskiego Funduszu Społecznego Plus (EFS+)",
+        "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/srodki-na-podjecie-dzialalnosci-gospodarczej-kolejny-nabor-wnioskow-w-ramach-projektu-nie-czekaj-zdobadz-doswiadczenie-iv-wspolfinansowanego-ze-srodkow-europejskiego-funduszu-spolecznego-plus-efs-?p_r_p_assetEntryId=62423774"
       }
     ]
   },
@@ -8434,6 +8434,39 @@
     ]
   },
   {
+    "urzad": "Węgrów",
+    "woj": "mazowieckie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 500000,
+    "limit_roczny_text": "500 000 zl",
+    "limit_source_url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662",
+    "limit_confidence": 55,
+    "suma_naborow": 500000,
+    "suma_naborow_text": "500 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "Informacja o wysokości limitu przyznanych środków KFS na 2026 r.",
+        "url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662"
+      }
+    ]
+  },
+  {
     "urzad": "Wolsztyn",
     "woj": "wielkopolskie",
     "probability": 18,
@@ -8467,39 +8500,6 @@
       {
         "title": "Informacja o wysokości środków oraz priorytety wydatkowania KFS na 2026 rok",
         "url": "https://wolsztyn.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok"
-      }
-    ]
-  },
-  {
-    "urzad": "Węgrów",
-    "woj": "mazowieckie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 500000,
-    "limit_roczny_text": "500 000 zl",
-    "limit_source_url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662",
-    "limit_confidence": 55,
-    "suma_naborow": 500000,
-    "suma_naborow_text": "500 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Informacja o wysokości limitu przyznanych środków KFS na 2026 r.",
-        "url": "https://wegrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-wysokosci-limitu-przyznanych-srodkow-kfs-na-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=56545662"
       }
     ]
   },
@@ -8590,7 +8590,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -8940,7 +8940,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -9897,7 +9897,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 2,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
