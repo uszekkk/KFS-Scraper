@@ -1458,34 +1458,6 @@
     "sources": []
   },
   {
-    "urzad": "Kozienice",
-    "woj": "mazowieckie",
-    "probability": 44,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": 500000,
-    "suma_naborow_text": "500 000 zl",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 1,
-    "kfs_articles": 9,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Byl nabor, termin minal, brak jednoznacznego komunikatu o wyczerpaniu."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Krosno Odrzańskie",
     "woj": "lubuskie",
     "probability": 44,
@@ -1503,6 +1475,34 @@
     "active_count": 0,
     "ended_count": 1,
     "kfs_articles": 4,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Byl nabor, termin minal, brak jednoznacznego komunikatu o wyczerpaniu."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Kozienice",
+    "woj": "mazowieckie",
+    "probability": 44,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": 500000,
+    "suma_naborow_text": "500 000 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 1,
+    "kfs_articles": 9,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1869,7 +1869,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 6,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2258,8 +2258,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Strzelce Krajeńskie",
+    "woj": "lubuskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2286,8 +2286,8 @@
     "sources": []
   },
   {
-    "urzad": "Strzelce Krajeńskie",
-    "woj": "lubuskie",
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2342,8 +2342,8 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
+    "urzad": "Tczew",
+    "woj": "pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2370,8 +2370,8 @@
     "sources": []
   },
   {
-    "urzad": "Tczew",
-    "woj": "pomorskie",
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2510,34 +2510,6 @@
     "sources": []
   },
   {
-    "urzad": "Łuków",
-    "woj": "lubelskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Łowicz",
     "woj": "łódzkie",
     "probability": 38,
@@ -2555,6 +2527,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 2,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Łuków",
+    "woj": "lubelskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -3628,7 +3628,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -3986,7 +3986,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -7126,7 +7126,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -7141,12 +7141,16 @@
         "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-na-ksztalcenie-ustawiczne-finansowane-z-krajowego-funduszu-szkoleniowego-w-2026-roku?p_r_p_resetCur=false&p_r_p_assetEntryId=60499275"
       },
       {
+        "title": "Komunikat w sprawie oceny wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego na 2026 r. – nabór pierwszy prowadzony w okresie od 30.03.2026 r. do 03.04.2026 r.",
+        "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/komunikat-w-sprawie-oceny-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-na-2026-r.-nabor-pierwszy-prowadzony-w-okresie-od-30.03.2026-r.-do-03.04.2026-r.?p_r_p_assetEntryId=63256421"
+      },
+      {
         "title": "Dodatkowe bony na zasiedlenie dla bezrobotnych w ramach projektu współfinansowanego z EFS+",
         "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/dodatkowe-bony-na-zasiedlenie-dla-bezrobotnych-w-ramach-projektu-wspolfinansowanego-z-efs-?p_r_p_assetEntryId=63207201"
       },
       {
         "title": "Środki na podjęcie działalności gospodarczej – kolejny nabór wniosków w ramach projektu „Nie czekaj – zdobądź doświadczenie (IV)” współfinansowanego ze środków Europejskiego Funduszu Społecznego Plus (EFS+)",
-        "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/srodki-na-podjecie-dzialalnosci-gospodarczej-kolejny-nabor-wnioskow-w-ramach-projektu-nie-czekaj-zdobadz-doswiadczenie-iv-wspolfinansowanego-ze-srodkow-europejskiego-funduszu-spolecznego-plus-efs-?p_r_p_assetEntryId=62423774"
+        "url": "https://skarzysko.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/srodki-na-podjecie-dzialalnosci-gospodarczej-kolejny-nabor-wnioskow-w-ramach-projektu-nie-czekaj-zdobadz-doswiadczenie-iv-wspolfinansowanego-ze-srodkow-europejskiego-funduszu-spolecznego-plus-efs-?p_r_p_resetCur=false&p_r_p_assetEntryId=62423774"
       }
     ]
   },
@@ -8098,14 +8102,14 @@
     "limit_roczny_text": "560 000 zl",
     "limit_source_url": "https://znin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/powiatowy-urzad-pracy-w-zninie-oglasza-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_resetCur=false&p_r_p_assetEntryId=60550430",
     "limit_confidence": 70,
-    "suma_naborow": 560000,
-    "suma_naborow_text": "560 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
+    "suma_naborow": 654000,
+    "suma_naborow_text": "654 000 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 2,
+    "active_count": 1,
     "ended_count": 1,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -8118,6 +8122,10 @@
       {
         "title": "Powiatowy Urząd Pracy w  Żninie ogłasza nabór wniosków o przyznanie środków   Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
         "url": "https://znin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/powiatowy-urzad-pracy-w-zninie-oglasza-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_resetCur=false&p_r_p_assetEntryId=60550430"
+      },
+      {
+        "title": "Powiatowy Urząd Pracy w  Żninie ogłasza nabór wniosków o przyznanie środków   Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
+        "url": "https://znin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/powiatowy-urzad-pracy-w-zninie-oglasza-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego-1?p_r_p_assetEntryId=63256787"
       },
       {
         "title": "Krajowy Fundusz Szkoleniowy (KFS)",
@@ -10657,7 +10665,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 8,
+    "kfs_articles": 9,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -10673,11 +10681,15 @@
       },
       {
         "title": "Planowany nabór wniosków o przyznanie środków KFS",
-        "url": "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-dofinansowanie-kosztow-ksztalcenia-ustawicznego-pracownikow-i-pracodawcow-ze-srodkow-krajowego-funduszu-szkoleniowego-1?p_r_p_resetCur=false&p_r_p_assetEntryId=59798645"
+        "url": "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabor-wnioskow-o-przyznanie-srodkow-kfs?p_r_p_assetEntryId=63257341"
       },
       {
         "title": "Planowany nabór wniosków na podjęcie działalności gospodarczej",
         "url": "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabor-wnioskow-na-podjecie-dzialalnosci-gospodarczej-oraz-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy?p_r_p_resetCur=false&p_r_p_assetEntryId=43693337"
+      },
+      {
+        "title": "Planowany nabór wniosków o przyznanie środków KFS",
+        "url": "https://wagrowiec.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-dofinansowanie-kosztow-ksztalcenia-ustawicznego-pracownikow-i-pracodawcow-ze-srodkow-krajowego-funduszu-szkoleniowego-1?p_r_p_resetCur=false&p_r_p_assetEntryId=59798645"
       },
       {
         "title": "Nabór wniosków o przyznanie bonu na kształcenie ustawiczne",
@@ -10791,8 +10803,8 @@
         "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=62018603"
       },
       {
-        "title": "Wstrzymanie naboru WNIOSKÓW O ZAWARCIE UMOWY O ZORGANIZOWANIE STAŻU,  w ramach Środków Rezerwy Funduszu Pracy na finansowanie kosztów realizacji form pomocy bez EFS+",
-        "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wstrzymanie-naboru-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-w-ramach-srodkow-rezerwy-funduszu-pracy-na-finansowanie-kosztow-realizacji-form-pomocy-bez-efs-?p_r_p_assetEntryId=62757618"
+        "title": "Wstrzymanie naboru WNIOSKÓW O ZAWARCIE UMOWY O ZORGANIZOWANIE STAŻU, ze środków Państwowego Funduszu Rehabilitacji Osób Niepełnosprawnych (PFRON)",
+        "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wstrzymanie-naboru-wnioskow-o-zawarcie-umowy-o-zorganizowanie-stazu-ze-srodkow-panstwowego-funduszu-rehabilitacji-osob-niepelnosprawnych-pfron-?p_r_p_assetEntryId=63250770"
       }
     ]
   },
@@ -10985,16 +10997,16 @@
     "label": "Niskie",
     "limit_roczny": 600000,
     "limit_roczny_text": "600 000 zl",
-    "limit_source_url": "https://kolbuszowa.praca.gov.pl/-/informacja-w-sprawie-limitu-srodkow-krajowego-funduszu-szkoleniowego-na-2026-rok-dla-powiatu-kolbuszowskiego",
-    "limit_confidence": 65,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
+    "limit_source_url": "https://kolbuszowa.praca.gov.pl/-/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-na-finansowanie-kosztow-ksztalcenia-ustawicznego",
+    "limit_confidence": 70,
+    "suma_naborow": 600000,
+    "suma_naborow_text": "600 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -11004,6 +11016,10 @@
       "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
     ],
     "sources": [
+      {
+        "title": "Nabór wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego na finansowanie kosztów kształcenia ustawicznego",
+        "url": "https://kolbuszowa.praca.gov.pl/-/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-na-finansowanie-kosztow-ksztalcenia-ustawicznego"
+      },
       {
         "title": "Informacja w sprawie limitu środków Krajowego Funduszu Szkoleniowego na 2026 rok dla powiatu kolbuszowskiego",
         "url": "https://kolbuszowa.praca.gov.pl/-/informacja-w-sprawie-limitu-srodkow-krajowego-funduszu-szkoleniowego-na-2026-rok-dla-powiatu-kolbuszowskiego"
@@ -11829,39 +11845,6 @@
     ]
   },
   {
-    "urzad": "Rawicz",
-    "woj": "wielkopolskie",
-    "probability": 5,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": true,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
-    ],
-    "sources": [
-      {
-        "title": "WYCZERPANA PULA ŚRODKÓW NA REALIZACJĘ PRAC INTERWENCYJNYCH, BONU NA ZASIEDLENIE ORAZ DOFINANSOWANIE WYNAGRODZENIA DLA OSÓB W WIEKU 50+",
-        "url": "https://rawicz.praca.gov.pl/-/wyczerpana-pula-srodkow-na-realizacje-bonu-na-zasiedlenie-oraz-dofinansowanie-wynagrodzenia-dla-osob-w-wieku-50-"
-      }
-    ]
-  },
-  {
     "urzad": "Płońsk",
     "woj": "mazowieckie",
     "probability": 5,
@@ -11895,6 +11878,39 @@
       {
         "title": "Zamknięcie naboru wniosków na organizację prac społecznie użytecznych",
         "url": "https://plonsk.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-naboru-wnioskow-na-organizacje-prac-spolecznie-uzytecznych?p_r_p_assetEntryId=62408995"
+      }
+    ]
+  },
+  {
+    "urzad": "Rawicz",
+    "woj": "wielkopolskie",
+    "probability": 5,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": true,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
+    ],
+    "sources": [
+      {
+        "title": "WYCZERPANA PULA ŚRODKÓW NA REALIZACJĘ PRAC INTERWENCYJNYCH, BONU NA ZASIEDLENIE ORAZ DOFINANSOWANIE WYNAGRODZENIA DLA OSÓB W WIEKU 50+",
+        "url": "https://rawicz.praca.gov.pl/-/wyczerpana-pula-srodkow-na-realizacje-bonu-na-zasiedlenie-oraz-dofinansowanie-wynagrodzenia-dla-osob-w-wieku-50-"
       }
     ]
   },
