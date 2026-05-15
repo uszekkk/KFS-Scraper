@@ -661,7 +661,7 @@
     "sources": [
       {
         "title": "Planowane nabory wniosków w I półroczu 2026 r.",
-        "url": "https://siedlce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabory-w-i-polroczu-2026-r.?p_r_p_assetEntryId=58850759"
+        "url": "https://siedlce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabory-w-i-polroczu-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=58850759"
       }
     ]
   },
@@ -1853,34 +1853,6 @@
     "sources": []
   },
   {
-    "urzad": "Człuchow",
-    "woj": "pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Dzierżoniów",
     "woj": "dolnośląskie",
     "probability": 38,
@@ -1909,8 +1881,8 @@
     "sources": []
   },
   {
-    "urzad": "Gorzów Wielkopolski",
-    "woj": "lubuskie",
+    "urzad": "Człuchow",
+    "woj": "pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -1925,7 +1897,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 2,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2174,34 +2146,6 @@
     "sources": []
   },
   {
-    "urzad": "Pisz",
-    "woj": "warmińsko-mazurskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Piekary Śląskie",
     "woj": "śląskie",
     "probability": 38,
@@ -2219,6 +2163,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Pisz",
+    "woj": "warmińsko-mazurskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2594,34 +2566,6 @@
     "sources": []
   },
   {
-    "urzad": "Świdnik",
-    "woj": "lubelskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Środa Wlkp.",
     "woj": "wielkopolskie",
     "probability": 38,
@@ -2667,6 +2611,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Świdnik",
+    "woj": "lubelskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -3288,14 +3260,14 @@
     "limit_roczny_text": "358 586 zl",
     "limit_source_url": "https://kolno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-dotyczaca-dofinansowania-dzialan-ze-srodkow-krajowego-funduszu-szkoleniowego-w-2026-roku?p_r_p_resetCur=false&p_r_p_assetEntryId=57711655",
     "limit_confidence": 65,
-    "suma_naborow": 358586,
-    "suma_naborow_text": "358 586 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
+    "suma_naborow": 627873,
+    "suma_naborow_text": "627 873 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 2,
+    "active_count": 1,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": true,
     "has_planned_signal": true,
@@ -5090,7 +5062,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -6076,7 +6048,7 @@
     "label": "Niskie",
     "limit_roczny": 1000000,
     "limit_roczny_text": "1 000 000 zl",
-    "limit_source_url": "https://gliwice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy-2026r.?p_r_p_assetEntryId=61456640",
+    "limit_source_url": "https://gliwice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy-2026r.?p_r_p_resetCur=false&p_r_p_assetEntryId=61456640",
     "limit_confidence": 70,
     "suma_naborow": 1000000,
     "suma_naborow_text": "1 000 000 zl",
@@ -6097,7 +6069,7 @@
     "sources": [
       {
         "title": "Nabór wniosków Krajowy Fundusz Szkoleniowy 2026r.",
-        "url": "https://gliwice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy-2026r.?p_r_p_assetEntryId=61456640"
+        "url": "https://gliwice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy-2026r.?p_r_p_resetCur=false&p_r_p_assetEntryId=61456640"
       },
       {
         "title": "Górnośląski Akcelerator Przedsiębiorczości Rynkowej sp. z o.o. realizuje projekt „Wsparcie osób dorosłych z subregionu centralnego województwa śląskiego w zakresie nabywania zielonych kompetencji/kwalifikacji",
@@ -6410,7 +6382,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 6,
+    "kfs_articles": 7,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6565,8 +6537,8 @@
         "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/kfs-na-2026-rok?p_r_p_assetEntryId=57829810"
       },
       {
-        "title": "ZAPRASZAMY osoby bezrobotne i poszukujące pracy do składania wniosków o przyznanie bonu na kształcenie ustawiczne (do dn. 22.05.2026 r.)",
-        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/BHM0w787rVxb/content/zapraszamy-osoby-bezrobotne-i-poszukujace-pracy-do-skladania-wnioskow-o-przyznanie-bonu-na-ksztalcenie-ustawiczne-do-dn.-22.05.2026-r.-?p_r_p_assetEntryId=62909207"
+        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
+        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=61453337"
       }
     ]
   },
@@ -7927,7 +7899,7 @@
       },
       {
         "title": "Wstrzymanie naboru wniosków o przyznanie bonu na zasiedlenie",
-        "url": "https://zwolen.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wstrzymanie-naboru-wnioskow-o-przyznanie-bonu-na-zasiedlenie?p_r_p_assetEntryId=61981036"
+        "url": "https://zwolen.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/wstrzymanie-naboru-wnioskow-o-przyznanie-bonu-na-zasiedlenie?p_r_p_resetCur=false&p_r_p_assetEntryId=61981036"
       }
     ]
   },
@@ -10188,7 +10160,7 @@
       },
       {
         "title": "Ogłoszenie o zamknięciu naboru wniosków o przyznanie bonu na zasiedlenie",
-        "url": "https://bilgoraj.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-zamknieciu-naboru-wnioskow-o-przyznanie-bonu-na-zasiedlenie-w-ramach-projektu-aktywizacja-zawodowa-wpowiecie-bilgorajskim?p_r_p_assetEntryId=62294656"
+        "url": "https://bilgoraj.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-zamknieciu-naboru-wnioskow-o-przyznanie-bonu-na-zasiedlenie-w-ramach-projektu-aktywizacja-zawodowa-wpowiecie-bilgorajskim?p_r_p_resetCur=false&p_r_p_assetEntryId=62294656"
       }
     ]
   },
@@ -10685,7 +10657,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -10795,7 +10767,7 @@
     "label": "Niskie",
     "limit_roczny": 780000,
     "limit_roczny_text": "780 000 zl",
-    "limit_source_url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=62018603",
+    "limit_source_url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=62018603",
     "limit_confidence": 60,
     "suma_naborow": 780000,
     "suma_naborow_text": "780 000 zl",
@@ -10816,7 +10788,7 @@
     "sources": [
       {
         "title": "Nabór wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego",
-        "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=62018603"
+        "url": "https://tomaszowlubelski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=62018603"
       },
       {
         "title": "Wstrzymanie naboru WNIOSKÓW O ZAWARCIE UMOWY O ZORGANIZOWANIE STAŻU,  w ramach Środków Rezerwy Funduszu Pracy na finansowanie kosztów realizacji form pomocy bez EFS+",
@@ -11651,6 +11623,39 @@
     ]
   },
   {
+    "urzad": "Gorzów Wielkopolski",
+    "woj": "lubuskie",
+    "probability": 5,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": true,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
+    ],
+    "sources": [
+      {
+        "title": "Informacja o dostępnych środkach na aktywizację zawodową",
+        "url": "https://gorzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-dostepnych-srodkach-na-aktywizacje-zawodowa?p_r_p_assetEntryId=63251974"
+      }
+    ]
+  },
+  {
     "urzad": "Hajnówka",
     "woj": "podlaskie",
     "probability": 5,
@@ -11824,6 +11829,39 @@
     ]
   },
   {
+    "urzad": "Rawicz",
+    "woj": "wielkopolskie",
+    "probability": 5,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": true,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
+    ],
+    "sources": [
+      {
+        "title": "WYCZERPANA PULA ŚRODKÓW NA REALIZACJĘ PRAC INTERWENCYJNYCH, BONU NA ZASIEDLENIE ORAZ DOFINANSOWANIE WYNAGRODZENIA DLA OSÓB W WIEKU 50+",
+        "url": "https://rawicz.praca.gov.pl/-/wyczerpana-pula-srodkow-na-realizacje-bonu-na-zasiedlenie-oraz-dofinansowanie-wynagrodzenia-dla-osob-w-wieku-50-"
+      }
+    ]
+  },
+  {
     "urzad": "Płońsk",
     "woj": "mazowieckie",
     "probability": 5,
@@ -11857,39 +11895,6 @@
       {
         "title": "Zamknięcie naboru wniosków na organizację prac społecznie użytecznych",
         "url": "https://plonsk.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-naboru-wnioskow-na-organizacje-prac-spolecznie-uzytecznych?p_r_p_assetEntryId=62408995"
-      }
-    ]
-  },
-  {
-    "urzad": "Rawicz",
-    "woj": "wielkopolskie",
-    "probability": 5,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": true,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
-    ],
-    "sources": [
-      {
-        "title": "WYCZERPANA PULA ŚRODKÓW NA REALIZACJĘ PRAC INTERWENCYJNYCH, BONU NA ZASIEDLENIE ORAZ DOFINANSOWANIE WYNAGRODZENIA DLA OSÓB W WIEKU 50+",
-        "url": "https://rawicz.praca.gov.pl/-/wyczerpana-pula-srodkow-na-realizacje-bonu-na-zasiedlenie-oraz-dofinansowanie-wynagrodzenia-dla-osob-w-wieku-50-"
       }
     ]
   },
