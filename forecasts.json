@@ -1769,6 +1769,34 @@
     "sources": []
   },
   {
+    "urzad": "Chełmno",
+    "woj": "kujawsko-pomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Będzinin",
     "woj": "śląskie",
     "probability": 38,
@@ -1814,34 +1842,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Chełmno",
-    "woj": "kujawsko-pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2146,34 +2146,6 @@
     "sources": []
   },
   {
-    "urzad": "Pisz",
-    "woj": "warmińsko-mazurskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Piekary Śląskie",
     "woj": "śląskie",
     "probability": 38,
@@ -2202,6 +2174,34 @@
     "sources": []
   },
   {
+    "urzad": "Pisz",
+    "woj": "warmińsko-mazurskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Pyrzyce",
     "woj": "zachodniopomorskie",
     "probability": 38,
@@ -2219,34 +2219,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Police",
-    "woj": "zachodniopomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2342,6 +2314,34 @@
     "sources": []
   },
   {
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Suwałki",
     "woj": "podlaskie",
     "probability": 38,
@@ -2372,34 +2372,6 @@
   {
     "urzad": "Tczew",
     "woj": "pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2538,6 +2510,34 @@
     "sources": []
   },
   {
+    "urzad": "Łuków",
+    "woj": "lubelskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Łowicz",
     "woj": "łódzkie",
     "probability": 38,
@@ -2566,8 +2566,8 @@
     "sources": []
   },
   {
-    "urzad": "Łuków",
-    "woj": "lubelskie",
+    "urzad": "Środa Wlkp.",
+    "woj": "wielkopolskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2639,34 +2639,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Środa Wlkp.",
-    "woj": "wielkopolskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6565,8 +6537,8 @@
         "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/kfs-na-2026-rok?p_r_p_assetEntryId=57829810"
       },
       {
-        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
-        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/pNYLZyW8j2Lg/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=61453337"
+        "title": "ZAPRASZAMY osoby bezrobotne i poszukujące pracy do składania wniosków o przyznanie bonu na kształcenie ustawiczne (do dn. 22.05.2026 r.)",
+        "url": "https://pila.praca.gov.pl/strona-glowna/-/asset_publisher/BHM0w787rVxb/content/zapraszamy-osoby-bezrobotne-i-poszukujace-pracy-do-skladania-wnioskow-o-przyznanie-bonu-na-ksztalcenie-ustawiczne-do-dn.-22.05.2026-r.-?p_r_p_assetEntryId=62909207"
       }
     ]
   },
@@ -10390,6 +10362,51 @@
       {
         "title": "Zamknięcie naboru na organizację stażu dla osób bezrobotnych ze środków FP",
         "url": "https://wieliczka.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-naboru-na-organizacje-stazu-dla-osob-bezrobotnych-ze-srodkow-fp?p_r_p_resetCur=false&p_r_p_assetEntryId=59546874"
+      }
+    ]
+  },
+  {
+    "urzad": "Police",
+    "woj": "zachodniopomorskie",
+    "probability": 5,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 1038153,
+    "limit_roczny_text": "1 038 153 zl",
+    "limit_source_url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypomnienie-o-trwajacym-naborze-wnioskow-w-ramach-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61135822",
+    "limit_confidence": 60,
+    "suma_naborow": 2038153,
+    "suma_naborow_text": "2 038 153 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 2,
+    "active_count": 0,
+    "ended_count": 2,
+    "kfs_articles": 7,
+    "has_exhausted_signal": true,
+    "has_reserve_signal": false,
+    "has_planned_signal": true,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
+    ],
+    "sources": [
+      {
+        "title": "Przypomnienie o trwającym naborze wniosków w ramach Krajowego Funduszu Szkoleniowego 2026",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypomnienie-o-trwajacym-naborze-wnioskow-w-ramach-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61135822"
+      },
+      {
+        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego w 2026 r.",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego-w-2026-r.?p_r_p_assetEntryId=60803498"
+      },
+      {
+        "title": "Spotkanie informacyjne dla pracodawców – Krajowy Fundusz Szkoleniowy 2026",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-informacyjne-dla-pracodawcow-krajowy-fundusz-szkoleniowy-2026-1?p_r_p_assetEntryId=60350696"
+      },
+      {
+        "title": "Nabór wniosków na dofinansowanie w ramach prac interwencyjnych zakończony",
+        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-na-dofinansowanie-w-ramach-prac-interwencyjnych-zakonczony?p_r_p_assetEntryId=62492044"
       }
     ]
   },
