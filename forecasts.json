@@ -74,6 +74,43 @@
     ]
   },
   {
+    "urzad": "Bydgoszcz",
+    "woj": "kujawsko-pomorskie",
+    "probability": 74,
+    "level": "WARM",
+    "label": "Srednie",
+    "limit_roczny": 7246007,
+    "limit_roczny_text": "7 246 007 zl",
+    "limit_source_url": "https://bydgoszcz.praca.gov.pl/-/informacja-w-zakresie-rozpatrywania-wnioskow-na-finansowanie-kfss",
+    "limit_confidence": 80,
+    "suma_naborow": 5233876,
+    "suma_naborow_text": "5 233 876 zl",
+    "szacowane_pozostalo": 2012131,
+    "szacowane_pozostalo_text": "2 012 131 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 1,
+    "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": true,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Limit roczny jest wyzszy niz suma wykrytych pul naborow."
+    ],
+    "sources": [
+      {
+        "title": "Informacja w zakresie rozpatrywania wniosków na finansowanie kształcenia ustawicznego ze środków KFS",
+        "url": "https://bydgoszcz.praca.gov.pl/-/informacja-w-zakresie-rozpatrywania-wnioskow-na-finansowanie-kfss"
+      },
+      {
+        "title": "Nabór wniosków o finansowanie kształcenia z KFS",
+        "url": "https://bydgoszcz.praca.gov.pl/-/nabor-wnioskow-o-finansowanie-ksztalcenia-z-kfs-33"
+      }
+    ]
+  },
+  {
     "urzad": "Koszalin",
     "woj": "zachodniopomorskie",
     "probability": 72,
@@ -124,7 +161,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -501,39 +538,6 @@
     ]
   },
   {
-    "urzad": "Lipno",
-    "woj": "kujawsko-pomorskie",
-    "probability": 72,
-    "level": "WARM",
-    "label": "Srednie",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": true,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "W tekstach pojawia sie planowany/kolejny/dodatkowy nabor."
-    ],
-    "sources": [
-      {
-        "title": "INFORMACJA O PLANOWANYM NABORZE",
-        "url": "https://lipno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-planowanym-naborze?p_r_p_assetEntryId=61535575"
-      }
-    ]
-  },
-  {
     "urzad": "Lubań",
     "woj": "dolnośląskie",
     "probability": 72,
@@ -563,6 +567,39 @@
       {
         "title": "Informacja o planowanych naborach wniosków w roku 2026",
         "url": "https://luban.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-planowanych-naborach-wnioskow-w-roku-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=56737652"
+      }
+    ]
+  },
+  {
+    "urzad": "Lipno",
+    "woj": "kujawsko-pomorskie",
+    "probability": 72,
+    "level": "WARM",
+    "label": "Srednie",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": true,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "W tekstach pojawia sie planowany/kolejny/dodatkowy nabor."
+    ],
+    "sources": [
+      {
+        "title": "INFORMACJA O PLANOWANYM NABORZE",
+        "url": "https://lipno.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-planowanym-naborze?p_r_p_assetEntryId=61535575"
       }
     ]
   },
@@ -695,6 +732,39 @@
       {
         "title": "Informacje dot. KFS w 2026 roku",
         "url": "https://skierniewice.praca.gov.pl/-/informacje-kfs-2026"
+      }
+    ]
+  },
+  {
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
+    "probability": 72,
+    "level": "WARM",
+    "label": "Srednie",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": true,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "W tekstach pojawia sie planowany/kolejny/dodatkowy nabor."
+    ],
+    "sources": [
+      {
+        "title": "Informacja dot. naboru wniosków na staż",
+        "url": "https://starachowice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/komunikat?p_r_p_assetEntryId=63323831"
       }
     ]
   },
@@ -1769,8 +1839,8 @@
     "sources": []
   },
   {
-    "urzad": "Będzinin",
-    "woj": "śląskie",
+    "urzad": "Chełmno",
+    "woj": "kujawsko-pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -1797,8 +1867,8 @@
     "sources": []
   },
   {
-    "urzad": "Chełmno",
-    "woj": "kujawsko-pomorskie",
+    "urzad": "Będzinin",
+    "woj": "śląskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -1853,34 +1923,6 @@
     "sources": []
   },
   {
-    "urzad": "Człuchow",
-    "woj": "pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Dzierżoniów",
     "woj": "dolnośląskie",
     "probability": 38,
@@ -1898,6 +1940,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 6,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Człuchow",
+    "woj": "pomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2162,7 +2232,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2286,8 +2356,8 @@
     "sources": []
   },
   {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
+    "urzad": "Tczew",
+    "woj": "pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2331,34 +2401,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Tczew",
-    "woj": "pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2454,8 +2496,8 @@
     "sources": []
   },
   {
-    "urzad": "Węgorzewo",
-    "woj": "warmińsko-mazurskie",
+    "urzad": "Włodawa",
+    "woj": "lubelskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2482,8 +2524,8 @@
     "sources": []
   },
   {
-    "urzad": "Włodawa",
-    "woj": "lubelskie",
+    "urzad": "Węgorzewo",
+    "woj": "warmińsko-mazurskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2594,34 +2636,6 @@
     "sources": []
   },
   {
-    "urzad": "Łęczyca",
-    "woj": "łódzkie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Świdnik",
     "woj": "lubelskie",
     "probability": 38,
@@ -2639,6 +2653,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Łęczyca",
+    "woj": "łódzkie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -3123,7 +3165,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 5,
+    "kfs_articles": 6,
     "has_exhausted_signal": false,
     "has_reserve_signal": true,
     "has_planned_signal": false,
@@ -3136,6 +3178,10 @@
       {
         "title": "Krajowy Fundusz Szkoleniowy (KFS) – nabór wniosków w 2026 roku (I)",
         "url": "https://augustow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/krajowy-fundusz-szkoleniowy-kfs-nabor-wnioskow-w-2026-roku-i-?p_r_p_resetCur=false&p_r_p_assetEntryId=60547224"
+      },
+      {
+        "title": "Nabór wniosków - Bon na kształcenie ustawiczne",
+        "url": "https://augustow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-bon-na-ksztalcenie-ustawiczne?p_r_p_assetEntryId=63333100"
       }
     ]
   },
@@ -3304,7 +3350,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 5,
+    "kfs_articles": 6,
     "has_exhausted_signal": false,
     "has_reserve_signal": true,
     "has_planned_signal": false,
@@ -3674,39 +3720,6 @@
       {
         "title": "Nabór wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego (KFS)",
         "url": "https://wroclaw.praca.gov.pl/-/nabor-wnioskow-kfs"
-      }
-    ]
-  },
-  {
-    "urzad": "Bydgoszcz",
-    "woj": "kujawsko-pomorskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 5233876,
-    "limit_roczny_text": "5 233 876 zl",
-    "limit_source_url": "https://bydgoszcz.praca.gov.pl/-/nabor-wnioskow-o-finansowanie-ksztalcenia-z-kfs-33",
-    "limit_confidence": 50,
-    "suma_naborow": 5233876,
-    "suma_naborow_text": "5 233 876 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 1,
-    "kfs_articles": 4,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": true,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Nabór wniosków o finansowanie kształcenia z KFS",
-        "url": "https://bydgoszcz.praca.gov.pl/-/nabor-wnioskow-o-finansowanie-ksztalcenia-z-kfs-33"
       }
     ]
   },
@@ -5046,43 +5059,6 @@
     ]
   },
   {
-    "urzad": "Turek",
-    "woj": "wielkopolskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 1509600,
-    "limit_roczny_text": "1 509 600 zl",
-    "limit_source_url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=60435693",
-    "limit_confidence": 70,
-    "suma_naborow": 1979227,
-    "suma_naborow_text": "1 979 227 zl",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 2,
-    "active_count": 0,
-    "ended_count": 2,
-    "kfs_articles": 6,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": true,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Nabór wniosków z Krajowego Funduszu Szkoleniowego 2026",
-        "url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=60435693"
-      },
-      {
-        "title": "II nabór wniosków z Krajowego Funduszu Szkoleniowego 2026",
-        "url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026-1?p_r_p_assetEntryId=61997760"
-      }
-    ]
-  },
-  {
     "urzad": "Chorzow",
     "woj": "śląskie",
     "probability": 18,
@@ -5337,7 +5313,7 @@
     "label": "Niskie",
     "limit_roczny": 1412100,
     "limit_roczny_text": "1 412 100 zl",
-    "limit_source_url": "https://klobuck.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy?p_r_p_assetEntryId=62427041",
+    "limit_source_url": "https://klobuck.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy?p_r_p_resetCur=false&p_r_p_assetEntryId=62427041",
     "limit_confidence": 70,
     "suma_naborow": 1412100,
     "suma_naborow_text": "1 412 100 zl",
@@ -5358,7 +5334,7 @@
     "sources": [
       {
         "title": "Nabór wniosków - Krajowy Fundusz Szkoleniowy",
-        "url": "https://klobuck.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy?p_r_p_assetEntryId=62427041"
+        "url": "https://klobuck.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-krajowy-fundusz-szkoleniowy?p_r_p_resetCur=false&p_r_p_assetEntryId=62427041"
       },
       {
         "title": "Spotkanie informacyjne pn.: „Twoja droga do dotacji – wniosek bez tajemnic”",
@@ -5387,7 +5363,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 8,
+    "kfs_articles": 9,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -5400,6 +5376,10 @@
       {
         "title": "Nowe Priorytety KFS na 2026 Rok!",
         "url": "https://wadowice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nowe-priorytety-kfs-na-2026-rok-?p_r_p_resetCur=false&p_r_p_assetEntryId=56314178"
+      },
+      {
+        "title": "Przedłużenie terminu rozpatrywania wniosków z Krajowego Funduszu Szkoleniowego",
+        "url": "https://wadowice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przedluzenie-terminu-rozpatrywania-wnioskow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=63327675"
       },
       {
         "title": "Wnioski KFS – tylko drogą elektroniczną przez portal praca.gov.pl",
@@ -5613,7 +5593,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6345,7 +6325,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 7,
+    "kfs_articles": 6,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -6785,7 +6765,7 @@
     "label": "Niskie",
     "limit_roczny": 817027,
     "limit_roczny_text": "817 027 zl",
-    "limit_source_url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61829198",
+    "limit_source_url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=61829198",
     "limit_confidence": 55,
     "suma_naborow": 817027,
     "suma_naborow_text": "817 027 zl",
@@ -6803,19 +6783,19 @@
         "amount": 817027,
         "raw": "817 027,89 zł",
         "title": "Nabór wniosków w sprawie przyznania środków z Krajowego Funduszu Szkoleniowego - zakończony",
-        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61829198"
+        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=61829198"
       },
       {
         "amount": 4064,
         "raw": "4 064,82 zł",
         "title": "Nabór wniosków w sprawie przyznania środków z Krajowego Funduszu Szkoleniowego - zakończony",
-        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61829198"
+        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=61829198"
       },
       {
         "amount": 812963,
         "raw": "812 963,07 zł",
         "title": "Nabór wniosków w sprawie przyznania środków z Krajowego Funduszu Szkoleniowego - zakończony",
-        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61829198"
+        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=61829198"
       }
     ],
     "ask_public_info": false,
@@ -6825,7 +6805,7 @@
     "sources": [
       {
         "title": "Nabór wniosków w sprawie przyznania środków z Krajowego Funduszu Szkoleniowego - zakończony",
-        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61829198"
+        "url": "https://zagan.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-w-sprawie-przyznania-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=61829198"
       },
       {
         "title": "PFRON zakupu auta dostosowanego do wjazdu wózkiem na miejsce pasażera lub kierowcy.",
@@ -8846,7 +8826,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 6,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -9147,7 +9127,7 @@
     "label": "Niskie",
     "limit_roczny": 400000,
     "limit_roczny_text": "400 000 zl",
-    "limit_source_url": "https://aleksandrowkujawski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61551096",
+    "limit_source_url": "https://aleksandrowkujawski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=61551096",
     "limit_confidence": 60,
     "suma_naborow": 400000,
     "suma_naborow_text": "400 000 zl",
@@ -9168,7 +9148,7 @@
     "sources": [
       {
         "title": "NABÓR WNIOSKÓW O PRZYZNANIE ŚRODKÓW Z KRAJOWEGO FUNDUSZU SZKOLENIOWEGO",
-        "url": "https://aleksandrowkujawski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=61551096"
+        "url": "https://aleksandrowkujawski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego?p_r_p_resetCur=false&p_r_p_assetEntryId=61551096"
       }
     ]
   },
@@ -9824,6 +9804,47 @@
     ]
   },
   {
+    "urzad": "Turek",
+    "woj": "wielkopolskie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 244720,
+    "limit_roczny_text": "244 720 zl",
+    "limit_source_url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/iii-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=63327101",
+    "limit_confidence": 80,
+    "suma_naborow": 1979227,
+    "suma_naborow_text": "1 979 227 zl",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 2,
+    "active_count": 0,
+    "ended_count": 2,
+    "kfs_articles": 7,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": true,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "III Nabór wniosków z Krajowego Funduszu Szkoleniowego 2026",
+        "url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/iii-nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego?p_r_p_assetEntryId=63327101"
+      },
+      {
+        "title": "Nabór wniosków z Krajowego Funduszu Szkoleniowego 2026",
+        "url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=60435693"
+      },
+      {
+        "title": "II nabór wniosków z Krajowego Funduszu Szkoleniowego 2026",
+        "url": "https://turek.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026-1?p_r_p_assetEntryId=61997760"
+      }
+    ]
+  },
+  {
     "urzad": "Brzeziny",
     "woj": "łódzkie",
     "probability": 18,
@@ -10152,7 +10173,7 @@
     "nabor_count": 2,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 7,
+    "kfs_articles": 8,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -10755,7 +10776,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 8,
+    "kfs_articles": 9,
     "has_exhausted_signal": true,
     "has_reserve_signal": true,
     "has_planned_signal": false,
@@ -11357,10 +11378,6 @@
         "url": "https://zambrow.praca.gov.pl/-/7751754-nabor-wnioskow-na-ksztalcenie-ustawiczne-pracownikow-i-pracodawcow-w-ramach-rezerwy-krajowego-funduszu-szkoleniowego"
       },
       {
-        "title": "Ogłoszenie o naborze wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego na finansowanie kosztów kształcenia ustawicznego na rok 2026",
-        "url": "https://zambrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-na-finansowanie-kosztow-ksztalcenia-ustawicznego-na-rok-2026?p_r_p_assetEntryId=60997899"
-      },
-      {
         "title": "Staż dla bezrobotnych",
         "url": "https://zambrow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/staz-dla-bezrobotnych?p_r_p_assetEntryId=61294537"
       }
@@ -11593,7 +11610,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 6,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": true,
