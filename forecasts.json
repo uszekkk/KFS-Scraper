@@ -681,7 +681,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 6,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -1801,8 +1801,8 @@
     "sources": []
   },
   {
-    "urzad": "Będzinin",
-    "woj": "śląskie",
+    "urzad": "Chełmno",
+    "woj": "kujawsko-pomorskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -1857,8 +1857,8 @@
     "sources": []
   },
   {
-    "urzad": "Chełmno",
-    "woj": "kujawsko-pomorskie",
+    "urzad": "Będzinin",
+    "woj": "śląskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2318,34 +2318,6 @@
     "sources": []
   },
   {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Suwałki",
     "woj": "podlaskie",
     "probability": 38,
@@ -2363,6 +2335,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2781,7 +2781,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 9,
+    "kfs_articles": 10,
     "has_exhausted_signal": false,
     "has_reserve_signal": true,
     "has_planned_signal": false,
@@ -4014,11 +4014,11 @@
       },
       {
         "title": "Bon na kształcenie ustawiczne – nabór wniosków",
-        "url": "https://gdynia.praca.gov.pl/-/bon-na-ksztalcenie-ustawiczne-nabor-wnioskow"
+        "url": "https://gdynia.praca.gov.pl/-/bon-na-ksztalcenie-ustawiczne-nabor-wnioskow-1"
       },
       {
         "title": "Bon na kształcenie ustawiczne – nabór wniosków",
-        "url": "https://gdynia.praca.gov.pl/-/bon-na-ksztalcenie-ustawiczne-nabor-wnioskow-1"
+        "url": "https://gdynia.praca.gov.pl/-/bon-na-ksztalcenie-ustawiczne-nabor-wnioskow"
       }
     ]
   },
@@ -7010,7 +7010,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -11679,16 +11679,20 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 2,
+    "kfs_articles": 3,
     "has_exhausted_signal": true,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
+    "has_reserve_signal": true,
+    "has_planned_signal": true,
     "promotion_candidates": [],
     "ask_public_info": false,
     "signals": [
       "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
     ],
     "sources": [
+      {
+        "title": "Informacje o planowanym naborze wniosków o środki KFS w 2026 r.",
+        "url": "https://gorzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacje-o-planowanym-naborze-wnioskow-o-srodki-kfs-w-2026-r.?p_r_p_assetEntryId=63380379"
+      },
       {
         "title": "Informacja o dostępnych środkach na aktywizację zawodową",
         "url": "https://gorzow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/informacja-o-dostepnych-srodkach-na-aktywizacje-zawodowa?p_r_p_assetEntryId=63251974"
