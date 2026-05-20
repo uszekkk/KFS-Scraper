@@ -99797,5 +99797,33 @@
     "termin": "",
     "kwota": "",
     "classified_date": "20.05.2026"
+  },
+  "https://srodaslaska.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_resetCur=false&p_r_p_assetEntryId=60496480": {
+    "wynik": "TAK",
+    "powod": "Zawiera termin, kwotę i ogłasza nabór KFS",
+    "termin": "30.03.2026 - 03.04.2026",
+    "kwota": "900 000,00 zł",
+    "classified_date": "23.03.2026"
+  },
+  "https://chelmno.praca.gov.pl/-/oferta-pracy-dla-osob-z-orzeczeniem-o-niepelnosprawnosci": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "20.05.2026"
+  },
+  "https://garwolin.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-doposazenie-wyposazenie-stanowiska-pracy?p_r_p_assetEntryId=63509785": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "20.05.2026"
+  },
+  "https://srodaslaska.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/akademia-goz-bezplatne-szkolenia-i-doradztwo?p_r_p_assetEntryId=63508578": {
+    "wynik": "NIE",
+    "powod": "Brak słów kluczowych KFS",
+    "termin": "",
+    "kwota": "",
+    "classified_date": "20.05.2026"
   }
 }
