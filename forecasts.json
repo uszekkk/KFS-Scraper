@@ -1801,6 +1801,34 @@
     "sources": []
   },
   {
+    "urzad": "Będzinin",
+    "woj": "śląskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Chełmno",
     "woj": "kujawsko-pomorskie",
     "probability": 38,
@@ -1857,34 +1885,6 @@
     "sources": []
   },
   {
-    "urzad": "Będzinin",
-    "woj": "śląskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Dzierżoniów",
     "woj": "dolnośląskie",
     "probability": 38,
@@ -1901,7 +1901,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 5,
+    "kfs_articles": 6,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2234,6 +2234,34 @@
     "sources": []
   },
   {
+    "urzad": "Police",
+    "woj": "zachodniopomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Rybnik",
     "woj": "śląskie",
     "probability": 38,
@@ -2290,6 +2318,34 @@
     "sources": []
   },
   {
+    "urzad": "Tarnobrzeg",
+    "woj": "podkarpackie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Suwałki",
     "woj": "podlaskie",
     "probability": 38,
@@ -2335,34 +2391,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Tarnobrzeg",
-    "woj": "podkarpackie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 1,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -5253,14 +5281,14 @@
     "limit_roczny_text": "1 427 329 zl",
     "limit_source_url": "https://sokolowpodlaski.praca.gov.pl/-/informacja-o-naborze-wnioskow-i-nowych-zasadach-przyznawania-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-w-2026-roku",
     "limit_confidence": 55,
-    "suma_naborow": 2844658,
-    "suma_naborow_text": "2 844 658 zl",
+    "suma_naborow": 3504141,
+    "suma_naborow_text": "3 504 141 zl",
     "szacowane_pozostalo": null,
     "szacowane_pozostalo_text": "",
-    "nabor_count": 2,
+    "nabor_count": 3,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -7089,7 +7117,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": true,
@@ -8710,32 +8738,32 @@
       {
         "amount": 1721,
         "raw": "1.721,90 zł",
-        "title": "Ważna informacja o wnioskach z KFS",
-        "url": "https://mupolsztyn.praca.gov.pl/-/wazna-informacja-o-wnioskach-z-kfs"
-      },
-      {
-        "amount": 2066,
-        "raw": "2.066,30 zł",
-        "title": "Ważna informacja o wnioskach z KFS",
-        "url": "https://mupolsztyn.praca.gov.pl/-/wazna-informacja-o-wnioskach-z-kfs"
-      },
-      {
-        "amount": 1721,
-        "raw": "1.721,90 zł",
-        "title": "Ogłoszenie o naborze wniosków Krajowy Fundusz Szkoleniowy (KFS) 2026",
-        "url": "https://mupolsztyn.praca.gov.pl/-/ogloszenie-o-naborze-wnioskow-krajowy-fundusz-szkoleniowy-kfs-2026"
-      },
-      {
-        "amount": 2066,
-        "raw": "2.066,30 zł",
-        "title": "Ogłoszenie o naborze wniosków Krajowy Fundusz Szkoleniowy (KFS) 2026",
-        "url": "https://mupolsztyn.praca.gov.pl/-/ogloszenie-o-naborze-wnioskow-krajowy-fundusz-szkoleniowy-kfs-2026"
-      },
-      {
-        "amount": 1721,
-        "raw": "1.721,90 zł",
         "title": "Wkrótce koniec naboru wniosków o środki KFS !!!",
         "url": "https://mupolsztyn.praca.gov.pl/-/wkrotce-koniec-naboru-wnioskow-o-srodki-kfs-"
+      },
+      {
+        "amount": 2066,
+        "raw": "2.066,30 zł",
+        "title": "Wkrótce koniec naboru wniosków o środki KFS !!!",
+        "url": "https://mupolsztyn.praca.gov.pl/-/wkrotce-koniec-naboru-wnioskow-o-srodki-kfs-"
+      },
+      {
+        "amount": 1721,
+        "raw": "1.721,90 zł",
+        "title": "Ważna informacja o wnioskach z KFS",
+        "url": "https://mupolsztyn.praca.gov.pl/-/wazna-informacja-o-wnioskach-z-kfs"
+      },
+      {
+        "amount": 2066,
+        "raw": "2.066,30 zł",
+        "title": "Ważna informacja o wnioskach z KFS",
+        "url": "https://mupolsztyn.praca.gov.pl/-/wazna-informacja-o-wnioskach-z-kfs"
+      },
+      {
+        "amount": 1721,
+        "raw": "1.721,90 zł",
+        "title": "Ogłoszenie o naborze wniosków Krajowy Fundusz Szkoleniowy (KFS) 2026",
+        "url": "https://mupolsztyn.praca.gov.pl/-/ogloszenie-o-naborze-wnioskow-krajowy-fundusz-szkoleniowy-kfs-2026"
       }
     ],
     "ask_public_info": false,
@@ -10397,51 +10425,6 @@
     ]
   },
   {
-    "urzad": "Police",
-    "woj": "zachodniopomorskie",
-    "probability": 5,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 1038153,
-    "limit_roczny_text": "1 038 153 zl",
-    "limit_source_url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypomnienie-o-trwajacym-naborze-wnioskow-w-ramach-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61135822",
-    "limit_confidence": 60,
-    "suma_naborow": 2038153,
-    "suma_naborow_text": "2 038 153 zl",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 2,
-    "active_count": 0,
-    "ended_count": 2,
-    "kfs_articles": 7,
-    "has_exhausted_signal": true,
-    "has_reserve_signal": false,
-    "has_planned_signal": true,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Komunikat wyglada na wyczerpanie/rozdysponowanie srodkow."
-    ],
-    "sources": [
-      {
-        "title": "Przypomnienie o trwającym naborze wniosków w ramach Krajowego Funduszu Szkoleniowego 2026",
-        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/przypomnienie-o-trwajacym-naborze-wnioskow-w-ramach-krajowego-funduszu-szkoleniowego-2026?p_r_p_assetEntryId=61135822"
-      },
-      {
-        "title": "Ogłoszenie o naborze wniosków o przyznanie środków z Krajowego Funduszu Szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego w 2026 r.",
-        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego-w-2026-r.?p_r_p_assetEntryId=60803498"
-      },
-      {
-        "title": "Spotkanie informacyjne dla pracodawców – Krajowy Fundusz Szkoleniowy 2026",
-        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/spotkanie-informacyjne-dla-pracodawcow-krajowy-fundusz-szkoleniowy-2026-1?p_r_p_assetEntryId=60350696"
-      },
-      {
-        "title": "Nabór wniosków na dofinansowanie w ramach prac interwencyjnych zakończony",
-        "url": "https://police.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-na-dofinansowanie-w-ramach-prac-interwencyjnych-zakonczony?p_r_p_assetEntryId=62492044"
-      }
-    ]
-  },
-  {
     "urzad": "Krosno",
     "woj": "podkarpackie",
     "probability": 5,
@@ -10592,8 +10575,8 @@
         "url": "https://chrzanow.praca.gov.pl/-/nabor-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego"
       },
       {
-        "title": "Zamknięcie otwartego naboru wniosków o przyznanie bonu na zasiedlenie z EFS+(IV)",
-        "url": "https://chrzanow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-otwartego-naboru-wnioskow-o-przyznanie-bonu-na-zasiedlenie-z-efs-iv-?p_r_p_assetEntryId=63338555"
+        "title": "Zamknięcie otwartego naboru wniosków o staż w ramach Programu Regionalnego „Konserwator”",
+        "url": "https://chrzanow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-otwartego-naboru-wnioskow-o-staz-w-ramach-programu-regionalnego-konserwator?p_r_p_assetEntryId=63416048"
       }
     ]
   },
@@ -11500,7 +11483,7 @@
       },
       {
         "title": "Ogłoszenie o naborze wniosków o organizację staży w projekcie \"Aktywizacja zawodowa osób pozostających bez zatrudnienia realizowana przez PUP w Namysłowie (III)\"",
-        "url": "https://namyslow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-organizacje-stazy-w-projekcie-aktywizacja-zawodowa-osob-pozostajacych-bez-zatrudnienia-realizowana-przez-pup-w-namyslowie-iii-3?p_r_p_resetCur=false&p_r_p_assetEntryId=60608478"
+        "url": "https://namyslow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-organizacje-stazy-w-projekcie-aktywizacja-zawodowa-osob-pozostajacych-bez-zatrudnienia-realizowana-przez-pup-w-namyslowie-iii-6?p_r_p_assetEntryId=63397321"
       }
     ]
   },
@@ -11780,7 +11763,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -11898,8 +11881,8 @@
         "url": "https://plonsk.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowane-ogloszenie-naboru-wnioskow-o-przyznanie-jednorazowo-srodkow-na-podjecie-dzialalnosci-gospodarczej-2?p_r_p_resetCur=false&p_r_p_assetEntryId=60301201"
       },
       {
-        "title": "Zamknięcie naboru wniosków na organizację prac społecznie użytecznych",
-        "url": "https://plonsk.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/zamkniecie-naboru-wnioskow-na-organizacje-prac-spolecznie-uzytecznych?p_r_p_assetEntryId=62408995"
+        "title": "Ogłoszenie o naborze wniosków na organizację robót publicznych",
+        "url": "https://plonsk.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-na-organizacje-robot-publicznych-2?p_r_p_assetEntryId=63445283"
       }
     ]
   },
