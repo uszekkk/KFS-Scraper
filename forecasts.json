@@ -660,7 +660,7 @@
     "sources": [
       {
         "title": "Planowane nabory wniosków w I półroczu 2026 r.",
-        "url": "https://siedlce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabory-w-i-polroczu-2026-r.?p_r_p_assetEntryId=58850759"
+        "url": "https://siedlce.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/planowany-nabory-w-i-polroczu-2026-r.?p_r_p_resetCur=false&p_r_p_assetEntryId=58850759"
       }
     ]
   },
@@ -694,39 +694,6 @@
       {
         "title": "Informacje dot. KFS w 2026 roku",
         "url": "https://skierniewice.praca.gov.pl/-/informacje-kfs-2026"
-      }
-    ]
-  },
-  {
-    "urzad": "Starachowice",
-    "woj": "świętokrzyskie",
-    "probability": 72,
-    "level": "WARM",
-    "label": "Srednie",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": true,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "W tekstach pojawia sie planowany/kolejny/dodatkowy nabor."
-    ],
-    "sources": [
-      {
-        "title": "Informacja dot. naboru wniosków na staż",
-        "url": "https://starachowice.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/komunikat?p_r_p_assetEntryId=63323831"
       }
     ]
   },
@@ -1733,7 +1700,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1761,7 +1728,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 3,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1790,6 +1757,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Będzinin",
+    "woj": "śląskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1846,34 +1841,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Będzinin",
-    "woj": "śląskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -1986,6 +1953,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Kraków PUP",
+    "woj": "małopolskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2137,34 +2132,6 @@
     "sources": []
   },
   {
-    "urzad": "Pisz",
-    "woj": "warmińsko-mazurskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 4,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Piekary Śląskie",
     "woj": "śląskie",
     "probability": 38,
@@ -2182,6 +2149,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Pisz",
+    "woj": "warmińsko-mazurskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 4,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2249,6 +2244,34 @@
     "sources": []
   },
   {
+    "urzad": "Starachowice",
+    "woj": "świętokrzyskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Strzelce Krajeńskie",
     "woj": "lubuskie",
     "probability": 38,
@@ -2305,34 +2328,6 @@
     "sources": []
   },
   {
-    "urzad": "Tczew",
-    "woj": "pomorskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 2,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
     "urzad": "Tarnobrzeg",
     "woj": "podkarpackie",
     "probability": 38,
@@ -2350,6 +2345,34 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 1,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
+    "urzad": "Tczew",
+    "woj": "pomorskie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2473,6 +2496,34 @@
     "sources": []
   },
   {
+    "urzad": "Łowicz",
+    "woj": "łódzkie",
+    "probability": 38,
+    "level": "WATCH",
+    "label": "Obserwuj",
+    "limit_roczny": null,
+    "limit_roczny_text": "",
+    "limit_source_url": "",
+    "limit_confidence": 0,
+    "suma_naborow": null,
+    "suma_naborow_text": "",
+    "szacowane_pozostalo": null,
+    "szacowane_pozostalo_text": "",
+    "nabor_count": 0,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 2,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": true,
+    "signals": [
+      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
+    ],
+    "sources": []
+  },
+  {
     "urzad": "Łuków",
     "woj": "lubelskie",
     "probability": 38,
@@ -2501,8 +2552,8 @@
     "sources": []
   },
   {
-    "urzad": "Łowicz",
-    "woj": "łódzkie",
+    "urzad": "Świdnik",
+    "woj": "lubelskie",
     "probability": 38,
     "level": "WATCH",
     "label": "Obserwuj",
@@ -2517,7 +2568,7 @@
     "nabor_count": 0,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 2,
+    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2574,34 +2625,6 @@
     "active_count": 0,
     "ended_count": 0,
     "kfs_articles": 5,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": true,
-    "signals": [
-      "Sa artykuly KFS, ale scraper nie widzi aktywnego naboru ani rozliczenia."
-    ],
-    "sources": []
-  },
-  {
-    "urzad": "Świdnik",
-    "woj": "lubelskie",
-    "probability": 38,
-    "level": "WATCH",
-    "label": "Obserwuj",
-    "limit_roczny": null,
-    "limit_roczny_text": "",
-    "limit_source_url": "",
-    "limit_confidence": 0,
-    "suma_naborow": null,
-    "suma_naborow_text": "",
-    "szacowane_pozostalo": null,
-    "szacowane_pozostalo_text": "",
-    "nabor_count": 0,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 3,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -2679,6 +2702,10 @@
       {
         "title": "Przypomnienie o NABORZE WNIOSKÓW KFS",
         "url": "https://pabianice.praca.gov.pl/-/-nabor-wnioskow-kfs"
+      },
+      {
+        "title": "NABÓR KFS",
+        "url": "https://pabianice.praca.gov.pl/-/przypomnienie-nabor-kfs"
       },
       {
         "title": "DNI OTWARTE I NABÓR KFS",
@@ -2839,7 +2866,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": true,
     "has_planned_signal": true,
@@ -3569,12 +3596,12 @@
         "url": "https://lodz.praca.gov.pl/-/nabor-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-na-wspomaganie-podmiotow-inwestujacych-w-ksztalcenie-ustawiczne-osob-pracujacych"
       },
       {
-        "title": "Informacja o planowanym uruchomieniu naboru wniosków o dofinansowanie podjęcia działalności gospodarczej w ramach środków rezerwy Funduszu Pracy przeznaczonej na finansowanie kosztów realizacji form pomocy bez EFS+",
-        "url": "https://lodz.praca.gov.pl/-/informacja-o-planowanym-uruchomieniu-naboru-wnioskow-o-dofinansowanie-podjecia-dzialalnosci-gospodarczej-w-ramach-srodkow-rezerwy-funduszu-pracy-przeznaczonej-na-finansowanie-kosztow-realizacji-form-pomocy-bez-efs-"
+        "title": "Informacja o planowanym uruchomieniu naboru wniosków o refundację kosztów wyposażenia lub doposażenia stanowiska pracy w ramach projektu „Łódź aktywizuje zawodowo IV”",
+        "url": "https://lodz.praca.gov.pl/-/informacja-o-planowanym-uruchomieniu-naboru-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy-w-ramach-projektu-lodz-aktywizuje-zawodowo-iv-1"
       },
       {
-        "title": "Informacja o planowanym uruchomieniu naboru wniosków o dofinansowanie podjęcia działalności gospodarczej w ramach projektu „Łódź aktywizuje zawodowo IV",
-        "url": "https://lodz.praca.gov.pl/-/informacja-o-planowanym-uruchomieniu-naboru-wnioskow-o-dofinansowanie-podjecia-dzialalnosci-gospodarczej-w-ramach-projektu-lodz-aktywizuje-zawodowo-iv-1"
+        "title": "Informacja o planowanym uruchomieniu nabór wniosków o refundacje kosztów wyposażenia lub doposażenia stanowiska pracy dla skierowanego bezrobotnego ze środków rezerwy Funduszu Pracy przeznaczonej na finansowanie kosztów realizacji form pomocy bez EFS+",
+        "url": "https://lodz.praca.gov.pl/-/informacja-o-planowanym-uruchomieniu-naboru-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy-w-ramach-srodkow-rezerwy-funduszu-pracy-przeznaczonej-na-finansowanie-kosztow-realizacji-form-pomocy-bez-efs-1"
       }
     ]
   },
@@ -3826,39 +3853,6 @@
       {
         "title": "Nabór wniosków o dofinansowanie kształcenia ustawicznego ze środków KFS",
         "url": "https://zamosc.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/nabor-wnioskow-o-dofinansowanie-ksztalcenia-ustawicznego-ze-srodkow-kfs?p_r_p_assetEntryId=44152706"
-      }
-    ]
-  },
-  {
-    "urzad": "Kraków PUP",
-    "woj": "małopolskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 3505800,
-    "limit_roczny_text": "3 505 800 zl",
-    "limit_source_url": "https://uppkrakow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-psz-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego-na-rok-2026-i-nabor-dla-wnioskow-spelniajacych-priorytety-kfs-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=61457748",
-    "limit_confidence": 55,
-    "suma_naborow": 3505800,
-    "suma_naborow_text": "3 505 800 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 1,
-    "kfs_articles": 3,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Ogłoszenie o naborze wniosków o przyznanie środków Krajowego Funduszu Szkoleniowego (PSZ-KFS) na finansowanie kosztów kształcenia ustawicznego na rok 2026. I nabór dla wniosków spełniających priorytety KFS 2026",
-        "url": "https://uppkrakow.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-krajowego-funduszu-szkoleniowego-psz-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego-na-rok-2026-i-nabor-dla-wnioskow-spelniajacych-priorytety-kfs-2026?p_r_p_resetCur=false&p_r_p_assetEntryId=61457748"
       }
     ]
   },
@@ -4216,7 +4210,7 @@
     "nabor_count": 3,
     "active_count": 0,
     "ended_count": 1,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -5091,39 +5085,6 @@
     ]
   },
   {
-    "urzad": "Pszczyna",
-    "woj": "śląskie",
-    "probability": 18,
-    "level": "COLD",
-    "label": "Niskie",
-    "limit_roczny": 1500000,
-    "limit_roczny_text": "1 500 000 zl",
-    "limit_source_url": "https://pszczyna.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok",
-    "limit_confidence": 60,
-    "suma_naborow": 1500000,
-    "suma_naborow_text": "1 500 000 zl",
-    "szacowane_pozostalo": 0,
-    "szacowane_pozostalo_text": "0 zl",
-    "nabor_count": 1,
-    "active_count": 0,
-    "ended_count": 0,
-    "kfs_articles": 6,
-    "has_exhausted_signal": false,
-    "has_reserve_signal": false,
-    "has_planned_signal": false,
-    "promotion_candidates": [],
-    "ask_public_info": false,
-    "signals": [
-      "Wykryte pule naborow prawie domykaja limit roczny."
-    ],
-    "sources": [
-      {
-        "title": "Krajowy Fundusz Szkoleniowy w 2026 roku",
-        "url": "https://pszczyna.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok"
-      }
-    ]
-  },
-  {
     "urzad": "Pruszków",
     "woj": "mazowieckie",
     "probability": 18,
@@ -5153,6 +5114,39 @@
       {
         "title": "Krajowy Fundusz Szkoleniowy - nabór wniosków",
         "url": "https://pruszkow.praca.gov.pl/-/krajowy-fundusz-szkoleniowy-nabor-wnioskow"
+      }
+    ]
+  },
+  {
+    "urzad": "Pszczyna",
+    "woj": "śląskie",
+    "probability": 18,
+    "level": "COLD",
+    "label": "Niskie",
+    "limit_roczny": 1500000,
+    "limit_roczny_text": "1 500 000 zl",
+    "limit_source_url": "https://pszczyna.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok",
+    "limit_confidence": 60,
+    "suma_naborow": 1500000,
+    "suma_naborow_text": "1 500 000 zl",
+    "szacowane_pozostalo": 0,
+    "szacowane_pozostalo_text": "0 zl",
+    "nabor_count": 1,
+    "active_count": 0,
+    "ended_count": 0,
+    "kfs_articles": 6,
+    "has_exhausted_signal": false,
+    "has_reserve_signal": false,
+    "has_planned_signal": false,
+    "promotion_candidates": [],
+    "ask_public_info": false,
+    "signals": [
+      "Wykryte pule naborow prawie domykaja limit roczny."
+    ],
+    "sources": [
+      {
+        "title": "Krajowy Fundusz Szkoleniowy w 2026 roku",
+        "url": "https://pszczyna.praca.gov.pl/-/informacja-o-wysokosci-srodkow-oraz-priorytety-wydatkowania-kfs-na-2026-rok"
       }
     ]
   },
@@ -6842,6 +6836,10 @@
       {
         "title": "Nabór wniosków z Krajowego Funduszu Szkoleniowego 2026r.",
         "url": "https://gostyn.praca.gov.pl/-/nabor-wnioskow-z-krajowego-funduszu-szkoleniowego-2026r."
+      },
+      {
+        "title": "Nabór wniosków na szkolenia indywidualne w ramach projektu: „Aktywizacja bezrobotnych w powiecie gostyńskim”.",
+        "url": "https://gostyn.praca.gov.pl/-/nabor-wnioskow-na-szkolenia-indywidualne-w-ramach-projektu-aktywizacja-bezrobotnych-w-powiecie-gostynskim.-1"
       }
     ]
   },
@@ -8442,7 +8440,7 @@
     "nabor_count": 1,
     "active_count": 0,
     "ended_count": 0,
-    "kfs_articles": 4,
+    "kfs_articles": 5,
     "has_exhausted_signal": false,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -9408,7 +9406,7 @@
     "label": "Niskie",
     "limit_roczny": 355119,
     "limit_roczny_text": "355 119 zl",
-    "limit_source_url": "https://lidzbarkwarminski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=61214730",
+    "limit_source_url": "https://lidzbarkwarminski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_resetCur=false&p_r_p_assetEntryId=61214730",
     "limit_confidence": 55,
     "suma_naborow": 355119,
     "suma_naborow_text": "355 119 zl",
@@ -9429,7 +9427,7 @@
     "sources": [
       {
         "title": "Ogłoszenie o naborze wniosków o przyznanie środków  z krajowego funduszu szkoleniowego (KFS) na finansowanie kosztów kształcenia ustawicznego",
-        "url": "https://lidzbarkwarminski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_assetEntryId=61214730"
+        "url": "https://lidzbarkwarminski.praca.gov.pl/rynek-pracy/aktualnosci/-/asset_publisher/8VCc6CLiHUaO/content/ogloszenie-o-naborze-wnioskow-o-przyznanie-srodkow-z-krajowego-funduszu-szkoleniowego-kfs-na-finansowanie-kosztow-ksztalcenia-ustawicznego?p_r_p_resetCur=false&p_r_p_assetEntryId=61214730"
       }
     ]
   },
@@ -11508,7 +11506,7 @@
     "nabor_count": 2,
     "active_count": 1,
     "ended_count": 1,
-    "kfs_articles": 6,
+    "kfs_articles": 7,
     "has_exhausted_signal": true,
     "has_reserve_signal": false,
     "has_planned_signal": false,
@@ -11846,6 +11844,10 @@
       {
         "title": "UWAGA: Informacja o dodatkowym naborze wniosków o refundację kosztów wyposażenia lub doposażenia stanowiska pracy dla osób powyżej 55 roku życia",
         "url": "https://ostrowiec.praca.gov.pl/-/uwaga-informacja-o-dodatkowym-naborze-wnioskow-o-refundacje-kosztow-wyposazenia-lub-doposazenia-stanowiska-pracy-dla-osob-powyzej-55-roku-zycia"
+      },
+      {
+        "title": "Informacja o uzupełniającym naborze wniosków o przyznanie osobom niepełnosprawnym środków na podjęcie działalności gospodarczej, rolniczej albo działalności gospodarczej w formie spółdzielni socjalnej ze środków Państwowego Funduszu Rehabilitacji Osób Niepełnosprawnych (PFRON)",
+        "url": "https://ostrowiec.praca.gov.pl/-/informacja-o-uzupelniajacym-naborze-wnioskow-o-przyznanie-osobom-niepelnosprawnym-srodkow-na-podjecie-dzialalnosci-gospodarczej-rolniczej-albo-dzialalnosci-gospodarczej-w-formie-spoldzielni-socjalnej-ze-srodkow-panstwowego-funduszu-rehabilitacji-osob-niep"
       },
       {
         "title": "Informacja o zakończeniu naboru wniosków o przyznanie refundacji kosztów wyposażenia stanowiska pracy osoby niepełnosprawnej ze środków PFRON",
